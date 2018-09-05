@@ -4,7 +4,7 @@ import markdown
 
 AUTHOR = 'lisa johnson'
 SITENAME = 'comparative bioinformatics'
-SITEURL = ''
+SITEURL = 'https://ljcohen.github.io/blog/'
 TIMEZONE = 'America/Los_Angeles'
 DEFAULT_LANG = 'en'
 
