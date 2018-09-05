@@ -1,0 +1,16 @@
+language: python
+dist: xenial
+python: '3.7'
+branches:
+  only:
+  - master
+install:
+- pipenv install
+script:
+- pipenv run pelican
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN # Set in the settings page of your repository
+  on:
+    branch: master
