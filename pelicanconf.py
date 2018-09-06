@@ -20,6 +20,10 @@ THEME = './theme'
 # --------------8<---------------------
 # Files and content
 
+# Set artiel URL
+#ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}'
+#ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html
+
 # Don't try to turn HTML files into pages
 READERS = {'html': None}
 
