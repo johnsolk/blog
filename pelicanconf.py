@@ -15,12 +15,16 @@ OUTPUT_PATH = 'output'
 # Theme
 
 THEME = './theme'
-# https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
+# https://github.com/getpelican/pelican-themes/tree/master/bootstrap
+
+GITHUB_URL = 'https://github.com/ljcohen'
+TWITTER_USERNAME = 'monsterbashseq'
+DISQUS_SITENAME = 'https-ljcohen-github-io-blog'
 
 # --------------8<---------------------
 # Files and content
 
-# Set artiel URL
+# Set article URL
 #ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}'
 #ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html
 
