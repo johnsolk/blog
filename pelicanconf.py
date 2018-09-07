@@ -20,7 +20,7 @@ THEME = './theme'
 GITHUB_URL = 'https://github.com/ljcohen'
 TWITTER_USERNAME = 'monsterbashseq'
 DISQUS_SITENAME = 'https-ljcohen-github-io-blog'
-
+SOCIAL = {'twitter':'https://twitter.com/monsterbashseq'}
 # --------------8<---------------------
 # Files and content
 
