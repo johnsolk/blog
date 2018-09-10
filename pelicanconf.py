@@ -16,6 +16,7 @@ OUTPUT_PATH = 'output'
 
 THEME = './theme'
 # https://github.com/getpelican/pelican-themes/tree/master/bootstrap
+LINKS = [('name','url')]
 
 GITHUB_URL = 'https://github.com/ljcohen'
 TWITTER_USERNAME = 'monsterbashseq'
