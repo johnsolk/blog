@@ -20,7 +20,7 @@ THEME = './theme'
 LINKS = [('name','url')]
 
 DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
-
+SEARCH_URL = '/blog/search.html'
 DISPLAY_CATEGORIES_ON_MENU = True
 
 PLUGIN_PATHS = ['./plugins']
