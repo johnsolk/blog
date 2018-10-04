@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2ae52cf1223721e58ebd6eb41ba369056379ba383bfe1cdbccdbfdf454b0c318"
+            "sha256": "9eee9621256b04ac5ce37fa33bd38e31a414a12f3400cc50de03070ef923e835"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -52,11 +52,11 @@
         },
         "markdown": {
             "hashes": [
-                "sha256:9ba587db9daee7ec761cfc656272be6aabe2ed300fece21208e4aab2e457bc8f",
-                "sha256:a856869c7ff079ad84a3e19cd87a64998350c2b94e9e08e44270faef33400f81"
+                "sha256:c00429bd503a47ec88d5e30a751e147dcb4c6889663cd3e2ba0afe858e009baa",
+                "sha256:d02e0f9b04c500cde6637c11ad7c72671f359b87b9fe924b2383649d8841db7c"
             ],
             "index": "pypi",
-            "version": "==2.6.11"
+            "version": "==3.0.1"
         },
         "markupsafe": {
             "hashes": [
@@ -85,6 +85,13 @@
                 "sha256:e27001de32f627c22380a688bcc43ce83504a7bc5da472209b4c70f02829f0b8"
             ],
             "version": "==2.7.3"
+        },
+        "python-gettext": {
+            "hashes": [
+                "sha256:f40540324edc600e33df7aaf840aec7a4021d3b0615830918c231eb1d7163456"
+            ],
+            "index": "pypi",
+            "version": "==3.0"
         },
         "pytz": {
             "hashes": [

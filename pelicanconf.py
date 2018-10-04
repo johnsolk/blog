@@ -4,7 +4,7 @@ import markdown
 
 AUTHOR = u'Lisa Johnson'
 SITENAME = u'monsteRbashSeq'
-SITEURL = 'https://ljcohen.github.io/blog/'
+SITEURL = 'https://ljcohen.github.io/blog'
 TIMEZONE = 'America/Los_Angeles'
 DEFAULT_LANG = u'en'
 
@@ -20,6 +20,9 @@ THEME = './theme'
 LINKS = [('name','url')]
 
 DISPLAY_CATEGORIES_ON_MENU = True
+
+PLUGIN_PATHS = ['./plugins']
+PLUGINS = ['i18n_subsites']
 
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 
