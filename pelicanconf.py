@@ -48,7 +48,7 @@ DISQUS_SITENAME = "johnson_lk"
 
 
 ### Theme specific settings
-BANNER = 'img/sanomacoast.jpg'
+BANNER = 'content/img/sanomacoast.jpg'
 BANNER_SUBTITLE = 'Lisa K. Johnson'
 BANNER_ALL_PAGES = True
 DISPLAY_TAGS_ON_SIDEBAR = True
