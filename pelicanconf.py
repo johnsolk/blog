@@ -35,6 +35,7 @@ BOOTSTRAP_THEME = 'simplex'
 
 BOOTSTRAP_NAVBAR_INVERSE = True
 
+STATIC_PATHS = ['img']
 
 SOCIAL = (('twitter', 'https://twitter.com/monsterbashseq'),
           ('github', 'https://github.com/ljcohen'),
@@ -48,7 +49,7 @@ DISQUS_SITENAME = "johnson_lk"
 
 
 ### Theme specific settings
-BANNER = 'https://www.dropbox.com/s/b8ejwn4irxxtvaf/sanomacoast.png'
+BANNER = '/img/sanomacoast.png'
 BANNER_SUBTITLE = 'Lisa K. Johnson'
 BANNER_ALL_PAGES = True
 DISPLAY_TAGS_ON_SIDEBAR = True
