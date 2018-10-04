@@ -37,6 +37,8 @@ BOOTSTRAP_NAVBAR_INVERSE = True
 
 STATIC_PATHS = ['img']
 
+READERS = {'html': None}
+
 SOCIAL = (('twitter', 'https://twitter.com/monsterbashseq'),
           ('github', 'https://github.com/ljcohen'),
           ('flickr','https://www.flickr.com/155690017@N06/'),
