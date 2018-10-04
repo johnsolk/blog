@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Blogging with Pelican</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="https://ljcohen.github.io/blog/" rel="canonical" />
+
+  <!-- Feed -->
+        <link href="https://ljcohen.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="monsteRbashSeq Full Atom Feed" />
+          <link href="https://ljcohen.github.io/blog/feeds/python.atom.xml" type="application/atom+xml" rel="alternate" title="monsteRbashSeq Categories Atom Feed" />
+
+  <link href="https://ljcohen.github.io/blog/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://ljcohen.github.io/blog/theme/css/code_blocks/github.css" rel="stylesheet">
+
+    <!-- CSS specified by the user -->
+
+
+    <link href="https://ljcohen.github.io/blog/css/myblog.css" type="text/css" rel="stylesheet" />
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="https://ljcohen.github.io/blog/blogging-with-pelican.html" rel="canonical" />
+
+    <meta name="description" content="In Lab Learning Opportunity (ILLO) by Data Intensive Biology (DIB) lab mate, Luiz Irber.">
+
+    <meta name="author" content="Lisa K. Johnson">
+
+    <meta name="tags" content="pelican">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="monsteRbashSeq"/>
+<meta property="og:title" content="Blogging with Pelican"/>
+<meta property="og:description" content="In Lab Learning Opportunity (ILLO) by Data Intensive Biology (DIB) lab mate, Luiz Irber."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://ljcohen.github.io/blog/blogging-with-pelican.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-09-06 00:00:00-07:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://ljcohen.github.io/blog/author/lisa-k-johnson.html">
+<meta property="article:section" content="Python"/>
+<meta property="article:tag" content="pelican"/>
+<meta property="og:image" content="https://ljcohen.github.io/blog/img/sanomacoast.jpg">
+
+<!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@monsterbashseq">
+    <meta name="twitter:title" content="Blogging with Pelican">
+    <meta name="twitter:url" content="https://ljcohen.github.io/blog/blogging-with-pelican.html">
+
+        <meta name="twitter:image:src" content="https://ljcohen.github.io/blog/img/sanomacoast.jpg">
+
+      <meta name="twitter:description" content="In Lab Learning Opportunity (ILLO) by Data Intensive Biology (DIB) lab mate, Luiz Irber.">
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "Blogging with Pelican",
+  "headline": "Blogging with Pelican",
+  "datePublished": "2018-09-06 00:00:00-07:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Lisa K. Johnson",
+    "url": "https://ljcohen.github.io/blog/author/lisa-k-johnson.html"
+  },
+  "image": "https://ljcohen.github.io/blog/img/sanomacoast.jpg",
+  "url": "https://ljcohen.github.io/blog/blogging-with-pelican.html",
+  "description": "In Lab Learning Opportunity (ILLO) by Data Intensive Biology (DIB) lab mate, Luiz Irber."
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://ljcohen.github.io/blog/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Blogging with Pelican</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://ljcohen.github.io/blog/author/lisa-k-johnson.html">Lisa K. Johnson</a>
+            | <time datetime="Thu 06 September 2018">Thu 06 September 2018</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('https://ljcohen.github.io/blog/img/sanomacoast.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>Luiz was gratious in spending some time walking us through how to set up a blog with Pelican, host it on <a href="https://pages.github.com/">github.io</a>, and have <a href="https://travis-ci.com/">travis-ci</a> test and deploy.</p>
+<p>Video: https://www.youtube.com/watch?v=QhC9yjUQL6o</p>
+<p>We started with the tutorial from <a href="https://git.charlesreid1.com/charlesreid1/how-do-i-pelican">Charles Reid</a>, which has <a href="https://github.com/charlesreid1/magic-flying-pelican/pelican/">practice content</a>.</p>
+<h2>Some Background</h2>
+<p>Over the past few years as a PhD student in Dr. Titus Brown's <a href="http://ivory.idyll.org/lab/">DIB Lab</a> at UC Davis, I've been fortunate to be able to expand my data science toolkit. This has included a range of skills from <a href="https://www.biorxiv.org/content/early/2018/05/17/323576">automated genomic-scale data analysis &amp; visualization</a> to time-saving tricks like note-taking in <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">markdown</a>. Markdown is a <a href="https://en.wikipedia.org/wiki/Markdown">simple text-formatting language</a>, sorta like html. At the encouragement of Titus a few years ago during our summer <a href="http://ivory.idyll.org/dibsi/">DIBSI workshop</a>, I started taking notes on the online collaborative document site, <a href="https://hackmd.io/">hackmd.io</a>. This cool site lets you write in markdown, and immediately see it rendered on the right side. The link can be shared with collaborators, and the document can be exported to <code>.pdf</code>, <code>.html</code>, or <code>.md</code> formats. </p>
+<p><a href="https://hackmd.io/"><img alt="" src="/uploads/upload_29bccf36bfae6cb042d13b1c958e511f.png"></a></p>
+<p>I've had <a href="https://monsterbashseq.wordpress.com/">a blog</a> that I started when I was learning and developing computational skills for genomics research <a href="http://vosslab.weebly.com/lab-alumni.html">as a lab technician at HBOI in FL</a>. Wordpress blogs are great for quickly publishing a post, with capacity for formatting pictures (screenshots) and links to Tweets. But manually converting <code>.md</code> documents and code chunks in the online wordpress user interface is tedious. </p>
+<p>This week, when <a href="https://github.com/luizirber">Luiz Irber</a> re-instated our weekly chain of lab group emails outlining our past week's accomplishments and goals for the coming week, I casually mentioned in my summary that I wanted to migrate from wordpress to a more markdown-friendly format for my blog. I've tried <a href="https://jekyllrb.com/">Jekyll</a> in the past, and have been slowly migrating <a href="https://ljcohen.github.io/">my website</a> to something markdown-friendly, but haven't quite hit my stride yet with migrating my blog over. Luiz immediately chimed in that <a href="http://docs.getpelican.com/en/3.6.3/quickstart.html">Pelican</a> is great! And uses it for his <a href="https://blog.luizirber.org/">blog</a>. It turns out that <a href="http://ivory.idyll.org/blog/">Titus' blog</a> and other lab mate, <a href="https://charlesreid1.com/">Charles Reid</a> both have their blogs in Pelican as well. One of the many advantages of Pelican is that it is written in Python, unlike Jekyll which is written in Ruby. (I'm more comfortable coding and debugging in Python than in Ruby.) And Charles provided lots of documentation on how to use Pelican! It's great to be in a lab group where people have such useful and encouraging advice.</p>
+<h2>Tutorial</h2>
+<p>Make a working directory for your blog:</p>
+<div class="highlight"><pre><span></span>mkdir blog
+cd blog/
+git init
+</pre></div>
+
+
+<p>Get the configuration file, <code>pelicanconf.py</code>:</p>
+<div class="highlight"><pre><span></span>wget https://raw.githubusercontent.com/charlesreid1/magic-flying-pelican/master/pelican/pelicanconf.py
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>mkdir content
+cd content/
+</pre></div>
+
+
+<p>Navigate to some of the example posts and download:</p>
+<div class="highlight"><pre><span></span>wget https://raw.githubusercontent.com/charlesreid1/magic-flying-pelican/master/pelican/content/posts/hello-world-1.md
+</pre></div>
+
+
+<p>Taking a look, we see that each <code>.md</code> post file must have this header:</p>
+<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">Hello</span> <span class="n">world</span> <span class="n">number</span> <span class="n">one</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">13</span> <span class="mi">22</span><span class="o">:</span><span class="mi">00</span>
+<span class="n">Category</span><span class="o">:</span> <span class="n">Python</span>
+<span class="n">Tags</span><span class="o">:</span> <span class="n">pelican</span>
+<span class="n">Author</span><span class="o">:</span> <span class="n">charlesreid1</span>
+<span class="n">Summary</span><span class="o">:</span> <span class="n">First</span> <span class="n">hello</span> <span class="n">world</span> <span class="n">post</span>
+</pre></div>
+
+
+<p>Now we have to install Pelican and markdown. Luiz uses <a href="https://pipenv.readthedocs.io/en/latest/"><code>pipenv</code></a>. This will activate a new virtualenv with pelican and markdown available without messing with dependencies in your computer's $PATH.</p>
+<div class="highlight"><pre><span></span>pip install --user pipenv
+export PATH=~/.local/bin:$PATH
+pipenv install pelican markdown
+pipenv shell
+</pre></div>
+
+
+<p>Now we need some Pelican <a href="http://www.pelicanthemes.com/">themes</a>. (All themes are downloaded, so put them in a different location.)</p>
+<div class="highlight"><pre><span></span>cd ../../
+git clone --recursive https://github.com/getpelican/pelican-themes
+cd pelican-themes
+pelican-themes -i bootstrap
+</pre></div>
+
+
+<p>Change the path location of the theme in the <code>pelicanconf.py</code> file: </p>
+<div class="highlight"><pre><span></span>cd blog
+cp -a ../pelican-themes/bootstrap theme
+vi pelicanconf.py 
+</pre></div>
+
+
+<p>Specify the path where the theme will be saved to (this was copied with the command above).</p>
+<div class="highlight"><pre><span></span>THEME = &#39;./theme&#39;
+</pre></div>
+
+
+<p>Change other information, such as your name and site name and site url in the <code>pelicanconf.py</code> file.</p>
+<div class="highlight"><pre><span></span>wget https://raw.githubusercontent.com/charlesreid1/magic-flying-pelican/master/pelican/content/posts/hello-world-1.md
+mkdir posts
+mv hello-world-1.md posts/
+mv hello-world-1.md 2018-09-05.md
+vi 2018-09-05.md 
+</pre></div>
+
+
+<p>Then run:</p>
+<div class="highlight"><pre><span></span>pelican
+</pre></div>
+
+
+<p>This will produce output like this:</p>
+<div class="highlight"><pre><span></span><span class="n">WARNING</span><span class="o">:</span> <span class="n">Removed</span> <span class="n">extraneous</span> <span class="n">trailing</span> <span class="n">slash</span> <span class="n">from</span> <span class="n">SITEURL</span><span class="o">.</span>
+<span class="n">Done</span><span class="o">:</span> <span class="n">Processed</span> <span class="mi">2</span> <span class="n">articles</span><span class="o">,</span> <span class="mi">0</span> <span class="n">drafts</span><span class="o">,</span> <span class="mi">0</span> <span class="n">pages</span> <span class="n">and</span> <span class="mi">0</span> <span class="n">hidden</span> <span class="n">pages</span> <span class="k">in</span> <span class="mf">0.55</span> <span class="n">seconds</span><span class="o">.</span>
+</pre></div>
+
+
+<p>Check how it looks:</p>
+<div class="highlight"><pre><span></span>python -m http.server
+</pre></div>
+
+
+<p>(Go to http://localhost:8000/output/)</p>
+<p>At anytime, you can remove <code>output/</code>, because this is what is generated when running <code>pelican</code>.</p>
+<div class="highlight"><pre><span></span>rm -rf output/
+</pre></div>
+
+
+<h3>Hosting on github.io</h3>
+<p>Add/commit changes, then set up a repository on GitHub (don't initialize with <code>README.md</code>) to add as remote.</p>
+<div class="highlight"><pre><span></span>git add --all
+git status
+git commit -m &quot;first commit&quot;
+git remote add origin https://github.com/ljcohen/blog.git
+git push -u origin master
+</pre></div>
+
+
+<p>Install ghp-import:</p>
+<div class="highlight"><pre><span></span><span class="n">pipenv</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
+<span class="nn">pipenv</span> <span class="nn">install</span> <span class="nn">ghp</span><span class="o">-</span><span class="kn">import</span>
+<span class="nn">git</span> <span class="nn">status</span>
+<span class="n">git</span> <span class="n">diff</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
+<span class="nn">which</span> <span class="nn">ghp</span><span class="o">-</span><span class="kn">import</span>
+<span class="nn">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">--</span><span class="n">help</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="nn">pelican</span>
+<span class="n">pelican</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="nn">output</span>
+<span class="n">git</span> <span class="n">branch</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">p</span> <span class="n">output</span>
+</pre></div>
+
+
+<h3>Using travis-ci</h3>
+<p>Make a travis <code>.yml</code> file:</p>
+<div class="highlight"><pre><span></span>vi .travis.yml
+</pre></div>
+
+
+<p>With this content:</p>
+<div class="highlight"><pre><span></span><span class="n">language</span><span class="o">:</span> <span class="n">python</span>
+<span class="n">dist</span><span class="o">:</span> <span class="n">xenial</span>
+<span class="n">python</span><span class="o">:</span> <span class="s1">&#39;3.6&#39;</span>
+<span class="n">branches</span><span class="o">:</span>
+  <span class="n">only</span><span class="o">:</span>
+  <span class="o">-</span> <span class="n">master</span>
+<span class="n">install</span><span class="o">:</span>
+<span class="o">-</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pipenv</span>
+<span class="o">-</span> <span class="n">pipenv</span> <span class="n">install</span>
+<span class="n">script</span><span class="o">:</span>
+<span class="o">-</span> <span class="n">pipenv</span> <span class="n">run</span> <span class="n">pelican</span>
+<span class="n">deploy</span><span class="o">:</span>
+  <span class="n">provider</span><span class="o">:</span> <span class="n">pages</span>
+  <span class="n">skip</span><span class="o">-</span><span class="n">cleanup</span><span class="o">:</span> <span class="kc">true</span>
+  <span class="n">local</span><span class="o">-</span><span class="n">dir</span><span class="o">:</span> <span class="n">output</span>
+  <span class="n">github</span><span class="o">-</span><span class="n">token</span><span class="o">:</span> <span class="n">$GITHUB_TOKEN</span> <span class="err">#</span> <span class="n">Set</span> <span class="k">in</span> <span class="n">the</span> <span class="n">settings</span> <span class="n">page</span> <span class="n">of</span> <span class="n">your</span> <span class="n">repository</span>
+  <span class="n">on</span><span class="o">:</span>
+    <span class="n">branch</span><span class="o">:</span> <span class="n">master</span>
+</pre></div>
+
+
+<p>Add/commit:</p>
+<div class="highlight"><pre><span></span>git add .travis.yml 
+git commit -m &quot;added travis-ci&quot;
+git push -u origin master
+</pre></div>
+
+
+<ol>
+<li>Go to <a href="https://travis-ci.com/">travis-ci</a> and login to GitHub. </li>
+<li>Set up your <a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/">personal access tokens</a> on your GitHub account. </li>
+<li>Go to 'Settings', 'Integration &amp; services' in the GitHub repository to configure Travis CI with a key to give push access.</li>
+<li>Add the repository to Travis CI: https://travis-ci.com/ljcohen/blog</li>
+</ol>
+<p>You're done!</p>
+<p>Now add more posts!</p>
+<div class="highlight"><pre><span></span>vi 2018-09-05_b.md 
+vi 2018-09-05_b.md 
+git add 2018-09-05_b.md 
+git commit -m &quot;new post&quot;
+git push
+vi pelicanconf.py 
+</pre></div>
+
+
+<p>Travis CI will automatically run pelican and push to github.</p>
+<p>With Pelican, you can also <a href="http://docs.getpelican.com/en/stable/importer.html#">import an existing site, like from WordPress</a>.</p>
+<p>Thank you, Luiz!</p>
+<p><img alt="" src="/uploads/upload_80d0987c2010250d095a1fdf7b824513.png"></p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Blogging with Pelican&amp;url=https://ljcohen.github.io/blog/blogging-with-pelican.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://ljcohen.github.io/blog/blogging-with-pelican.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://ljcohen.github.io/blog/blogging-with-pelican.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="https://ljcohen.github.io/blog/tag/pelican.html">pelican</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+                <script type="text/javascript">
+                    var disqus = 'attilademo';
+                    var disqus_shortname = 'attilademo';
+                    var disqus_identifier = '/blogging-with-pelican.html';
+                    var disqus_url = 'https://ljcohen.github.io/blog/blogging-with-pelican.html';
+                </script>
+                <noscript>Please enable JavaScript to view the comments.</noscript>
+                <section class="post-comments">
+                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/blogging-with-pelican.html" >Show Comments</a>
+                    <div id="disqus_thread"></div>
+                </section>
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="https://ljcohen.github.io/blog/theme/js/script.js"></script>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3546274-12']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'attilademo';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>

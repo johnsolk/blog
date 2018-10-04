@@ -2,74 +2,111 @@
 # -*- coding: utf-8 -*- #
 import markdown
 
-AUTHOR = 'lisa johnson'
-SITENAME = 'comparative bioinformatics'
+AUTHOR = 'Lisa Johnson'
+SITENAME = 'monsteRbashSeq'
 SITEURL = 'https://ljcohen.github.io/blog/'
 TIMEZONE = 'America/Los_Angeles'
 DEFAULT_LANG = 'en'
+#DEFAULT_DATE = 'fs'
+#DEFAULT_DATE_FORMAT = '%d %b %Y'
 
 PATH = 'content'
 OUTPUT_PATH = 'output'
 
-# --------------8<---------------------
-# Theme
 
 THEME = './theme'
-# https://github.com/getpelican/pelican-themes/tree/master/bootstrap
+# https://github.com/arulrajnet/attila
 LINKS = [('name','url')]
 
-GITHUB_URL = 'https://github.com/ljcohen'
-TWITTER_USERNAME = 'monsterbashseq'
+HEADER_COVER = './img/sanomacoast.jpg'
+#GITHUB_URL = 'https://github.com/ljcohen'
+#TWITTER_USERNAME = 'monsterbashseq'
 DISQUS_SITENAME = 'https-ljcohen-github-io-blog'
-SOCIAL = [('twitter','https://twitter.com/monsterbashseq')]
-# --------------8<---------------------
-# Files and content
 
-# Set article URL
-#ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}'
-#ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html
 
-# Don't try to turn HTML files into pages
-READERS = {'html': None}
+#SOCIAL = [('twitter','https://twitter.com/monsterbashseq')]
 
-# This will look for a directory img/ 
-# inside the directory content/
-# The contents of img/ will be available at 
-# {{ SITEURL }}/img
-STATIC_PATHS = ['img']
+SOCIAL = (('twitter', 'https://twitter.com/monsterbashseq'),
+          ('github', 'https://github.com/ljcohen'),
+          ('flickr','https://www.flickr.com/155690017@N06/'),
+          ('envelope','mailto:ljcohen@ucdavis.edu'))
 
-# If we want to create static pages,
-# we should put them in content/pages
-PAGE_PATHS = ['pages']
+# Post and Pages path
+#ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}.html'
+#ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{slug}.html'
+#PAGE_URL = 'pages/{slug}/'
+#PAGE_SAVE_AS = 'pages/{slug}/index.html'
+#YEAR_ARCHIVE_SAVE_AS = '{date:%Y}/index.html'
+#MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
 
-# If we want to create blog posts (articles),
-# we should put them in content/posts
-ARTICLE_PATHS = ['posts']
+# Tags and Category path
+#CATEGORY_URL = 'category/{slug}'
+#CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+#CATEGORIES_SAVE_AS = 'catgegories.html'
+#TAG_URL = 'tag/{slug}'
+#TAG_SAVE_AS = 'tag/{slug}/index.html'
+#TAGS_SAVE_AS = 'tags.html'
 
-# -------------8<----------------------
-# Add an app with multiple files
-#
-# Look for files in example_app/ directory,
-# make them available on the site at /app
-"""
-EXTRA_TEMPLATES_PATHS = []
-TEMPLATE_PAGES = {}
+# Author
+#AUTHOR_URL = 'author/{slug}'
+#AUTHOR_SAVE_AS = 'author/{slug}/index.html'
+#AUTHORS_SAVE_AS = 'authors.html'
 
-EXTRA_TEMPLATES_PATHS.append('example_app') # This is where these files live
-#TEMPLATE_PAGES[filename]      = /final/site/path/filename
-TEMPLATE_PAGES['my_app.html'] = 'app/index.html'
-TEMPLATE_PAGES['app.js']      = 'app/app.js'
-TEMPLATE_PAGES['app.css']     = 'app/app.css'
-TEMPLATE_PAGES['data.json']   = 'app/data.json'
-"""
+### Plugins
 
-# --------------8<---------------------
-# idk just some dumb stuff
+#PLUGIN_PATHS = [
+#  'pelican-plugins'
+#]
 
-DISPLAY_PAGES_ON_MENU = False
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
-DEFAULT_PAGINATION = False
+#PLUGINS = [
+#  'sitemap',
+#  'neighbors',
+#  'assets'
+#]
+
+# Sitemap
+#SITEMAP = {
+#    'format': 'xml',
+#    'priorities': {
+#        'articles': 0.5,
+#        'indexes': 0.5,
+#        'pages': 0.5
+#    },
+#    'changefreqs': {
+#        'articles': 'monthly',
+#        'indexes': 'daily',
+#        'pages': 'monthly'
+#    }
+#}
+
+# Comments
+DISQUS_SITENAME = "attilademo"
+
+# Analytics
+GOOGLE_ANALYTICS = "UA-3546274-12"
+
+
+### Theme specific settings
+
+HEADER_COVER = 'img/sanomacoast.jpg'
+
+COLOR_SCHEME_CSS = 'github.css'
+
+CSS_OVERRIDE = ['css/myblog.css']
+
+AUTHORS_BIO = {
+  "zutrinken": {
+    "name": "Zutrinken",
+    "cover": "https://casper.ghost.org/v1.0.0/images/team.jpg",
+    "image": "assets/images/avatar.png",
+    "website": "http://blog.arulraj.net",
+    "linkedin": "unavailable",
+    "github": "arulrajnet",
+    "location": "Chennai",
+    "bio": "This is the place for a small biography with max 200 characters. Well, now 100 are left. Cool, hugh?"
+  }
+}
+
+# Custom Header
+
+#HEADER_COVERS_BY_TAG = {'cupcake': 'assets/images/rainbow_cupcake_cover.png', 'general':'https://casper.ghost.org/v1.0.0/images/writing.jpg'}
