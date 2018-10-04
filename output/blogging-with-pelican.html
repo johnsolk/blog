@@ -9,6 +9,170 @@
 
 
 
+
+<style type="text/css">
+
+/*some stuff for output/input prompts*/
+div.cell{border:1px solid transparent;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}div.cell.selected{border-radius:4px;border:thin #ababab solid}
+div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
+div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
+div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
+@media (max-width:480px){div.prompt{text-align:left}}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;line-height:1.21429em}
+div.prompt:empty{padding-top:0;padding-bottom:0}
+div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;}
+div.inner_cell{width:90%;}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;}
+div.input_prompt{color:navy;border-top:1px solid transparent;}
+div.output_wrapper{margin-top:5px;position:relative;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;}
+div.output_scroll{height:24em;width:100%;overflow:auto;border-radius:4px;-webkit-box-shadow:inset 0 2px 8px rgba(0, 0, 0, 0.8);-moz-box-shadow:inset 0 2px 8px rgba(0, 0, 0, 0.8);box-shadow:inset 0 2px 8px rgba(0, 0, 0, 0.8);}
+div.output_collapsed{margin:0px;padding:0px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;}
+div.out_prompt_overlay{height:100%;padding:0px 0.4em;position:absolute;border-radius:4px;}
+div.out_prompt_overlay:hover{-webkit-box-shadow:inset 0 0 1px #000000;-moz-box-shadow:inset 0 0 1px #000000;box-shadow:inset 0 0 1px #000000;background:rgba(240, 240, 240, 0.5);}
+div.output_prompt{color:darkred;}
+
+a.anchor-link:link{text-decoration:none;padding:0px 20px;visibility:hidden;}
+h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anchor-link,h5:hover .anchor-link,h6:hover .anchor-link{visibility:visible;}
+/* end stuff for output/input prompts*/
+
+
+.highlight-ipynb .hll { background-color: #ffffcc }
+.highlight-ipynb  { background: #f8f8f8; }
+.highlight-ipynb .c { color: #408080; font-style: italic } /* Comment */
+.highlight-ipynb .err { border: 1px solid #FF0000 } /* Error */
+.highlight-ipynb .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight-ipynb .o { color: #666666 } /* Operator */
+.highlight-ipynb .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight-ipynb .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight-ipynb .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight-ipynb .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight-ipynb .gd { color: #A00000 } /* Generic.Deleted */
+.highlight-ipynb .ge { font-style: italic } /* Generic.Emph */
+.highlight-ipynb .gr { color: #FF0000 } /* Generic.Error */
+.highlight-ipynb .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight-ipynb .gi { color: #00A000 } /* Generic.Inserted */
+.highlight-ipynb .go { color: #888888 } /* Generic.Output */
+.highlight-ipynb .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight-ipynb .gs { font-weight: bold } /* Generic.Strong */
+.highlight-ipynb .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight-ipynb .gt { color: #0044DD } /* Generic.Traceback */
+.highlight-ipynb .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight-ipynb .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight-ipynb .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight-ipynb .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight-ipynb .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight-ipynb .kt { color: #B00040 } /* Keyword.Type */
+.highlight-ipynb .m { color: #666666 } /* Literal.Number */
+.highlight-ipynb .s { color: #BA2121 } /* Literal.String */
+.highlight-ipynb .na { color: #7D9029 } /* Name.Attribute */
+.highlight-ipynb .nb { color: #008000 } /* Name.Builtin */
+.highlight-ipynb .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight-ipynb .no { color: #880000 } /* Name.Constant */
+.highlight-ipynb .nd { color: #AA22FF } /* Name.Decorator */
+.highlight-ipynb .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight-ipynb .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight-ipynb .nf { color: #0000FF } /* Name.Function */
+.highlight-ipynb .nl { color: #A0A000 } /* Name.Label */
+.highlight-ipynb .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight-ipynb .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight-ipynb .nv { color: #19177C } /* Name.Variable */
+.highlight-ipynb .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight-ipynb .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight-ipynb .mf { color: #666666 } /* Literal.Number.Float */
+.highlight-ipynb .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight-ipynb .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight-ipynb .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight-ipynb .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight-ipynb .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight-ipynb .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight-ipynb .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight-ipynb .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight-ipynb .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight-ipynb .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight-ipynb .sx { color: #008000 } /* Literal.String.Other */
+.highlight-ipynb .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight-ipynb .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight-ipynb .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight-ipynb .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight-ipynb .vc { color: #19177C } /* Name.Variable.Class */
+.highlight-ipynb .vg { color: #19177C } /* Name.Variable.Global */
+.highlight-ipynb .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight-ipynb .il { color: #666666 } /* Literal.Number.Integer.Long */
+</style>
+
+<style type="text/css">
+/* Overrides of notebook CSS for static HTML export */
+div.entry-content {
+  overflow: visible;
+  padding: 8px;
+}
+.input_area {
+  padding: 0.2em;
+}
+
+a.heading-anchor {
+ white-space: normal;
+}
+
+.rendered_html
+code {
+ font-size: .8em;
+}
+
+pre.ipynb {
+  color: black;
+  background: #f7f7f7;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0;
+  padding: 0;
+  margin: 0px;
+  font-size: 13px;
+}
+
+/* remove the prompt div from text cells */
+div.text_cell .prompt {
+    display: none;
+}
+
+/* remove horizontal padding from text cells, */
+/* so it aligns with outer body text */
+div.text_cell_render {
+    padding: 0.5em 0em;
+}
+
+img.anim_icon{padding:0; border:0; vertical-align:middle; -webkit-box-shadow:none; -box-shadow:none}
+
+div.collapseheader {
+    width=100%;
+    padding: 2px;
+    cursor: pointer;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
 <link rel="canonical" href="https://ljcohen.github.io/blog/blogging-with-pelican.html">
 
         <meta name="author" content="Lisa K. Johnson" />
@@ -32,6 +196,7 @@
     <link href="https://ljcohen.github.io/blog/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="https://ljcohen.github.io/blog/theme/css/pygments/native.css" rel="stylesheet">
+    <link href="https://ljcohen.github.io/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
     <link rel="stylesheet" href="https://ljcohen.github.io/blog/theme/css/style.css" type="text/css"/>
         <link href="https://ljcohen.github.io/blog/static/custom.css" rel="stylesheet">
 
@@ -65,6 +230,11 @@ monsteRbashSeq            </a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+              <li><span>
+                <form class="navbar-search" action="/search.html">
+                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -74,7 +244,7 @@ monsteRbashSeq            </a>
 <!-- Banner -->
 <style>
 	#banner{
-	    background-image:url("https://ljcohen.github.io/blog/./img/sanomacoast.jpg");
+	    background-image:url("https://ljcohen.github.io/blog/https://www.dropbox.com/s/b8ejwn4irxxtvaf/sanomacoast.png");
 	}
 </style>
 
@@ -121,11 +291,17 @@ monsteRbashSeq            </a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
                 <p>Luiz was gratious in spending some time walking us through how to set up a blog with Pelican, host it on <a href="https://pages.github.com/">github.io</a>, and have <a href="https://travis-ci.com/">travis-ci</a> test and deploy.</p>
-<p>Video: https://www.youtube.com/watch?v=QhC9yjUQL6o</p>
+<p>Video: </p>
+<p><span class="videobox">
+                <iframe width="640" height="390"
+                    src='https://www.youtube.com/embed/QhC9yjUQL6o'
+                    frameborder='0' webkitAllowFullScreen mozallowfullscreen
+                    allowFullScreen>
+                </iframe>
+            </span></p>
 <p>We started with the tutorial from <a href="https://git.charlesreid1.com/charlesreid1/how-do-i-pelican">Charles Reid</a>, which has <a href="https://github.com/charlesreid1/magic-flying-pelican/pelican/">practice content</a>.</p>
 <h2>Some Background</h2>
-<p>Over the past few years as a PhD student in Dr. Titus Brown's <a href="http://ivory.idyll.org/lab/">DIB Lab</a> at UC Davis, I've been fortunate to be able to expand my data science toolkit. This has included a range of skills from <a href="https://www.biorxiv.org/content/early/2018/05/17/323576">automated genomic-scale data analysis &amp; visualization</a> to time-saving tricks like note-taking in <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">markdown</a>. Markdown is a <a href="https://en.wikipedia.org/wiki/Markdown">simple text-formatting language</a>, sorta like html. At the encouragement of Titus a few years ago during our summer <a href="http://ivory.idyll.org/dibsi/">DIBSI workshop</a>, I started taking notes on the online collaborative document site, <a href="https://hackmd.io/">hackmd.io</a>. This cool site lets you write in markdown, and immediately see it rendered on the right side. The link can be shared with collaborators, and the document can be exported to <code>.pdf</code>, <code>.html</code>, or <code>.md</code> formats. </p>
-<p><a href="https://hackmd.io/"><img alt="" src="/uploads/upload_29bccf36bfae6cb042d13b1c958e511f.png"></a></p>
+<p>Over the past few years as a PhD student in Dr. Titus Brown's <a href="http://ivory.idyll.org/lab/">DIB Lab</a> at UC Davis, I've been fortunate to be able to expand my data science toolkit. This has included a range of skills from <a href="https://www.biorxiv.org/content/early/2018/05/17/323576">automated genomic-scale data analysis &amp; visualization</a> to time-saving tricks like note-taking in <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">markdown</a>. Markdown is a <a href="https://en.wikipedia.org/wiki/Markdown">simple text-formatting language</a>, sorta like html. At the encouragement of Titus a few years ago during our summer <a href="http://ivory.idyll.org/dibsi/">DIBSI workshop</a>, I started taking notes on the online collaborative document site, <a href="https://hackmd.io/">hackmd.io</a>. This cool site lets you write in markdown, and immediately see it rendered on the right side. The link can be shared with collaborators, and the document can be exported to <code>.pdf</code>, <code>.html</code>, or <code>.md</code> formats.</p>
 <p>I've had <a href="https://monsterbashseq.wordpress.com/">a blog</a> that I started when I was learning and developing computational skills for genomics research <a href="http://vosslab.weebly.com/lab-alumni.html">as a lab technician at HBOI in FL</a>. Wordpress blogs are great for quickly publishing a post, with capacity for formatting pictures (screenshots) and links to Tweets. But manually converting <code>.md</code> documents and code chunks in the online wordpress user interface is tedious. </p>
 <p>This week, when <a href="https://github.com/luizirber">Luiz Irber</a> re-instated our weekly chain of lab group emails outlining our past week's accomplishments and goals for the coming week, I casually mentioned in my summary that I wanted to migrate from wordpress to a more markdown-friendly format for my blog. I've tried <a href="https://jekyllrb.com/">Jekyll</a> in the past, and have been slowly migrating <a href="https://ljcohen.github.io/">my website</a> to something markdown-friendly, but haven't quite hit my stride yet with migrating my blog over. Luiz immediately chimed in that <a href="http://docs.getpelican.com/en/3.6.3/quickstart.html">Pelican</a> is great! And uses it for his <a href="https://blog.luizirber.org/">blog</a>. It turns out that <a href="http://ivory.idyll.org/blog/">Titus' blog</a> and other lab mate, <a href="https://charlesreid1.com/">Charles Reid</a> both have their blogs in Pelican as well. One of the many advantages of Pelican is that it is written in Python, unlike Jekyll which is written in Ruby. (I'm more comfortable coding and debugging in Python than in Ruby.) And Charles provided lots of documentation on how to use Pelican! It's great to be in a lab group where people have such useful and encouraging advice.</p>
 <h2>Tutorial</h2>
@@ -301,7 +477,7 @@ vi pelicanconf.py
 <p>Travis CI will automatically run pelican and push to github.</p>
 <p>With Pelican, you can also <a href="http://docs.getpelican.com/en/stable/importer.html#">import an existing site, like from WordPress</a>.</p>
 <p>Thank you, Luiz!</p>
-<p><img alt="" src="/uploads/upload_80d0987c2010250d095a1fdf7b824513.png"></p>
+<p><img src="https://www.dropbox.com/s/xpr87ye8dmqex38/dib.jpg"></p>
             </div>
             <!-- /.entry-content -->
     <hr/>
@@ -422,6 +598,19 @@ vi pelicanconf.py
     </script>
     <!-- End Disqus Code -->
 
-
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $("div.collapseheader").click(function () {
+    $header = $(this).children("span").first();
+    $codearea = $(this).children(".input_area");
+    console.log($(this).children());
+    $codearea.slideToggle(500, function () {
+        $header.text(function () {
+            return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
+        });
+    });
+});
+});
+</script>
 </body>
 </html>
