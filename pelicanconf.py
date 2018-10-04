@@ -24,8 +24,8 @@ DISPLAY_CATEGORIES_ON_MENU = True
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.youtube', 'liquid_tags.vimeo',
-           'liquid_tags.include_code', 'tipue_search',
-           'i18n_subsites']
+           'liquid_tags.include_code', liquid_tags.notebook',
+           'tipue_search','i18n_subsites']
 
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 
