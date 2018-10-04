@@ -8,6 +8,7 @@ pelican = "*"
 markdown = "*"
 ghp-import = "*"
 python-gettext = "*"
+"beautifulsoup4" = "*"
 
 [dev-packages]
 
