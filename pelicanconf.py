@@ -22,7 +22,10 @@ LINKS = [('name','url')]
 DISPLAY_CATEGORIES_ON_MENU = True
 
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['i18n_subsites']
+PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
+           'liquid_tags.youtube', 'liquid_tags.vimeo',
+           'liquid_tags.include_code', 'tipue_search',
+           'i18n_subsites']
 
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 
