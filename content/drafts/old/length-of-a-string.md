@@ -1,8 +1,0 @@
-Title: Length of a String
-Date: 2015-03-27 17:06
-Author: monsterbashseq
-Category: bash, Linux
-Slug: length-of-a-string
-Status: published
-
-` [17:05] cohenl06@phoenix2 ~ $ a=TGCGGTTATCCATCTGCTTATGGAAGCCAAGCATTGGGGATTGAGAAAGAGTAGAAATGCCACAAGCCTCAATAGCAGGTTTAAGAGCCTCGATACGCTCAAAGTCAAAATAATCAGCGTGACATTCAGAAGGGTAATAAGAACGAACCAA [17:05] cohenl06@phoenix2 ~ $ echo ${#a} 151`
