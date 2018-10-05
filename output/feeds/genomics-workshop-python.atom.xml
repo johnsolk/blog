@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Genomics Workshop, Python</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/genomics-workshop-python.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2014-01-21T15:02:00-08:00</updated><entry><title>PYTHONPATH</title><link href="https://ljcohen.github.io/blog/pythonpath.html" rel="alternate"></link><published>2014-01-21T15:02:00-08:00</published><updated>2014-01-21T15:02:00-08:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2014-01-21:/blog/pythonpath.html</id><summary type="html">&lt;p&gt;To run graphing graphics in Python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~$ pip install matplotlib
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Installing Python modules with virtualenv or pip:&lt;br&gt;
+http://www.bdnyc.org/2012/09/17/editing-pythonpath-to-import-modules/&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Logical and neat directory structure will make your own, your
+computer's and your collaborators' lives much easier.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;My recommendation:&lt;/strong&gt; Create a master code directory …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;To run graphing graphics in Python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~$ pip install matplotlib
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Installing Python modules with virtualenv or pip:&lt;br&gt;
+http://www.bdnyc.org/2012/09/17/editing-pythonpath-to-import-modules/&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Logical and neat directory structure will make your own, your
+computer's and your collaborators' lives much easier.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;My recommendation:&lt;/strong&gt; Create a master code directory (called
+"Modules" or something) in your Documents folder. This will be the new
+home of all your future Python projects.&lt;/p&gt;
+&lt;p&gt;http://deweylab.biostat.wisc.edu/rsem/README.html&lt;/p&gt;
+&lt;p&gt;Now every time you create a .py file, it should go into a project
+folder inside your Modules directory, i.e.
+/Documents/Modules/NewProject/MyModule.py. Note that you should have
+no actual modules inside your Modules directory! Keep those puppies in
+their warm, snuggly project subdirectories.&lt;/p&gt;
+&lt;p&gt;This way you can also initialize that project folder (i.e.
+/NewProject) as a Git repository and just push and pull the contents
+to keep it up-to-date!&lt;/p&gt;
+&lt;/blockquote&gt;</content></entry></feed>

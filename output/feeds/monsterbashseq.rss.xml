@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>monsteRbashSeq - monsterbashseq</title><link>https://ljcohen.github.io/blog/</link><description></description><lastBuildDate>Thu, 01 Feb 2018 11:41:00 -0800</lastBuildDate><item><title>Q&amp;A at Porecamp TAMU, June 2017: From the Ebola Outbreak to Sequencing on Mars</title><link>https://ljcohen.github.io/blog/qa-at-porecamp-tamu-june-2017-from-the-ebola-outbreak-to-sequencing-on-mars.html</link><description>&lt;p&gt;https://twitter.com/monsterbashseq/status/871794185866625024&lt;/p&gt;
+&lt;p&gt;As part of my PhD project at UC Davis with &lt;a href="http://ivory.idyll.org/lab/"&gt;Dr. C. Titus
+Brown&lt;/a&gt; and &lt;a href="https://whiteheadresearch.wordpress.com/"&gt;Dr. Andrew
+Whitehead&lt;/a&gt;, I am assessing the
+feasibility of using &lt;a href="https://nanoporetech.com/products/minion"&gt;Oxford Nanopore Technologies (ONT)
+MinION&lt;/a&gt; device to generate
+long reads of DNA sequencing data for &lt;em&gt;de novo &lt;/em&gt;genome assemblies …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 01 Feb 2018 11:41:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2018-02-01:/blog/qa-at-porecamp-tamu-june-2017-from-the-ebola-outbreak-to-sequencing-on-mars.html</guid></item><item><title>ASLO Aquatic Sciences meeting - Honolulu, HI</title><link>https://ljcohen.github.io/blog/aslo-aquatic-sciences-meeting-honolulu-hi-feb-27-to-march-3-2017.html</link><description>&lt;p&gt;Aloha!&lt;/p&gt;
+&lt;p&gt;Last week I gave a
+&lt;a href="https://www.sgmeet.com/aslo/honolulu2017/viewabstract.asp?abstractid=29893"&gt;talk&lt;/a&gt; on
+re-assembling de novo transcriptomes for the
+&lt;a href="http://marinemicroeukaryotes.org/"&gt;MMETSP&lt;/a&gt; at the Association for the
+Sciences of Limnology &amp;amp; Oceanography (ASLO) &lt;a href="https://www.sgmeet.com/aslo/honolulu2017/program.asp"&gt;Aquatic Sciences
+meeting&lt;/a&gt; in
+Honolulu, HI held at the Hawaii Convention Center from February 27 to
+March 3, 2017.&lt;/p&gt;
+&lt;p&gt;Here are links to the latest …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 10 Mar 2017 00:10:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2017-03-10:/blog/aslo-aquatic-sciences-meeting-honolulu-hi-feb-27-to-march-3-2017.html</guid></item><item><title>About</title><link>https://ljcohen.github.io/blog/about.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 18 Feb 2017 21:09:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2017-02-18:/blog/about.html</guid></item><item><title>Home</title><link>https://ljcohen.github.io/blog/home.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 18 Feb 2017 21:06:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2017-02-18:/blog/home.html</guid></item><item><title>No title [mmetsp]</title><link>https://ljcohen.github.io/blog/mmetsp.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 18 Feb 2017 21:05:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2017-02-18:/blog/mmetsp.html</guid></item><item><title>DIB Lab Retreat to Yosemite, February 2017</title><link>https://ljcohen.github.io/blog/dib-lab-retreat-to-yosemite-february-2017.html</link><description>&lt;p&gt;[This past weekend, all of us in Titus Brown's Data Intensive Biology
+(DIB) lab went to]{style="font-weight:400;"}&lt;a href="http://www.yosemitebug.com/"&gt;[Yosemite
+Bug]{style="font-weight:400;"}&lt;/a&gt;[, which is
+just outside]{style="font-weight:400;"}&lt;a href="https://www.nps.gov/yose/index.htm"&gt;[Yosemite National
+Park]{style="font-weight:400;"}&lt;/a&gt;[,
+for our first (annual?) lab retreat. We had a great time! I personally …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 08 Feb 2017 20:46:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2017-02-08:/blog/dib-lab-retreat-to-yosemite-february-2017.html</guid></item><item><title>MMETSP re-assemblies</title><link>https://ljcohen.github.io/blog/mmetsp-re-assemblies.html</link><description>&lt;p&gt;*** Update (9/27/2016): 719 assemblies now available at the links
+below. All FINISHED!!!&lt;/p&gt;
+&lt;p&gt;*** Update (9/22/2016): 715 assemblies now available at the links
+below.&lt;/p&gt;
+&lt;p&gt;I have *almost* finished re-assembling &lt;em&gt;de novo&lt;/em&gt; transcriptomes from
+the Marine Microbial Eukaryotic Transcriptome Sequencing Project
+(&lt;a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001889"&gt;Keeling et al.
+2014&lt;/a&gt;).
+This is an effort …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 13 Sep 2016 14:56:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2016-09-13:/blog/mmetsp-re-assemblies.html</guid></item><item><title>Adventures with ONT MinION at MBL's Microbial Diversity Course</title><link>https://ljcohen.github.io/blog/adventures-with-ont-minion-at-mbls-microbial-diversity-course.html</link><description>&lt;p&gt;My time here at the &lt;a href="http://www.mbl.edu/microbialdiversity/"&gt;Microbial Diversity
+Course&lt;/a&gt; at
+&lt;a href="http://www.mbl.edu/"&gt;MBL&lt;/a&gt; has come to an end after visiting for the
+past 2 weeks with our
+&lt;a href="http://ivory.idyll.org/lab/"&gt;lab's&lt;/a&gt; &lt;a href="https://www.nanoporetech.com/"&gt;MinION&lt;/a&gt; to
+sequence genomes from bacterial isolates that students collected from
+the Trunk River in Woods Hole, MA. (Photo by Jared Leadbetter of
+'Ectocooler' &lt;em&gt;Tenacibaculum …&lt;/em&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 13 Aug 2016 07:43:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2016-08-13:/blog/adventures-with-ont-minion-at-mbls-microbial-diversity-course.html</guid></item><item><title>Computing Workflows for Biologists - Dr. Tracy Teal</title><link>https://ljcohen.github.io/blog/computing-workflows-for-biologists-dr-tracy-teal.html</link><description>&lt;p&gt;I'm so excited to be visiting the
+&lt;a href="http://www.mbl.edu/microbialdiversity/"&gt;Microbial Diversity Course&lt;/a&gt; at
+the &lt;a href="http://www.mbl.edu/"&gt;Marine Biological Lab&lt;/a&gt; in Woods Hole,
+Massachusetts right now. Really enjoying talking to students and faculty
+working on projects related to microbial communities, aspects of
+microbial metabolism, microbial genomics, transcriptomics. I'm here with
+our
+&lt;a href="http://ivory.idyll.org/lab/"&gt;lab&lt;/a&gt;'s &lt;a href="https://www.nanoporetech.com/products-services/minion-mki"&gt;MinION&lt;/a&gt;
+to …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sun, 31 Jul 2016 15:33:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2016-07-31:/blog/computing-workflows-for-biologists-dr-tracy-teal.html</guid></item><item><title>Marine Microbes! What to do with all the data?</title><link>https://ljcohen.github.io/blog/marine-microbes-what-to-do-with-all-the-data.html</link><description>&lt;p&gt;UPDATE: Check out Titus' blog post, &lt;a href="http://ivory.idyll.org/blog/2016-mmetsp-a-first-look.html"&gt;Bashing on monstrous sequencing
+collections&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;[Since Sept 2015, I've been a PhD student
+in]{style="font-weight:400;"}&lt;a href="http://ivory.idyll.org/lab/index.html"&gt;[C. Titus Brown’s
+lab]{style="font-weight:400;"}&lt;/a&gt;[
+at]{style="font-weight:400;"}&lt;a href="http://mcip.ucdavis.edu/"&gt;[UC
+Davis]{style="font-weight:400;"}&lt;/a&gt;[ working
+with data from]{style="font-weight:400;"}&lt;a href="http://marinemicroeukaryotes.org/"&gt;[Moore’s Marine …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 07 Apr 2016 10:30:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2016-04-07:/blog/marine-microbes-what-to-do-with-all-the-data.html</guid></item><item><title>Intro git - Lab meeting</title><link>https://ljcohen.github.io/blog/intro-git-lab-meeting.html</link><description>&lt;p&gt;By the end of this meeting, you will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new repository&lt;/li&gt;
+&lt;li&gt;Edit readme.md (markdown lesson from Reid Brennan)&lt;/li&gt;
+&lt;li&gt;clone to local desktop&lt;/li&gt;
+&lt;li&gt;make changes&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;commit and push changes&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Create a new repository&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Click on the "New" button to create a new repository:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="new_repository" src="https://monsterbashseq.files.wordpress.com/2016/03/new_repository.png"&gt;{.alignnone
+.size-full .wp-image-2318 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 08 Mar 2016 22:52:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2016-03-08:/blog/intro-git-lab-meeting.html</guid></item><item><title>Fish Gill Cell Culture System, MCB263 science communication assignment</title><link>https://ljcohen.github.io/blog/fish-gill-cell-culture-system-mcb263-science-communication-assignment.html</link><description>&lt;p&gt;https://twitter.com/monsterbashseq/status/703080905296904192&lt;/p&gt;
+&lt;p&gt;My tweet for this week's
+&lt;a href="https://monsterbashseq.wordpress.com/2016/01/14/mcb263-science-communication-via-social-media-assignment/"&gt;MCB263&lt;/a&gt;
+science communication assignment is about a new technique by researchers
+at King's College London, published in &lt;a href="http://www.nature.com/nprot/journal/v11/n3/full/nprot.2016.029.html"&gt;Nature
+Protocols&lt;/a&gt;,
+using freshwater gill tissue in culture as a proxy for &lt;em&gt;in vivo&lt;/em&gt; fish
+gill tissue which is commonly used in …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 26 Feb 2016 13:57:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2016-02-26:/blog/fish-gill-cell-culture-system-mcb263-science-communication-assignment.html</guid></item><item><title>Downloading masses of files, useful ftp commands</title><link>https://ljcohen.github.io/blog/downloading-masses-of-files-useful-ftp-commands.html</link><description>&lt;p&gt;You have finished a sequencing project and now your sequencing facility
+is sending you lots of files! You're eager to see your results. Your
+facility sends you a link with files displayed on a website. Now what
+are you supposed to do?&lt;/p&gt;
+&lt;p&gt;First, log in to your hpc server (AWS …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 02 Feb 2016 11:25:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2016-02-02:/blog/downloading-masses-of-files-useful-ftp-commands.html</guid></item><item><title>How to install linux software without root privileges</title><link>https://ljcohen.github.io/blog/how-to-install-linux-software-without-root-privileges.html</link><description>&lt;p&gt;HPC cluster users rarely have root privileges for installing new
+software. Default location for installation is usually /usr/bin/, but
+our user directories are usually located somewhere else like
+/home/ljcohen/ or /mnt/home/ljcohen/. So, what are you supposed to do
+when you need to use a new software …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sun, 24 Jan 2016 23:51:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2016-01-24:/blog/how-to-install-linux-software-without-root-privileges.html</guid></item><item><title>Genetically-engineered chestnut tree, MCB263 scicomm assignment 2</title><link>https://ljcohen.github.io/blog/genetically-engineered-chestnut-tree-mcb263-scicomm-assignment-2.html</link><description>&lt;p&gt;My tweet post for this week's &lt;a href="https://monsterbashseq.wordpress.com/2016/01/14/mcb263-science-communication-via-social-media-assignment/"&gt;MCB263 sci comm
+assignment&lt;/a&gt;
+is on the genetically-engineered chestnut tree. This is the first
+transgenic plant to ever be considered for use in species and ecological
+restoration. It is currently under review by the US EPA and USDA.&lt;/p&gt;
+&lt;p&gt;https://twitter.com/monsterbashseq/status/690641259325599744 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 22 Jan 2016 14:04:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2016-01-22:/blog/genetically-engineered-chestnut-tree-mcb263-scicomm-assignment-2.html</guid></item><item><title>MCB263 Science Communication via Social Media assignment</title><link>https://ljcohen.github.io/blog/mcb263-science-communication-via-social-media-assignment.html</link><description>&lt;p&gt;This winter quarter at UC Davis I'm taking a course called
+'Biotechnology Fundamentals and Applications' by &lt;a href="http://ucd-advance.ucdavis.edu/profile/denneal-jamison-mcclung"&gt;Dr. Denneal
+Jamison-McClung&lt;/a&gt;,
+which is required for my degree with a designated emphasis in
+biotechnology (DEB). (This is like a doctoral minor. It will show up on
+my diploma and my transcript.) This course …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 14 Jan 2016 19:05:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2016-01-14:/blog/mcb263-science-communication-via-social-media-assignment.html</guid></item><item><title>UC Davis Docker workshop, live-coding</title><link>https://ljcohen.github.io/blog/uc-davis-docker-workshop-live-coding.html</link><description>&lt;p&gt;For the second day of the UC Davis &lt;a href="http://dib-training.readthedocs.org/en/pub/2015-11-09-docker.html"&gt;Docker
+workshop&lt;/a&gt;,
+&lt;a href="http://ivory.idyll.org/blog/"&gt;Dr. Titus Brown&lt;/a&gt; initiates a "teach-me"
+session on how to make a Docker container. He will live-code and we will
+tell him what to write. The idea is to package software he knows well,
+e.g. &lt;a href="https://github.com/dib-lab/khmer"&gt;khmer&lt;/a&gt; into a Docker …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 10 Nov 2015 11:53:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-11-10:/blog/uc-davis-docker-workshop-live-coding.html</guid></item><item><title>Bioboxes Demo at UC Davis</title><link>https://ljcohen.github.io/blog/bioboxes-demo-at-uc-davis.html</link><description>&lt;p&gt;&lt;a href="http://www.bioinformaticszen.com/"&gt;Michael Barton&lt;/a&gt;,
+&lt;a href="http://jgi.doe.gov/"&gt;JGI&lt;/a&gt; sequencing QA/QC group&lt;/p&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/22487127088/&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DNA sequencing&lt;/li&gt;
+&lt;li&gt;Evaluating scientific software&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://bioboxes.org/"&gt;Bioboxes&lt;/a&gt;,
+    &lt;a href="http://nucleotid.es/"&gt;nucleotid.es&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/22284282293/&lt;/p&gt;
+&lt;p&gt;Suggests reading &lt;a href="https://en.wikipedia.org/wiki/Malcom_McLean"&gt;Malcom
+McLean&lt;/a&gt; ([&lt;a href="http://press.princeton.edu/titles/9383.html"&gt;The
+Box&lt;/a&gt;]{style="text-decoration:underline;"}),
+who implemented idea for standardized cargo containers. All you have to
+do …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 09 Nov 2015 14:47:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-11-09:/blog/bioboxes-demo-at-uc-davis.html</guid></item><item><title>Docker hands-on workshop at UC Davis</title><link>https://ljcohen.github.io/blog/docker-hands-on-workshop-at-uc-davis.html</link><description>&lt;p&gt;&lt;a href="http://ivory.idyll.org/lab/"&gt;Dr. C. Titus Brown&lt;/a&gt;, &lt;a href="http://dib-training.readthedocs.org/en/pub/2015-11-09-docker.html"&gt;Docker hands-on
+workshop at UC
+Davis&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dib-training.readthedocs.org/en/pub/"&gt;Lots of workshops available at
+UCD&lt;/a&gt;, open to everyone and
+free! (sign up, as max capacity is 40) Entry and intermediate levels
+available. &lt;a href="http://datascience.ucdavis.edu/"&gt;Data Science Initiative&lt;/a&gt; is
+a hub for data science on campus with space available for workshops in …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 09 Nov 2015 11:29:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-11-09:/blog/docker-hands-on-workshop-at-uc-davis.html</guid></item><item><title>Physiology and Bioinformatics</title><link>https://ljcohen.github.io/blog/physiology-and-bioinformatics.html</link><description>&lt;p&gt;Physiologists strive to understand how and why things work in living
+tissues. I've been trying to think about physiology in the context of my
+research interests in genomics and bioinformatics in nonmodel species.
+We don't discuss this at all in my physiology courses, but I can't help
+thinking about sequencing …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 31 Oct 2015 12:51:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-10-31:/blog/physiology-and-bioinformatics.html</guid></item><item><title>Extracting biological features from 'big data' with ADAGE - Dr. Casey Greene</title><link>https://ljcohen.github.io/blog/extracting-biological-features-from-big-data-with-adage-dr-casey-greene.html</link><description>&lt;p&gt;&lt;a href="http://www.greenelab.com/research"&gt;Dr. Casey Greene, University of
+Pennsylvania&lt;/a&gt; - talk at UC Davis,
+October 12, 2015&lt;/p&gt;
+&lt;p&gt;Twitter, to be
+used! &lt;a href="https://twitter.com/GreeneScientist"&gt;@GreeneScientist&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Started with example that &lt;a href="https://hbr.org/2015/10/the-ceo-of-bolthouse-farms-on-making-carrots-cool"&gt;Carrots are routine fun part of every
+day!&lt;/a&gt; Just
+like bioinformatics and genomics. Aim to scale up data universe from lab
+-&amp;gt; publicly-available -&amp;gt; compendium. Big data universe right now …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 12 Oct 2015 11:51:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-10-12:/blog/extracting-biological-features-from-big-data-with-adage-dr-casey-greene.html</guid></item><item><title>Time Travel in Experimental Evolution - Dr. Richard Lenski</title><link>https://ljcohen.github.io/blog/time-travel-in-experimental-evolution-dr-richard-lenski.html</link><description>&lt;p&gt;https://www.flickr.com/photos/lpcohen/21407367043/in/dateposted-public/&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://myxo.css.msu.edu/"&gt;Dr. Richard Lenski, Michigan State
+University&lt;/a&gt; (&lt;a href="https://telliamedrevisited.wordpress.com/"&gt;blog&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Fascinating long-term research experiment, has been culturing E. coli
+over several decades&lt;/p&gt;
+&lt;p&gt;Historical context of evolution experiments: Darwin thought evolution
+too slow to observe, "no wonder evolutionary biologists are interested
+in time travel"...fossils …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 07 Oct 2015 18:45:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-10-07:/blog/time-travel-in-experimental-evolution-dr-richard-lenski.html</guid></item><item><title>Beginnings of Metagenomics and the emerging tree of life - Dr. Norman Pace</title><link>https://ljcohen.github.io/blog/beginnings-of-metagenomics-and-the-emerging-tree-of-life-dr-norman-pace.html</link><description>&lt;p&gt;https://www.flickr.com/photos/lpcohen/21817022598/in/dateposted-public/&lt;/p&gt;
+&lt;p&gt;***Update, &lt;a href="https://storify.com/phylogenomics/norm-pace-talk-at-ucdavis"&gt;Twitter
+storify&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I had the privilege today of attending a talk by &lt;a href="http://pacelab.colorado.edu/index.html"&gt;Dr. Norman
+Pace&lt;/a&gt; from UC-Boulder, who was
+the first to investigate the structure/function of rRNA molecules in the
+context of deep phylogeny. This opened the view of …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 06 Oct 2015 16:34:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-10-06:/blog/beginnings-of-metagenomics-and-the-emerging-tree-of-life-dr-norman-pace.html</guid></item><item><title>DIB jclub, Better reporting for better research: a checklist for reproducibility</title><link>https://ljcohen.github.io/blog/dib-jclub-better-reporting-for-better-research-a-checklist-for-reproducibility.html</link><description>&lt;p&gt;By: Lisa Cohen, Camille Scott, Tamer Mansour, Sherine Awad, C. Titus
+Brown&lt;/p&gt;
+&lt;p&gt;Cross-posted:
+&lt;a href="http://ivory.idyll.org/blog/2015-jclub-etc-on-reproducibility.html"&gt;http://ivory.idyll.org/blog/2015-jclub-etc-on-reproducibility.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; at the &lt;a class="reference external" href="http://ivory.idyll.org/lab/"&gt;Lab for Data Intensive
+Biology&lt;/a&gt;, we're
+trying out a new journal club format where we summarize our thoughts on
+the paper in a blog post. For this …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sun, 27 Sep 2015 10:53:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-09-27:/blog/dib-jclub-better-reporting-for-better-research-a-checklist-for-reproducibility.html</guid></item><item><title>iPlant - Advanced workshop</title><link>https://ljcohen.github.io/blog/iplant-advanced-workshop.html</link><description>&lt;p&gt;"API for scalable science" - &lt;a href="https://www.tacc.utexas.edu/about/directory/matthew-vaughn"&gt;Matt
+Vaughn&lt;/a&gt;,
+&lt;a href="https://www.tacc.utexas.edu/about/directory/john-fonner"&gt;John Fonner&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;https://pods.iplantcollaborative.org/wiki/display/Events/2015+09+21+iPlant+Workshops+at+UC+Davis&lt;/p&gt;
+&lt;p&gt;https://github.com/iPlantCollaborativeOpenSource/Advanced_iPlant&lt;/p&gt;
+&lt;p&gt;slides:&lt;/p&gt;
+&lt;p&gt;https://docs.google.com/presentation/d/1RioNnjvL2qyRPQHSQ2-MG04m_LwNzf9gGqHwsSpCguM/edit?usp=sharing&lt;/p&gt;
+&lt;p&gt;Install &lt;a href="http://docs.docker.com/mac/started/"&gt;Docker&lt;/a&gt; (I'm running OSX.
+See other instructions for Linux and …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 23 Sep 2015 12:10:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-09-23:/blog/iplant-advanced-workshop.html</guid></item><item><title>iPlant - Intermediate workshop</title><link>https://ljcohen.github.io/blog/iplant-intermediate-workshop.html</link><description>&lt;p&gt;UCDavis, 9/22&lt;/p&gt;
+&lt;p&gt;http://dib-training.readthedocs.org/en/pub/2015-09-iplant.html&lt;br&gt;
+https://pods.iplantcollaborative.org/wiki/display/Events/2015+09+21+iPlant+Workshops+at+UC+Davis&lt;br&gt;
+https://etherpad.mozilla.org/iplant-ucdavis-sep2015&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://pimentel.github.io/"&gt;Harold Pimentel&lt;/a&gt;&lt;/strong&gt;, PhD student in CS at
+UC Berkeley&lt;/p&gt;
+&lt;p&gt;"Algorithms for RNAseq - from raw reads to differential expression
+analysis …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 22 Sep 2015 11:25:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-09-22:/blog/iplant-intermediate-workshop.html</guid></item><item><title>Past Year as a Junior Bioinformatician in Perspective</title><link>https://ljcohen.github.io/blog/past-year-as-a-junior-bioinformatician-in-perspective.html</link><description>&lt;p&gt;Starting a new chapter in life this week attending grad school (again)
+towards a PhD. Before moving on, wanted to put into perspective and
+share a few notes on what I've learned over the past year working as a
+junior bioinformatician for a service core. It's been a long journey …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 19 Sep 2015 10:53:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-09-19:/blog/past-year-as-a-junior-bioinformatician-in-perspective.html</guid></item><item><title>Erich Schwarz, talk on conserved unknowns</title><link>https://ljcohen.github.io/blog/erich-schwartz-talk-on-conserved-unknowns.html</link><description>&lt;p&gt;UC Davis, Genome Center&lt;br&gt;
+9/17/2015&lt;br&gt;
+"Using C. elegans to discover functions of conserved unknown human
+genes."&lt;br&gt;
+http://ivory.idyll.org/lab/talks/2015-09-17-conserved-unknowns.html&lt;/p&gt;
+&lt;p&gt;Titus: Erich is "not content with just a description of a genome", goes
+deep into the conservation of gene families&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How much of the …&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 17 Sep 2015 13:24:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-09-17:/blog/erich-schwartz-talk-on-conserved-unknowns.html</guid></item><item><title>Week 3 - NGS2015</title><link>https://ljcohen.github.io/blog/week-3-ngs2015.html</link><description>&lt;p&gt;&lt;a href="http://angus.readthedocs.org/en/2015/week3.html"&gt;Week 3&lt;/a&gt; of NGS 2015
+comes to a close. Discussion on what attendees and instructors have
+gained from this week: most important things learned, theory/big
+picture. Teaching and pedagogy especially. We went through 10 different
+workflows in 1 week! Analyzed complex data sets. This is a very new
+field …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 28 Aug 2015 11:54:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-08-28:/blog/week-3-ngs2015.html</guid></item><item><title>GitHub, Pull Requests, and ReadTheDocs - NGS2015</title><link>https://ljcohen.github.io/blog/github-pull-requests-and-readthedocs-ngs2015.html</link><description>&lt;p&gt;"We're good enough and deserve github."&lt;/p&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/20330046134/&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ivory.idyll.org/lab/"&gt;Dr. C. Titus Brown&lt;/a&gt; shares methods for
+using &lt;a href="https://readthedocs.org/"&gt;readthedocs&lt;/a&gt;, which he uses for classes
+including &lt;a href="http://angus.readthedocs.org/en/2015/week3.html"&gt;NGS2015&lt;/a&gt;, as
+well as github and forking pull requests.
+&lt;a href="http://sphinx-doc.org/"&gt;Sphinx&lt;/a&gt; is Python based, readthedocs is
+web-based method for putting stuff in Sphinx …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 28 Aug 2015 10:57:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-08-28:/blog/github-pull-requests-and-readthedocs-ngs2015.html</guid></item><item><title>Differential expression and dosage compensation in RNAseq - NGS2015</title><link>https://ljcohen.github.io/blog/differential-expression-and-dosage-compensation-in-rnaseq-ngs2015.html</link><description>&lt;p&gt;&lt;a href="http://butterflyology.net/"&gt;Dr. Chris Hamm, University of Kansas&lt;/a&gt;, side
+effects of sexual reproduction in Lepidoptera!&lt;/p&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/20920007072/in/dateposted-public/&lt;/p&gt;
+&lt;p&gt;Explanation of ESA, species status dependent # of self-sustaining
+populations, Mitchell's satyr butterfly endangered. Suggests &lt;a href="http://www.amazon.com/Butterfly-People-American-Encounter-Beauty/dp/1400076927"&gt;Butterfly
+People&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/K-means_clustering"&gt;K-means cluster&lt;/a&gt;
+plots, each vertical bar individual. Michigan different than other
+populations …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 27 Aug 2015 15:47:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-08-27:/blog/differential-expression-and-dosage-compensation-in-rnaseq-ngs2015.html</guid></item><item><title>Reproducibility with AWS - NGS2015</title><link>https://ljcohen.github.io/blog/reproducibility-with-aws-ngs2015.html</link><description>&lt;p&gt;Leigh Sheneman, &lt;a href="http://www.leighsheneman.com/"&gt;PhD student at MSU&lt;/a&gt; in
+CS. Evolution and learning with digital organisms, applying to real
+world organisms in the future!&lt;/p&gt;
+&lt;p&gt;http://angus.readthedocs.org/en/2015/week3/AWS-tips.html&lt;/p&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/20739813479/&lt;/p&gt;
+&lt;p&gt;Start EC2, medium-sized m3.medium is fine. Log in, update and install …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 27 Aug 2015 11:38:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-08-27:/blog/reproducibility-with-aws-ngs2015.html</guid></item><item><title>GWAS for NGS data - NGS2015</title><link>https://ljcohen.github.io/blog/gwas-for-ngs-data-ngs2015.html</link><description>&lt;p&gt;Dr. Tiffany Timbers, &lt;a href="http://tiffanytimbers.com/"&gt;postdoc at Simon Fraser
+University&lt;/a&gt;. Became interested in automating
+and programming from Multiworm tracker, automated image analyses for
+worm behavioral studies.&lt;/p&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/20917921421/&lt;/p&gt;
+&lt;p&gt;Today we will use a dataset from 2,007 individuals, 700,000 variants,
+20,000 genes potentially contain disruptive …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 26 Aug 2015 22:29:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-08-26:/blog/gwas-for-ngs-data-ngs2015.html</guid></item><item><title>Pathway Analysis for RNAseq Data - NGS2015</title><link>https://ljcohen.github.io/blog/pathway-analysis-for-rnaseq-data-ngs2015.html</link><description>&lt;p&gt;Presentation by Dr. Asela Wijeratne, Ohio State University at &lt;a href="http://oardc.osu.edu/mcic/"&gt;Molecular
+and Celluar Imaging Center&lt;/a&gt;. Research
+interests in co-expression networks during pathogen attack in
+agricultural plant species to identify regulatory genes.&lt;/p&gt;
+&lt;p&gt;Today: Different approaches for pathway analysis, statistical
+approaches, example using GAGE, challenges for pathway analysis, gene
+set enrichment analysis.&lt;/p&gt;
+&lt;p&gt;Pathways …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 26 Aug 2015 16:19:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-08-26:/blog/pathway-analysis-for-rnaseq-data-ngs2015.html</guid></item><item><title>RNAseq differential expression analysis - NGS2015</title><link>https://ljcohen.github.io/blog/rnaseq-differential-expression-analysis-ngs2015.html</link><description>&lt;p&gt;Dr. Meeta Mistry, &lt;a href="http://cbmi.catalyst.harvard.edu/cores/cat/core.html?core_id=121&amp;amp;uri_id=0000012e-58be-17bc-55da-381e80000000&amp;amp;category_id=10&amp;amp;navMode=cat"&gt;Harvard School of Public Health, Bioinformatics
+Core&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;See awesome workflows available from facility:&lt;/p&gt;
+&lt;p&gt;https://bcbio-nextgen.readthedocs.org/en/latest/&lt;/p&gt;
+&lt;p&gt;HSPH Bioinformatics Core offers regular short courses, Introduction to
+RNA-Seq, ChIP-seq, Unix and R courses as well as in-depth NGS courses,
+Software and Data Carpentry, version control, downstream …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 26 Aug 2015 12:11:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-08-26:/blog/rnaseq-differential-expression-analysis-ngs2015.html</guid></item><item><title>Reproducible Research Using Rmarkdown - NGS2015 Week 3</title><link>https://ljcohen.github.io/blog/reproducible-research-using-rmarkdown-ngs2015-week-3.html</link><description>&lt;p&gt;Tutorial by Marian Schmidt, PhD candidate at the University of Michigan
+and Software Carpentry instructor.&lt;/p&gt;
+&lt;p&gt;Fun presentation! Have used &lt;a href="http://ljcohen.github.io/analyses/Blanco/DESeq2_Blanco_invivo_June2015.html"&gt;knitR and Rmarkdown for analysis script
+files
+before&lt;/a&gt;,
+but I didn't even know that github could be accessed through the RStudio
+interface. Appreciated spending time on these tasks discussing how to …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 25 Aug 2015 19:28:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-08-25:/blog/reproducible-research-using-rmarkdown-ngs2015-week-3.html</guid></item><item><title>Genome Assembly - Week 3 NGS 2015</title><link>https://ljcohen.github.io/blog/genome-assembly-week-3-ngs-2015.html</link><description>&lt;p&gt;Great experience participating in genome assembly tutorial by &lt;a href="http://www.mn.uio.no/cees/english/people/technical/alexajo/"&gt;Dr. Lex
+Nederbragt, Norwegian Sequencing
+Centre&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;https://github.com/lexnederbragt&lt;br&gt;
+http://flavors.me/flxlex&lt;br&gt;
+https://flxlexblog.wordpress.com/&lt;/p&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/20850074396/&lt;/p&gt;
+&lt;p&gt;Notes below, feel free to comment and correct!&lt;/p&gt;
+&lt;p&gt;Atlantic cod genome assembly!
+http://www.nature.com/nature …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 25 Aug 2015 16:01:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-08-25:/blog/genome-assembly-week-3-ngs-2015.html</guid></item><item><title>Multivariate Tests with NGS Data and Visualization in R - Week 3 NGS 2015</title><link>https://ljcohen.github.io/blog/multivariate-tests-with-ngs-data-and-visualization-in-r-week-3-ngs-2015.html</link><description>&lt;p&gt;&lt;a href="http://ryanjw.github.io/"&gt;Dr. Ryan Williams&lt;/a&gt;, postdoc at Iowa State
+leads tutorial on R visualizations with multivariate statistical
+approaches for RNAseq data. Traditionally, multivariate stats approaches
+used for community ecology.&lt;/p&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/20881761561/&lt;/p&gt;
+&lt;p&gt;Following are my patchy notes from the tutorial. Please feel free to
+comment and correct!&lt;/p&gt;
+&lt;p&gt;The …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 25 Aug 2015 12:08:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-08-25:/blog/multivariate-tests-with-ngs-data-and-visualization-in-r-week-3-ngs-2015.html</guid></item><item><title>NGS 2015 Week 3 - Docker Tutorial</title><link>https://ljcohen.github.io/blog/ngs-2015-week-3-docker-tutorial.html</link><description>&lt;p&gt;Here at MSU's &lt;a href="http://www.kbs.msu.edu/"&gt;W.K. Kellogg Biological Station&lt;/a&gt;
+for the 3rd week of NGS 2015 workshop by &lt;a href="http://ivory.idyll.org/blog/"&gt;Dr. C. Titus
+Brown&lt;/a&gt; from UC Davis and a wealth of
+&lt;a href="https://twitter.com/ctitusbrown/status/636228826201235457"&gt;superstar
+instructors&lt;/a&gt;.
+This week is intended for advanced bioinformatics users and alum of the
+course to 1.) be a practice audience for …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 24 Aug 2015 16:45:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-08-24:/blog/ngs-2015-week-3-docker-tutorial.html</guid></item><item><title>Free R programming course (online)</title><link>https://ljcohen.github.io/blog/956.html</link><description>&lt;p&gt;Johns Hopkins University, School of Public Health (JHUSPH) offers a free
+course in R programming that starts today. I took this online course in
+2013 and found it very useful. I highly recommend it for anyone wanting
+to learn R for any type of statistical analyses. A few of my …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 06 Jul 2015 11:17:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-07-06:/blog/956.html</guid></item><item><title>Error loading bedtools/2.22.0</title><link>https://ljcohen.github.io/blog/error-loading-bedtools2-22-0.html</link><description>&lt;p&gt;By default, gcc/4.4 is loaded in my cluster environment. This happened
+when running bedtools:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;gcc/4.7.0(5):ERROR:150: Module 'gcc/4.7.0' conflicts with the currently loaded module(s) 'gcc/4.4' gcc/4.7.0(5):ERROR:102: Tcl command execution failed: conflict …&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 14 Apr 2015 12:08:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-04-14:/blog/error-loading-bedtools2-22-0.html</guid></item><item><title>R Classes: factor vs. character</title><link>https://ljcohen.github.io/blog/r-classes-factor-vs-character.html</link><description>&lt;p&gt;How to subset a data frame with only gene names in common with another
+list? Turned out, problem was the class of one list was a 'factor' and
+the other was a 'character'.&lt;/p&gt;
+&lt;p&gt;Solution:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;gt; qPCR&amp;lt;-read.csv("file1.csv") &amp;gt; Affy_DE_list&amp;lt;-read.csv("file2.csv") &amp;gt; class(qPCR) [1] "data.frame" &amp;gt; class …&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 09 Apr 2015 16:53:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-04-09:/blog/r-classes-factor-vs-character.html</guid></item><item><title>Length of a String</title><link>https://ljcohen.github.io/blog/length-of-a-string.html</link><description>&lt;p&gt;&lt;code&gt;[17:05] cohenl06@phoenix2 ~ $ a=TGCGGTTATCCATCTGCTTATGGAAGCCAAGCATTGGGGATTGAGAAAGAGTAGAAATGCCACAAGCCTCAATAGCAGGTTTAAGAGCCTCGATACGCTCAAAGTCAAAATAATCAGCGTGACATTCAGAAGGGTAATAAGAACGAACCAA [17:05] cohenl06@phoenix2 ~ $ echo ${#a} 151&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 27 Mar 2015 17:06:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-03-27:/blog/length-of-a-string.html</guid></item><item><title>aRgh</title><link>https://ljcohen.github.io/blog/argh.html</link><description>&lt;p&gt;Getting data into the right format is a frustration I have with R:&lt;br&gt;
+&lt;code&gt;&amp;gt; arrayQualityMetrics(expressionset = eset,outdir = "ArrayQualityMetrics",intgroup = c("sample_type_2.0"),do.logtransform=TRUE) The directory 'ArrayQualityMetrics' has been created. Error in `[.data.frame`(x, order(x, na.last = na.last, decreasing = decreasing)) : undefined columns selected&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;I've run into …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 18 Mar 2015 12:21:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-03-18:/blog/argh.html</guid></item><item><title>Draft Genome Annotation</title><link>https://ljcohen.github.io/blog/draft-genome-annotation.html</link><description>&lt;p&gt;Annotating a draft &lt;em&gt;de novo&lt;/em&gt; genome assembly of a
+previously-uncharacterized species with gene function information is a
+challenging problem. Having the genome sequence is not
+biologically-important until you know what the sequence does, in terms
+of what proteins are expressed/translated.
+Genome-&amp;gt;transcriptome-&amp;gt;protein sequence information is collected
+experimentally and …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 14 Mar 2015 15:49:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-03-14:/blog/draft-genome-annotation.html</guid></item><item><title>Useful Linux commands</title><link>https://ljcohen.github.io/blog/useful-linux-commands.html</link><description>&lt;p&gt;Decompress a gzipped tar file:&lt;br&gt;
+&lt;code&gt;tar -xzvf file.tar.gz&lt;/code&gt;&lt;br&gt;
+Or just a tar file:&lt;br&gt;
+&lt;code&gt;tar -xvf file.tar&lt;/code&gt;&lt;br&gt;
+Install program:&lt;br&gt;
+&lt;code&gt;tar -xzvf rsem-1.2.8.tar.gz cd rsem-1.2.8 make cd EBSeq make echo 'export PATH=$PATH:/root/rsem-1.2.8' &amp;gt;&amp;gt; ~/.bashrc source ~/.bashrc&lt;/code&gt;&lt;br&gt;
+Screen command, when …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 12 Mar 2015 17:31:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-03-12:/blog/useful-linux-commands.html</guid></item><item><title>How many transcripts?</title><link>https://ljcohen.github.io/blog/how-many-transcripts-do-organisms-have.html</link><description>&lt;p&gt;How many transcripts are there in common model species reference
+annotation files?&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[17:21] cohenl06@phoenix1 ~ $ cut -f9 /local/data/iGenomes/Mus_musculus/UCSC/mm9/Annotation/Genes/genes.gtf | cut -d ";" -f1 | sort | uniq | wc -l 23366 [17:21] cohenl06@phoenix1 ~ $ cut -f9 /local/data/iGenomes/Homo_sapiens/UCSC/hg19/Annotation/Genes …&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 20 Feb 2015 17:30:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2015-02-20:/blog/how-many-transcripts-do-organisms-have.html</guid></item><item><title>Error with HTSeq</title><link>https://ljcohen.github.io/blog/869.html</link><description>&lt;p&gt;Running HTSeq to get raw read counts associated with chromosomal
+positions/annotated genes from sorted .bam files:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Error&lt;/span&gt; &lt;span class="n"&gt;occurred&lt;/span&gt; &lt;span class="n"&gt;when&lt;/span&gt; &lt;span class="n"&gt;processing&lt;/span&gt; &lt;span class="n"&gt;SAM&lt;/span&gt; &lt;span class="n"&gt;input&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;record&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="mi"&gt;30675291&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;PATH&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tophat&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Exp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Basal&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;accepted_hits&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bam&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+ &lt;span class="n"&gt;Maximum&lt;/span&gt; &lt;span class="n"&gt;alignment&lt;/span&gt; &lt;span class="n"&gt;buffer&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt; &lt;span class="n"&gt;exceeded&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;pairing&lt;/span&gt; &lt;span class="n"&gt;SAM&lt;/span&gt; &lt;span class="n"&gt;alignments&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+ &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Exception&lt;/span&gt; &lt;span class="nl"&gt;type&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ValueError&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;raised&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;__init__ …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 15 Jul 2014 10:10:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-07-15:/blog/869.html</guid></item><item><title>gene set enrichment analysis (GSEA)</title><link>https://ljcohen.github.io/blog/gene-set-enrichment-analysis-gsea.html</link><description>&lt;p&gt;What is a gene set enrichment analysis? What is a reasonable enrichment
+score? With the genes in common between the two groups from yesterday's
+venn diagram, I want to see what functions they correspond to. There are
+many ways to assign functions to genes. One way is with gene ontology …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 10 Jul 2014 14:38:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-07-10:/blog/gene-set-enrichment-analysis-gsea.html</guid></item><item><title>Venn Diagrams</title><link>https://ljcohen.github.io/blog/venn-diagrams.html</link><description>&lt;p&gt;Today's adventures in Venn Diagrams. Seems like a simple task, right?
+Two (or more) circles with numbers in the middle. I want to use this
+visualization graphic to show the number of genes differentially
+expressed between 2 sets of groups.&lt;/p&gt;
+&lt;p&gt;Fold-change differences in gene expression were calculated between 2
+groups …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 09 Jul 2014 22:29:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-07-09:/blog/venn-diagrams.html</guid></item><item><title>Genomics Workshop (Week 2, Day 4) - QIIME and Metgenomics Analyses</title><link>https://ljcohen.github.io/blog/genomics-workshop-week-2-day-4-qiime-and-metgenomics-analyses.html</link><description>&lt;p&gt;http://www.flickr.com/photos/lpcohen/12101848195/&lt;br&gt;
+Daniel McDonald from Dr. Rob Knight's lab, U. Colorado&lt;/p&gt;
+&lt;p&gt;Some links:&lt;br&gt;
+http://www.earthmicrobiome.org/&lt;br&gt;
+http://www.hmpdacc.org/&lt;/p&gt;
+&lt;p&gt;QIIME analysis tool, using iPython notebook:&lt;br&gt;
+http://evomics.org/learning/genomics/metagenomics/metagenomics-laboratories/&lt;/p&gt;
+&lt;p&gt;Data files:&lt;br&gt;
+http://qiime.org/home_static/dataFiles.html&lt;br&gt;
+from this study …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 23 Jan 2014 09:14:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-23:/blog/genomics-workshop-week-2-day-4-qiime-and-metgenomics-analyses.html</guid></item><item><title>Genomics Analysis Tools</title><link>https://ljcohen.github.io/blog/genomics-analysis-tools.html</link><description>&lt;p&gt;http://www.broadinstitute.org/software/igv/home&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 22 Jan 2014 14:44:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-22:/blog/genomics-analysis-tools.html</guid></item><item><title>Workshop on Genomics (Week 2, Day 3) - Transcriptomics</title><link>https://ljcohen.github.io/blog/workshop-on-genomics-week-2-day-3-transcriptomics.html</link><description>&lt;p&gt;Dr. Manual Garber:&lt;/p&gt;
+&lt;p&gt;http://www.flickr.com/photos/lpcohen/12086234516/&lt;/p&gt;
+&lt;p&gt;Lecture slides:
+http://evomicsorg.wpengine.netdna-cdn.com/wp-content/uploads/2013/03/evomics_krumlov_2014.pdf&lt;/p&gt;
+&lt;p&gt;Exercises: http://evomics.org/learning/genomics/transcriptomics/#part1&lt;/p&gt;
+&lt;p&gt;Exercise 1: Prepare for genomic alignment (when there is reference
+genome)&lt;br&gt;
+Exercise 2: Genome alignment of RNA-seq reads&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Question …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 22 Jan 2014 09:27:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-22:/blog/workshop-on-genomics-week-2-day-3-transcriptomics.html</guid></item><item><title>PYTHONPATH</title><link>https://ljcohen.github.io/blog/pythonpath.html</link><description>&lt;p&gt;To run graphing graphics in Python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~$ pip install matplotlib
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Installing Python modules with virtualenv or pip:&lt;br&gt;
+http://www.bdnyc.org/2012/09/17/editing-pythonpath-to-import-modules/&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Logical and neat directory structure will make your own, your
+computer's and your collaborators' lives much easier.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;My recommendation:&lt;/strong&gt; Create a master code directory …&lt;/p&gt;&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 21 Jan 2014 15:02:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-21:/blog/pythonpath.html</guid></item><item><title>Workshop on Genomics (Week 2, Day 2) - Metagenomics</title><link>https://ljcohen.github.io/blog/workshop-on-genomics-week-2-day-2-metagenomics.html</link><description>&lt;p&gt;Interesting argument for the importance of social media. Rapid analysis
+of data for diagnosis of public health-related issues before
+publications/reports can be written/submitted. Also, public record of
+conversations and advice that might help people learning.&lt;/p&gt;
+&lt;p&gt;Dr. Nick Loman: &lt;a href="http://pathogenomics.bham.ac.uk/blog/"&gt;http://pathogenomics.bham.ac.uk/blog/&lt;/a&gt;&lt;br&gt;
+http://www.flickr.com …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 21 Jan 2014 10:19:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-21:/blog/workshop-on-genomics-week-2-day-2-metagenomics.html</guid></item><item><title>Python is cool.</title><link>https://ljcohen.github.io/blog/python-is-cool.html</link><description>&lt;p&gt;Some Python links:&lt;/p&gt;
+&lt;p&gt;http://pycogent.org/&lt;/p&gt;
+&lt;p&gt;http://nbviewer.ipython.org/&lt;/p&gt;
+&lt;p&gt;http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Chapter1_Introduction.ipynb&lt;/p&gt;
+&lt;p&gt;https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 20 Jan 2014 16:00:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-20:/blog/python-is-cool.html</guid></item><item><title>Workshop on Genomics (Week 2, Day 1, Notes) - RAD-Seq analyses with STACKS</title><link>https://ljcohen.github.io/blog/workshop-on-genomics-week-2-day-1-notes-rad-seq-analyses-with-stacks.html</link><description>&lt;p&gt;Czech food:&lt;/p&gt;
+&lt;p&gt;http://www.flickr.com/photos/lpcohen/12057609436/&lt;/p&gt;
+&lt;p&gt;Exercise:
+http://evomicsorg.wpengine.netdna-cdn.com/wp-content/uploads/2013/03/cesky_2014_RAD_tutorial.pdf&lt;/p&gt;
+&lt;p&gt;Start Amazon instance:
+https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:&lt;/p&gt;
+&lt;p&gt;STACKS Pipeline:&lt;/p&gt;
+&lt;p&gt;Part 1. Cleaning raw data:&lt;br&gt;
+- take raw reads, process RAD-tags to throw away …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 20 Jan 2014 10:58:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-20:/blog/workshop-on-genomics-week-2-day-1-notes-rad-seq-analyses-with-stacks.html</guid></item><item><title>Some things to try...</title><link>https://ljcohen.github.io/blog/some-things-to-try.html</link><description>&lt;p&gt;For mapping sequences to a reference from highly divergent species, try
+this (might work with Scleractinian coral to closest Cnidarian reference
+genome?) http://www.well.ox.ac.uk/project-stampy&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 17 Jan 2014 10:03:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-17:/blog/some-things-to-try.html</guid></item><item><title>Workshop on Genomics (Notes, Day 5) - Assembly</title><link>https://ljcohen.github.io/blog/workshop-on-genomics-notes-day-5-assembly.html</link><description>&lt;p&gt;Bridge will be under construction tomorrow, so we must find a
+cut-through:&lt;br&gt;
+http://www.flickr.com/photos/lpcohen/11995110086/&lt;/p&gt;
+&lt;p&gt;Trying different assembly methods with bacterial sequences:
+http://evomics.org/learning/assembly-and-alignment/2014-assembly-lab/&lt;/p&gt;
+&lt;p&gt;Using Velvet:&lt;br&gt;
+http://www.ebi.ac.uk/\~zerbino/velvet/&lt;br&gt;
+Manual: http://www.ebi.ac.uk/\~zerbino/velvet/Manual …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 17 Jan 2014 10:00:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-17:/blog/workshop-on-genomics-notes-day-5-assembly.html</guid></item><item><title>Workshop on Genomics (Notes, Day 4) - Metagenomics</title><link>https://ljcohen.github.io/blog/workshop-on-genomics-notes-day-4-metagenomics.html</link><description>&lt;p&gt;Dr. Mike Zoday, Broad Institute (cont'd)- Metagenomics conclusion of
+talk from Day 3.&lt;/p&gt;
+&lt;p&gt;Reproducility is an issue. Figure looking at different preps and
+sequencing facilities.&lt;/p&gt;
+&lt;p&gt;Real change vs. real truth. Want to be able to measure changes.&lt;/p&gt;
+&lt;p&gt;Different filtering: Number of OTU gets higher with more reads with 454.&lt;/p&gt;
+&lt;p&gt;Read …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 16 Jan 2014 13:20:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-16:/blog/workshop-on-genomics-notes-day-4-metagenomics.html</guid></item><item><title>Workshop on Genomics (Notes, Day 4) - Genomics, Alignment, Assembly</title><link>https://ljcohen.github.io/blog/workshop-on-genomics-notes-day-4-genomics-alignment-assembly.html</link><description>&lt;p&gt;View from road in front of our computer lab building:&lt;/p&gt;
+&lt;p&gt;http://www.flickr.com/photos/lpcohen/11979295043/&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href="http://evomics.org/blog/"&gt;evomics&lt;/a&gt; for linking this blog!&lt;/p&gt;
+&lt;p&gt;Today's alignment and assembly exercise:
+http://evomicsorg.wpengine.netdna-cdn.com/wp-content/uploads/2014/01/Evomics-2014-Workshop-on-Genomics-Final-Ver-2.pdf&lt;/p&gt;
+&lt;p&gt;Advice: Do not copy and paste from the document. It …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 16 Jan 2014 10:54:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-16:/blog/workshop-on-genomics-notes-day-4-genomics-alignment-assembly.html</guid></item><item><title>Workshop on Genomics (Notes, Day 3) – Sequence Data Quality Control</title><link>https://ljcohen.github.io/blog/workshop-on-genomics-notes-day-3-sequence-data-quality-control.html</link><description>&lt;p&gt;Use this link for starting AWS instance:
+http://www.google.com/url?q=http%3A%2F%2Fbit.ly%2Fevomics2014&amp;amp;sa=D&amp;amp;sntz=1&amp;amp;usg=AFQjCNHw6fapggOZ33Pu5k5cSJeiduXRZg&lt;/p&gt;
+&lt;p&gt;Today's lab topic:
+http://evomics.org/learning/quality-assessment-and-control-of-sequence-data/&lt;/p&gt;
+&lt;p&gt;http://www.flickr.com/photos/lpcohen/11964515385/&lt;/p&gt;
+&lt;p&gt;Quality control is important: sequencing, library prep&lt;/p&gt;
+&lt;p&gt;Given sequence files …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 15 Jan 2014 09:23:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-15:/blog/workshop-on-genomics-notes-day-3-sequence-data-quality-control.html</guid></item><item><title>Workshop on Genomics (Notes, Day 2) - Advanced UNIX</title><link>https://ljcohen.github.io/blog/workshop-on-genomics-notes-day-2-advanced-unix.html</link><description>&lt;p&gt;UNIX tutorial instructions: http://evomics.org/learning/unix-tutorial/&lt;br&gt;
+Exercises, part 2:
+http://evomicsorg.wpengine.netdna-cdn.com/wp-content/uploads/2014/01/2014_genomics_IntroUnixPart2.pdf&lt;/p&gt;
+&lt;p&gt;Common UNIX commands:
+http://mally.stanford.edu/\~sr/computing/basic-unix.html&lt;/p&gt;
+&lt;p&gt;Homework assignment 1:
+http://evomicsorg.wpengine.netdna-cdn.com/wp-content/uploads/2014/01/2014_genomics_unix_hw_1.pdf&lt;br&gt;
+Homework 2:
+http …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 14 Jan 2014 09:51:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-14:/blog/workshop-on-genomics-notes-day-2-advanced-unix.html</guid></item><item><title>Workshop on Genomics (Notes, Day 2) - Sequencing Technologies</title><link>https://ljcohen.github.io/blog/workshop-on-genomics-notes-day-2-sequencing-technologies.html</link><description>&lt;p&gt;http://www.flickr.com/photos/lpcohen/11945854246/in/photostream&lt;br&gt;
+Dr. Konrad Paszkiewicz, University of Exeter&lt;/p&gt;
+&lt;p&gt;Lecture slides:
+http://evomicsorg.wpengine.netdna-cdn.com/wp-content/uploads/2014/01/Cesky-Krumlov-Lecture-1-ver6.pdf&lt;/p&gt;
+&lt;p&gt;From Sanger -&amp;gt; human genome -&amp;gt; 2nd gen -&amp;gt; 3rd gen -&amp;gt;
+Nanopore (not yet released)&lt;/p&gt;
+&lt;p&gt;Recommended videos on Sanger sequencing:&lt;br&gt;
+http://youtu.be/91294ZAG2hg&lt;br&gt;
+http …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 14 Jan 2014 08:07:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-14:/blog/workshop-on-genomics-notes-day-2-sequencing-technologies.html</guid></item><item><title>Workshop on Genomics (Notes, Day 1) - Introduction to Linux</title><link>https://ljcohen.github.io/blog/workshop-on-genomics-notes-day-1-introduction-to-linux.html</link><description>&lt;p&gt;http://www.flickr.com/photos/lpcohen/11932547005/&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://imgs.xkcd.com/comics/regular_expressions.png"&gt;{.alignnone
+width="510" height="515"}&lt;/p&gt;
+&lt;p&gt;Lecture slides:
+http://evomicsorg.wpengine.netdna-cdn.com/wp-content/uploads/2014/01/2014_genomics_IntroUnixPart1.pdf&lt;/p&gt;
+&lt;p&gt;Linux tutorial: http://evomics.org/learning/unix-tutorial/&lt;/p&gt;
+&lt;p&gt;Bioinformatics analysis, computational biology requires knowing
+UNIX/Linux.&lt;/p&gt;
+&lt;p&gt;Try to work in 2 terminals: one to keep track …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 13 Jan 2014 15:56:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-13:/blog/workshop-on-genomics-notes-day-1-introduction-to-linux.html</guid></item><item><title>Workshop on Genomics (Notes) - Intro Lab Setup</title><link>https://ljcohen.github.io/blog/workshop-on-genomics-notes-intro-lab-setup.html</link><description>&lt;p&gt;"Cloud" computing, essentially storage services (Hotmail, Gmail, flickr,
+iTunes, Netflix, Dropbox, etc.).&lt;/p&gt;
+&lt;p&gt;Article on 'Wired' about Google infrastructure. Data centers located all
+over world, water cooling required.&lt;/p&gt;
+&lt;p&gt;We'll use Amazon Web Services (AWS).&lt;/p&gt;
+&lt;p&gt;Create virtual image. Can run all operating systems. Started with
+software written for gaming emulators. Terminals (secure …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 13 Jan 2014 09:27:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2014-01-13:/blog/workshop-on-genomics-notes-intro-lab-setup.html</guid></item><item><title>High Performance Computing</title><link>https://ljcohen.github.io/blog/high-performance-computing.html</link><description>&lt;p&gt;"When I care how fast I get an answer"&lt;/p&gt;
+&lt;p&gt;Cluster user setup at work this week.&lt;/p&gt;
+&lt;p&gt;HPC has a lot of jargon and acronyms.&lt;/p&gt;
+&lt;p&gt;Intro: According to XSEDE (reference?), 31% of HPC users are in
+Molecular Biosciences&lt;/p&gt;
+&lt;p&gt;Concerned with number of Floating Point Operations Per Second (FLOP/s).
+The number …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 12 Dec 2013 13:46:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-12-12:/blog/high-performance-computing.html</guid></item><item><title>Unable to mount mobile device on Ubuntu 13.04</title><link>https://ljcohen.github.io/blog/691.html</link><description>&lt;p&gt;When I plug my Samsung Galaxy 4 mobile android device into my laptop
+running Ubuntu 13.04, I immediately get this error message:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/12/screenshot-from-2013-12-10-201427.png"&gt;&lt;img alt="Screenshot from 2013-12-10
+20:14:27" src="http://monsterbashseq.files.wordpress.com/2013/12/screenshot-from-2013-12-10-201427.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-692 width="300"
+height="124"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I click 'OK'. It appears on my Devices list in both my file manager and
+in Rhythmbox. I want to …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 10 Dec 2013 20:22:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-12-10:/blog/691.html</guid></item><item><title>Grace Hopper Google Doodle</title><link>https://ljcohen.github.io/blog/grace-hopper-google-doodle.html</link><description>&lt;p&gt;&lt;a href="https://www.google.com/search?q=grace+hopper&amp;amp;ie=utf-8&amp;amp;oe=utf-8&amp;amp;aq=t&amp;amp;rls=org.mozilla:en-US:official&amp;amp;client=firefox-a"&gt;&lt;img alt="GH" src="http://monsterbashseq.files.wordpress.com/2013/12/gh.gif?w=300"&gt;{.alignnone
+.size-medium .wp-image-668 width="300"
+height="116"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Today's featured &lt;a href="http://www.google.com/doodles/grace-hoppers-107th-birthday"&gt;Google Doodle is Grace
+Hopper&lt;/a&gt;! My
+dad, John E. Johnson, was a computer specialist for Sperry Univac for
+&amp;gt;30 yrs, worked with &lt;a href="http://www.washingtonpost.com/blogs/comic-riffs/post/grace-hopper-doodle-by-writing-computer-language-pioneering-grandma-cobol-helped-rewrite-the-history-books/2013/12/09/72a80e36-60bf-11e3-8beb-3f9a9942850f_blog.html"&gt;Dr. Grace
+Hopper&lt;/a&gt;
+when she was setting up UNIVAC I in 1951. They were both honored, among
+many others …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 09 Dec 2013 08:59:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-12-09:/blog/grace-hopper-google-doodle.html</guid></item><item><title>Finding coding sequences in DNA</title><link>https://ljcohen.github.io/blog/possible-combinations.html</link><description>&lt;p&gt;From the UCSD "Bioinformatics Algorithms" class, &lt;a href="https://beta.stepic.org/Bioinformatics-Algorithms-2/How-Do-Bacteria-Make-Antibiotics-96/#step-6"&gt;programming
+assignments week
+2&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Given a DNA sequence and an amino acid peptide sequence:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;DNA=&amp;quot;ATGGCCATGGCCCCCAGAACTGAGATCAATAGTACCCGTATTAACGGGTGA&amp;quot;
+aapeptide=&amp;quot;MA&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I want to find all occurrences (including reverse compliment) of the
+coding sequence in the DNA for that amino acid peptide sequence. Example
+output:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;     ATGGCC
+     GGCCAT …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 29 Nov 2013 20:33:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-11-29:/blog/possible-combinations.html</guid></item><item><title>monsteR Photo Of The Day</title><link>https://ljcohen.github.io/blog/photo-of-the-day.html</link><description>&lt;p&gt;Crab-like spiny orb weaver spider, &lt;a href="http://eol.org/pages/1195285/details"&gt;&lt;em&gt;Gasteracantha
+cancriformis&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
+http://www.flickr.com/photos/lpcohen/5436528734/&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sun, 24 Nov 2013 17:52:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-11-24:/blog/photo-of-the-day.html</guid></item><item><title>WHOI Software Carpentry notes, Day 2 – afternoon</title><link>https://ljcohen.github.io/blog/whoi-software-carpentry-notes-day-2-afternoon.html</link><description>&lt;p&gt;Theory: Typical programmer, regardless of language, will write the same
+number of lines of code in their lifetime compared to any other
+programmer.&lt;/p&gt;
+&lt;p&gt;Tab completion in the command line rocks. Worth the whole trip.&lt;/p&gt;
+&lt;p&gt;Calculate GC content.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;seq=&amp;#39;ACGTACGTAGCTAGTAGCTACGTAGCTACGTA&amp;#39;
+g=seq.count(&amp;#39;G&amp;#39;)
+c=seq.count(&amp;#39;C&amp;#39;)
+a=seq.count …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 15 Nov 2013 13:55:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-11-15:/blog/whoi-software-carpentry-notes-day-2-afternoon.html</guid></item><item><title>WHOI Software Carpentry notes, Day 2 – morning</title><link>https://ljcohen.github.io/blog/whoi-software-carpentry-notes-day-2-morning.html</link><description>&lt;p&gt;https://etherpad.mozilla.org/swc-whoi-2013&lt;/p&gt;
+&lt;p&gt;Distributed version control systems, e.g. git, bzr, hg, dcvs&lt;/p&gt;
+&lt;p&gt;No master controller. All copies are equivalently complete and
+functional.&lt;/p&gt;
+&lt;p&gt;Yesterday, we ran:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone http://github.com/wltrimbl/2013-11-14-woodshole
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Changes were made last night. Today, we need to update.&lt;/p&gt;
+&lt;p&gt;In terminal, we type:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 15 Nov 2013 12:14:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-11-15:/blog/whoi-software-carpentry-notes-day-2-morning.html</guid></item><item><title>WHOI Software Carpentry notes, Day 1 - afternoon</title><link>https://ljcohen.github.io/blog/whoi-software-carpentry-notes-day-1-afternoon.html</link><description>&lt;p&gt;Python&lt;/p&gt;
+&lt;p&gt;Canopy?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;
+
+&lt;span class="n"&gt;flcellogrl&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="nl"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="mi"&gt;2013&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;woodshole&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nl"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; 
+&lt;span class="n"&gt;Reading&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;Done&lt;/span&gt;
+&lt;span class="n"&gt;Building&lt;/span&gt; &lt;span class="n"&gt;dependency&lt;/span&gt; &lt;span class="n"&gt;tree&lt;/span&gt;       
+&lt;span class="n"&gt;Reading&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt; &lt;span class="n"&gt;information&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;Done&lt;/span&gt;
+&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;following&lt;/span&gt; &lt;span class="n"&gt;packages&lt;/span&gt; &lt;span class="n"&gt;were&lt;/span&gt; &lt;span class="n"&gt;automatically&lt;/span&gt; &lt;span class="n"&gt;installed&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;longer&lt;/span&gt; &lt;span class="nl"&gt;required&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;libcurl3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;nss&lt;/span&gt; &lt;span class="n"&gt;libnspr4&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt; &lt;span class="n"&gt;libnss3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 14 Nov 2013 14:54:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-11-14:/blog/whoi-software-carpentry-notes-day-1-afternoon.html</guid></item><item><title>WHOI Software Carpentry notes, Day 1 - morning</title><link>https://ljcohen.github.io/blog/whoi-software-carpentry-notes-day-1.html</link><description>&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd ; git clone http://github.com/wltrimbl/2013-11-14-woodshole
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Copying workshop files.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;http://wltrimbl.github.io/2013-11-14-woodshole/
+http://wltrimbl.github.io/2013-11-14-woodshole/lessons/overview.html#%284%29
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Scientists are teaching ourselves. Need to learn the tricks the right
+way to save time later.&lt;br&gt;
+Be fluent in multiple languages.&lt;br&gt;
+Worth the effort …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 14 Nov 2013 12:23:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-11-14:/blog/whoi-software-carpentry-notes-day-1.html</guid></item><item><title>Software Carpentry Boot Camp, setup</title><link>https://ljcohen.github.io/blog/software-carpentry-boot-camp-setup.html</link><description>&lt;p&gt;&lt;a href="http://wltrimbl.github.io/2013-11-14-woodshole/"&gt;Setup instructions&lt;/a&gt;
+for the &lt;a href="http://software-carpentry.org/bootcamps/2013-11-14-whoi/index.html"&gt;Software Carpentry Boot
+Camp&lt;/a&gt;
+at &lt;a href="http://www.nefsc.noaa.gov/nefsc/woodshole/"&gt;Woods Hole Oceanographic
+Institution&lt;/a&gt; from 14-15 Nov.
+I'm really looking forward to this Boot Camp and setting up something
+similar at HBOI.&lt;/p&gt;
+&lt;p&gt;I already have the Linux command terminal, a text editor, and Python
+IDLE. The workshop will be using Python …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 13 Nov 2013 20:15:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-11-13:/blog/software-carpentry-boot-camp-setup.html</guid></item><item><title>What I'm Reading This Week</title><link>https://ljcohen.github.io/blog/software-assessments.html</link><description>&lt;p&gt;A blog that I read (&lt;a href="http://www.molecularecologist.com/2013/11/what-were-reading-mating-advantages-for-rare-males-in-guppies-a-new-species-of-dolphin-in-australian-waters-and-dna-sequencers-on-mars/"&gt;Molecular
+Ecologist&lt;/a&gt;)
+has a Friday post almost every week about what they're reading. I enjoy
+hearing about what other people are reading. It gives me ideas. These
+are some of the things I've been reading this week:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.ebi.ac.uk/about/news/press-releases/RGASP-2013"&gt;Comparing software packages for accuracy and
+efficiency&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.biomedcentral.com/1472-6750/11/109"&gt;Fusion …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 08 Nov 2013 09:49:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-11-08:/blog/software-assessments.html</guid></item><item><title>GRE Powerprep crashes on Ubuntu 13.04</title><link>https://ljcohen.github.io/blog/gre-powerprep-crash-on-ubuntu-13-04.html</link><description>&lt;p&gt;Old, famous problem with GRE Powerprep software crashing on Ubuntu OS:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;http://whynotwiki.com/Getting_GRE_Powerprep_to_work_under_Wine&lt;/li&gt;
+&lt;li&gt;http://ubuntuforums.org/showthread.php?t=861707&lt;/li&gt;
+&lt;li&gt;http://bugs.winehq.org/show_bug.cgi?id=3766&lt;/li&gt;
+&lt;li&gt;http://www.winehq.org/pipermail/wine-bugs/2009-May/175350.html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I agree with this assessment:&lt;/p&gt;
+&lt;p&gt;http://www.jonathanmoeller.com/screed/?p …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 05 Nov 2013 21:39:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-11-05:/blog/gre-powerprep-crash-on-ubuntu-13-04.html</guid></item><item><title>R/Bioconductor package installation on Ubuntu: Error messages</title><link>https://ljcohen.github.io/blog/bioconductor-package-installation-on-ubuntu-error-messages.html</link><description>&lt;p&gt;I fixed this issue by starting R as root user, then installing the
+necessary packages. Apparently, this was a common rookie mistake using R
+and Ubuntu/Linux that I luckily searched for and learned about. When
+installing new R packages in Ubuntu, always start R as root user.&lt;/p&gt;
+&lt;p&gt;The Bioconductor …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 18 Oct 2013 10:38:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-18:/blog/bioconductor-package-installation-on-ubuntu-error-messages.html</guid></item><item><title>Replicate Analyses</title><link>https://ljcohen.github.io/blog/replicate-analyses.html</link><description>&lt;p&gt;This is a good exercise/assignment to replicate published analyses:&lt;/p&gt;
+&lt;p&gt;http://bioinformatics.risha.me/r/&lt;/p&gt;
+&lt;p&gt;http://www.stjuderesearch.org/site/data/AML1/&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 18 Oct 2013 09:13:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-18:/blog/replicate-analyses.html</guid></item><item><title>ExpressionSet success!!</title><link>https://ljcohen.github.io/blog/expressionset-success.html</link><description>&lt;p&gt;Behold, the ExpressionSet object:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;gt; sponge_ExpressionSet&amp;amp;lt;-new(&amp;quot;ExpressionSet&amp;quot;,exprs=sponge_data,phenoData=pd,experimentData=experimentData,featureData=an)
+&amp;amp;gt; sponge_ExpressionSet
+ExpressionSet (storageMode: lockedEnvironment)
+assayData: 15744 features, 72 samples 
+  element names: exprs 
+protocolData: none
+phenoData
+  sampleNames: 1_1 1_2 ... 9_8 (72 total)
+  varLabels: Chip Number File Name ... Name (9 total)
+  varMetadata: labelDescription
+featureData …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 17 Oct 2013 15:11:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-17:/blog/expressionset-success.html</guid></item><item><title>Py Biobase</title><link>https://ljcohen.github.io/blog/py-biobase.html</link><description>&lt;p&gt;This could be useful:&lt;/p&gt;
+&lt;p&gt;http://pydoc.net/Python/rpy2-bioconductor-extensions/0.2-dev/bioc.biobase/&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 17 Oct 2013 14:05:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-17:/blog/py-biobase.html</guid></item><item><title>Error in validObject(.Object)</title><link>https://ljcohen.github.io/blog/error-in-validobject-object.html</link><description>&lt;p&gt;Biobase's  "ExpressionSet" package:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sponge_ExpressionSet&amp;amp;lt;-new(&amp;quot;ExpressionSet&amp;quot;,exprs=sponge_data,phenoData=pd,experimentData=experimentData,featureData=an)
+Error in validObject(.Object) : 
+  invalid class “ExpressionSet” object: 1: featureNames differ between assayData and featureData
+invalid class “ExpressionSet” object: 2: sampleNames differ between assayData and phenoData
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It is looking for the same data in all …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 17 Oct 2013 13:25:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-17:/blog/error-in-validobject-object.html</guid></item><item><title>Regular Expressions in R</title><link>https://ljcohen.github.io/blog/regular-expressions-in-r.html</link><description>&lt;p&gt;http://stackoverflow.com/questions/10294284/remove-all-special-characters-from-a-string-in-r&lt;/p&gt;
+&lt;p&gt;http://stackoverflow.com/questions/6240026/regular-expressions-in-r-to-erase-all-characters-after-the-first-space&lt;/p&gt;
+&lt;p&gt;Removing special characters in R:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;new_homicides&amp;amp;lt;-gsub(&amp;quot;&amp;amp;lt;[^&amp;amp;gt;]+&amp;amp;gt;&amp;quot;,&amp;quot;&amp;quot;,homicides)
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 16 Oct 2013 21:58:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-16:/blog/regular-expressions-in-r.html</guid></item><item><title>ScrapeR installation on Ubuntu</title><link>https://ljcohen.github.io/blog/scraper-installation-on-ubuntu.html</link><description>&lt;p&gt;The 'scrapeR' package in R will remove html, xml tags from text.&lt;br&gt;
+http://cran.r-project.org/web/packages/scrapeR/scrapeR.pdf&lt;br&gt;
+http://files.meetup.com/1625815/crug_scraper_05-01-2013.pdf&lt;/p&gt;
+&lt;p&gt;I wanted to use this to parse out information for my Week 4 Programming
+Assignment. However, I ran into this problem:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;gt …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 16 Oct 2013 21:00:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-16:/blog/scraper-installation-on-ubuntu.html</guid></item><item><title>Building An ExpressionSet From Scratch</title><link>https://ljcohen.github.io/blog/building-an-expressionset-from-scratch.html</link><description>&lt;p&gt;http://www.bioconductor.org/packages/2.13/bioc/vignettes/Biobase/inst/doc/ExpressionSetIntroduction.pdf&lt;/p&gt;
+&lt;p&gt;http://www.bioconductor.org/help/course-materials/2006/biocintro_oct/labs/ExpressionSet/ExpressionSetIntro-lab.pdf&lt;/p&gt;
+&lt;p&gt;1.Make sure raw microarray data are in a matrix of the appropriate
+dimensions.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;gt; class(sponge_data) 
+[1] &amp;quot;data.frame&amp;quot;
+&amp;amp;gt; matrix_sponge_data&amp;amp;lt;-as …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 16 Oct 2013 12:57:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-16:/blog/building-an-expressionset-from-scratch.html</guid></item><item><title>Biobase</title><link>https://ljcohen.github.io/blog/biobase.html</link><description>&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;gt; source(&amp;quot;http://bioconductor.org/biocLite.R&amp;quot;)
+Bioconductor version 2.13 (BiocInstaller 1.12.0), ?biocLite for help
+
+&amp;amp;gt; biocLite(&amp;quot;Biobase&amp;quot;)
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.0), R version 3.0.2.
+Installing package(s) &amp;#39;Biobase&amp;#39;
+trying URL &amp;#39;http://bioconductor.org/packages/2 …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 16 Oct 2013 12:39:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-16:/blog/biobase.html</guid></item><item><title>Exclude NA from vector of observations</title><link>https://ljcohen.github.io/blog/exclude-na-from-vector-of-observations.html</link><description>&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;gt; f&amp;amp;lt;-outcome2[,11]
+&amp;amp;gt; f
+  [1] 16.1 16.3 15.7   NA 17.4 15.7 12.9 17.4 18.1 16.0 16.4 15.4 21.6 14.5 16.1 15.1
+ [17] 17.4 16.6 18.8 13.6 14.2 …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 14 Oct 2013 12:53:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-14:/blog/exclude-na-from-vector-of-observations.html</guid></item><item><title>Programming Assignment 3</title><link>https://ljcohen.github.io/blog/programming-assignment-3.html</link><description>&lt;p&gt;Plotting outcome of hospital care data,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;gt; outcome &amp;amp;lt;- read.csv(&amp;quot;outcome-of-care-measures.csv&amp;quot;, colClasses = &amp;quot;character&amp;quot;)
+&amp;amp;gt; outcome[, 11] &amp;amp;lt;- as.numeric(outcome[, 11])
+Warning message:
+NAs introduced by coercion 
+&amp;amp;gt; hist(outcome[, 11],xlab=&amp;quot;30-Day Death Rate&amp;quot;,main=&amp;quot;Heart Attack 30-day Death Rate&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/10/rplot_hist_outcome_labels.jpeg"&gt;&lt;img alt="Rplot_hist_outcome_labels" src="http://monsterbashseq.files.wordpress.com/2013/10/rplot_hist_outcome_labels.jpeg"&gt;{.alignnone
+.size-full .wp-image-392 width="640"
+height="387 …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sun, 13 Oct 2013 14:27:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-13:/blog/programming-assignment-3.html</guid></item><item><title>Plotting Data in R</title><link>https://ljcohen.github.io/blog/plotting-data-in-r.html</link><description>&lt;p&gt;Base vs. Lattice graphics, examples from "Computing for Data Analysis"
+Week 3 lectures by Dr. Roger Peng (Johns Hopkins/Coursera) and R
+datasets:&lt;/p&gt;
+&lt;p&gt;https://www.coursera.org/course/compdata&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Base Graphing&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Base parameter documentation, use this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;gt;?par
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Using base graphics &lt;strong&gt;plot()&lt;/strong&gt;, add a title (&lt;strong&gt;main=""&lt;/strong&gt;) and axis
+labels (&lt;strong&gt;xlab …&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sun, 13 Oct 2013 09:34:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-13:/blog/plotting-data-in-r.html</guid></item><item><title>Simulations with Random Numbers</title><link>https://ljcohen.github.io/blog/simulations-with-random-numbers.html</link><description>&lt;p&gt;Randomly-generated numbers by a computer are not actually random. They
+are programmed to seem random. This is technically considered
+&lt;a href="http://en.wikipedia.org/wiki/Pseudorandomness"&gt;pseudorandom&lt;/a&gt;. To
+repeatedly use the same set of randomly-generated numbers in R, use the
+set.seed(1) function.&lt;/p&gt;
+&lt;p&gt;https://d396qusza40orc.cloudfront.net/compdata/slides%2Fsimulation.pdf&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/10/screenshot-from-2013-10-12-185515.png"&gt;&lt;img alt="Screenshot from 2013-10-12
+18:55:15" src="http://monsterbashseq.files.wordpress.com/2013/10/screenshot-from-2013-10-12-185515.png"&gt;{.alignnone
+.size-full .wp-image-337 width="640 …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 12 Oct 2013 18:58:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-12:/blog/simulations-with-random-numbers.html</guid></item><item><title>Clear RStudio Console</title><link>https://ljcohen.github.io/blog/clear-rstudio-console.html</link><description>&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/10/r_clearconsole_10-12-2013.jpg"&gt;&lt;img alt="R_clearconsole_10.12.2013" src="http://monsterbashseq.files.wordpress.com/2013/10/r_clearconsole_10-12-2013.jpg"&gt;{.alignnone
+.size-full .wp-image-333 width="285"
+height="71"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;http://stackoverflow.com/questions/14260340/function-to-clear-the-console-in-r&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 12 Oct 2013 17:03:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-12:/blog/clear-rstudio-console.html</guid></item><item><title>Data Formatting and Experimental Variable Assignments</title><link>https://ljcohen.github.io/blog/data-formatting-and-experimental-variable-assignments.html</link><description>&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;gt; source(&amp;#39;~/Dropbox/HBOI/sponge raw data/microarray_data_formatting.R&amp;#39;)
+&amp;amp;gt; names(b)
+ [1] &amp;quot;initial_blockdata.RefNumber&amp;quot; &amp;quot;initial_blockdata.ID&amp;quot;        &amp;quot;initial_blockdata.Name&amp;quot;      &amp;quot;initial_blockdata.Row&amp;quot;       &amp;quot;initial_blockdata.Column&amp;quot;    &amp;quot;Block 1 Chip 1&amp;quot;             
+ [7] &amp;quot;Block 2 Chip 1&amp;quot;              &amp;quot;Block 3 Chip 1&amp;quot;              &amp;quot;Block 4 Chip 1&amp;quot;              &amp;quot;Block 5 Chip 1&amp;quot;              &amp;quot;Block 6 Chip 1&amp;quot;              &amp;quot;Block 7 …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 12 Oct 2013 17:01:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-12:/blog/data-formatting-and-experimental-variable-assignments.html</guid></item><item><title>Raw Microarray Data Distribution Analyses - MA plotting</title><link>https://ljcohen.github.io/blog/raw-microarray-data-distribution-analyses-ma-plotting.html</link><description>&lt;p&gt;http://en.wikipedia.org/wiki/MA_plot&lt;/p&gt;
+&lt;p&gt;http://cran.r-project.org/web/packages/EMA/vignettes/EMA_vignette.pdf&lt;br&gt;
+http://faculty.ucr.edu/\~tgirke/HTML_Presentations/Manuals/Microarray/arrayBasics.pdf&lt;br&gt;
+http://bioinformatics.oxfordjournals.org/content/18/4/576.full.pdf&lt;br&gt;
+http://bioinformatics.oxfordjournals.org/content/25/3/415.full&lt;br&gt;
+http://www3.it.nuigalway.ie …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 12 Oct 2013 00:36:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-12:/blog/raw-microarray-data-distribution-analyses-ma-plotting.html</guid></item><item><title>Reading Microarray Data</title><link>https://ljcohen.github.io/blog/reading-microarray-data.html</link><description>&lt;p&gt;Given an Agilent microarray, scanned intensity data converted with
+GenePix to *.gpr, I want to write automated R functions that will:&lt;br&gt;
+1. read only F532-BG column in each .gpr file in a directory&lt;br&gt;
+2. separate rows of data by block&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;chip1&amp;amp;lt;-readGAL(&amp;quot;08.23.2012_253295110035.gpr&amp;quot;,path=NULL,header …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 10 Oct 2013 16:52:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-10:/blog/reading-microarray-data.html</guid></item><item><title>Clear R Workspace</title><link>https://ljcohen.github.io/blog/clear-r-workspace.html</link><description>&lt;p&gt;https://stat.ethz.ch/pipermail/r-help/2007-August/137694.html&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;gt; rm(list=ls())
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will clear all functions and datasets stored in the R workspace
+memory.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 10 Oct 2013 15:50:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-10:/blog/clear-r-workspace.html</guid></item><item><title>Mean of a data column</title><link>https://ljcohen.github.io/blog/mean-of-a-data-column.html</link><description>&lt;p&gt;Given a data set with multiple rows and columns, what is the mean of
+only one of the columns?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;gt; d&amp;amp;lt;-iris[,c(&amp;quot;Sepal.Length&amp;quot;)]
+&amp;amp;gt; d
+  [1] 5.1 4.9 4.7 4.6 5.0 5.4 4.6 5.0 4.4 4.9 5 …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 05 Oct 2013 14:56:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-05:/blog/mean-of-a-data-column.html</guid></item><item><title>Scoping</title><link>https://ljcohen.github.io/blog/scoping.html</link><description>&lt;p&gt;http://en.wikipedia.org/wiki/Scope_%28computer_science%29&lt;br&gt;
+Lexical (static) vs. Dynamic&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/10/screenshot-from-2013-10-05-120716.png"&gt;&lt;img alt="Screenshot from 2013-10-05
+12:07:16" src="http://monsterbashseq.files.wordpress.com/2013/10/screenshot-from-2013-10-05-120716.png"&gt;{.alignnone
+.size-full .wp-image-307 width="140"
+height="228"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The global variable &lt;em&gt;y&lt;/em&gt; is 10, unless it is called within the function
+&lt;em&gt;f&lt;/em&gt;, where it is defined as 2.&lt;/p&gt;
+&lt;p&gt;Robert Gentleman and Ross Ihaka (2000). “Lexical Scope and&lt;br&gt;
+Statistical Computing …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 05 Oct 2013 12:08:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-05:/blog/scoping.html</guid></item><item><title>R Control Structures</title><link>https://ljcohen.github.io/blog/r-control-structures.html</link><description>&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/10/screenshot-from-2013-10-04-214505.png"&gt;&lt;img alt="Screenshot from 2013-10-04
+21:45:05" src="http://monsterbashseq.files.wordpress.com/2013/10/screenshot-from-2013-10-04-214505.png"&gt;{.alignnone
+.size-full .wp-image-302 width="542"
+height="496"}&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 04 Oct 2013 21:46:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-04:/blog/r-control-structures.html</guid></item><item><title>Molecular Animations on YouTube</title><link>https://ljcohen.github.io/blog/molecular-animations-on-youtube.html</link><description>&lt;p&gt;I'm poking around this week, researching grad schools specifically in
+Bioinformatics. There are not many schools who offer a PhD degree
+specifically in this field. Computational, systems biology, genetics,
+molecular biology - many schools have programs and offer specializations
+in the area of bioinformatics. Schools with Core Genomics Facilities
+have faculty …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 03 Oct 2013 10:57:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-10-03:/blog/molecular-animations-on-youtube.html</guid></item><item><title>Python Variable Names</title><link>https://ljcohen.github.io/blog/python-variable-names.html</link><description>&lt;p&gt;I learned today that in Python, variable names cannot start with a
+number. For example, this is an incorrect variable name:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1_AA_aa
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/blockquote&gt;
+&lt;p&gt;This could be used instead:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;AA_aa1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/blockquote&gt;
+&lt;p&gt;http://en.wikibooks.org/wiki/Python_Beginner_to_Expert/Native_Types&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 28 Sep 2013 13:50:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-28:/blog/python-variable-names.html</guid></item><item><title>Jan. 10 Wiki competition for Computational Biology articles</title><link>https://ljcohen.github.io/blog/jan-10-wiki-competition-for-computational-biology-articles.html</link><description>&lt;p&gt;https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Computational_Biology/ISCB_competition_announcement_2013&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 28 Sep 2013 12:29:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-28:/blog/jan-10-wiki-competition-for-computational-biology-articles.html</guid></item><item><title>Maximum Value in Subset</title><link>https://ljcohen.github.io/blog/maximum-value-in-subset.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;What was the maximum ozone value in the month of May (i.e. Month = 5)?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Google "R subset data maximum value":&lt;/p&gt;
+&lt;p&gt;[1]
+http://stackoverflow.com/questions/12350783/find-max-mean-min-of-the-a-subset-in-r&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data_subset3.jpg"&gt;&lt;img alt="ProgrammingQuizW1_data_subset3" src="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data_subset3.jpg"&gt;{.alignnone
+.size-full .wp-image-282 width="302"
+height="551"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data_subset3_max.jpg"&gt;&lt;img alt="ProgrammingQuizW1_data_subset3_max" src="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data_subset3_max.jpg"&gt;{.alignnone
+.size-full .wp-image-283 width="576"
+height="502"}&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 27 Sep 2013 22:46:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-27:/blog/maximum-value-in-subset.html</guid></item><item><title>Subset data equal to one value</title><link>https://ljcohen.github.io/blog/subset-data-equal-to-one-value.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;What is the mean of "Temp" when "Month" is equal to 6?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data_subset_dataequalto.jpg"&gt;&lt;img alt="ProgrammingQuizW1_data_subset_dataequalto" src="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data_subset_dataequalto.jpg"&gt;{.alignnone
+.size-full .wp-image-277 width="285"
+height="535"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data_subset_dataequalto_answer.jpg"&gt;&lt;img alt="ProgrammingQuizW1_data_subset_dataequalto_answer" src="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data_subset_dataequalto_answer.jpg"&gt;{.alignnone
+.size-full .wp-image-278 width="196"
+height="102"}&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 27 Sep 2013 22:27:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-27:/blog/subset-data-equal-to-one-value.html</guid></item><item><title>Range of Data</title><link>https://ljcohen.github.io/blog/range-of-data.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;Extract the subset of rows of the data frame where Ozone values are
+above 31 and Temp values are above 90. What is the mean of Solar.R in
+this subset?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Google search: "R subset values in one column above threshold"&lt;/p&gt;
+&lt;p&gt;This was a very helpful link:&lt;/p&gt;
+&lt;p&gt;[1] http://www …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 27 Sep 2013 22:11:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-27:/blog/range-of-data.html</guid></item><item><title>Calculate the mean</title><link>https://ljcohen.github.io/blog/calculate-the-mean.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;What is the mean of the Ozone column in this dataset? Exclude missing
+values (coded as NA) from this calculation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There is no information in the Coursera lecture notes on how to
+calculate the mean from a column of data. I Google search for "R
+calculate mean exclude missing values …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 27 Sep 2013 21:13:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-27:/blog/calculate-the-mean.html</guid></item><item><title>Rosalind Plankton</title><link>https://ljcohen.github.io/blog/rosalind-plankton.html</link><description>&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/09/plankton.png"&gt;&lt;img alt="plankton" src="http://monsterbashseq.files.wordpress.com/2013/09/plankton.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-244 width="300"
+height="278"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;"Plankton" level on &lt;a href="http://rosalind.info/users/johnsolk/"&gt;Rosalind&lt;/a&gt;
+achieved after 16 problems solved!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 27 Sep 2013 13:22:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-27:/blog/rosalind-plankton.html</guid></item><item><title>Classes</title><link>https://ljcohen.github.io/blog/classes.html</link><description>&lt;p&gt;http://biopython.org/DIST/docs/api/Bio.SeqUtils.ProtParam.ProteinAnalysis-class.html&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 26 Sep 2013 16:03:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-26:/blog/classes.html</guid></item><item><title>Missing Values</title><link>https://ljcohen.github.io/blog/missing-values.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;How many missing values are in the Ozone column of this data frame?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I want to calculate the number of missing values in a column without
+having to count them by hand. I'm not sure how to subset only one column
+of data.&lt;/p&gt;
+&lt;p&gt;I try this:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data_missingvalues_completecases.jpg"&gt;&lt;img alt="ProgrammingQuizW1_data_missingvalues_completecases" src="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data_missingvalues_completecases.jpg?w=640"&gt;{.alignnone
+.size-large .wp-image-231 width …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 26 Sep 2013 14:14:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-26:/blog/missing-values.html</guid></item><item><title>Subsetting Data</title><link>https://ljcohen.github.io/blog/subsetting-data.html</link><description>&lt;p&gt;In addition to what I tried yesterday, I tried these today, with no
+luck:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data_csvfile_last2rows_error2.jpg"&gt;&lt;img alt="ProgrammingQuizW1_data_csvfile_last2rows_error2" src="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data_csvfile_last2rows_error2.jpg?w=640"&gt;{.alignnone
+.size-large .wp-image-223 width="640"
+height="320"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Then, finally, this worked!&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data_csvfile_last2rows_works1.jpg"&gt;&lt;img alt="ProgrammingQuizW1_data_csvfile_last2rows_WORKS" src="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data_csvfile_last2rows_works1.jpg"&gt;{.alignnone
+.size-full .wp-image-233 width="505"
+height="153"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A combination of [1] and the lecture notes on subsetting lists and
+matrices, with syntax:  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;gt; x&amp;amp;lt …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 26 Sep 2013 13:20:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-26:/blog/subsetting-data.html</guid></item><item><title>Programming Quiz 1 - Week 1</title><link>https://ljcohen.github.io/blog/programming-quiz-1-week-1.html</link><description>&lt;p&gt;&lt;a href="https://class.coursera.org/compdata-003/class"&gt;Computing for Data
+Analysis&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Quiz 1 Steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Download "hw1_data.zip" from course website.&lt;/li&gt;
+&lt;li&gt;Extract files, "hw1_data.csv". I opened this file in MS Excel, to
+    visualize the data.&lt;br&gt;
+&lt;a href="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data.jpg"&gt;&lt;img alt="ProgrammingQuizW1_data" src="http://monsterbashseq.files.wordpress.com/2013/09/programmingquizw1_data.jpg?w=240"&gt;{.alignnone
+    .size-medium .wp-image-203 width="240"
+    height="300"}&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;There are 154 rows and 6 columns of data, with 1 header row with
+    names …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 25 Sep 2013 16:58:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-25:/blog/programming-quiz-1-week-1.html</guid></item><item><title>Permutations</title><link>https://ljcohen.github.io/blog/permutations.html</link><description>&lt;p&gt;Combinations of items, order matters:&lt;/p&gt;
+&lt;div class="header"&gt;
+
+import itertools&lt;/code&gt;
+&lt;/p&gt;
+http://docs.python.org/3.3/library/itertools.html\#itertools.permutations
+
+http://en.wikipedia.org/wiki/Permutation
+
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 25 Sep 2013 13:41:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-25:/blog/permutations.html</guid></item><item><title>Longest Common Substring Problem</title><link>https://ljcohen.github.io/blog/longest-common-substring-problem.html</link><description>&lt;p&gt;To find a &lt;a href="http://rosalind.info/problems/lcsm/"&gt;shared motif between a collection of nucleic acid
+sequences&lt;/a&gt;, skills for solving the
+&lt;a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem"&gt;longest common substring
+problem&lt;/a&gt;
+are needed.&lt;/p&gt;
+&lt;p&gt;Suffix Trees, Dynamic Programming:&lt;/p&gt;
+&lt;p&gt;http://www.cs.cmu.edu/\~ckingsf/bioinfo-lectures/suffixtrees.pdf&lt;/p&gt;
+&lt;p&gt;http://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Longest_common_substring#Python&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;LCSubstr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;S&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt;&lt;span class="nx"&gt;m&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nx"&gt;T …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 25 Sep 2013 12:12:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-25:/blog/longest-common-substring-problem.html</guid></item><item><title>How To Get Help</title><link>https://ljcohen.github.io/blog/how-to-get-help.html</link><description>&lt;p&gt;&lt;a href="http://simplystatistics.org/"&gt;Dr. Roger Peng's&lt;/a&gt; intuitive set of
+instructions for how to properly ask questions on a programming forum is
+quite entertaining and informative:&lt;/p&gt;
+&lt;p&gt;http://www.youtube.com/watch?v=ZFaWxxzouCY&lt;/p&gt;
+&lt;p&gt;His video presentation was inspired by this:
+&lt;a href="http://www.catb.org/esr/faqs/smart-questions.html"&gt;http://www.catb.org/esr/faqs/smart-questions.html&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 23 Sep 2013 13:03:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-23:/blog/how-to-get-help.html</guid></item><item><title>Computing For Data Analysis</title><link>https://ljcohen.github.io/blog/computing-for-data-analysis.html</link><description>&lt;p&gt;Learn R programming on Coursera, &lt;a href="https://www.coursera.org/course/compdata"&gt;"Computing for Data
+Analysis"&lt;/a&gt; by &lt;a href="http://simplystatistics.org/"&gt;Dr. Roger
+Peng&lt;/a&gt; - starts this week!&lt;/p&gt;
+&lt;p&gt;http://www.youtube.com/playlist?list=PLjTlxb-wKvXNSDfcKPFH2gzHGyjpeCZmJ&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 23 Sep 2013 09:10:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-23:/blog/computing-for-data-analysis.html</guid></item><item><title>Rosalind</title><link>https://ljcohen.github.io/blog/rosalind.html</link><description>&lt;p&gt;Problems solved:&lt;/p&gt;
+&lt;p&gt;https://github.com/ljcohen/Rosalind&lt;/p&gt;
+&lt;p&gt;http://rosalind.info/users/johnsolk/&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sun, 22 Sep 2013 21:21:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-22:/blog/rosalind.html</guid></item><item><title>Installing R and BioPython on Ubuntu</title><link>https://ljcohen.github.io/blog/158.html</link><description>&lt;p&gt;Installing BioPython:&lt;/p&gt;
+&lt;p&gt;https://dl.dropboxusercontent.com/u/9205689/BioPython_python3.3_install_WORKS_transcript_9.20.13.txt&lt;/p&gt;
+&lt;p&gt;Installing R:&lt;/p&gt;
+&lt;p&gt;I use Ubuntu - Raring 13.04 - and managed to install R and RStudio
+yesterday. These instructions worked:&lt;br&gt;
+&lt;a href="http://cran.r-project.org/bin/linux/ubuntu/README"&gt;http://cran.r-project.org/bin/linux/ubuntu/README&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1. Edit the sources.list file. In the terminal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sun, 22 Sep 2013 21:03:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-22:/blog/158.html</guid></item><item><title>monsteR Photo of the Day</title><link>https://ljcohen.github.io/blog/photo-of-the-day-2.html</link><description>&lt;p&gt;Gravid female blue land crab, &lt;em&gt;&lt;a href="http://www.sms.si.edu/IRLSpec/Cardis_guanhu.htm"&gt;Cardisoma
+guanhumi&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;http://www.flickr.com/photos/lpcohen/9826619683/&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 20 Sep 2013 10:33:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-20:/blog/photo-of-the-day-2.html</guid></item><item><title>Rosalind Amoeba</title><link>https://ljcohen.github.io/blog/176.html</link><description>&lt;p&gt;&lt;a href="http://rosalind.info/problems/list-view/"&gt;&lt;img alt="amoeba" src="http://monsterbashseq.files.wordpress.com/2013/09/amoeba.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-177 width="300"
+height="278"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;"Amoeba" level on &lt;a href="http://rosalind.info/users/johnsolk/"&gt;Rosalind&lt;/a&gt;
+achieved after 8 problems solved!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 16 Sep 2013 13:32:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-09-16:/blog/176.html</guid></item><item><title>Tutorials and Books</title><link>https://ljcohen.github.io/blog/tutorials-and-books.html</link><description>&lt;p&gt;http://ged.msu.edu/angus/tutorials-2013/&lt;/p&gt;
+&lt;p&gt;http://practicalcomputing.org/&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 08 Jul 2013 12:03:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-07-08:/blog/tutorials-and-books.html</guid></item><item><title>Big Data in Biology</title><link>https://ljcohen.github.io/blog/big-data-in-biology.html</link><description>&lt;p&gt;http://www.nature.com/nature/journal/v498/n7453/full/498255a.html&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 18 Jun 2013 22:13:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-06-18:/blog/big-data-in-biology.html</guid></item><item><title>test vcf_reader</title><link>https://ljcohen.github.io/blog/test-vcf_reader.html</link><description>&lt;p&gt;once you get a virtualenv set up and pyvcf installed, you can work with
+vcf files:&lt;/p&gt;
+&lt;p&gt;import vcf&lt;/p&gt;
+&lt;p&gt;with open('F0--R0.vcf') as vcf_reader:&lt;br&gt;
+for record in vcf_reader:&lt;br&gt;
+print(record)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 18 Jun 2013 22:10:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-06-18:/blog/test-vcf_reader.html</guid></item><item><title>leaving virtualenv</title><link>https://ljcohen.github.io/blog/leaving-virtualenv.html</link><description>&lt;p&gt;(Python)flcellogrl@purplebanyan:/home\$ deactivate&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 18 Jun 2013 22:05:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-06-18:/blog/leaving-virtualenv.html</guid></item><item><title>reduce pdf file size</title><link>https://ljcohen.github.io/blog/reduce-pdf-file-size.html</link><description>&lt;p&gt;http://www.alfredklomp.com/programming/shrinkpdf/&lt;/p&gt;
+&lt;p&gt;flcellogrl@purplebanyan:\~\$ sudo apt-get install ghostscript&lt;br&gt;
+[sudo] password for flcellogrl:&lt;br&gt;
+Reading package lists... Done&lt;br&gt;
+Building dependency tree&lt;br&gt;
+Reading state information... Done&lt;br&gt;
+ghostscript is already the newest version.&lt;br&gt;
+ghostscript set to manually installed.&lt;br&gt;
+The following packages were automatically installed and are no longer
+required:&lt;br&gt;
+guile-1 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Mon, 27 May 2013 11:16:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-05-27:/blog/reduce-pdf-file-size.html</guid></item><item><title>de novo transcriptome assembly analyses</title><link>https://ljcohen.github.io/blog/de-novo-transcriptome-assembly-analyses.html</link><description>&lt;p&gt;http://mbe.oxfordjournals.org/content/early/2013/05/10/molbev.mst087.short&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Wed, 15 May 2013 09:33:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-05-15:/blog/de-novo-transcriptome-assembly-analyses.html</guid></item><item><title>Bioinformatics vs. Computational Biology</title><link>https://ljcohen.github.io/blog/bioinformatics-vs-computational-biology.html</link><description>&lt;p&gt;http://rbaltman.wordpress.com/2009/02/18/bioinformatics-computational-biology-same-no/&lt;/p&gt;
+&lt;p&gt;http://en.wikipedia.org/wiki/Computational_biology&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sun, 12 May 2013 14:40:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-05-12:/blog/bioinformatics-vs-computational-biology.html</guid></item><item><title>Blast2GO</title><link>https://ljcohen.github.io/blog/blast2go.html</link><description>&lt;p&gt;https://groups.google.com/forum/?fromgroups=#!topic/blast2go/6zd4CjvDJg4&lt;/p&gt;
+&lt;p&gt;http://gremlin2.soic.indiana.edu/blog/?p=34&lt;/p&gt;
+&lt;p&gt;https://groups.google.com/forum/#!topic/blast2go/12dlQkQvL_4&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sun, 12 May 2013 11:28:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-05-12:/blog/blast2go.html</guid></item><item><title>BioLinux?</title><link>https://ljcohen.github.io/blog/biolinux.html</link><description>&lt;p&gt;http://nebc.nerc.ac.uk/tools/bio-linux/bio-linux-7-info&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sun, 12 May 2013 11:27:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-05-12:/blog/biolinux.html</guid></item><item><title>Reading single-channel microarray data</title><link>https://ljcohen.github.io/blog/r-targets-file.html</link><description>&lt;p&gt;The first step in working with microarray data, in general, is to gather
+and format all of your data files. In most cases, this can be a tedious
+task. In R, the first step is to import your data.&lt;/p&gt;
+&lt;p&gt;1. Create a Microsoft Excel spreadsheet with the names of all …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 09 May 2013 18:07:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-05-09:/blog/r-targets-file.html</guid><category>BioConductor</category></item><item><title>virtualenv</title><link>https://ljcohen.github.io/blog/virtualenv.html</link><description>&lt;p&gt;Installing Python on Ubuntu.&lt;/p&gt;
+&lt;p&gt;Installing Biopython on Ubuntu.&lt;/p&gt;
+&lt;p&gt;Dealing with vcf and gatk modules to evntually use in a Python pipeline
+script. The documentation for those are here:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/chapmanb/bcbio-nextgen"&gt;https://github.com/chapmanb/bcbio-nextgen&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://github.com/jamescasbon/PyVCF"&gt;https://github.com/jamescasbon/PyVCF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here are the Linux command lines to setup the Python virtualenv (virtual …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 03 May 2013 20:19:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-05-03:/blog/virtualenv.html</guid></item><item><title>Ubuntu OS</title><link>https://ljcohen.github.io/blog/ubuntu-os.html</link><description>&lt;p&gt;Different versions of Ubuntu.&lt;/p&gt;
+&lt;p&gt;Installing Ubuntu from USB drive.&lt;/p&gt;
+&lt;p&gt;Testing first to see whether hardware works before fully installing.&lt;/p&gt;
+&lt;p&gt;I like the Cinnamon desktop environment.&lt;/p&gt;
+&lt;p&gt;I upgraded Ubuntu 13.04.&lt;/p&gt;
+&lt;p&gt;Graphics troubleshooting procedure:
+https://help.ubuntu.com/community/GraphicsTroubleshootingProcedure&lt;/p&gt;
+&lt;p&gt;https://answers.launchpad.net/ubuntu/+question/227596&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sun, 28 Apr 2013 20:18:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-04-28:/blog/ubuntu-os.html</guid></item><item><title>Python Dictionary Objects</title><link>https://ljcohen.github.io/blog/python-dictionary-objects.html</link><description>&lt;p&gt;Dictionaries stored as hashtables vs. linear searching keys. THis kinda
+fits into your discussion of why linear searching is slow.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blip.tv/pycon-us-videos-2009-2010-2011/pycon-2010-the-mighty-dictionary-55-3352147"&gt;http://blip.tv/pycon-us-videos-2009-2010-2011/pycon-2010-the-mighty-dictionary-55-3352147&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://stackoverflow.com/questions/327311/how-are-pythons-built-in-dictionaries-implemented"&gt;http://stackoverflow.com/questions/327311/how-are-pythons-built-in-dictionaries-implemented&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://stackoverflow.com/questions/1602934/what-is-a-good-way-to-test-if-a-key-exists-in-python-dictionary"&gt;http://stackoverflow.com/questions/1602934/what-is-a-good-way-to-test-if-a-key-exists-in-python-dictionary&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://wiki.python.org/moin/DictionaryKeys"&gt;http://wiki.python.org/moin/DictionaryKeys&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 26 Apr 2013 20:54:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-04-26:/blog/python-dictionary-objects.html</guid></item><item><title>Problem</title><link>https://ljcohen.github.io/blog/problem.html</link><description>&lt;p&gt;The first step is admitting you have a problem. I'm addicted:&lt;/p&gt;
+&lt;p&gt;http://cscircles.cemc.uwaterloo.ca/visualize/#mode=edit&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 25 Apr 2013 20:44:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-04-25:/blog/problem.html</guid></item><item><title>README</title><link>https://ljcohen.github.io/blog/readme.html</link><description>&lt;p&gt;Focus on writing good, clear descriptive "Read Me" files.&lt;/p&gt;
+&lt;p&gt;http://thechangelog.com/top-ten-reasons-why-i-wont-use-your-open-source-project/&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 09 Apr 2013 23:51:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-04-09:/blog/readme.html</guid></item><item><title>Programming Ideas</title><link>https://ljcohen.github.io/blog/programming-ideas.html</link><description>&lt;p&gt;Ideas for Python coding:&lt;br&gt;
+- put sequences in fasta format&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;parses sequences from fasta format&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;reverse translate amino acid sequence&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;search fasta file with EST for ORF&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;search ncbi and pull fasta files for taxonomic groups and specific
+genes&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;primer melting temperature  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;GC content  &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;molarity calculations, e.g.
+http://www.graphpad …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Thu, 04 Apr 2013 20:42:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-04-04:/blog/programming-ideas.html</guid></item><item><title>Links and References</title><link>https://ljcohen.github.io/blog/links-and-references.html</link><description>&lt;p&gt;Links and references to get started.&lt;/p&gt;
+&lt;p&gt;stackoverflow&lt;/p&gt;
+&lt;p&gt;python&lt;/p&gt;
+&lt;p&gt;learningpythonthehardway&lt;/p&gt;
+&lt;p&gt;http://teamtreehouse.com/&lt;br&gt;
+https://www.ai-class.com/&lt;br&gt;
+http://www.udacity.com/&lt;/p&gt;
+&lt;p&gt;Bioinformatics python links:&lt;br&gt;
+http://jura.wi.mit.edu/bio/education/&lt;br&gt;
+http://ocw.mit.edu/courses/biology/7-91j-foundations-of-computational-and-systems-biology-spring-2004/study-materials/&lt;br&gt;
+http://ocw.mit.edu/courses/biology/7-91j-foundations-of-computational-and-systems-biology-spring-2004/syllabus/&lt;br&gt;
+http://www.dalkescientific.com …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Tue, 15 Jan 2013 20:26:00 -0800</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2013-01-15:/blog/links-and-references.html</guid></item><item><title>IDLE in Windows</title><link>https://ljcohen.github.io/blog/idle-in-windows.html</link><description>&lt;p&gt;When I first installed the Python 3 IDLE on Windows XP and tried to open
+the environment, I would get this error message, "IDLE's subprocess
+didn't make connection. Either IDLE can't start a subprocess or personal
+firewall software is blocking the connection:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/05/errormsg_atwork.jpg"&gt;&lt;img alt="errormsg_atwork" src="http://monsterbashseq.files.wordpress.com/2013/05/errormsg_atwork.jpg?w=640"&gt;{.alignnone
+.size-large .wp-image-35 width="640"
+height="528"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Sat, 25 Aug 2012 13:27:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2012-08-25:/blog/idle-in-windows.html</guid><category>idle</category><category>Microsoft Windows</category><category>Personal firewall</category><category>Programming</category><category>Python 2.7</category><category>Windows XP</category></item><item><title>Cy-3 Labeling for Agilent microarray analysis</title><link>https://ljcohen.github.io/blog/cy-3-labeling-for-agilent-microarray-analysis.html</link><description>&lt;p&gt;An undergrad in my lab asked me to explain the Cy-3 labeling process to
+him. He didn't understand what we were doing or why it was necessary to
+put a Cy-3 labeled RNA sample on the microarray. This is what the white
+board looked like after our 1 hr discussion …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">monsterbashseq</dc:creator><pubDate>Fri, 27 Jul 2012 10:24:00 -0700</pubDate><guid isPermaLink="false">tag:ljcohen.github.io,2012-07-27:/blog/cy-3-labeling-for-agilent-microarray-analysis.html</guid></item></channel></rss>

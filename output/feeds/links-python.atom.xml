@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Links, Python</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/links-python.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2013-09-25T13:41:00-07:00</updated><entry><title>Permutations</title><link href="https://ljcohen.github.io/blog/permutations.html" rel="alternate"></link><published>2013-09-25T13:41:00-07:00</published><updated>2013-09-25T13:41:00-07:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-09-25:/blog/permutations.html</id><summary type="html">&lt;p&gt;Combinations of items, order matters:&lt;/p&gt;
+&lt;div class="header"&gt;
+
+import itertools&lt;/code&gt;
+&lt;/p&gt;
+http://docs.python.org/3.3/library/itertools.html\#itertools.permutations
+
+http://en.wikipedia.org/wiki/Permutation
+
+&lt;/div&gt;</summary><content type="html">&lt;p&gt;Combinations of items, order matters:&lt;/p&gt;
+&lt;div class="header"&gt;
+
+import itertools&lt;/code&gt;
+&lt;/p&gt;
+http://docs.python.org/3.3/library/itertools.html\#itertools.permutations
+
+http://en.wikipedia.org/wiki/Permutation
+
+&lt;/div&gt;</content></entry></feed>

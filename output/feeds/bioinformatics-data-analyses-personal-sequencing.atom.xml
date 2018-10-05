@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Bioinformatics, Data Analyses, Personal, Sequencing</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/bioinformatics-data-analyses-personal-sequencing.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2015-09-19T10:53:00-07:00</updated><entry><title>Past Year as a Junior Bioinformatician in Perspective</title><link href="https://ljcohen.github.io/blog/past-year-as-a-junior-bioinformatician-in-perspective.html" rel="alternate"></link><published>2015-09-19T10:53:00-07:00</published><updated>2015-09-19T10:53:00-07:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2015-09-19:/blog/past-year-as-a-junior-bioinformatician-in-perspective.html</id><summary type="html">&lt;p&gt;Starting a new chapter in life this week attending grad school (again)
+towards a PhD. Before moving on, wanted to put into perspective and
+share a few notes on what I've learned over the past year working as a
+junior bioinformatician for a service core. It's been a long journey …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Starting a new chapter in life this week attending grad school (again)
+towards a PhD. Before moving on, wanted to put into perspective and
+share a few notes on what I've learned over the past year working as a
+junior bioinformatician for a service core. It's been a long journey,
+was a difficult decision to leave, and have moved several different
+institutions and cities now. I am focusing and following my own research
+interests. In the long run, I'll be of better use to people this way.
+Looking forward to the next steps!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I got the job by responding to a &lt;a href="https://support.bioconductor.org/p/56545/"&gt;post on the Bioconductor
+    listserv&lt;/a&gt;. I had an
+    interdisciplinary-enough background coming with MS research
+    degree, 4 years of molecular bench work experience, some makeshift
+    computational/programming skills, attended excellent &lt;a href="http://evomics.org/"&gt;Workshop on
+    Genomics&lt;/a&gt;, &lt;a href="http://wltrimbl.github.io/2013-11-14-woodshole/"&gt;Software
+    Carpentry&lt;/a&gt;
+    workshop, and was really interested. They were willing to train me.&lt;/li&gt;
+&lt;li&gt;They had foresight to hire junior-level positions. My colleagues and
+    I did the more routine stuff like Illumina demultiplexing and fairly
+    well-worked out pipelines, e.g. RNAseq so the higher-level
+    bioinformaticians could be free to tackle larger research projects
+    and administrative challenges.&lt;/li&gt;
+&lt;li&gt;Worked on a side project benchmarking &lt;em&gt;de novo&lt;/em&gt; transcriptome
+    assemblers, ended up being in the right place at the right time, and
+    wrote a review chapter for a
+    &lt;a href="http://cshlpress.com/default.tpl?cart=144267682315232380&amp;amp;action=full&amp;amp;--eqskudatarq=1041"&gt;book&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Learned to reach out to people I admire and ask questions.&lt;/li&gt;
+&lt;li&gt;"&lt;a href="https://en.wikipedia.org/wiki/Perfect_is_the_enemy_of_good"&gt;The perfect is the enemy of the
+    good&lt;/a&gt;."
+    (or as someone I met recently put it, why does it have to be good,
+    can't it be excellent???) It's never going to be perfect. Do your
+    best to get results out, otherwise they will sit with you on and on
+    for continued time.&lt;/li&gt;
+&lt;li&gt;I worked on data analyses for 17 different PI in the past 12 months.
+    Some in more depth than others, but ultimately had to learn about 17
+    different research goals/questions/designs. That was just me. My
+    colleagues did even more than I did.&lt;/li&gt;
+&lt;li&gt;There's no substitute for working in the same office as two nice,
+    smart people working on similar things. Or walking across the hall
+    and asking my supervisor, having him spend the time to outline an
+    answer or discussion so that we both understand more about what's
+    going on. I've motivated a lot of self-guided study over the past
+    few years, learning to &lt;a href="http://www.catb.org/esr/faqs/smart-questions.html"&gt;seek
+    help&lt;/a&gt; through the
+    online community when I was isolated in a place where no one else
+    was doing what I was doing. But, if there's a problem that I've been
+    staring at for the past 20 min-to-an-hr, having people physically
+    present and just asking "Can you take a look at this?" can save a
+    lot of time and has really escalated my understanding and grasp of
+    bioinformatics. Plus, it's fun to laugh together when service
+    clients send funny emails. &lt;strong&gt;I am eternally grateful for my former
+    officemates, supervisors and all of my colleagues.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;There was genuine interest and initiative for improving relationship
+    between biomedical research community and bioinformatics support.
+    High demands for diverse services create challenges and constraints
+    on time.&lt;/li&gt;
+&lt;li&gt;There are benefits to being at a large institution (I had come from
+    a small academic institution). If someone doesn't know the answer to
+    your question, someone else might. Or, different conversations with
+    different people will be thought-provoking towards a different way
+    of looking at things. Very supportive, diverse and productive
+    atmosphere.&lt;/li&gt;
+&lt;li&gt;Co-author on 2 papers,
+    &lt;a href="http://onlinelibrary.wiley.com/doi/10.1002/stem.1921/abstract?userIsAuthenticated=false&amp;amp;deniedAccessCustomisedMessage="&gt;RNAseq&lt;/a&gt;
+    and &lt;a href="http://www.sciencedirect.com/science/article/pii/S0960894X14013444"&gt;16S community profiling
+    analyses&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;That's not to say there aren't politics associated. There will be
+    negatives about every place.&lt;/li&gt;
+&lt;li&gt;At the end of the day, you have to be happy with both what you're
+    doing and where you live.&lt;/li&gt;
+&lt;li&gt;In a service-oriented facility, some PI just want results. I've
+    experienced this stalemate first hand:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/21355199539/in/dateposted-public/&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bioinformatics is a process, &lt;a href="https://biomickwatson.wordpress.com/2013/08/06/bioinformatics-is-not-something-you-are-taught-its-a-way-of-life/"&gt;way of
+    life&lt;/a&gt;,
+    a field of study in itself, and not just a set of software tools
+    that will output results. Requires hypotheses and protocols and
+    being &lt;a href="http://www.molecularecologist.com/2015/04/dont-trust-your-data-reviewing-bioinformatics-data-skills/"&gt;skeptical of your
+    results&lt;/a&gt;
+    then going back and doing it again to make sure you can reproduce.
+    What I love about bioinformatics is that you can go back and do it
+    again in a slightly different way to see what happens, testing what
+    parameter caused the interesting results. Not like in the lab where
+    reagents are SO expensive, samples hard to come by, that if you were
+    to go back and do it again, it would double your costs. With
+    bioinformatics, there are costs but in time and computing resources.&lt;/li&gt;
+&lt;li&gt;I'm convinced that results and interpretations of bioinformatics
+    tools are better if the PI or grad student or someone deeply
+    involved in the research question learns about the tools, can
+    program in R or use the commandline tools themselves. I really think
+    that &lt;a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000589"&gt;every biologist should learn how to
+    program&lt;/a&gt;,
+    but I realize that's not realistic expectation. So, at the very
+    least, if bioinformatics results are a necessary part of the study,
+    students, post-docs, someone in the team, should be active in
+    learning about how to use the bioinformatics tools.&lt;/li&gt;
+&lt;li&gt;I knew stuff about microarrays and was willing to analyze microarray
+    data. People still have microarray data and seemed to be grateful.
+    The field seems to be moving away from microarrays. Yes, data are
+    messy, noisy. Don't give you unsolicited sequence information like
+    RNAseq. Cost of microarray vs. RNAseq might even be higher at this
+    point because of analyses compared to RNAseq. But, I'm not convinced
+    that this is a completely dead technology that should be discarded.
+    Might be more appropriate data type for some questions. Such as...?&lt;/li&gt;
+&lt;li&gt;I'm glad that I postponed grad school over this year rather than
+    accepting admissions offers last year. It gave me a chance to
+    explore more in depth, and meet new people. Question the grad school
+    process and even apply to a few more schools. (Another post
+    forthcoming about grad school application process.) Now is
+    definitely the time. Answer to '&lt;a href="http://shouldigetaphd.com/"&gt;Do you really want a
+    PhD?&lt;/a&gt;' is now a resounding "Yes!" Can't
+    imagine doing anything else. Excited about future.&lt;/li&gt;
+&lt;li&gt;I still feel like a gigantic moron most of the time, write code
+    badly in a way that is not &lt;a href="https://mozillascience.github.io/codeReview/intro.html"&gt;collaborative or
+    sustainable&lt;/a&gt;.
+    Sometimes I find that I can't reproduce my own analyses several
+    months later and then end up having to re-do past work. (Everything
+    is documented, just in a haphazard way that makes sense for me, but
+    not necessarily someone else - or my future self in 3 months.) Need
+    to work on all of that that. &lt;a href="https://monsterbashseq.wordpress.com/2015/08/25/reproducible-research-using-rmarkdown-ngs2015-week-3/"&gt;Session on reproducibility at
+    NGS2015&lt;/a&gt;
+    helped tremendously as does github.&lt;/li&gt;
+&lt;li&gt;I still remember the first time I got a big HPC job running, and saw
+    my name on the board. It was exciting! Don't forget that:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/14243536613/in/dateposted-public/&lt;/p&gt;</content></entry></feed>

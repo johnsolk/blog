@@ -10,6 +10,7 @@ ghp-import = "*"
 python-gettext = "*"
 "beautifulsoup4" = "*"
 ipython = "*"
+lxml = "*"
 
 [dev-packages]
 

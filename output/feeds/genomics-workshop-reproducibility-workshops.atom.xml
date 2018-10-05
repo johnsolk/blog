@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Genomics Workshop, reproducibility, workshops</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/genomics-workshop-reproducibility-workshops.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2015-08-27T11:38:00-07:00</updated><entry><title>Reproducibility with AWS - NGS2015</title><link href="https://ljcohen.github.io/blog/reproducibility-with-aws-ngs2015.html" rel="alternate"></link><published>2015-08-27T11:38:00-07:00</published><updated>2015-08-27T11:38:00-07:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2015-08-27:/blog/reproducibility-with-aws-ngs2015.html</id><summary type="html">&lt;p&gt;Leigh Sheneman, &lt;a href="http://www.leighsheneman.com/"&gt;PhD student at MSU&lt;/a&gt; in
+CS. Evolution and learning with digital organisms, applying to real
+world organisms in the future!&lt;/p&gt;
+&lt;p&gt;http://angus.readthedocs.org/en/2015/week3/AWS-tips.html&lt;/p&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/20739813479/&lt;/p&gt;
+&lt;p&gt;Start EC2, medium-sized m3.medium is fine. Log in, update and install …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Leigh Sheneman, &lt;a href="http://www.leighsheneman.com/"&gt;PhD student at MSU&lt;/a&gt; in
+CS. Evolution and learning with digital organisms, applying to real
+world organisms in the future!&lt;/p&gt;
+&lt;p&gt;http://angus.readthedocs.org/en/2015/week3/AWS-tips.html&lt;/p&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/20739813479/&lt;/p&gt;
+&lt;p&gt;Start EC2, medium-sized m3.medium is fine. Log in, update and install
+stuff. We need the packages for the software we will run with the
+eel-pond protocols: https://khmer-protocols.readthedocs.org/en/v0.8.4/&lt;/p&gt;
+&lt;p&gt;Discussion about interesting package name,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt-get -y install libncurses5-dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Titus: text window graphics from 70s games, likely needed for samtools
+tview? Everyone: Ahhhhh (understanding)&lt;/p&gt;
+&lt;p&gt;We're going to make public AMI, for times if we wanted to share and
+distribute to colleagues for collaboration.&lt;/p&gt;
+&lt;p&gt;Go to EC2 console.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/08/create_image.png"&gt;&lt;img alt="create_image" src="https://monsterbashseq.files.wordpress.com/2015/08/create_image.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1100 width="300"
+height="173"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/08/create.png"&gt;&lt;img alt="create" src="https://monsterbashseq.files.wordpress.com/2015/08/create.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1101 width="300"
+height="156"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/08/ami.png"&gt;&lt;img alt="AMI" src="https://monsterbashseq.files.wordpress.com/2015/08/ami.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1102 width="300"
+height="134"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Efficient way to capture OS and software, can terminate instance and
+keep AMI and only get charged fraction of cost (about \$0.10 per
+month/GB) rather than keeping instance running. Snapshot is for volume
+of data rather than image, which is OS filesystem.&lt;/p&gt;
+&lt;p&gt;Change permissions so you are not the only owner. Since we want to make
+public.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/08/public_images.png"&gt;&lt;img alt="public_images" src="https://monsterbashseq.files.wordpress.com/2015/08/public_images.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1103 width="300"
+height="162"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/08/lookatpublic.png"&gt;&lt;img alt="lookatpublic" src="https://monsterbashseq.files.wordpress.com/2015/08/lookatpublic.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1104 width="300"
+height="218"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Takes some time to make this public. So, wait a bit before sharing
+AMI-ID.&lt;/p&gt;
+&lt;p&gt;Important, this image was created in the 'N. Virginia' region. This
+image is only visible in the 'N. Virginia' region. There are other ways
+to share between regions.&lt;/p&gt;
+&lt;p&gt;Class discussion about costs for hosting images and sharing images
+associated with publications. Who pays? If reviewers of papers will need
+the images, how does that work? It is easy to share data and software
+associated with analyses for studies. We can provide all the
+instructions and data and software we want. But no one has figured out a
+realistic and sustainable management framework for computing resources
+for scientific studies. Reproducibility is of concern, but there are no
+incentives for scientists to provide data and transparent analyses via
+methods like AWS AMI to demonstrate reproducibility. If this were
+required for publication, there would likely be more funding resources
+available and everyone would do this instead of a select few. Now,
+people can provide stuff like this, but who is really going out and
+checking other peoples' data and code and software, besides reviewers
+and few colleagues?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Create Volume&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Make sure the availability zone (e.g. us-east-1e) matches the instance.
+If not, pull down menu and select:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="public_ami" src="https://monsterbashseq.files.wordpress.com/2015/08/public_ami.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1105 width="300" height="122"}&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/08/volume.png"&gt;&lt;img alt="volume" src="https://monsterbashseq.files.wordpress.com/2015/08/volume.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1106 width="300"
+height="110"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/08/volume_avail.png"&gt;&lt;img alt="volume_avail" src="https://monsterbashseq.files.wordpress.com/2015/08/volume_avail.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1107 width="300"
+height="146"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Then attach a new 100GB volume to instance. Log out of ssh, log back in.
+Run mount commands to format disk :&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/08/mount1.png"&gt;&lt;img alt="mount" src="https://monsterbashseq.files.wordpress.com/2015/08/mount1.png?w=298"&gt;{.alignnone
+.size-medium .wp-image-1109 width="298"
+height="300"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In the above list /dev/xvda1 is system disk, we attached /dev/xvdf&lt;/p&gt;
+&lt;p&gt;See elastic cloud computing manual for &lt;a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instances-and-amis.html"&gt;Amazon Web Services: AMI,
+Volume, Snapshot, and
+Instances.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/20738536090/&lt;/p&gt;
+&lt;p&gt;If creating an image for someone else, you would do the above where we
+took an image of an OS and a snapshot of a volume.&lt;/p&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/20738795578/in/dateposted-public/&lt;/p&gt;
+&lt;p&gt;Now, (power pose) we will load someone else's snapshot (it's really our
+snapshot, but same idea). First, we have to &lt;strong&gt;Launch&lt;/strong&gt; an AMI instance,
+m3.medium is fine:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/08/createami1.png"&gt;&lt;img alt="createAMI" src="https://monsterbashseq.files.wordpress.com/2015/08/createami1.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1111 width="300"
+height="183"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Then, create a volume from the snapshot to add to the running instance.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/08/create_snapshot_thenvolume.png"&gt;&lt;img alt="create_snapshot_thenvolume" src="https://monsterbashseq.files.wordpress.com/2015/08/create_snapshot_thenvolume.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1112 width="300"
+height="222"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The volume is available to attach:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/08/volumes.png"&gt;&lt;img alt="volumes" src="https://monsterbashseq.files.wordpress.com/2015/08/volumes.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1113 width="300"
+height="89"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Under "Actions", attach volume and select the running instance (should
+pop up once you start typing).&lt;/p&gt;
+&lt;p&gt;Log in, then mount volume (do not format new volume because this
+contains the data!), and it is there!!&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/08/mount_xvdf.png"&gt;&lt;img alt="mount_xvdf" src="https://monsterbashseq.files.wordpress.com/2015/08/mount_xvdf.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1114 width="300"
+height="39"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Creating a bucket to share files, S3&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you wanted to host files for others to download, \$0.10/GB per month.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/08/s3.png"&gt;&lt;img alt="S3" src="https://monsterbashseq.files.wordpress.com/2015/08/s3.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1115 width="300"
+height="121"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Then, you can get the link for people to download:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl -O https://s3.amazonaws.com/lisangs2015/bigwig.py
+&lt;/pre&gt;&lt;/div&gt;</content></entry></feed>

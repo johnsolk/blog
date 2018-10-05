@@ -12,12 +12,19 @@ PATH = 'content'
 
 OUTPUT_PATH = 'output'
 
-CUSTOM_CSS = 'static/css/custom.css'
+#CUSTOM_CSS = 'static/css/custom.css'
 
 THEME = './theme'
 # https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
 
-LINKS = [('name','url')]
+LINKS = [("Titus Brown's DIB Lab","http://ivory.idyll.org/lab/",
+          "Andrew Whitehead's Lab, Environmental Genomics",'https://whiteheadresearch.wordpress.com/',
+          'UCD DIB Training','https://dib-training.readthedocs.io/en/pub/',
+          'NSF-XSEDE Jetstream login','https://use.jetstream-cloud.org/application/dashboard',
+          'Python conda environment docs','https://conda.io/docs/user-guide/tasks/manage-environments.html',
+          'hackmd.io','https://hackmd.io/',
+          'osf','https://osf.io/',
+          'EvidentialGene, killifish genome project','http://arthropods.eugenes.org/EvidentialGene/killifish/')]
 
 DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
 SEARCH_URL = '/blog/search.html'
@@ -47,7 +54,7 @@ SOCIAL = (('twitter', 'https://twitter.com/monsterbashseq'),
           ('github', 'https://github.com/ljcohen'),
           ('flickr','https://www.flickr.com/155690017@N06/'),
           ('linkedin','https://www.linkedin.com/in/johnsolk/'),
-          ('envelope','mailto:ljcohen@ucdavis.edu'))
+          ('email','mailto:ljcohen@ucdavis.edu'))
 
 DISQUS_SITENAME = "johnson_lk"
 

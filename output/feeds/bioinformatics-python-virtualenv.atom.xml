@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Bioinformatics, Python, virtualenv</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/bioinformatics-python-virtualenv.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2013-06-18T22:10:00-07:00</updated><entry><title>test vcf_reader</title><link href="https://ljcohen.github.io/blog/test-vcf_reader.html" rel="alternate"></link><published>2013-06-18T22:10:00-07:00</published><updated>2013-06-18T22:10:00-07:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-06-18:/blog/test-vcf_reader.html</id><summary type="html">&lt;p&gt;once you get a virtualenv set up and pyvcf installed, you can work with
+vcf files:&lt;/p&gt;
+&lt;p&gt;import vcf&lt;/p&gt;
+&lt;p&gt;with open('F0--R0.vcf') as vcf_reader:&lt;br&gt;
+for record in vcf_reader:&lt;br&gt;
+print(record)&lt;/p&gt;</summary><content type="html">&lt;p&gt;once you get a virtualenv set up and pyvcf installed, you can work with
+vcf files:&lt;/p&gt;
+&lt;p&gt;import vcf&lt;/p&gt;
+&lt;p&gt;with open('F0--R0.vcf') as vcf_reader:&lt;br&gt;
+for record in vcf_reader:&lt;br&gt;
+print(record)&lt;/p&gt;</content></entry></feed>

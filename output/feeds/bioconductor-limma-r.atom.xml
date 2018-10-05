@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Bioconductor, limma, R</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/bioconductor-limma-r.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2013-10-10T16:52:00-07:00</updated><entry><title>Reading Microarray Data</title><link href="https://ljcohen.github.io/blog/reading-microarray-data.html" rel="alternate"></link><published>2013-10-10T16:52:00-07:00</published><updated>2013-10-10T16:52:00-07:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-10-10:/blog/reading-microarray-data.html</id><summary type="html">&lt;p&gt;Given an Agilent microarray, scanned intensity data converted with
+GenePix to *.gpr, I want to write automated R functions that will:&lt;br&gt;
+1. read only F532-BG column in each .gpr file in a directory&lt;br&gt;
+2. separate rows of data by block&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;chip1&amp;amp;lt;-readGAL(&amp;quot;08.23.2012_253295110035.gpr&amp;quot;,path=NULL,header …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Given an Agilent microarray, scanned intensity data converted with
+GenePix to *.gpr, I want to write automated R functions that will:&lt;br&gt;
+1. read only F532-BG column in each .gpr file in a directory&lt;br&gt;
+2. separate rows of data by block&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;chip1&amp;amp;lt;-readGAL(&amp;quot;08.23.2012_253295110035.gpr&amp;quot;,path=NULL,header=TRUE,sep=&amp;quot;\t&amp;quot;,quote=&amp;quot;\&amp;quot;&amp;quot;,skip=NULL,as.is=TRUE)
+&amp;amp;gt; names(chip1)
+ [1] &amp;quot;Block&amp;quot;                &amp;quot;Column&amp;quot;               &amp;quot;Row&amp;quot;                 
+ [4] &amp;quot;Name&amp;quot;                 &amp;quot;ID&amp;quot;                   &amp;quot;X&amp;quot;                   
+ [7] &amp;quot;Y&amp;quot;                    &amp;quot;Dia.&amp;quot;                 &amp;quot;F532.Median&amp;quot;         
+[10] &amp;quot;F532.Mean&amp;quot;            &amp;quot;F532.SD&amp;quot;              &amp;quot;F532.CV&amp;quot;             
+[13] &amp;quot;B532&amp;quot;                 &amp;quot;B532.Median&amp;quot;          &amp;quot;B532.Mean&amp;quot;           
+[16] &amp;quot;B532.SD&amp;quot;              &amp;quot;B532.CV&amp;quot;              &amp;quot;X....B532.1SD&amp;quot;       
+[19] &amp;quot;X....B532.2SD&amp;quot;        &amp;quot;F532...Sat.&amp;quot;          &amp;quot;F.Pixels&amp;quot;            
+[22] &amp;quot;B.Pixels&amp;quot;             &amp;quot;Circularity&amp;quot;          &amp;quot;F532.Median...B532&amp;quot;  
+[25] &amp;quot;F532.Mean...B532&amp;quot;     &amp;quot;F532.Total.Intensity&amp;quot; &amp;quot;SNR.532&amp;quot;             
+[28] &amp;quot;Flags&amp;quot;                &amp;quot;Normalize&amp;quot;            &amp;quot;Autoflag&amp;quot;            
+[31] &amp;quot;RefNumber&amp;quot;            &amp;quot;ControlType&amp;quot;          &amp;quot;GeneName&amp;quot;            
+[34] &amp;quot;TopHit&amp;quot;               &amp;quot;Description&amp;quot; 
+&amp;amp;gt; good&amp;amp;lt;-chip1$F532.Median...B532
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;References&lt;br&gt;
+[1]
+http://www.bioconductor.org/packages/2.12/bioc/vignettes/limma/inst/doc/usersguide.pdf&lt;/p&gt;</content></entry></feed>

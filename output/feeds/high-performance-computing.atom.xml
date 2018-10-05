@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - High Performance Computing</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/high-performance-computing.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2013-12-12T13:46:00-08:00</updated><entry><title>High Performance Computing</title><link href="https://ljcohen.github.io/blog/high-performance-computing.html" rel="alternate"></link><published>2013-12-12T13:46:00-08:00</published><updated>2013-12-12T13:46:00-08:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-12-12:/blog/high-performance-computing.html</id><summary type="html">&lt;p&gt;"When I care how fast I get an answer"&lt;/p&gt;
+&lt;p&gt;Cluster user setup at work this week.&lt;/p&gt;
+&lt;p&gt;HPC has a lot of jargon and acronyms.&lt;/p&gt;
+&lt;p&gt;Intro: According to XSEDE (reference?), 31% of HPC users are in
+Molecular Biosciences&lt;/p&gt;
+&lt;p&gt;Concerned with number of Floating Point Operations Per Second (FLOP/s).
+The number …&lt;/p&gt;</summary><content type="html">&lt;p&gt;"When I care how fast I get an answer"&lt;/p&gt;
+&lt;p&gt;Cluster user setup at work this week.&lt;/p&gt;
+&lt;p&gt;HPC has a lot of jargon and acronyms.&lt;/p&gt;
+&lt;p&gt;Intro: According to XSEDE (reference?), 31% of HPC users are in
+Molecular Biosciences&lt;/p&gt;
+&lt;p&gt;Concerned with number of Floating Point Operations Per Second (FLOP/s).
+The number the environment can provide is a concern. Delivers large
+amounts of processing capacity over long periods of time. Sustained vs.
+peak cycles - as close to 100% as possible. For example, "K"
+supercomputer &amp;gt;10PetaFLOP/s at 93%&lt;/p&gt;
+&lt;p&gt;Bioinformatics requires many task computing, completing large number of
+relatively short jobs. Need to effectively manage. We are task parallel
+vs. other applications more data parallel&lt;/p&gt;
+&lt;p&gt;Cluster: one or more networks, nodes connected. Software (MPI, open
+source) allows nodes to communicate, allows users to reserve resources.
+Log on to one node. 1 master, 4 slaves. Interconnect network.&lt;/p&gt;
+&lt;p&gt;Infiniband "fabric" with multicore parallel workstation&lt;/p&gt;
+&lt;p&gt;RDMA- Infiniband mediates interconnections&lt;/p&gt;
+&lt;p&gt;UMA- memory for all&lt;/p&gt;
+&lt;p&gt;NUMA- pools of memory&lt;/p&gt;
+&lt;p&gt;1 node has 64 (or 32?) cores&lt;/p&gt;
+&lt;p&gt;AMD vs. Intel processors, we have AMD&lt;/p&gt;
+&lt;p&gt;Cannot send data faster than latency and bandwidth of network
+(microseconds), want low latency.&lt;/p&gt;
+&lt;p&gt;Build RAM disk, put files directly on memory of computer, just like
+having solid state disk on laptop&lt;/p&gt;
+&lt;p&gt;Find code for GPU, co-processors (?)&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://e-negotiations.org/wp-content/uploads/2012/09/Figure_2.1_TypicalComputerArchitecture.jpg"&gt;&lt;img alt="Figure_2.1_TypicalComputerArchitecture" src="http://monsterbashseq.files.wordpress.com/2013/12/figure_2-1_typicalcomputerarchitecture.jpg?w=300"&gt;{.alignnone
+.wp-image-710 width="300"
+height="163"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Running faster, cache memory- order in which numbers are stored changes
+depending on what language you use. Efficient code will not waste space.
+Writing loops impacts the order in which data goes into CPU memory.&lt;/p&gt;
+&lt;p&gt;Running faster pipelines, n-stage pipeline, eliminate "if" loops with
+branch prediction, profile code if possible&lt;/p&gt;
+&lt;p&gt;Apparently FMA (floating multiplier add) not relevant to bioinformatics
+tasks?&lt;/p&gt;
+&lt;p&gt;Introduce checkpoints in code.&lt;/p&gt;</content></entry></feed>

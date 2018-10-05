@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Bioinformatics, Data Analyses, Python</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/bioinformatics-data-analyses-python.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2014-01-23T09:14:00-08:00</updated><entry><title>Genomics Workshop (Week 2, Day 4) - QIIME and Metgenomics Analyses</title><link href="https://ljcohen.github.io/blog/genomics-workshop-week-2-day-4-qiime-and-metgenomics-analyses.html" rel="alternate"></link><published>2014-01-23T09:14:00-08:00</published><updated>2014-01-23T09:14:00-08:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2014-01-23:/blog/genomics-workshop-week-2-day-4-qiime-and-metgenomics-analyses.html</id><summary type="html">&lt;p&gt;http://www.flickr.com/photos/lpcohen/12101848195/&lt;br&gt;
+Daniel McDonald from Dr. Rob Knight's lab, U. Colorado&lt;/p&gt;
+&lt;p&gt;Some links:&lt;br&gt;
+http://www.earthmicrobiome.org/&lt;br&gt;
+http://www.hmpdacc.org/&lt;/p&gt;
+&lt;p&gt;QIIME analysis tool, using iPython notebook:&lt;br&gt;
+http://evomics.org/learning/genomics/metagenomics/metagenomics-laboratories/&lt;/p&gt;
+&lt;p&gt;Data files:&lt;br&gt;
+http://qiime.org/home_static/dataFiles.html&lt;br&gt;
+from this study …&lt;/p&gt;</summary><content type="html">&lt;p&gt;http://www.flickr.com/photos/lpcohen/12101848195/&lt;br&gt;
+Daniel McDonald from Dr. Rob Knight's lab, U. Colorado&lt;/p&gt;
+&lt;p&gt;Some links:&lt;br&gt;
+http://www.earthmicrobiome.org/&lt;br&gt;
+http://www.hmpdacc.org/&lt;/p&gt;
+&lt;p&gt;QIIME analysis tool, using iPython notebook:&lt;br&gt;
+http://evomics.org/learning/genomics/metagenomics/metagenomics-laboratories/&lt;/p&gt;
+&lt;p&gt;Data files:&lt;br&gt;
+http://qiime.org/home_static/dataFiles.html&lt;br&gt;
+from this study:&lt;br&gt;
+http://www.ncbi.nlm.nih.gov/pubmed/21624126&lt;br&gt;
+additional info:&lt;br&gt;
+http://www.ncbi.nlm.nih.gov/pubmed/20534432&lt;/p&gt;
+&lt;p&gt;argument for using iPython notebook:&lt;br&gt;
+http://www.ncbi.nlm.nih.gov/pubmed/23096404&lt;/p&gt;
+&lt;p&gt;iPython notebook:&lt;br&gt;
+http://ipython.org/ipython-doc/stable/interactive/notebook.html&lt;/p&gt;</content></entry></feed>

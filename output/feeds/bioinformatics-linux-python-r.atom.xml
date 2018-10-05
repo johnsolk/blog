@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Bioinformatics, Linux, Python, R</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/bioinformatics-linux-python-r.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2013-09-22T21:03:00-07:00</updated><entry><title>Installing R and BioPython on Ubuntu</title><link href="https://ljcohen.github.io/blog/158.html" rel="alternate"></link><published>2013-09-22T21:03:00-07:00</published><updated>2013-09-22T21:03:00-07:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-09-22:/blog/158.html</id><summary type="html">&lt;p&gt;Installing BioPython:&lt;/p&gt;
+&lt;p&gt;https://dl.dropboxusercontent.com/u/9205689/BioPython_python3.3_install_WORKS_transcript_9.20.13.txt&lt;/p&gt;
+&lt;p&gt;Installing R:&lt;/p&gt;
+&lt;p&gt;I use Ubuntu - Raring 13.04 - and managed to install R and RStudio
+yesterday. These instructions worked:&lt;br&gt;
+&lt;a href="http://cran.r-project.org/bin/linux/ubuntu/README"&gt;http://cran.r-project.org/bin/linux/ubuntu/README&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1. Edit the sources.list file. In the terminal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Installing BioPython:&lt;/p&gt;
+&lt;p&gt;https://dl.dropboxusercontent.com/u/9205689/BioPython_python3.3_install_WORKS_transcript_9.20.13.txt&lt;/p&gt;
+&lt;p&gt;Installing R:&lt;/p&gt;
+&lt;p&gt;I use Ubuntu - Raring 13.04 - and managed to install R and RStudio
+yesterday. These instructions worked:&lt;br&gt;
+&lt;a href="http://cran.r-project.org/bin/linux/ubuntu/README"&gt;http://cran.r-project.org/bin/linux/ubuntu/README&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1. Edit the sources.list file. In the terminal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~$ sudo gedit /etc/apt/sources.list
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Include this line at the end of the sources.list file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;deb&lt;/span&gt; &lt;span class="s"&gt;http://cran.cnr.Berkeley.edu/bin/linux/ubuntu&lt;/span&gt; &lt;span class="kp"&gt;raring/&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;2. Save the file.&lt;/p&gt;
+&lt;p&gt;3. Then, you have to get a public key:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~$ sudo apt-key adv --keyserver keyserver.ubuntu.com
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;4. Finally, you can start the commands listed on  the website:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~$ sudo apt-get update
+flcellogrl@flcellogrl:~$ sudo apt-get install r-base
+flcellogrl@flcellogrl:~$ sudo apt-get install r-base-dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here are my transcripts if anyone is interested. Might help if you're
+trying to figure out what commands to use:&lt;/p&gt;
+&lt;p&gt;https://dl.dropboxusercontent.com/u/9205689/R_installUbuntu_WORKS_9.22.2013.txt&lt;/p&gt;
+&lt;p&gt;R Studio:&lt;/p&gt;
+&lt;p&gt;https://dl.dropboxusercontent.com/u/9205689/RStudio_installUbuntu_WORKS_9.22.2013.txt&lt;/p&gt;</content></entry></feed>

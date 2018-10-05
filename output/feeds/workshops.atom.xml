@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - workshops</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/workshops.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2015-11-10T11:53:00-08:00</updated><entry><title>UC Davis Docker workshop, live-coding</title><link href="https://ljcohen.github.io/blog/uc-davis-docker-workshop-live-coding.html" rel="alternate"></link><published>2015-11-10T11:53:00-08:00</published><updated>2015-11-10T11:53:00-08:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2015-11-10:/blog/uc-davis-docker-workshop-live-coding.html</id><summary type="html">&lt;p&gt;For the second day of the UC Davis &lt;a href="http://dib-training.readthedocs.org/en/pub/2015-11-09-docker.html"&gt;Docker
+workshop&lt;/a&gt;,
+&lt;a href="http://ivory.idyll.org/blog/"&gt;Dr. Titus Brown&lt;/a&gt; initiates a "teach-me"
+session on how to make a Docker container. He will live-code and we will
+tell him what to write. The idea is to package software he knows well,
+e.g. &lt;a href="https://github.com/dib-lab/khmer"&gt;khmer&lt;/a&gt; into a Docker …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For the second day of the UC Davis &lt;a href="http://dib-training.readthedocs.org/en/pub/2015-11-09-docker.html"&gt;Docker
+workshop&lt;/a&gt;,
+&lt;a href="http://ivory.idyll.org/blog/"&gt;Dr. Titus Brown&lt;/a&gt; initiates a "teach-me"
+session on how to make a Docker container. He will live-code and we will
+tell him what to write. The idea is to package software he knows well,
+e.g. &lt;a href="https://github.com/dib-lab/khmer"&gt;khmer&lt;/a&gt; into a Docker container,
+run the Dockerfile successfully, and upload to &lt;a href="https://hub.docker.com/u/diblab/"&gt;Docker
+hub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This really highlights the beauty of Docker. One of the most
+time-consuming aspects of open-source software is installing and getting
+it to work. There are many dependencies and sometimes version updates
+with dependencies can conflict with dependencies of other software.
+Docker containers install dependencies in &lt;a href="https://en.wiktionary.org/wiki/one_fell_swoop"&gt;one fell
+swoop&lt;/a&gt; and run the
+software in isolation from other software with separate dependencies.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://hackpad.com/Notes-from-the-Docker-hands-on-Nov-9-10-2015-olJpjzy4jCj"&gt;Hackpad&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Titus' github &lt;a href="https://github.com/ctb/2015-docker-building"&gt;repo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Start EC2 instance, m3.xlarge, &lt;a href="https://github.com/ngs-docs/2015-nov-docker/blob/master/docker-intro.rst"&gt;install and run
+Docker&lt;/a&gt; (don't
+forget to log out then log back in again)&lt;/p&gt;
+&lt;p&gt;While editing &lt;code&gt;Dockerfile&lt;/code&gt;, have two windows with the same instance
+open: 1.) Docker is running, 2.) instance shell to figure stuff out&lt;/p&gt;
+&lt;p&gt;Tricky part is figuring out what dependencies are required for install,
+can use &lt;code&gt;ENV PACKAGES&lt;/code&gt; and &lt;code&gt;ENV VERSION&lt;/code&gt;. Fill in &lt;code&gt;{PACKAGES}&lt;/code&gt; and
+&lt;code&gt;{VERSION}&lt;/code&gt;, see if they work, then will have completed &lt;code&gt;Dockerfile&lt;/code&gt; for
+running.&lt;/p&gt;
+&lt;p&gt;Then, write script &lt;code&gt;build_test.sh&lt;/code&gt; to run with set of test data to see
+if Dockerfile works.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://github.com/ctb/2015-docker-building.git cd 2015-docker-building/khmer/ bash run_test.sh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Works, so cool!!&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/11/khmer_docker.png"&gt;&lt;img alt="khmer_docker" src="https://monsterbashseq.files.wordpress.com/2015/11/khmer_docker.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1478 width="300"
+height="294"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now, Figure out how to upload to Docker hub.&lt;/p&gt;
+&lt;p&gt;http://docs.docker.com/engine/userguide/dockerrepos/&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker tag diblab/khmer:2.0 diblab/khmer:latest&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Puts the image here:&lt;/p&gt;
+&lt;p&gt;https://hub.docker.com/r/diblab/khmer/&lt;/p&gt;
+&lt;p&gt;Now, anyone can run:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker pull diblab/khmer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Yay!&lt;/p&gt;
+&lt;p&gt;This took 1.5 hrs.&lt;/p&gt;
+&lt;p&gt;Also, &lt;a href="https://github.com/COMBINE-lab/salmon"&gt;salmon&lt;/a&gt; and &lt;a href="https://github.com/camillescott/dammit"&gt;dammit&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;dammit has database files, which are big-ish (\~GB): options for these:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;include db files in image (BAD because image is big and not shared
+    between containers)&lt;/li&gt;
+&lt;li&gt;download each time (BAD because slow and not shared between
+    containers, goal with large dataset is that we want to share between
+    containers)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;*** want to do this *** create data volume within Docker, an
+    image that is just detachable, configured disk space, download files
+    once and then share forever (downside is accessible only in docker
+    files system)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;local disk (a. download, b. mount each time, BAD because local file
+    system is required, not independent and sometimes doesn't work)&lt;/li&gt;
+&lt;/ol&gt;</content></entry><entry><title>iPlant - Intermediate workshop</title><link href="https://ljcohen.github.io/blog/iplant-intermediate-workshop.html" rel="alternate"></link><published>2015-09-22T11:25:00-07:00</published><updated>2015-09-22T11:25:00-07:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2015-09-22:/blog/iplant-intermediate-workshop.html</id><summary type="html">&lt;p&gt;UCDavis, 9/22&lt;/p&gt;
+&lt;p&gt;http://dib-training.readthedocs.org/en/pub/2015-09-iplant.html&lt;br&gt;
+https://pods.iplantcollaborative.org/wiki/display/Events/2015+09+21+iPlant+Workshops+at+UC+Davis&lt;br&gt;
+https://etherpad.mozilla.org/iplant-ucdavis-sep2015&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://pimentel.github.io/"&gt;Harold Pimentel&lt;/a&gt;&lt;/strong&gt;, PhD student in CS at
+UC Berkeley&lt;/p&gt;
+&lt;p&gt;"Algorithms for RNAseq - from raw reads to differential expression
+analysis …&lt;/p&gt;</summary><content type="html">&lt;p&gt;UCDavis, 9/22&lt;/p&gt;
+&lt;p&gt;http://dib-training.readthedocs.org/en/pub/2015-09-iplant.html&lt;br&gt;
+https://pods.iplantcollaborative.org/wiki/display/Events/2015+09+21+iPlant+Workshops+at+UC+Davis&lt;br&gt;
+https://etherpad.mozilla.org/iplant-ucdavis-sep2015&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://pimentel.github.io/"&gt;Harold Pimentel&lt;/a&gt;&lt;/strong&gt;, PhD student in CS at
+UC Berkeley&lt;/p&gt;
+&lt;p&gt;"Algorithms for RNAseq - from raw reads to differential expression
+analysis"&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://pods.iplantcollaborative.org/wiki/download/attachments/21135454/2015_09_22%20Harold.pdf"&gt;slides&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/21605321126/in/dateposted-public/&lt;/p&gt;
+&lt;p&gt;Not all reads are created equal! Number reads proportional to length of
+transcript, normalize to correct for length bias&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/09/length_norm.png"&gt;&lt;img alt="length_norm" src="https://monsterbashseq.files.wordpress.com/2015/09/length_norm.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1224 width="300"
+height="136"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Very fast overview of RNAseq workflows. New RNAseq workflow faster.
+Typically align reads (e.g. bowtie or splice-aware tophat). Genomic vs.
+transcriptomic alignment? Genomic alignment is easier to visualize.
+Tools are similar, similar results.&lt;/p&gt;
+&lt;p&gt;Pseudoalignment with &lt;a href="http://pachterlab.github.io/kallisto/"&gt;Kallisto&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;At the end of the day, what you care about is counting matches with
+transcripts.&lt;/strong&gt; Can do analysis on laptop in &amp;lt;10 min, similar accuracy
+to existing methods.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://monsterbashseq.files.wordpress.com/2015/09/tbg.png"&gt;&lt;img alt="tbg" src="https://monsterbashseq.files.wordpress.com/2015/09/tbg.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-1225 width="300"
+height="159"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Take &lt;em&gt;k-&lt;/em&gt;mers of every single transcript, walk along path. Wherever they
+differ, you create a new path. In dB graph, different splice sites
+diverge along path of graph, sometimes they have same path but some
+don't. Follow &lt;em&gt;k&lt;/em&gt;-mers along graph, intersection of &lt;em&gt;k-&lt;/em&gt;mers can give
+upper bound on compatibility of prior kmers in path. First 3 &lt;em&gt;k&lt;/em&gt;-mers
+have exact same information, 2nd only have a few in common, same with
+the next. Method always assumes&lt;/p&gt;
+&lt;p&gt;Performance speed &amp;gt;500x faster than existing tools, comparable
+accuracy.&lt;/p&gt;
+&lt;p&gt;Two schools of thought for RNAseq differential expression: transcript
+abundance estimation vs. counts&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.nature.com/nbt/journal/v31/n1/abs/nbt.2450.html"&gt;Issues with raw counts (Figure
+1).&lt;/a&gt; Counts
+do not take into account length, not well posed: Isoform A (1000) vs.
+Isoform B (500) vs. union of A and B (1500)&lt;/p&gt;
+&lt;p&gt;FPKM union &amp;lt;= FPKM true&lt;/p&gt;
+&lt;p&gt;Sum of fractions vs. fractions of sums&lt;/p&gt;
+&lt;p&gt;How wrong is gene counting? Take a closer look at cuffdiff2 approach
+(&lt;a href="http://www.nature.com/nbt/journal/v31/n1/abs/nbt.2450.html"&gt;paper&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Latent allocation problem. Maximum likelihood estimate number of reads
+of one vs. num&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://arxiv.org/abs/1104.3889"&gt;L. Pachter "Models for transcript quantification from RNA-Seq" arXiv,
+2011&lt;/a&gt;. Review of models, all transcript
+quantification methods boil down to inference algorithm. Then you have
+abundance estimation output for sailfish, kallisto. For
+example, proportionally assign A, fragment B which is compatible only
+with red therefore unique mapping. Re-estimate maximum likelihood
+estimate, iterate and prove likelihood and will be non-decreasing every
+step every good as last step. Under some circumstances guaranteed local
+maximum and under some global maximum.&lt;/p&gt;
+&lt;p&gt;Results are highly dependent on particular transcriptome, mapping step
+parameters, and what is considered to be compatible. What if missing
+annotation, get partial mapping with one complete mapping to another
+isoform. Take this on case by case basis, not really a blanket statement
+can be made about every scenario of analysis. A few papers have tried to
+answer, but when you're missing 15-20% of transcriptome, depending on
+what your'e missing ( what you're missing is probably not highly
+expressed).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Simple &lt;em&gt;t&lt;/em&gt;-test won't work because not normal distribution, negative
+    binomial (NB2) (DESeq2, edgeR)&lt;/li&gt;
+&lt;li&gt;assume log(counts) = normal (sleuth, limma)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;https://haroldpimentel.wordpress.com/2014/12/08/in-rna-seq-2-2-between-sample-normalization/&lt;/p&gt;
+&lt;p&gt;Between sample normalization, spike-ins are not to always be trusted
+(from published studies). Naive vs. not-so naive normalization: TMM,
+DESeq median count/geom. mean across samples.&lt;/p&gt;
+&lt;p&gt;Dealing with small sample sizes. Estimators have variance, this variance
+is large in small samples, large variance on your variance! Prior
+shrinking weights from weight towards some prior. eBayes estimator to
+define what weights are going to be. Key principle. Increasing power by
+pooling all information together. If only one estimate, not enough
+information. Many estimates across many different genes, exploit this.&lt;/p&gt;
+&lt;p&gt;Multiple hypothesis testing problem. (Null true but rejected=type I
+error) If we do this thousands of times, the number of false-positives
+blows up, even if there isn't real discovery.&lt;/p&gt;
+&lt;p&gt;Sleuth has bootstrap, multinomial model to resample data and get new
+transcript abundance estimates. Essentially, &lt;em&gt;in silico&lt;/em&gt; technical
+replicates. Take sample, bootstrap variance has high correlation. Assume
+that noise is Poisson distributed, sometimes not true. Especially
+transcript abundance estimated variance.&lt;/p&gt;
+&lt;p&gt;Try
+&lt;a href="https://bitbucket.org/johanneskoester/snakemake/wiki/Home"&gt;Snakemake&lt;/a&gt;
+for creating reproducible workflows!&lt;/p&gt;
+&lt;p&gt;Conclusion:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;don't compare raw units without normalization&lt;/li&gt;
+&lt;li&gt;every choice you make in a pipeline affects downstream&lt;/li&gt;
+&lt;li&gt;RNAseq should be tool for guidance&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(References on
+&lt;a href="https://pods.iplantcollaborative.org/wiki/download/attachments/21135454/2015_09_22%20Harold.pdf"&gt;slides&lt;/a&gt;
+at end.)&lt;/p&gt;
+&lt;p&gt;Kallisto and sleuth walkthrough:
+https://github.com/pimentel/bears_iplant&lt;/p&gt;</content></entry></feed>

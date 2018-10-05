@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Python, software, Software Carpentry</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/python-software-software-carpentry.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2013-11-15T13:55:00-08:00</updated><entry><title>WHOI Software Carpentry notes, Day 2 – afternoon</title><link href="https://ljcohen.github.io/blog/whoi-software-carpentry-notes-day-2-afternoon.html" rel="alternate"></link><published>2013-11-15T13:55:00-08:00</published><updated>2013-11-15T13:55:00-08:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-11-15:/blog/whoi-software-carpentry-notes-day-2-afternoon.html</id><summary type="html">&lt;p&gt;Theory: Typical programmer, regardless of language, will write the same
+number of lines of code in their lifetime compared to any other
+programmer.&lt;/p&gt;
+&lt;p&gt;Tab completion in the command line rocks. Worth the whole trip.&lt;/p&gt;
+&lt;p&gt;Calculate GC content.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;seq=&amp;#39;ACGTACGTAGCTAGTAGCTACGTAGCTACGTA&amp;#39;
+g=seq.count(&amp;#39;G&amp;#39;)
+c=seq.count(&amp;#39;C&amp;#39;)
+a=seq.count …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Theory: Typical programmer, regardless of language, will write the same
+number of lines of code in their lifetime compared to any other
+programmer.&lt;/p&gt;
+&lt;p&gt;Tab completion in the command line rocks. Worth the whole trip.&lt;/p&gt;
+&lt;p&gt;Calculate GC content.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;seq=&amp;#39;ACGTACGTAGCTAGTAGCTACGTAGCTACGTA&amp;#39;
+g=seq.count(&amp;#39;G&amp;#39;)
+c=seq.count(&amp;#39;C&amp;#39;)
+a=seq.count(&amp;#39;A&amp;#39;)
+t=seq.count(&amp;#39;T&amp;#39;)
+gc=((g+c)/(a+t+g+c)*100)
+print(&amp;#39;GC count is:&amp;#39;,gc,&amp;#39;%&amp;#39;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Make functions:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;def gc_content(seq):
+    seq=seq.upper()
+    g=seq.count(&amp;#39;G&amp;#39;)
+    c=seq.count(&amp;#39;C&amp;#39;)
+    a=seq.count(&amp;#39;A&amp;#39;)
+    t=seq.count(&amp;#39;T&amp;#39;)
+    gc=((g+c)/(a+t+g+c)*100)
+    return(gc)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Not good practice to do:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This is because you may be importing functions you're not aware of. If
+you accidentally name one of your functions the same name, you will have
+a conflict. Your namespace is polluted.&lt;br&gt;
+http://stackoverflow.com/questions/1432480/any-way-to-clear-pythons-idle-window&lt;br&gt;
+&lt;a href="http://xkcd.com/974/"&gt;&lt;img alt="" src="http://imgs.xkcd.com/comics/the_general_problem.png"&gt;{.alignnone
+width="550" height="230"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;THIS IS REALLY IMPORTANT. THIS WILL ALLOW YOU TO IMPORT YOUR FUNCTIONS.
+Keep all functions in one working directory. Set pythonpath to working
+directory so it can find your functions.&lt;br&gt;
+In the terminal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~/good_science$ export PYTHONPATH=$(pwd)
+flcellogrl@flcellogrl:~/good_science$ echo $PYTHONPATH
+/home/flcellogrl/good_science
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Runable script.&lt;br&gt;
+In Python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;def gc_content(seq):
+    seq=seq.upper()
+    g=seq.count(&amp;#39;G&amp;#39;)
+    c=seq.count(&amp;#39;C&amp;#39;)
+    a=seq.count(&amp;#39;A&amp;#39;)
+    t=seq.count(&amp;#39;T&amp;#39;)
+    gc=((g+c)/(a+t+g+c)*100)
+    return(gc)
+
+def hello():
+    print(&amp;#39;Hello world.&amp;#39;)
+
+if __name__==&amp;#39;__main__&amp;#39;:
+    print(&amp;quot;Unimplemented&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Save in working directory.&lt;br&gt;
+In Linux shell:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~/good_science$ python cgc.py
+Unimplemented
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Read shell on Linux shell command line.&lt;br&gt;
+In Python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;gc_content&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;upper&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;G&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;T&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;gc&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hello&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Hello world.&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In Linux command line:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~/good_science$ python cgc.py &amp;quot;Hello dolly&amp;quot;
+Hello dolly
+flcellogrl@flcellogrl:~/good_science$
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Something useful:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;gc_content&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;upper&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;G&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;T&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="n"&gt;gc&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gc_content&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In Linux shell:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~/good_science$ python cgc.py ATGCGC
+ATGCGC
+66.6666666667
+flcellogrl@flcellogrl:~/good_science$
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;For comparable data types to data.frame in R, look more at &lt;a href="http://pandas.pydata.org/"&gt;Python
+pandas&lt;/a&gt; and &lt;a href="http://www.numpy.org/"&gt;numpy&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Things to consider for code, what to return when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mixed case: handled with string.upper()&lt;/li&gt;
+&lt;li&gt;Empty string: Return informative error?&lt;/li&gt;
+&lt;li&gt;No GC content:&lt;/li&gt;
+&lt;li&gt;No AT content&lt;/li&gt;
+&lt;li&gt;A letter of "n" or "N", meaning wildcard, flexible - could be
+    A,T,C,or G: Return informative error&lt;/li&gt;
+&lt;li&gt;Protein sequence: Informative error.&lt;/li&gt;
+&lt;li&gt;non-DNA string: Informative error.&lt;/li&gt;
+&lt;li&gt;non-string argument: Informative error message&lt;/li&gt;
+&lt;li&gt;unprintable characters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- --&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;nose.tools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;assert_equal&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;assert_almost_equal&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;assert_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;   
+   &lt;span class="n"&gt;assert_false&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;assert_raises&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;assert_is_instance&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;calculate_gc&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;calculate_gc&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;test_only_G_and_C&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;    Sequence of only G&amp;#39;s and C&amp;#39;s has fraction 1.0&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;fixture&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;GGCGCCGGC&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;calculate_gc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fixture&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;assert_equal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;test_half&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;    Sequence with half G and C has fraction 0.5&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;fixture&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;ATGC&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;calculate_gc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fixture&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;assert_equal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;test_lower_case&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;    Sequence with lower case letters&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;fixture&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;atgc&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;calculate_gc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fixture&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;assert_equal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;test_not_DNA&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;    Raise TypeError if not DNA&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;fixture&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;qwerty&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;assert_raises&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ne"&gt;TypeError&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;calculate_gc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fixture&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;From above:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;nose.tools
+
+nosetests
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;http://nose.readthedocs.org/en/latest/&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/11/test_prod1.jpg"&gt;&lt;img alt="test_prod" src="http://monsterbashseq.files.wordpress.com/2013/11/test_prod1.jpg?w=300"&gt;{.alignnone
+.size-medium .wp-image-611 width="300"
+height="300"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Debugging tools, didn't get to, Lesson on this (thw-python-debugging)
+linked here:&lt;br&gt;
+http://wltrimbl.github.io/2013-11-14-woodshole/lessons/&lt;/p&gt;
+&lt;p&gt;Pylint: http://www.pylint.org/&lt;/p&gt;
+&lt;p&gt;etherpad results from course:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;Welcome&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;MoPad&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;span class="nt"&gt;This&lt;/span&gt; &lt;span class="nt"&gt;pad&lt;/span&gt; &lt;span class="nt"&gt;text&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;synchronized&lt;/span&gt; &lt;span class="nt"&gt;as&lt;/span&gt; &lt;span class="nt"&gt;you&lt;/span&gt; &lt;span class="nt"&gt;type&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;so&lt;/span&gt; &lt;span class="nt"&gt;that&lt;/span&gt; &lt;span class="nt"&gt;everyone&lt;/span&gt; &lt;span class="nt"&gt;viewing&lt;/span&gt; &lt;span class="nt"&gt;this&lt;/span&gt; &lt;span class="nt"&gt;page&lt;/span&gt; &lt;span class="nt"&gt;sees&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;same&lt;/span&gt; &lt;span class="nt"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;  &lt;span class="nt"&gt;This&lt;/span&gt; &lt;span class="nt"&gt;allows&lt;/span&gt; &lt;span class="nt"&gt;you&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;collaborate&lt;/span&gt; &lt;span class="nt"&gt;seamlessly&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt; &lt;span class="nt"&gt;documents&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;span class="nt"&gt;Please&lt;/span&gt; &lt;span class="nt"&gt;be&lt;/span&gt; &lt;span class="nt"&gt;cognizant&lt;/span&gt; &lt;span class="nt"&gt;of&lt;/span&gt; &lt;span class="nt"&gt;whether&lt;/span&gt; &lt;span class="nt"&gt;you&lt;/span&gt; &lt;span class="nt"&gt;are&lt;/span&gt; &lt;span class="nt"&gt;using&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;public&lt;/span&gt; &lt;span class="nt"&gt;pad&lt;/span&gt; &lt;span class="nt"&gt;or&lt;/span&gt; &lt;span class="nt"&gt;private&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;team&lt;/span&gt; &lt;span class="nt"&gt;pad&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;and&lt;/span&gt; &lt;span class="nt"&gt;take&lt;/span&gt; &lt;span class="nt"&gt;appropriate&lt;/span&gt; &lt;span class="nt"&gt;precautions&lt;/span&gt; &lt;span class="nt"&gt;with&lt;/span&gt; &lt;span class="nt"&gt;data&lt;/span&gt; &lt;span class="nt"&gt;you&lt;/span&gt; &lt;span class="nt"&gt;post&lt;/span&gt; &lt;span class="nt"&gt;here&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+
+ &lt;span class="nt"&gt;Add&lt;/span&gt; &lt;span class="nt"&gt;your&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt; &lt;span class="nt"&gt;in&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;box&lt;/span&gt; &lt;span class="nt"&gt;at&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;upper&lt;/span&gt; &lt;span class="nt"&gt;right&lt;/span&gt; &lt;span class="nt"&gt;--&lt;/span&gt; &lt;span class="nt"&gt;then&lt;/span&gt; &lt;span class="nt"&gt;we&lt;/span&gt; &lt;span class="nt"&gt;can&lt;/span&gt; &lt;span class="nt"&gt;tell&lt;/span&gt; &lt;span class="nt"&gt;who&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;s asking the question.&lt;/span&gt;
+&lt;span class="s1"&gt; And feel free to answer each other&amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;s&lt;/span&gt; &lt;span class="nt"&gt;questions&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+ &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;clone&lt;/span&gt; &lt;span class="nt"&gt;https&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="nt"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;wltrimbl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;2013-11-14-woodshole&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;git&lt;/span&gt;
+
+&lt;span class="nt"&gt;If&lt;/span&gt; &lt;span class="nt"&gt;you&lt;/span&gt; &lt;span class="nt"&gt;want&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;install&lt;/span&gt; &lt;span class="nt"&gt;packages&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;virtual&lt;/span&gt; &lt;span class="nt"&gt;machine&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;g&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;sudo apt-get install nedit&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;password&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;swc&amp;quot;&lt;/span&gt; 
+&lt;span class="nt"&gt;Lesson&lt;/span&gt; &lt;span class="nt"&gt;index&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="nt"&gt;http&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="nt"&gt;wltrimbl&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;io&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;2013-11-14-woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="nt"&gt;Shell&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="nt"&gt;Top-level&lt;/span&gt; &lt;span class="nt"&gt;website&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="nt"&gt;http&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="nt"&gt;wltrimbl&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;io&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;2013-11-14-woodshole&lt;/span&gt;
+&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;but&lt;/span&gt; &lt;span class="nt"&gt;this&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;probably&lt;/span&gt; &lt;span class="nt"&gt;how&lt;/span&gt; &lt;span class="nt"&gt;you&lt;/span&gt; &lt;span class="nt"&gt;got&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;etherpad&lt;/span&gt;&lt;span class="o"&gt;..)&lt;/span&gt;
+&lt;span class="nt"&gt;Shell&lt;/span&gt; &lt;span class="nt"&gt;cheat&lt;/span&gt; &lt;span class="nt"&gt;sheet&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="nt"&gt;http&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="nt"&gt;wltrimbl&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;io&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;2013-11-14-woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;ref&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;shell&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;html&lt;/span&gt;
+&lt;span class="nt"&gt;pwd&lt;/span&gt;   &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;show&lt;/span&gt; &lt;span class="nt"&gt;directory&lt;/span&gt; 
+&lt;span class="nt"&gt;cd&lt;/span&gt;  &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;cd&lt;/span&gt; &lt;span class="nt"&gt;with&lt;/span&gt; &lt;span class="nt"&gt;no&lt;/span&gt; &lt;span class="nt"&gt;arguments&lt;/span&gt; &lt;span class="nt"&gt;changes&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;HOME&lt;/span&gt; &lt;span class="nt"&gt;directory&lt;/span&gt;
+&lt;span class="nt"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~&lt;/span&gt;       &lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="nt"&gt;tilde&lt;/span&gt;  &lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;symbol&lt;/span&gt; &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="nt"&gt;home&lt;/span&gt; &lt;span class="nt"&gt;directory&lt;/span&gt;
+&lt;span class="nt"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="nt"&gt;Desktop&lt;/span&gt;
+&lt;span class="nt"&gt;ls&lt;/span&gt; &lt;span class="nt"&gt;-ltr&lt;/span&gt;          &lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="nt"&gt;long&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;sortbytime&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;  &lt;span class="nt"&gt;reverse&lt;/span&gt;  
+&lt;span class="nt"&gt;ls&lt;/span&gt; &lt;span class="nt"&gt;-l&lt;/span&gt; &lt;span class="nt"&gt;-t&lt;/span&gt; &lt;span class="nt"&gt;-r&lt;/span&gt;     &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;equivalent&lt;/span&gt;
+&lt;span class="nt"&gt;ls&lt;/span&gt; &lt;span class="nt"&gt;-lt&lt;/span&gt; &lt;span class="nt"&gt;--reverse&lt;/span&gt;  &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;equivalent&lt;/span&gt;
+&lt;span class="nt"&gt;man&lt;/span&gt; &lt;span class="nt"&gt;ls&lt;/span&gt;      &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;linux&lt;/span&gt; &lt;span class="nt"&gt;or&lt;/span&gt; &lt;span class="nt"&gt;mac&lt;/span&gt;
+&lt;span class="nt"&gt;ls&lt;/span&gt; &lt;span class="nt"&gt;--help&lt;/span&gt;    &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;windows&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;gitbash&lt;/span&gt;
+&lt;span class="nt"&gt;ls&lt;/span&gt; &lt;span class="nt"&gt;-l&lt;/span&gt;       &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;first&lt;/span&gt; &lt;span class="nt"&gt;column&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;fie&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;directory&lt;/span&gt; &lt;span class="nt"&gt;fie&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;directory&lt;/span&gt; &lt;span class="nt"&gt;permissions&lt;/span&gt;
+    &lt;span class="nt"&gt;d&lt;/span&gt;   &lt;span class="nt"&gt;directory&lt;/span&gt;
+    &lt;span class="nt"&gt;r&lt;/span&gt;    &lt;span class="nt"&gt;read&lt;/span&gt;
+    &lt;span class="nt"&gt;w&lt;/span&gt;   &lt;span class="nt"&gt;write&lt;/span&gt;
+    &lt;span class="nt"&gt;x&lt;/span&gt;   &lt;span class="nt"&gt;execute&lt;/span&gt;
+    &lt;span class="nt"&gt;u&lt;/span&gt;   &lt;span class="nt"&gt;user&lt;/span&gt;
+    &lt;span class="nt"&gt;g&lt;/span&gt;    &lt;span class="nt"&gt;your&lt;/span&gt;  &lt;span class="nt"&gt;group&lt;/span&gt;
+    &lt;span class="nt"&gt;o&lt;/span&gt;    &lt;span class="nt"&gt;others&lt;/span&gt;
+    &lt;span class="nt"&gt;rwx&lt;/span&gt;  &lt;span class="o"&gt;*&lt;/span&gt;   &lt;span class="nt"&gt;ugo&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;rwxrwxrwx&lt;/span&gt;
+&lt;span class="nt"&gt;cd&lt;/span&gt;
+&lt;span class="nt"&gt;cd&lt;/span&gt; &lt;span class="nt"&gt;2013-11-17-woodshole&lt;/span&gt;
+&lt;span class="nt"&gt;cd&lt;/span&gt; &lt;span class="nt"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;thw-shell&lt;/span&gt;
+&lt;span class="nt"&gt;cd&lt;/span&gt; &lt;span class="nt"&gt;2013&lt;/span&gt;    &lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="nt"&gt;Typing&lt;/span&gt;  &lt;span class="nt"&gt;on&lt;/span&gt; &lt;span class="nt"&gt;an&lt;/span&gt; &lt;span class="nt"&gt;incomplete&lt;/span&gt; &lt;span class="nt"&gt;filename&lt;/span&gt; &lt;span class="nt"&gt;triggers&lt;/span&gt; &lt;span class="nt"&gt;tab-completion&lt;/span&gt;
+                            &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;bash&lt;/span&gt; &lt;span class="nt"&gt;tries&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;guess&lt;/span&gt; &lt;span class="nt"&gt;what&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;long&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;filename&lt;/span&gt; &lt;span class="nt"&gt;you&lt;/span&gt; &lt;span class="nt"&gt;want&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;type&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+                            &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;unless&lt;/span&gt; &lt;span class="nt"&gt;it&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;s ambiguous&lt;/span&gt;
+&lt;span class="s1"&gt;or &lt;/span&gt;
+&lt;span class="s1"&gt;cd ~/2013-11-17-woodshole/lessons/thw-shell&lt;/span&gt;
+&lt;span class="s1"&gt;cd data&lt;/span&gt;
+&lt;span class="s1"&gt;echo $0       # prints the location or name of the shell program that is currently running in bash&lt;/span&gt;
+&lt;span class="s1"&gt;echo Hello   &lt;/span&gt;
+&lt;span class="s1"&gt;echo $HOME&lt;/span&gt;
+&lt;span class="s1"&gt;echo $PATH&lt;/span&gt;
+&lt;span class="s1"&gt;cd ~/2013-11-17-woodshole/lessons/thw-shell/data&lt;/span&gt;
+&lt;span class="s1"&gt;ls&lt;/span&gt;
+&lt;span class="s1"&gt;cd alexander&lt;/span&gt;
+&lt;span class="s1"&gt;ls&lt;/span&gt;
+&lt;span class="s1"&gt;cat data_216.DATA&lt;/span&gt;
+&lt;span class="s1"&gt;cd ..&lt;/span&gt;
+&lt;span class="s1"&gt;ls bert&lt;/span&gt;
+&lt;span class="s1"&gt;cd bert&lt;/span&gt;
+&lt;span class="s1"&gt;ls aud    # double-tab gives a list of possibilities&lt;/span&gt;
+&lt;span class="s1"&gt;ls -R    # recursive  &lt;/span&gt;
+&lt;span class="s1"&gt;cat jamesm/NOTES      #    relative path&lt;/span&gt;
+&lt;span class="s1"&gt;cat /Users/wltrimbl/2013-11-17-woodshole/lessons/thw-shell/data/jamesm/NOTES  # absolute path&lt;/span&gt;
+&lt;span class="s1"&gt;TASK:&lt;/span&gt;
+&lt;span class="s1"&gt;find the files in the jamesm directory that contain the numeral 0 in their name&lt;/span&gt;
+&lt;span class="s1"&gt;ls jamesm/*0*          &lt;/span&gt;
+&lt;span class="s1"&gt;       #    *   is the wildcard   -- it matches 0 or more characters, which can be anything&lt;/span&gt;
+&lt;span class="s1"&gt;       #    *0*     matches anything with a 0 somewhere.&lt;/span&gt;
+
+&lt;span class="s1"&gt;    retrieves earlier commands entered at the bash prompt&lt;/span&gt;
+&lt;span class="s1"&gt;allows them to be repeated or modified.&lt;/span&gt;
+&lt;span class="s1"&gt;history&lt;/span&gt;
+&lt;span class="s1"&gt;!482     # invoke the 482nd command from the history .&lt;/span&gt;
+&lt;span class="s1"&gt;Control-R  : gives you a prompt to search previous commands&lt;/span&gt;
+&lt;span class="s1"&gt;Control-C :    put the command out of its sufferiing.  Aborts the current command.&lt;/span&gt;
+&lt;span class="s1"&gt;cd  ~/2013-11-17-woodshole/lessons/thw-shell/data&lt;/span&gt;
+&lt;span class="s1"&gt;find .  &lt;/span&gt;
+&lt;span class="s1"&gt;# spit out the relative paths of all of the files and directories in and beneath the current directory&lt;/span&gt;
+&lt;span class="s1"&gt;find . -name &amp;quot;Data*&amp;quot;&lt;/span&gt;
+&lt;span class="s1"&gt;echo Hi &amp;amp;gt; Data000&lt;/span&gt;
+&lt;span class="s1"&gt;# creates a small file called Data000&lt;/span&gt;
+&lt;span class="s1"&gt;find . -name Data*&lt;/span&gt;
+&lt;span class="s1"&gt;expands to &lt;/span&gt;
+&lt;span class="s1"&gt;find . -name Data000&lt;/span&gt;
+&lt;span class="s1"&gt;and only after doing the wildcard expansion is find invoked.&lt;/span&gt;
+&lt;span class="s1"&gt;find . | less&lt;/span&gt;
+&lt;span class="s1"&gt;#      |   is THE PIPE&lt;/span&gt;
+&lt;span class="s1"&gt;find . -name &amp;quot;Data*&amp;quot;  | less &lt;/span&gt;
+&lt;span class="s1"&gt;        #   shows the output of find one page at a time.&lt;/span&gt;
+&lt;span class="s1"&gt;        #  within less, Control-B and Control-F go backward and forth&lt;/span&gt;
+&lt;span class="s1"&gt;        #  within less,   q will escape and return you to the shell&lt;/span&gt;
+&lt;span class="s1"&gt;Control -C    :   Abort the current command  (never hear from it again)&lt;/span&gt;
+&lt;span class="s1"&gt;Control-Z    :    Suspend the current command and return you to the shell.  (command can be restarted)  &lt;/span&gt;
+&lt;span class="s1"&gt;Control-D  :    End of file character&lt;/span&gt;
+&lt;span class="s1"&gt;less ../dictionary.txt&lt;/span&gt;
+&lt;span class="s1"&gt;find .  | less&lt;/span&gt;
+&lt;span class="s1"&gt;find . &amp;amp;gt; filelist&lt;/span&gt;
+&lt;span class="s1"&gt;#  creates a file called filelist with the contents of the output of find .&lt;/span&gt;
+&lt;span class="s1"&gt;tail filelist&lt;/span&gt;
+&lt;span class="s1"&gt;tail -n 4 filelist     # show the last four lines&lt;/span&gt;
+&lt;span class="s1"&gt;head filelist   &lt;/span&gt;
+&lt;span class="s1"&gt;grep NOTES filelist&lt;/span&gt;
+&lt;span class="s1"&gt;grep &amp;#39;&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0123456789&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39; filelist&lt;/span&gt;
+&lt;span class="s1"&gt;grep &amp;#39;&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0123456789&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39; filelist | wc&lt;/span&gt;
+&lt;span class="s1"&gt;# count the lines of the output of grep&lt;/span&gt;
+&lt;span class="s1"&gt;#  The power editors are vi  and emacs.  They do everything but are hard to learn.&lt;/span&gt;
+&lt;span class="s1"&gt;Notepad++   (windows)&lt;/span&gt;
+&lt;span class="s1"&gt;Sublime     (mac)&lt;/span&gt;
+&lt;span class="s1"&gt;TextWrangler (mac)&lt;/span&gt;
+&lt;span class="s1"&gt;Notepad or TextEdit as emergency backups..&lt;/span&gt;
+&lt;span class="s1"&gt;Use a text editor  to create a file with the contents &lt;/span&gt;
+&lt;span class="s1"&gt;grep &amp;#39;&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0123456789&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39; filelist  | wc &lt;/span&gt;
+&lt;span class="s1"&gt;and save it (using the editor)  in the directory ~/2013-11-14-woodshole/lessons/thw-shell/data&lt;/span&gt;
+&lt;span class="s1"&gt;as the filename  &lt;/span&gt;
+&lt;span class="s1"&gt;count_data_files.sh&lt;/span&gt;
+&lt;span class="s1"&gt;mkdir &amp;quot;My Space&amp;quot;&lt;/span&gt;
+&lt;span class="s1"&gt;ls -F   &lt;/span&gt;
+&lt;span class="s1"&gt;# postpends directories with &amp;quot;/&amp;quot;&lt;/span&gt;
+&lt;span class="s1"&gt;# Coping with spaces in filenames  jargon:  &amp;quot;Escaping&amp;quot;  the space caracter&lt;/span&gt;
+&lt;span class="s1"&gt;rmdir My\ Space  &lt;/span&gt;
+&lt;span class="s1"&gt;rmdir &amp;quot;My Space&amp;quot;    &lt;/span&gt;
+&lt;span class="s1"&gt;./count_data_files.sh&lt;/span&gt;
+&lt;span class="s1"&gt;# execute count_data_files&lt;/span&gt;
+&lt;span class="s1"&gt;ls -l count_data_files.sh&lt;/span&gt;
+&lt;span class="s1"&gt;chmod +x count_data_files.sh&lt;/span&gt;
+&lt;span class="s1"&gt;ls -l count_data_files.sh&lt;/span&gt;
+&lt;span class="s1"&gt;grep &amp;quot;Sex: N&amp;quot; $(cat filelist) &lt;/span&gt;
+&lt;span class="s1"&gt;grep &amp;quot;Sex: N&amp;quot;  */*&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1234567890&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s1"&gt;* &lt;/span&gt;
+&lt;span class="s1"&gt;for thing in `ls`; do echo :::$thing:::; done&lt;/span&gt;
+&lt;span class="s1"&gt;for file in *;   do  head -n 2 $file | tail -n 1 ; done &lt;/span&gt;
+&lt;span class="s1"&gt; ---------------------- PYTHON LESSONS ------------------------&lt;/span&gt;
+&lt;span class="s1"&gt;~/2013-11-14-woodshole/lessons/thw-python/vars-types/variables.ipynb&lt;/span&gt;
+&lt;span class="s1"&gt;~/2013-11-14-woodshole/lessons/thw-python/data-structures/data_structures.ipynb&lt;/span&gt;
+&lt;span class="s1"&gt;~/2013-11-14-woodshole/lessons/thw-python/flow-control/python_flow_control.ipynb&lt;/span&gt;
+&lt;span class="s1"&gt;--------------------- Some things to do different next time in Woods Hole ---------------------&lt;/span&gt;
+&lt;span class="s1"&gt;- bigger room at another lab&lt;/span&gt;
+&lt;span class="s1"&gt;- or less people at NEFSC conf rm (also turn down thermostat!!)&lt;/span&gt;
+&lt;span class="s1"&gt;- knapkins&lt;/span&gt;
+&lt;span class="s1"&gt;- a better wireless and/or drop line arrangement&lt;/span&gt;
+&lt;span class="s1"&gt;- less coffee&amp;amp;amp;pastry, more juice&amp;amp;amp; fruit&lt;/span&gt;
+&lt;span class="s1"&gt;- end lectures earlier in the afternoon&lt;/span&gt;
+&lt;span class="s1"&gt;REMINDER:  Woods Hole Python Users Group meets every Tuesday a 11am in the Bigelow Bldg first floor conference room for about an hour to chat about Python and a few other related tools. All are welcome. Contact: james.manning@noaa.gov&lt;/span&gt;
+&lt;span class="s1"&gt;----------------------------------------------------------------------------------------------------------------------&lt;/span&gt;
+&lt;span class="s1"&gt;DAY 2:&lt;/span&gt;
+&lt;span class="s1"&gt;Index: &lt;/span&gt;
+&lt;span class="s1"&gt;http://wltrimbl.github.io/2013-11-14-woodshole/lessons/&lt;/span&gt;
+&lt;span class="s1"&gt;First lesson &lt;/span&gt;
+&lt;span class="s1"&gt;http://wltrimbl.github.io/2013-11-14-woodshole/lessons/thw-git/local.html&lt;/span&gt;
+&lt;span class="s1"&gt;Basic motivation for version control:  http://www.phdcomics.com/comics/archive.php?comicid=1531&lt;/span&gt;
+&lt;span class="s1"&gt;github.com/wltrimbl/testrepo-2013-11-14-woodshole&lt;/span&gt;
+&lt;span class="s1"&gt;$ git remote add upstream http://github.com/wltrimbl/testrepo-2013-11-14-woodshole.git&lt;/span&gt;
+&lt;span class="s1"&gt;WRITING PYTHON FUNCTIONS&lt;/span&gt;
+&lt;span class="s1"&gt;2013-11-14-woodshole\lessons\thw-python\functions-modules&lt;/span&gt;
+&lt;span class="s1"&gt;You do not want &lt;/span&gt;
+&lt;span class="s1"&gt;NONONO   2013-11-14-woodshole\lessons\thw-python\functions-and-modules NONONO&lt;/span&gt;
+&lt;span class="s1"&gt;Will you share your data?&lt;/span&gt;
+&lt;span class="s1"&gt;http://www.youtube.com/watch?v=N2zK3sAtr-4&lt;/span&gt;
+&lt;span class="s1"&gt;take your calculate_gc  funciton definition &lt;/span&gt;
+&lt;span class="s1"&gt;and save it as calculate_gc.py     in   ~/good_science&lt;/span&gt;
+&lt;span class="s1"&gt;Navigate to ~/good_science in your shell&lt;/span&gt;
+&lt;span class="s1"&gt;cd ~/good_science&lt;/span&gt;
+&lt;span class="s1"&gt;Fire up&lt;/span&gt;
+&lt;span class="s1"&gt;python&lt;/span&gt;
+&lt;span class="s1"&gt;Inside of python   (after the &amp;amp;gt;&amp;amp;gt;&amp;amp;gt;)&lt;/span&gt;
+&lt;span class="s1"&gt;from calculate_gc   import calculate_gc &lt;/span&gt;
+&lt;span class="s1"&gt;calculate_gc(&amp;quot;AGCTAGGAA&amp;quot;)&lt;/span&gt;
+&lt;span class="s1"&gt;Q:  how can I add my own libraries / modules to somewhere where python will find them?&lt;/span&gt;
+&lt;span class="s1"&gt;A:  export PYTHONPATH=/path/to/modules&lt;/span&gt;
+&lt;span class="s1"&gt;echo $PATH&lt;/span&gt;
+&lt;span class="s1"&gt;mv calculate_gc.py dnautils.py    # renames calculate_gc.py&lt;/span&gt;
+&lt;span class="s1"&gt;python &lt;/span&gt;
+&lt;span class="s1"&gt;import dnautils&lt;/span&gt;
+&lt;span class="s1"&gt;dir(dnautils)&lt;/span&gt;
+&lt;span class="s1"&gt;dnautils.calculate_gc(&amp;quot;ATTTA&amp;quot;)&lt;/span&gt;
+&lt;span class="s1"&gt;import dnautils&lt;/span&gt;
+&lt;span class="s1"&gt;dnautils.hello()&lt;/span&gt;
+&lt;span class="s1"&gt;create a file called cgc.py&lt;/span&gt;
+&lt;span class="s1"&gt;containing&lt;/span&gt;
+&lt;span class="s1"&gt;def calculate_gc(x): &lt;/span&gt;
+&lt;span class="s1"&gt;...&lt;/span&gt;
+&lt;span class="s1"&gt;and the two lines:&lt;/span&gt;
+&lt;span class="s1"&gt;if __name__ == &amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;__main__&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;:&lt;/span&gt;
+&lt;span class="s1"&gt;    print &amp;quot;Unimplemented&amp;quot;&lt;/span&gt;
+&lt;span class="s1"&gt;And run it using:&lt;/span&gt;
+&lt;span class="s1"&gt;python cgc.py&lt;/span&gt;
+&lt;span class="s1"&gt;import sys&lt;/span&gt;
+&lt;span class="s1"&gt;if __name__ == &amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;__main__&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;:&lt;/span&gt;
+&lt;span class="s1"&gt;    print sys.argv&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s1"&gt;&lt;/span&gt;
+&lt;span class="s1"&gt;python cgc.py  &amp;quot;Hello dolly&amp;quot;&lt;/span&gt;
+&lt;span class="s1"&gt;TESTING&lt;/span&gt;
+&lt;span class="s1"&gt;cp ~/2013-11-14-woodshole/lessons/thw-testing-gc/test_calculate_gc.py ~/good_science&lt;/span&gt;
+&lt;span class="s1"&gt;This copies  the file test_calculate_gc.py   to  good_science.&lt;/span&gt;
+&lt;span class="s1"&gt;Change from calculate_gc to from cgc   (or the name of your calculate_gc file)&lt;/span&gt;
+&lt;span class="s1"&gt;nosetests&lt;/span&gt;
+&lt;span class="s1"&gt;This is the post-bootcamp survey. Please, take the time to go through the survey we promise it&amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;s&lt;/span&gt; &lt;span class="nt"&gt;easier&lt;/span&gt; &lt;span class="nt"&gt;than&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;past&lt;/span&gt; &lt;span class="nt"&gt;two&lt;/span&gt; &lt;span class="nt"&gt;days&lt;/span&gt; &lt;span class="nt"&gt;have&lt;/span&gt; &lt;span class="nt"&gt;been&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="nt"&gt;https&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="nt"&gt;docs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;google&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;1IfuvX6jtpq-q41IW0nY1Sv2CIhFyJTHySkfpt6P2OCo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;viewform&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>WHOI Software Carpentry notes, Day 1 - afternoon</title><link href="https://ljcohen.github.io/blog/whoi-software-carpentry-notes-day-1-afternoon.html" rel="alternate"></link><published>2013-11-14T14:54:00-08:00</published><updated>2013-11-14T14:54:00-08:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-11-14:/blog/whoi-software-carpentry-notes-day-1-afternoon.html</id><summary type="html">&lt;p&gt;Python&lt;/p&gt;
+&lt;p&gt;Canopy?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;
+
+&lt;span class="n"&gt;flcellogrl&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="nl"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="mi"&gt;2013&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;woodshole&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nl"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; 
+&lt;span class="n"&gt;Reading&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;Done&lt;/span&gt;
+&lt;span class="n"&gt;Building&lt;/span&gt; &lt;span class="n"&gt;dependency&lt;/span&gt; &lt;span class="n"&gt;tree&lt;/span&gt;       
+&lt;span class="n"&gt;Reading&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt; &lt;span class="n"&gt;information&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;Done&lt;/span&gt;
+&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;following&lt;/span&gt; &lt;span class="n"&gt;packages&lt;/span&gt; &lt;span class="n"&gt;were&lt;/span&gt; &lt;span class="n"&gt;automatically&lt;/span&gt; &lt;span class="n"&gt;installed&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;longer&lt;/span&gt; &lt;span class="nl"&gt;required&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;libcurl3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;nss&lt;/span&gt; &lt;span class="n"&gt;libnspr4&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt; &lt;span class="n"&gt;libnss3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Python&lt;/p&gt;
+&lt;p&gt;Canopy?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;
+
+&lt;span class="n"&gt;flcellogrl&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="nl"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="mi"&gt;2013&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;woodshole&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nl"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; 
+&lt;span class="n"&gt;Reading&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;Done&lt;/span&gt;
+&lt;span class="n"&gt;Building&lt;/span&gt; &lt;span class="n"&gt;dependency&lt;/span&gt; &lt;span class="n"&gt;tree&lt;/span&gt;       
+&lt;span class="n"&gt;Reading&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt; &lt;span class="n"&gt;information&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;Done&lt;/span&gt;
+&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;following&lt;/span&gt; &lt;span class="n"&gt;packages&lt;/span&gt; &lt;span class="n"&gt;were&lt;/span&gt; &lt;span class="n"&gt;automatically&lt;/span&gt; &lt;span class="n"&gt;installed&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;longer&lt;/span&gt; &lt;span class="nl"&gt;required&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;libcurl3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;nss&lt;/span&gt; &lt;span class="n"&gt;libnspr4&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt; &lt;span class="n"&gt;libnss3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt; &lt;span class="n"&gt;libssl&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt; &lt;span class="n"&gt;libssl&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;doc&lt;/span&gt; &lt;span class="n"&gt;linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.8.0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;
+  &lt;span class="n"&gt;linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.8.0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;generic&lt;/span&gt; &lt;span class="n"&gt;linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.8.0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;generic&lt;/span&gt;
+  &lt;span class="n"&gt;linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;extra&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.8.0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;generic&lt;/span&gt;
+&lt;span class="n"&gt;Use&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;autoremove&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;remove&lt;/span&gt; &lt;span class="n"&gt;them&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;following&lt;/span&gt; &lt;span class="n"&gt;extra&lt;/span&gt; &lt;span class="n"&gt;packages&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="nl"&gt;installed&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;configobj&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;decorator&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;simplegeneric&lt;/span&gt;
+&lt;span class="n"&gt;Suggested&lt;/span&gt; &lt;span class="nl"&gt;packages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;doc&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;qtconsole&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;matplotlib&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;zmq&lt;/span&gt;
+&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;following&lt;/span&gt; &lt;span class="n"&gt;NEW&lt;/span&gt; &lt;span class="n"&gt;packages&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="nl"&gt;installed&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;ipython&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;configobj&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;decorator&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;simplegeneric&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;upgraded&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="n"&gt;newly&lt;/span&gt; &lt;span class="n"&gt;installed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;remove&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;upgraded&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Need&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="mi"&gt;932&lt;/span&gt; &lt;span class="n"&gt;kB&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;archives&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;After&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="n"&gt;operation&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;623&lt;/span&gt; &lt;span class="n"&gt;kB&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;additional&lt;/span&gt; &lt;span class="n"&gt;disk&lt;/span&gt; &lt;span class="n"&gt;space&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;used&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="k"&gt;continue&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+&lt;span class="nl"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//us.archive.ubuntu.com/ubuntu/ raring/main python-configobj all 4.7.2+ds-4 [234 kB]&lt;/span&gt;
+&lt;span class="nl"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//us.archive.ubuntu.com/ubuntu/ raring/main python-decorator all 3.3.3-1 [19.9 kB]&lt;/span&gt;
+&lt;span class="nl"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//us.archive.ubuntu.com/ubuntu/ raring/universe python-simplegeneric all 0.8.1-1 [11.5 kB]&lt;/span&gt;
+&lt;span class="nl"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//us.archive.ubuntu.com/ubuntu/ raring/universe ipython all 0.13.2-1 [667 kB]&lt;/span&gt;
+&lt;span class="n"&gt;Fetched&lt;/span&gt; &lt;span class="mi"&gt;932&lt;/span&gt; &lt;span class="n"&gt;kB&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;858&lt;/span&gt; &lt;span class="n"&gt;kB&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+&lt;span class="n"&gt;Selecting&lt;/span&gt; &lt;span class="n"&gt;previously&lt;/span&gt; &lt;span class="n"&gt;unselected&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;configobj&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Reading&lt;/span&gt; &lt;span class="n"&gt;database&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="mi"&gt;439323&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;directories&lt;/span&gt; &lt;span class="n"&gt;currently&lt;/span&gt; &lt;span class="n"&gt;installed&lt;/span&gt;&lt;span class="p"&gt;.)&lt;/span&gt;
+&lt;span class="n"&gt;Unpacking&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;configobj&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;configobj_4&lt;/span&gt;&lt;span class="mf"&gt;.7.2&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;ds&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="n"&gt;_all&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Selecting&lt;/span&gt; &lt;span class="n"&gt;previously&lt;/span&gt; &lt;span class="n"&gt;unselected&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;decorator&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Unpacking&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;decorator&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;decorator_3&lt;/span&gt;&lt;span class="mf"&gt;.3.3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_all&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Selecting&lt;/span&gt; &lt;span class="n"&gt;previously&lt;/span&gt; &lt;span class="n"&gt;unselected&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;simplegeneric&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Unpacking&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;simplegeneric&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;simplegeneric_0&lt;/span&gt;&lt;span class="mf"&gt;.8.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_all&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Selecting&lt;/span&gt; &lt;span class="n"&gt;previously&lt;/span&gt; &lt;span class="n"&gt;unselected&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Unpacking&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ipython_0&lt;/span&gt;&lt;span class="mf"&gt;.13.2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_all&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Processing&lt;/span&gt; &lt;span class="n"&gt;triggers&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;doc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;base&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Processing&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;added&lt;/span&gt; &lt;span class="n"&gt;doc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;base&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Registering&lt;/span&gt; &lt;span class="n"&gt;documents&lt;/span&gt; &lt;span class="n"&gt;with&lt;/span&gt; &lt;span class="n"&gt;scrollkeeper&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Processing&lt;/span&gt; &lt;span class="n"&gt;triggers&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;bamfdaemon&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Rebuilding&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;share&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;applications&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bamf&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;2.&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Processing&lt;/span&gt; &lt;span class="n"&gt;triggers&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;desktop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;utils&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Processing&lt;/span&gt; &lt;span class="n"&gt;triggers&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;gnome&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;menus&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Processing&lt;/span&gt; &lt;span class="n"&gt;triggers&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;hicolor&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;icon&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;theme&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Processing&lt;/span&gt; &lt;span class="n"&gt;triggers&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;man&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Setting&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;configobj&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;4.7.2&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;ds&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Setting&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;decorator&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;3.3.3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Setting&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;simplegeneric&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.8.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Setting&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.13.2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;flcellogrl&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="nl"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="mi"&gt;2013&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;woodshole&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;
+&lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="mf"&gt;2.7.4&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Sep&lt;/span&gt; &lt;span class="mi"&gt;26&lt;/span&gt; &lt;span class="mi"&gt;2013&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mo"&gt;03&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;56&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+&lt;span class="n"&gt;Type&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;credits&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;license&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;more&lt;/span&gt; &lt;span class="n"&gt;information&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+
+&lt;span class="n"&gt;IPython&lt;/span&gt; &lt;span class="mf"&gt;0.13.2&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt; &lt;span class="n"&gt;An&lt;/span&gt; &lt;span class="n"&gt;enhanced&lt;/span&gt; &lt;span class="n"&gt;Interactive&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="o"&gt;?&lt;/span&gt;         &lt;span class="o"&gt;-&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;Introduction&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;overview&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;IPython&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;features&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="nf"&gt;%quickref&lt;/span&gt; &lt;span class="o"&gt;-&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;Quick&lt;/span&gt; &lt;span class="n"&gt;reference&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;help&lt;/span&gt;      &lt;span class="o"&gt;-&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;own&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt; &lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;object&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;   &lt;span class="o"&gt;-&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;Details&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;object&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;object&lt;/span&gt;&lt;span class="o"&gt;??&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;extra&lt;/span&gt; &lt;span class="n"&gt;details&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;quit&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook&lt;/span&gt;
+
+&lt;span class="n"&gt;flcellogrl&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="nl"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="mi"&gt;2013&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;thw&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook&lt;/span&gt;
+&lt;span class="n"&gt;Reading&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;Done&lt;/span&gt;
+&lt;span class="n"&gt;Building&lt;/span&gt; &lt;span class="n"&gt;dependency&lt;/span&gt; &lt;span class="n"&gt;tree&lt;/span&gt;       
+&lt;span class="n"&gt;Reading&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt; &lt;span class="n"&gt;information&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;Done&lt;/span&gt;
+&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;following&lt;/span&gt; &lt;span class="n"&gt;packages&lt;/span&gt; &lt;span class="n"&gt;were&lt;/span&gt; &lt;span class="n"&gt;automatically&lt;/span&gt; &lt;span class="n"&gt;installed&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;longer&lt;/span&gt; &lt;span class="nl"&gt;required&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;libcurl3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;nss&lt;/span&gt; &lt;span class="n"&gt;libnspr4&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt; &lt;span class="n"&gt;libnss3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt; &lt;span class="n"&gt;libssl&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt; &lt;span class="n"&gt;libssl&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;doc&lt;/span&gt; &lt;span class="n"&gt;linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.8.0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;
+  &lt;span class="n"&gt;linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.8.0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;generic&lt;/span&gt; &lt;span class="n"&gt;linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.8.0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;generic&lt;/span&gt;
+  &lt;span class="n"&gt;linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;extra&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.8.0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;generic&lt;/span&gt;
+&lt;span class="n"&gt;Use&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;autoremove&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;remove&lt;/span&gt; &lt;span class="n"&gt;them&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;following&lt;/span&gt; &lt;span class="n"&gt;extra&lt;/span&gt; &lt;span class="n"&gt;packages&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="nl"&gt;installed&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;fonts&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mathjax&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;common&lt;/span&gt; &lt;span class="n"&gt;libjs&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mathjax&lt;/span&gt; &lt;span class="n"&gt;libpgm&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;5.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;libzmq1&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;tornado&lt;/span&gt;
+  &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;zmq&lt;/span&gt;
+&lt;span class="n"&gt;Suggested&lt;/span&gt; &lt;span class="nl"&gt;packages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;fonts&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mathjax&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;extras&lt;/span&gt; &lt;span class="n"&gt;libjs&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mathjax&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;doc&lt;/span&gt;
+&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;following&lt;/span&gt; &lt;span class="n"&gt;NEW&lt;/span&gt; &lt;span class="n"&gt;packages&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="nl"&gt;installed&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;fonts&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mathjax&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;common&lt;/span&gt; &lt;span class="n"&gt;libjs&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mathjax&lt;/span&gt; &lt;span class="n"&gt;libpgm&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;5.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;libzmq1&lt;/span&gt;
+  &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;tornado&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;zmq&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;upgraded&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;newly&lt;/span&gt; &lt;span class="n"&gt;installed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;remove&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;upgraded&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Need&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;990&lt;/span&gt; &lt;span class="n"&gt;kB&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;archives&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;After&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="n"&gt;operation&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;16.6&lt;/span&gt; &lt;span class="n"&gt;MB&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;additional&lt;/span&gt; &lt;span class="n"&gt;disk&lt;/span&gt; &lt;span class="n"&gt;space&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;used&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="k"&gt;continue&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+&lt;span class="nl"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//us.archive.ubuntu.com/ubuntu/ raring/universe fonts-mathjax all 2.1+20121028-1 [958 kB]&lt;/span&gt;
+&lt;span class="nl"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//us.archive.ubuntu.com/ubuntu/ raring/universe libpgm-5.1-0 i386 5.1.118-1~dfsg-0.1ubuntu1 [182 kB]&lt;/span&gt;
+&lt;span class="nl"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//us.archive.ubuntu.com/ubuntu/ raring/universe libzmq1 i386 2.2.0+dfsg-2ubuntu1 [106 kB]&lt;/span&gt;
+&lt;span class="nl"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//us.archive.ubuntu.com/ubuntu/ raring/universe libjs-mathjax all 2.1+20121028-1 [887 kB]&lt;/span&gt;
+&lt;span class="nl"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//us.archive.ubuntu.com/ubuntu/ raring/universe ipython-notebook-common all 0.13.2-1 [360 kB]&lt;/span&gt;
+&lt;span class="nl"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//us.archive.ubuntu.com/ubuntu/ raring/main python-tornado all 2.4.1-1 [255 kB]&lt;/span&gt;
+&lt;span class="nl"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//us.archive.ubuntu.com/ubuntu/ raring/universe python-zmq i386 2.2.0.1-1 [217 kB]&lt;/span&gt;
+&lt;span class="nl"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//us.archive.ubuntu.com/ubuntu/ raring/universe ipython-notebook all 0.13.2-1 [25.0 kB]&lt;/span&gt;
+&lt;span class="n"&gt;Fetched&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;990&lt;/span&gt; &lt;span class="n"&gt;kB&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;649&lt;/span&gt; &lt;span class="n"&gt;kB&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;           
+&lt;span class="n"&gt;Selecting&lt;/span&gt; &lt;span class="n"&gt;previously&lt;/span&gt; &lt;span class="n"&gt;unselected&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;fonts&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mathjax&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Reading&lt;/span&gt; &lt;span class="n"&gt;database&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="mi"&gt;440060&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;directories&lt;/span&gt; &lt;span class="n"&gt;currently&lt;/span&gt; &lt;span class="n"&gt;installed&lt;/span&gt;&lt;span class="p"&gt;.)&lt;/span&gt;
+&lt;span class="n"&gt;Unpacking&lt;/span&gt; &lt;span class="n"&gt;fonts&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mathjax&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fonts&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mathjax_2&lt;/span&gt;&lt;span class="mf"&gt;.1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;20121028&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_all&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Selecting&lt;/span&gt; &lt;span class="n"&gt;previously&lt;/span&gt; &lt;span class="n"&gt;unselected&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;libpgm&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;5.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;i386&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Unpacking&lt;/span&gt; &lt;span class="n"&gt;libpgm&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;5.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;i386&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;libpgm&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;5.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;_5&lt;/span&gt;&lt;span class="mf"&gt;.1.118&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="n"&gt;dfsg&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="n"&gt;ubuntu1_i386&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Selecting&lt;/span&gt; &lt;span class="n"&gt;previously&lt;/span&gt; &lt;span class="n"&gt;unselected&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="nl"&gt;libzmq1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;i386&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Unpacking&lt;/span&gt; &lt;span class="nl"&gt;libzmq1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;i386&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;libzmq1_2&lt;/span&gt;&lt;span class="mf"&gt;.2.0&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;dfsg&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2u&lt;/span&gt;&lt;span class="n"&gt;buntu1_i386&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Selecting&lt;/span&gt; &lt;span class="n"&gt;previously&lt;/span&gt; &lt;span class="n"&gt;unselected&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;libjs&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mathjax&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Unpacking&lt;/span&gt; &lt;span class="n"&gt;libjs&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mathjax&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;libjs&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mathjax_2&lt;/span&gt;&lt;span class="mf"&gt;.1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;20121028&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_all&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Selecting&lt;/span&gt; &lt;span class="n"&gt;previously&lt;/span&gt; &lt;span class="n"&gt;unselected&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;common&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Unpacking&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;common&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;common_0&lt;/span&gt;&lt;span class="mf"&gt;.13.2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_all&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Selecting&lt;/span&gt; &lt;span class="n"&gt;previously&lt;/span&gt; &lt;span class="n"&gt;unselected&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;tornado&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Unpacking&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;tornado&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;tornado_2&lt;/span&gt;&lt;span class="mf"&gt;.4.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_all&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Selecting&lt;/span&gt; &lt;span class="n"&gt;previously&lt;/span&gt; &lt;span class="n"&gt;unselected&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;zmq&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Unpacking&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;zmq&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;zmq_2&lt;/span&gt;&lt;span class="mf"&gt;.2.0.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_i386&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Selecting&lt;/span&gt; &lt;span class="n"&gt;previously&lt;/span&gt; &lt;span class="n"&gt;unselected&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Unpacking&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook_0&lt;/span&gt;&lt;span class="mf"&gt;.13.2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_all&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Processing&lt;/span&gt; &lt;span class="n"&gt;triggers&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;fontconfig&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Setting&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt; &lt;span class="n"&gt;fonts&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mathjax&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;2.1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;20121028&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Setting&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt; &lt;span class="n"&gt;libpgm&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;5.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;i386&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;5.1.118&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="n"&gt;dfsg&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="n"&gt;ubuntu1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Setting&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt; &lt;span class="nl"&gt;libzmq1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;i386&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;2.2.0&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;dfsg&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2u&lt;/span&gt;&lt;span class="n"&gt;buntu1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Setting&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt; &lt;span class="n"&gt;libjs&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mathjax&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;2.1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;20121028&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Setting&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;common&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.13.2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Setting&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;tornado&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;2.4.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Setting&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;zmq&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;2.2.0.1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Setting&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;notebook&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.13.2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Processing&lt;/span&gt; &lt;span class="n"&gt;triggers&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;libc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;ldconfig&lt;/span&gt; &lt;span class="n"&gt;deferred&lt;/span&gt; &lt;span class="n"&gt;processing&lt;/span&gt; &lt;span class="n"&gt;now&lt;/span&gt; &lt;span class="n"&gt;taking&lt;/span&gt; &lt;span class="n"&gt;place&lt;/span&gt;
+&lt;span class="n"&gt;flcellogrl&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="nl"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="mi"&gt;2013&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;thw&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt; &lt;span class="n"&gt;notebook&lt;/span&gt; &lt;span class="n"&gt;variables&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ipynb&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;Using&lt;/span&gt; &lt;span class="n"&gt;existing&lt;/span&gt; &lt;span class="n"&gt;profile&lt;/span&gt; &lt;span class="nl"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;profile_default&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;Serving&lt;/span&gt; &lt;span class="n"&gt;notebooks&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2013&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;thw&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;IPython&lt;/span&gt; &lt;span class="n"&gt;Notebook&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;running&lt;/span&gt; &lt;span class="nl"&gt;at&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//127.0.0.1:8888/&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;Use&lt;/span&gt; &lt;span class="n"&gt;Control&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;shut&lt;/span&gt; &lt;span class="n"&gt;down&lt;/span&gt; &lt;span class="n"&gt;all&lt;/span&gt; &lt;span class="n"&gt;kernels&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nl"&gt;process&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;6034&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;GLib&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;CRITICAL&lt;/span&gt; &lt;span class="o"&gt;**:&lt;/span&gt; &lt;span class="nl"&gt;g_slice_set_config&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;assertion&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;sys_page_size&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;failed&lt;/span&gt;
+&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="n"&gt;CShutdown&lt;/span&gt; &lt;span class="n"&gt;Notebook&lt;/span&gt; &lt;span class="n"&gt;Server&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;Shutdown&lt;/span&gt; &lt;span class="n"&gt;confirmed&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;Shutting&lt;/span&gt; &lt;span class="n"&gt;down&lt;/span&gt; &lt;span class="n"&gt;kernels&lt;/span&gt;
+&lt;span class="n"&gt;flcellogrl&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="nl"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="mi"&gt;2013&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;thw&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt;
+&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;structures&lt;/span&gt;  &lt;span class="n"&gt;functions&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;and&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;modules&lt;/span&gt;  &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;orientation&lt;/span&gt;  &lt;span class="n"&gt;vars&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;types&lt;/span&gt;
+&lt;span class="n"&gt;flow&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;control&lt;/span&gt;     &lt;span class="n"&gt;functions&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;modules&lt;/span&gt;      &lt;span class="n"&gt;strings&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;
+&lt;span class="n"&gt;flcellogrl&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="nl"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="mi"&gt;2013&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;thw&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;vars&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;types&lt;/span&gt;
+&lt;span class="n"&gt;flcellogrl&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="nl"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="mi"&gt;2013&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;thw&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;vars&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;types&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt; &lt;span class="n"&gt;notebook&lt;/span&gt; &lt;span class="n"&gt;variables&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ipynb&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;Using&lt;/span&gt; &lt;span class="n"&gt;existing&lt;/span&gt; &lt;span class="n"&gt;profile&lt;/span&gt; &lt;span class="nl"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;profile_default&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;Serving&lt;/span&gt; &lt;span class="n"&gt;notebooks&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2013&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;thw&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;vars&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;types&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;IPython&lt;/span&gt; &lt;span class="n"&gt;Notebook&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;running&lt;/span&gt; &lt;span class="nl"&gt;at&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//127.0.0.1:8888/&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;Use&lt;/span&gt; &lt;span class="n"&gt;Control&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;shut&lt;/span&gt; &lt;span class="n"&gt;down&lt;/span&gt; &lt;span class="n"&gt;all&lt;/span&gt; &lt;span class="n"&gt;kernels&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nl"&gt;process&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;6116&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;GLib&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;CRITICAL&lt;/span&gt; &lt;span class="o"&gt;**:&lt;/span&gt; &lt;span class="nl"&gt;g_slice_set_config&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;assertion&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;sys_page_size&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;failed&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;Using&lt;/span&gt; &lt;span class="n"&gt;system&lt;/span&gt; &lt;span class="n"&gt;MathJax&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;Kernel&lt;/span&gt; &lt;span class="nl"&gt;started&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;679ff4f&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;49e3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4400&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a2b2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ea9cba39ec45&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;IPKernelApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;To&lt;/span&gt; &lt;span class="n"&gt;connect&lt;/span&gt; &lt;span class="n"&gt;another&lt;/span&gt; &lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="n"&gt;kernel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nl"&gt;use&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;IPKernelApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;existing&lt;/span&gt; &lt;span class="n"&gt;kernel&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;679ff4f&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;49e3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4400&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a2b2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ea9cba39ec45&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;Connecting&lt;/span&gt; &lt;span class="nl"&gt;to&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nl"&gt;tcp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//127.0.0.1:57053&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;Connecting&lt;/span&gt; &lt;span class="nl"&gt;to&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nl"&gt;tcp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//127.0.0.1:59491&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;Connecting&lt;/span&gt; &lt;span class="nl"&gt;to&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nl"&gt;tcp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//127.0.0.1:55042&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Running lecture from IP[y]:Notebook from shell&lt;/p&gt;
+&lt;p&gt;http://www.flickr.com/photos/lpcohen/10876121684/&lt;/p&gt;
+&lt;p&gt;Working from Python 3.3.1 Shell (IDLE).&lt;/p&gt;
+&lt;p&gt;Shift-Enter will run the code displayed.&lt;/p&gt;
+&lt;p&gt;Half-open slicing: http://c2.com/cgi/wiki?ZeroAndOneBasedIndexes&lt;/p&gt;
+&lt;p&gt;Python's &lt;a href="http://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html"&gt;half-open, 0-based index
+notation&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;http://www.flickr.com/photos/lpcohen/10868749926/in/photostream/&lt;/p&gt;
+&lt;p&gt;Defect:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;a = [1, 2]
+b = a
+a.append(10)
+print(a)
+print(b)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The output is this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[1, 2, 10]&lt;/span&gt;
+&lt;span class="k"&gt;[1, 2, 10]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;To get an actual copy, do this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;a = [1, 2]
+b = list(a)
+a.append(10)
+print(a)
+print(b)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[1, 2, 10]&lt;/span&gt;
+&lt;span class="k"&gt;[1, 2]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Covered:&lt;br&gt;
+Data Types: float, integer, string&lt;br&gt;
+Data Structures: list, tuple, dictionary&lt;/p&gt;
+&lt;p&gt;Appending dictionaries and lists&lt;/p&gt;
+&lt;p&gt;#aside: What is working directory for Python IDLE?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;#Exercise 5:
+#Need to figure out how to specify where file is located
+#what is python&amp;#39;s working directory?
+#http://stackoverflow.com/questions/5137497/find-current-directory-and-files-directory
+print(&amp;quot;Path at terminal when executing this file&amp;quot;)
+print(os.getcwd() + &amp;quot;\n&amp;quot;)
+print(&amp;quot;This file path, relative to os.getcwd()&amp;quot;)
+print(__file__ + &amp;quot;\n&amp;quot;)
+print(&amp;quot;This file full path (following symlinks)&amp;quot;)
+full_path = os.path.realpath(__file__)
+print(full_path + &amp;quot;\n&amp;quot;)
+print(&amp;quot;This file directory and name&amp;quot;)
+path, file = os.path.split(full_path)
+print(path + &amp;#39; --&amp;amp;gt; &amp;#39; + file + &amp;quot;\n&amp;quot;)
+print(&amp;quot;This file directory only&amp;quot;)
+print(os.path.dirname(full_path))
+
+#fh=open(&amp;quot;data.dat&amp;quot;)
+#for line in fh:
+#    print(line.strip())
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Flow Control&lt;br&gt;
+Comparisons&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;42 &amp;amp;lt; 24 or True and &amp;#39;wow&amp;#39; != &amp;#39;mom&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Please use parentheses to separate logic statements. Python knows what
+it's doing, you don't necessarily know the order.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;(42 &amp;amp;lt; 24 or True) and &amp;#39;wow&amp;#39; != &amp;#39;mom&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Python knows nothing about sports:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot;Red Sox&amp;quot; &amp;amp;gt; &amp;quot;Yankees&amp;quot;
+
+False
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If statements, multiple elifs, only one else:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;x = 5
+if x &amp;amp;lt; 0:
+    print(&amp;quot;x is negative&amp;quot;)
+elif x == 0:
+    print(&amp;quot;x is zero&amp;quot;)
+elif x&amp;amp;lt;5:
+    print(&amp;quot;x is small&amp;quot;)
+else:
+    print(&amp;quot;x is positive&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;For any x, determine whether x is odd or even:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if x%2==0:
+    print(&amp;quot;x is even.&amp;quot;)
+else:
+    print(&amp;quot;x is odd.&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Or:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;x=2.1
+if x%2==0:
+    print(&amp;quot;x is even.&amp;quot;)
+elif x%2 ==1:
+    print(&amp;quot;x is odd.&amp;quot;)
+else:
+    print(&amp;quot;Are you sure you have an integer?&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Let's get loopy.&lt;/p&gt;
+&lt;p&gt;while loops are less common, probably because of their ability to shunt
+out, undesireably&lt;br&gt;
+for loops more common, list of examples:&lt;/p&gt;
+&lt;p&gt;Useful tool: dir(foo), will give you a list of functions available for
+that type.&lt;/p&gt;
+&lt;p&gt;in Python notebook:, type foo.(then hit tab key,) a list of functions
+will appear in a dropdown menu&lt;/p&gt;
+&lt;p&gt;Learn Python notebook. This will help you show off your Python code and
+document it.&lt;/p&gt;
+&lt;p&gt;#calculate factorial of 7&lt;br&gt;
+#product of all positive integers up to and including 7&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;n=7
+fact=1
+for i in range(n):
+    fact=fact*(i+1)
+    print(i,fact,fact+1)
+print(fact)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Reading and writing files.&lt;br&gt;
+Figure out working directory, where files are located, etc.&lt;/p&gt;
+&lt;p&gt;wakari: https://www.wakari.io/&lt;/p&gt;</content></entry></feed>

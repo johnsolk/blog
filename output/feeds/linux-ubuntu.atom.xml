@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Linux, Ubuntu</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/linux-ubuntu.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2013-05-27T11:16:00-07:00</updated><entry><title>reduce pdf file size</title><link href="https://ljcohen.github.io/blog/reduce-pdf-file-size.html" rel="alternate"></link><published>2013-05-27T11:16:00-07:00</published><updated>2013-05-27T11:16:00-07:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-05-27:/blog/reduce-pdf-file-size.html</id><summary type="html">&lt;p&gt;http://www.alfredklomp.com/programming/shrinkpdf/&lt;/p&gt;
+&lt;p&gt;flcellogrl@purplebanyan:\~\$ sudo apt-get install ghostscript&lt;br&gt;
+[sudo] password for flcellogrl:&lt;br&gt;
+Reading package lists... Done&lt;br&gt;
+Building dependency tree&lt;br&gt;
+Reading state information... Done&lt;br&gt;
+ghostscript is already the newest version.&lt;br&gt;
+ghostscript set to manually installed.&lt;br&gt;
+The following packages were automatically installed and are no longer
+required:&lt;br&gt;
+guile-1 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;http://www.alfredklomp.com/programming/shrinkpdf/&lt;/p&gt;
+&lt;p&gt;flcellogrl@purplebanyan:\~\$ sudo apt-get install ghostscript&lt;br&gt;
+[sudo] password for flcellogrl:&lt;br&gt;
+Reading package lists... Done&lt;br&gt;
+Building dependency tree&lt;br&gt;
+Reading state information... Done&lt;br&gt;
+ghostscript is already the newest version.&lt;br&gt;
+ghostscript set to manually installed.&lt;br&gt;
+The following packages were automatically installed and are no longer
+required:&lt;br&gt;
+guile-1.8-libs python-speechd liblouis2 python-brlapi python-louis&lt;br&gt;
+gnome-games-data linux-headers-3.5.0-23 liblouis-data&lt;br&gt;
+linux-headers-3.5.0-23-generic&lt;br&gt;
+Use 'apt-get autoremove' to remove them.&lt;br&gt;
+0 upgraded, 0 newly installed, 0 to remove and 9 not upgraded.&lt;br&gt;
+flcellogrl@purplebanyan:\~\$ gs -sDEVICE=pdfwrite
+-dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH
+-sOutputFile=Lisacohen_BS_new.pdf
+LisaCohen_EckerdCollege_BStranscript_2002.pdf&lt;br&gt;
+Error: /undefinedfilename in
+(LisaCohen_EckerdCollege_BStranscript_2002.pdf)&lt;br&gt;
+Operand stack:&lt;/p&gt;
+&lt;p&gt;Execution stack:&lt;br&gt;
+%interp_exit   .runexec2   --nostringval--   --nostringval--  
+--nostringval--   2   %stopped_push   --nostringval--  
+--nostringval--   --nostringval--   false   1   %stopped_push&lt;br&gt;
+Dictionary stack:&lt;br&gt;
+--dict:1164/1684(ro)(G)--   --dict:0/20(G)--   --dict:77/200(L)--&lt;br&gt;
+Current allocation mode is local&lt;br&gt;
+Last OS error: 2&lt;br&gt;
+GPL Ghostscript 9.05: Unrecoverable error, exit code 1&lt;br&gt;
+flcellogrl@purplebanyan:\~\$ gs -sDEVICE=pdfwrite
+-dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH
+-sOutputFile=Lisacohen_BS_new.pdf
+LisaCohen_EckerdCollege_BStranscript_2002.pdf&lt;br&gt;
+Error: /undefinedfilename in
+(LisaCohen_EckerdCollege_BStranscript_2002.pdf)&lt;br&gt;
+Operand stack:&lt;/p&gt;
+&lt;p&gt;Execution stack:&lt;br&gt;
+%interp_exit   .runexec2   --nostringval--   --nostringval--  
+--nostringval--   2   %stopped_push   --nostringval--  
+--nostringval--   --nostringval--   false   1   %stopped_push&lt;br&gt;
+Dictionary stack:&lt;br&gt;
+--dict:1164/1684(ro)(G)--   --dict:0/20(G)--   --dict:77/200(L)--&lt;br&gt;
+Current allocation mode is local&lt;br&gt;
+Last OS error: 2&lt;br&gt;
+GPL Ghostscript 9.05: Unrecoverable error, exit code 1&lt;br&gt;
+flcellogrl@purplebanyan:\~\$ ls&lt;br&gt;
+bioinformatics  Documents  Dropbox           Lisacohen_BS_new.pdf 
+Pictures  R                       Templates   Videos&lt;br&gt;
+Desktop         Downloads  examples.desktop  Music                
+Public    temp Dropbox 5.27.2013  Ubuntu One&lt;br&gt;
+flcellogrl@purplebanyan:\~\$ cd Dropbox&lt;br&gt;
+flcellogrl@purplebanyan:\~/Dropbox\$ ls&lt;br&gt;
+bahamas         Files with Lisa  Jobs                 Lisa and Ana   
+misc    Public           St.Eve               to-do_4.25.2013.txt\~&lt;br&gt;
+Camera Uploads  Grad School      Kim and Lisa         Lisa and Peter 
+Music   punta cana 2013  to-do_4.13.2013.txt  Tursiops&lt;br&gt;
+CS              HBOI             links_4.24.2013.txt  MBEAB          
+Photos  Sara and Lisa    to-do_4.25.2013.txt  VBCO pics for website&lt;br&gt;
+flcellogrl@purplebanyan:\~/Dropbox\$ cd Grad School&lt;br&gt;
+bash: cd: Grad: No such file or directory&lt;br&gt;
+flcellogrl@purplebanyan:\~/Dropbox\$ ls&lt;br&gt;
+bahamas         Files with Lisa  Jobs                 Lisa and Ana   
+misc    Public           St.Eve               to-do_4.25.2013.txt\~&lt;br&gt;
+Camera Uploads  Grad School      Kim and Lisa         Lisa and Peter 
+Music   punta cana 2013  to-do_4.13.2013.txt  Tursiops&lt;br&gt;
+CS              HBOI             links_4.24.2013.txt  MBEAB          
+Photos  Sara and Lisa    to-do_4.25.2013.txt  VBCO pics for website&lt;br&gt;
+flcellogrl@purplebanyan:\~/Dropbox\$ cd Grad School&lt;br&gt;
+bash: cd: Grad: No such file or directory&lt;br&gt;
+flcellogrl@purplebanyan:\~/Dropbox\$ sh shrinkpdf.sh
+LisaCohen_EckerdCollege_BStranscript_2002.pdf&lt;br&gt;
+sh: 0: Can't open shrinkpdf.sh&lt;br&gt;
+flcellogrl@purplebanyan:\~/Dropbox\$ cd&lt;br&gt;
+flcellogrl@purplebanyan:\~\$ cd Dropbox&lt;br&gt;
+flcellogrl@purplebanyan:\~/Dropbox\$ cd "Grad School"&lt;br&gt;
+flcellogrl@purplebanyan:\~/Dropbox/Grad School\$ ls&lt;br&gt;
+advice.txt  Grad School 2006  links.txt                 My
+application            schools.txt&lt;br&gt;
+EMBL-EBI    GRE               M02_Kellis_Thesis_03.pdf  Nature
+2011_PhD.pdf       short bio for HBOI website.txt&lt;br&gt;
+FAU         Jackson Labs.txt  MiamiU-Ohio               programs to
+apply to.txt  UF&lt;br&gt;
+flcellogrl@purplebanyan:\~/Dropbox/Grad School\$ cd "My application"&lt;br&gt;
+flcellogrl@purplebanyan:\~/Dropbox/Grad School/My application\$ sh
+shrinkpdf.sh LisaCohen_EckerdCollege_BStranscript_2002.pdf&lt;br&gt;
+flcellogrl@purplebanyan:\~/Dropbox/Grad School/My application\$ sh
+shrinkpdf.sh&lt;/p&gt;
+&lt;p&gt;You can change the resolution to adjust for desired file size. For some
+reason, there is no difference between resolution of 90 and 99, but
+there is between 90 and 100.&lt;/p&gt;
+&lt;p&gt;#!/bin/sh&lt;/p&gt;
+&lt;p&gt;gs    -q -dNOPAUSE -dBATCH -dSAFER \&lt;br&gt;
+-sDEVICE=pdfwrite \&lt;br&gt;
+-dCompatibilityLevel=1.3 \&lt;br&gt;
+-dPDFSETTINGS=/screen \&lt;br&gt;
+-dEmbedAllFonts=true \&lt;br&gt;
+-dSubsetFonts=true \&lt;br&gt;
+-dColorImageDownsampleType=/Bicubic \&lt;br&gt;
+-dColorImageResolution=99 \&lt;br&gt;
+-dGrayImageDownsampleType=/Bicubic \&lt;br&gt;
+-dGrayImageResolution=99 \&lt;br&gt;
+-dMonoImageDownsampleType=/Bicubic \&lt;br&gt;
+-dMonoImageResolution=99 \&lt;br&gt;
+-sOutputFile=out.pdf \&lt;br&gt;
+\$1&lt;/p&gt;</content></entry></feed>

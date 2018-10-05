@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Bioinformatics, Computational Biology, Genomics Workshop, Linux</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/bioinformatics-computational-biology-genomics-workshop-linux.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2015-08-24T16:45:00-07:00</updated><entry><title>NGS 2015 Week 3 - Docker Tutorial</title><link href="https://ljcohen.github.io/blog/ngs-2015-week-3-docker-tutorial.html" rel="alternate"></link><published>2015-08-24T16:45:00-07:00</published><updated>2015-08-24T16:45:00-07:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2015-08-24:/blog/ngs-2015-week-3-docker-tutorial.html</id><summary type="html">&lt;p&gt;Here at MSU's &lt;a href="http://www.kbs.msu.edu/"&gt;W.K. Kellogg Biological Station&lt;/a&gt;
+for the 3rd week of NGS 2015 workshop by &lt;a href="http://ivory.idyll.org/blog/"&gt;Dr. C. Titus
+Brown&lt;/a&gt; from UC Davis and a wealth of
+&lt;a href="https://twitter.com/ctitusbrown/status/636228826201235457"&gt;superstar
+instructors&lt;/a&gt;.
+This week is intended for advanced bioinformatics users and alum of the
+course to 1.) be a practice audience for …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here at MSU's &lt;a href="http://www.kbs.msu.edu/"&gt;W.K. Kellogg Biological Station&lt;/a&gt;
+for the 3rd week of NGS 2015 workshop by &lt;a href="http://ivory.idyll.org/blog/"&gt;Dr. C. Titus
+Brown&lt;/a&gt; from UC Davis and a wealth of
+&lt;a href="https://twitter.com/ctitusbrown/status/636228826201235457"&gt;superstar
+instructors&lt;/a&gt;.
+This week is intended for advanced bioinformatics users and alum of the
+course to 1.) be a practice audience for new lessons and 2.) push our
+bioinformatics toolkits to a new level.&lt;/p&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/20250815668/&lt;/p&gt;
+&lt;p&gt;All tutorials are publicly available on this site:&lt;/p&gt;
+&lt;p&gt;http://angus.readthedocs.org/en/2015/week3.html&lt;/p&gt;
+&lt;p&gt;Super excited to be here to learn some new bioinformatics techniques and
+also learn how these expert instructors explain complex instructions to
+newbies like me. :)&lt;/p&gt;
+&lt;p&gt;Here is schedule from the first 2 weeks of beginning level:&lt;br&gt;
+http://angus.readthedocs.org/en/2015/&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Today's tutorial is on &lt;a href="https://www.docker.com/"&gt;Docker&lt;/a&gt;! I have been
+interested in this for several months now, from interest in &lt;em&gt;de
+novo &lt;/em&gt;transcriptome and genome assembly benchmarking with this site:&lt;/p&gt;
+&lt;p&gt;http://nucleotid.es/&lt;/p&gt;
+&lt;p&gt;and Titus Brown's blog posts:&lt;/p&gt;
+&lt;p&gt;http://ivory.idyll.org/blog/tag/benchmarking.html&lt;/p&gt;
+&lt;p&gt;http://ivory.idyll.org/blog/2015-docker-and-replicating-papers.html&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Here is the tutorial:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;https://github.com/ngs-docs/angus/blob/2015/week3/CTB_docker.rst&lt;/p&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/20859065351/&lt;/p&gt;
+&lt;p&gt;Docker is an alternative to virtual machines, since 2013 has been
+popular. Solves some problems including software installation and
+versions. Does it solve problems for research and training? Commands in
+tutorial should work, just need to undestand concepts.&lt;/p&gt;
+&lt;p&gt;Let's say you want to install a new software package to use. What do you
+do? Problem of spend 3 days installing stuff. Everything breaks when you
+update one thing for one software or for another reason. Standard
+problem with teaching students, who show up with different OS and
+hardware. Can start virtual machine simulation of another computer to
+run inside. But limited, cannot run bigger computer and then have
+different GUI to deal with. Instead, Docker is isolated lightweight
+containers. Can run several as processes, only take up as much memory as
+they need, can run from different OS, isolated. Problems solved with
+tech work with databases, web servers, etc. We are interested in Docker
+because scientific computing can benefit from reproducibility.
+Publications can provide Docker containers including software and data
+to send to people with instructions and allow other people to make
+things happen, build on, etc. This promotes collaboration. Can send
+analyses and data and software to people, don't require everyone to have
+the same hardware.&lt;/p&gt;
+&lt;p&gt;Super Cool.&lt;/p&gt;
+&lt;p&gt;Steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Launch EC2 instance. (Cloud cheaper option than buying new hardware.
+    Rent what you use, don't pay when you don't need it. Amazon images
+    are larger than local computer hardware.) Today's tutorial will use
+    7 GB of memory. This is sometimes more than peoples' computers, so
+    we use an Amazon (AWS) EC2
+    image. http://angus.readthedocs.org/en/2015/amazon/index.html&lt;/li&gt;
+&lt;li&gt;Get Docker, run as root user. You are now running a container within
+    AWS EC2 instance.&lt;/li&gt;
+&lt;li&gt;Update and install stuff on docker container. Porosity is user
+    defined. Can get out to internet by default. No way for network to
+    get into container, unless configured.&lt;/li&gt;
+&lt;li&gt;Save docker image by typing 'hostname'. Keep this host code.&lt;/li&gt;
+&lt;li&gt;Save image by commit command with hostname:&lt;br&gt;
+&lt;img alt="docker_login_logout" src="https://monsterbashseq.files.wordpress.com/2015/08/docker_login_logout1.png?w=660"&gt;{.alignnone
+    .size-large .wp-image-1000 width="660" height="115"}&lt;/li&gt;
+&lt;li&gt;Add containers and run as needed.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you want to use data from outside container, mount data as
+    symlink, mirrored data:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker run -v /home/ubuntu/data:/data   
+  -it megahit
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Log back in to docker image, then your data will be there: ls /data&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Now you can run the megahit assembly software you installed on the
+    docker image with the data you
+    mounted.&lt;a href="https://monsterbashseq.files.wordpress.com/2015/08/docker_data_mount.png"&gt;&lt;img alt="docker_data_mount" src="https://monsterbashseq.files.wordpress.com/2015/08/docker_data_mount.png?w=660"&gt;{.alignnone
+    .size-large .wp-image-1001 width="660"
+    height="309"}&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now, output data from megahit assembly will be saved (because
+    of symlink) on EC2 instance at&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/home/ubuntu/data
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;p&gt;
+&lt;a href="https://monsterbashseq.files.wordpress.com/2015/08/megahit_output.png"&gt;&lt;img alt="megahit_output" src="https://monsterbashseq.files.wordpress.com/2015/08/megahit_output.png?w=660"&gt;{.alignnone
+.size-large .wp-image-1002 width="660"
+height="179"}&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now you can write a script to both install, download, and run the
+    software.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Note, docker is a security vulnerability hole between image and host
+computer files. Some HPC systems will not let you run Docker because of
+this.&lt;/p&gt;
+&lt;p&gt;Docker runs in a similar way to github with an account:
+https://hub.docker.com/&lt;br&gt;
+If you want to pull a public Dockerfile, just install docker. It will
+find script.&lt;br&gt;
+https://hub.docker.com/r/titus/megahit/&lt;/p&gt;
+&lt;p&gt;Sensible defaults. All you need is Dockerfile to make new docker image.
+Install docker, also need script to run. Docker image will run with
+local hardware. (Floating point numbers on different systems could lead
+to slightly different results.)&lt;/p&gt;
+&lt;p&gt;https://www.flickr.com/photos/lpcohen/20852912655/&lt;/p&gt;
+&lt;p&gt;Do challenge exercises.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Super cool new commandline tricks&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat &amp;amp;lt; do-assemble.sh
+#! /bin/bash
+rm -fr /data/ecoli
+/home/megahit/megahit --12 /data/*.pe.fq.gz   
+                    -r /data/*.se.fq.gz    
+                    -o /data/ecoli -t 4
+EOF
+
+Ctrl-R
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;when typing commands, e.g. 'docker' will search history and show you
+last command with 'docker', again will show previous, etc.&lt;/p&gt;
+&lt;p&gt;Critical evaluations of Docker:&lt;/p&gt;
+&lt;p&gt;http://txt.fliglio.com/2015/07/containers-and-cfg-mgmt/&lt;/p&gt;
+&lt;p&gt;http://www.boycottdocker.org/&lt;/p&gt;</content></entry></feed>

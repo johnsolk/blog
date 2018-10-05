@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Bioconductor, Bioinformatics, R</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/bioconductor-bioinformatics-r.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2014-07-09T22:29:00-07:00</updated><entry><title>Venn Diagrams</title><link href="https://ljcohen.github.io/blog/venn-diagrams.html" rel="alternate"></link><published>2014-07-09T22:29:00-07:00</published><updated>2014-07-09T22:29:00-07:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2014-07-09:/blog/venn-diagrams.html</id><summary type="html">&lt;p&gt;Today's adventures in Venn Diagrams. Seems like a simple task, right?
+Two (or more) circles with numbers in the middle. I want to use this
+visualization graphic to show the number of genes differentially
+expressed between 2 sets of groups.&lt;/p&gt;
+&lt;p&gt;Fold-change differences in gene expression were calculated between 2
+groups …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Today's adventures in Venn Diagrams. Seems like a simple task, right?
+Two (or more) circles with numbers in the middle. I want to use this
+visualization graphic to show the number of genes differentially
+expressed between 2 sets of groups.&lt;/p&gt;
+&lt;p&gt;Fold-change differences in gene expression were calculated between 2
+groups, relative to the control.&lt;/p&gt;
+&lt;p&gt;The question: How many genes are expressed differently between one set
+of groups vs. the other set of groups? What are the genes they are
+expressing in common?&lt;/p&gt;
+&lt;p&gt;Since these are three groups, two of which are being compared to a
+control, it is helpful to know what genes are expressed in common
+between the two treatments and which are different. This way, the
+researchers can narrow in on what those same or different genes are
+doing, then target treatment, therapy, or possibly use a suite of these
+as biomarkers for diagnosis.&lt;/p&gt;
+&lt;p&gt;I'm using R. This is a topic for another post about how much I dislike
+R.&lt;/p&gt;
+&lt;p&gt;Venn diagrams are a bit arbitrary, but they can give you a ballpark
+idea. This is just a methodical process of filtering. The cutoff for
+what is "differentially expressed" is a bit arbitrary and depends on the
+results. What is a reasonable cutoff? We're aiming for significant, so a
+p or alpha value of 0.05 is usually used to indicate that 95% of the
+differences seen can be explained from biological significance, rather
+than by chance. We also have a q value, which is an adjusted p value and
+more stringent. (The &lt;a href="http://training.bioinformatics.ucdavis.edu/docs/2012/05/RNA/_downloads/the-statistics-of-rna-seq.pdf"&gt;mathematical details of these particular
+tests&lt;/a&gt;
+are also for another day's post.) The q value is more stringent, and
+since we have tens of thousands of genes, using q&amp;lt;0.25 will narrow
+our results down to lists with hundreds of "significantly" different
+genes, making the task of identifying the functions of these genes
+(rather than tens or hundreds of thousands) more manageable. Since we
+assign an arbitrary cutoff of significance, some groups end up having
+slightly different numbers of significantly different genes compared to
+the control, so a Venn diagram approach to displaying these differences
+is a bit arbitrary, but narrowing down hundreds from hundreds of
+thousands will give an idea that there are differences identify genes to
+investigate further.&lt;/p&gt;
+&lt;p&gt;It would be more interesting if we had more comparisons to make, but we
+are only making 2 today. The first challenge to making graphics in R, or
+doing anything in R really, is getting your data in the right format.
+There are data.frames, matrices, tables, vectors, etc. Column names have
+to match up between matrices being compared, otherwise you are comparing
+the wrong values. There is a general graphic package in R called
+'&lt;a href="http://cran.r-project.org/web/packages/gplots/gplots.pdf"&gt;gplots&lt;/a&gt;'.
+This will give you all kinds of good graphing tools, such as histograms,
+heatmaps, plots, and venn diagrams. This was the most logical choice to
+look up when setting out to make a venn diagram. In doing an internet
+search, there seem to be quite a few venn diagram packages, introducing
+color, ease of coding, and other features. At first I was hung up on
+wanting color. After realizing how complicated this is, I became less
+interested in this feature. The &lt;a href="http://www.bioconductor.org/packages/release/bioc/vignettes/limma/inst/doc/usersguide.pdf"&gt;limma
+Bioconductor&lt;/a&gt;
+package also has a function for the venn diagram. Also, no color. These
+are the basic steps. The venn diagram is just counts, so the basic idea
+is you have to create an array with 0 or 1 for each gene for each
+comparison to indicate whether the gene is present or absent in that
+group.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Use the 'union' function in R to get a list of all unique genes
+    shared between the groups.&lt;/li&gt;
+&lt;li&gt;Make a list of all 0 the length of the union list for each group.&lt;/li&gt;
+&lt;li&gt;Match the differentially-expressed gene list with the list of all 0
+    in #2 and set the matches=1. (This will give you a list of 0 and 1,
+    depending on whether the gene was present or not.) Do this for all
+    groups.&lt;/li&gt;
+&lt;li&gt;cbind the groups together&lt;/li&gt;
+&lt;li&gt;Venn diagram of counts.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;gplots:
+&lt;a href="https://monsterbashseq.files.wordpress.com/2014/07/second_venn.png"&gt;&lt;img alt="second_venn" src="https://monsterbashseq.files.wordpress.com/2014/07/second_venn.png?w=640"&gt;{.alignnone
+.size-large .wp-image-841 width="640"
+height="477"}&lt;/a&gt;limma:
+&lt;img alt="redo_limma_venn" src="https://monsterbashseq.files.wordpress.com/2014/07/redo_limma_venn.png?w=640"&gt;{.alignnone
+.size-large .wp-image-840 width="640" height="471"} Thankfully, the
+results are the same (which obviously they should be because I'm giving
+the same data structure to each function). Here is my code:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# with help from:
+# https://insilicodb.com/compare-deg-signatures/
+# http://cran.r-project.org/web/packages/colorfulVennPlot/colorfulVennPlot.pdf
+library(limma)
+library(gplots)
+raw_ApoE_WT&amp;amp;lt;-read.csv(&amp;quot;sig_genes_WT_ApoE.csv&amp;quot;,sep=&amp;quot;,&amp;quot;)
+raw_DKO_WT&amp;amp;lt;-read.csv(&amp;quot;sig_genes_WT_DKO.csv&amp;quot;,sep=&amp;quot;,&amp;quot;)
+gene.ApoE_WT&amp;amp;lt;-raw_ApoE_WT$gene
+gene.DKO_WT&amp;amp;lt;-raw_DKO_WT$gene
+gene_union&amp;amp;lt;-union(gene.ApoE_WT,gene.DKO_WT)
+ApoE_WT&amp;amp;lt;-array(0,dim=c(length(gene_union)))
+DKO_WT&amp;amp;lt;-array(0,dim=c(length(gene_union)))
+ApoE_WT[match(gene.ApoE_WT,gene_union)]=1
+DKO_WT[match(gene.DKO_WT,gene_union)]=1
+#limma package vennDiagram
+venncounts_all&amp;amp;lt;-cbind(ApoE_WT,DKO_WT)
+venncounts=vennCounts(venncounts_all)
+vennDiagram(venncounts)
+# gplots venn
+combined&amp;amp;lt;-cbind(ApoE_WT,DKO_WT)
+combined_data.frame&amp;amp;lt;-as.data.frame(combined)
+venn(combined_data.frame)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;My colleague was disappointed that I couldn't get colorful venn
+diagrams, so this will be a project for another day when I have more
+time to spend on this. The two packages that seem promising are
+venneuler and colorfulVennPlot. Here are some helpful references for
+then:&lt;/p&gt;
+&lt;p&gt;http://cran.r-project.org/web/packages/colorfulVennPlot/colorfulVennPlot.pdf&lt;br&gt;
+http://www.inside-r.org/packages/cran/colorfulVennPlot/docs/plotVenn3d&lt;br&gt;
+http://stackoverflow.com/questions/1428946/venn-diagrams-with-r&lt;br&gt;
+https://github.com/drpowell/vennt&lt;br&gt;
+https://www.biostars.org/p/102393/&lt;br&gt;
+https://insilicodb.com/compare-deg-signatures/&lt;br&gt;
+http://www.inside-r.org/packages/cran/colorfulVennPlot/docs/plotVenn&lt;br&gt;
+http://stackoverflow.com/questions/9121956/legend-venn-diagram-in-venneuler&lt;br&gt;
+http://stackoverflow.com/questions/8713994/venn-diagram-in-r-proportional-and-color-shading-possible-semi-transparency-sup&lt;br&gt;
+http://stackoverflow.com/questions/8153594/venn-diagram-from-list-of-clusters-and-co-occuring-factors&lt;br&gt;
+https://www.biostars.org/p/70963/&lt;br&gt;
+http://www.ats.ucla.edu/stat/r/faq/venn.htm&lt;br&gt;
+http://www.biomedcentral.com/1471-2105/12/35&lt;br&gt;
+http://stackoverflow.com/questions/12803390/venndiagram-internal-labels&lt;/p&gt;</content></entry></feed>

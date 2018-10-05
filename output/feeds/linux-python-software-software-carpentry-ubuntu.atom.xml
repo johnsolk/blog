@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Linux, Python, software, Software Carpentry, Ubuntu</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/linux-python-software-software-carpentry-ubuntu.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2013-11-14T12:23:00-08:00</updated><entry><title>WHOI Software Carpentry notes, Day 1 - morning</title><link href="https://ljcohen.github.io/blog/whoi-software-carpentry-notes-day-1.html" rel="alternate"></link><published>2013-11-14T12:23:00-08:00</published><updated>2013-11-14T12:23:00-08:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-11-14:/blog/whoi-software-carpentry-notes-day-1.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd ; git clone http://github.com/wltrimbl/2013-11-14-woodshole
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Copying workshop files.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;http://wltrimbl.github.io/2013-11-14-woodshole/
+http://wltrimbl.github.io/2013-11-14-woodshole/lessons/overview.html#%284%29
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Scientists are teaching ourselves. Need to learn the tricks the right
+way to save time later.&lt;br&gt;
+Be fluent in multiple languages.&lt;br&gt;
+Worth the effort …&lt;/p&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd ; git clone http://github.com/wltrimbl/2013-11-14-woodshole
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Copying workshop files.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;http://wltrimbl.github.io/2013-11-14-woodshole/
+http://wltrimbl.github.io/2013-11-14-woodshole/lessons/overview.html#%284%29
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Scientists are teaching ourselves. Need to learn the tricks the right
+way to save time later.&lt;br&gt;
+Be fluent in multiple languages.&lt;br&gt;
+Worth the effort. You will have tricks to use for years.&lt;br&gt;
+Learn other peoples' libraries. Saves time the long run.&lt;br&gt;
+If you find yourself copying and pasting a lot, that is an opportunity
+to write a script.&lt;br&gt;
+Commonly used blocks of code, e.g. opening files, etc. are best to put
+into functions and use again.&lt;br&gt;
+Group commonly-used functions into libraries.&lt;br&gt;
+Share code with others.&lt;br&gt;
+Writing less code, doing more things with fewer lines, is always a good
+thing.&lt;br&gt;
+Need good protocol for backing up data. You will make mistakes.&lt;br&gt;
+Use version control for collaboration.&lt;br&gt;
+Document.&lt;br&gt;
+Every time you write a function, document, what is it for, file inputs,
+so you don't hold yourself in contempt. Save every piece of code.
+Annotation for versions of pieces of code.&lt;br&gt;
+Aim for reproducibility.&lt;br&gt;
+One of the most valuable things you can do in writing scientific code is
+finding another person to read your code. This helps to eliminate
+errors. A second pair of eyes will help uncover errors, e.g. reading in
+wrong files, etc.&lt;br&gt;
+http://wltrimbl.github.io/2013-11-14-woodshole/lessons/overview.html#%2843%29&lt;br&gt;
+Geeks recognize that scale of problem needs a function.&lt;br&gt;
+Let the net do your debugging. Other people will notice your mistakes.
+Share your code. Collaborate with your coding.&lt;/p&gt;
+&lt;p&gt;Invitation to Software Carpentry, sent out to potential instructors,
+oceanographic community.&lt;br&gt;
+Try to take high level lessons and show tools to solve our own problems.
+how to make hard things easier. At the end of 2 days, some things should
+go more efficiently.&lt;/p&gt;
+&lt;p&gt;Unix vs. Linux - historical, Linux open source after 1990s, based on
+UNIX (copyright by AT&amp;amp;T/Bell)&lt;/p&gt;
+&lt;p&gt;Help each other to solve your problems. Help your neighbors.&lt;/p&gt;
+&lt;p&gt;Basic Commands&lt;br&gt;
+http://wltrimbl.github.io/2013-11-14-woodshole/lessons/ref/shell.html&lt;br&gt;
+cd in commands take you to home directory&lt;br&gt;
+pwd: full path&lt;/p&gt;
+&lt;p&gt;linux commands take options, flags introduced with "-"&lt;br&gt;
+man ls&lt;br&gt;
+ls -l -t - r&lt;br&gt;
+same as&lt;br&gt;
+ls -lrt&lt;br&gt;
+same as&lt;br&gt;
+ls -l -reverse -t&lt;/p&gt;
+&lt;p&gt;first part of entry:&lt;br&gt;
+d = directory&lt;br&gt;
+- = file&lt;br&gt;
+read, write, execute permission = rwx&lt;br&gt;
+first set is user, then others&lt;/p&gt;
+&lt;p&gt;../&lt;br&gt;
+(up one director, down another directory)&lt;/p&gt;
+&lt;p&gt;Shell is a programming language with variables, variables have \$in
+front&lt;br&gt;
+\$ echo \$0&lt;/p&gt;
+&lt;p&gt;name of shell program = bash&lt;/p&gt;
+&lt;p&gt;This will return what you are running.&lt;br&gt;
+print command = echo&lt;/p&gt;
+&lt;p&gt;Different flavors of shells.&lt;/p&gt;
+&lt;p&gt;Shells sit atop kernels.&lt;/p&gt;
+&lt;p&gt;Kernel is always running on Linux machines.&lt;br&gt;
+The shell is a different program that makes calls into program. Shell
+decides prompts, reads commands. (insert video.) There are many
+shells/Python/instances going on at the same time.&lt;br&gt;
+Common kernel takes orders and shuffels and deals them out.&lt;/p&gt;
+&lt;p&gt;Artificial data. Half million people with cochlear implants.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~/2013-11-14-woodshole/lessons/thw-shell/data$ ls
+alexander  bert  frank_richard  gerdal  jamesm  lawrence  thomas
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Type in a partial command, then hit tab, it will auto fill-in files it
+finds with that name, if it doesn't work, hit tab twice, and it will
+list all files with that file beginning. Help with file-name
+conventions.&lt;br&gt;
+&lt;a href="http://monsterbashseq.files.wordpress.com/2013/11/screenshot-from-2013-11-14-103857.png"&gt;&lt;img alt="Screenshot from 2013-11-14
+10:38:57" src="http://monsterbashseq.files.wordpress.com/2013/11/screenshot-from-2013-11-14-103857.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-591 width="300"
+height="189"}&lt;/a&gt;&lt;br&gt;
+Find data with missing values.&lt;/p&gt;
+&lt;p&gt;ls -R&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~/2013-11-14-woodshole/lessons/thw-shell/data$ ls -R
+.:
+alexander  bert  frank_richard  gerdal  jamesm  lawrence  thomas
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;./alexander:&lt;br&gt;
+data_216.DATA  data_297.DATA  data_347.DATA  data_415.DATA 
+data_473.DATA  data_547.DATA&lt;br&gt;
+data_242.DATA  data_305.DATA  data_357.DATA  data_420.DATA 
+data_498.DATA  data_548.DATA&lt;br&gt;
+data_256.DATA  data_306.DATA  data_364.DATA  data_421.DATA 
+data_502.DATA  data_550.DATA&lt;br&gt;
+data_262.DATA  data_309.DATA  data_379.DATA  data_427.DATA 
+data_516.DATA  data_560.DATA&lt;br&gt;
+data_268.DATA  data_318.DATA  data_387.DATA  data_434.DATA 
+data_527.DATA&lt;br&gt;
+data_277.DATA  data_337.DATA  data_389.DATA  data_454.DATA 
+data_530.DATA&lt;br&gt;
+data_278.DATA  data_339.DATA  data_397.DATA  data_462.DATA 
+data_536.DATA&lt;br&gt;
+data_288.DATA  data_344.DATA  data_402.DATA  data_469.DATA 
+data_542.DATA&lt;br&gt;
+data_292.DATA  data_346.DATA  data_408.DATA  data_471.DATA 
+data_546.DATA&lt;/p&gt;
+&lt;p&gt;./bert:&lt;br&gt;
+audioresult-00215  audioresult-00304  audioresult-00359 
+audioresult-00443  audioresult-00497&lt;br&gt;
+audioresult-00222  audioresult-00317  audioresult-00372 
+audioresult-00445  audioresult-00518&lt;br&gt;
+audioresult-00223  audioresult-00319  audioresult-00377 
+audioresult-00451  audioresult-00521&lt;br&gt;
+audioresult-00235  audioresult-00320  audioresult-00380 
+audioresult-00453  audioresult-00532&lt;br&gt;
+audioresult-00239  audioresult-00321  audioresult-00384 
+audioresult-00460  audioresult-00534&lt;br&gt;
+audioresult-00246  audioresult-00330  audioresult-00386 
+audioresult-00466  audioresult-00535&lt;br&gt;
+audioresult-00265  audioresult-00332  audioresult-00393 
+audioresult-00470  audioresult-00557&lt;br&gt;
+audioresult-00267  audioresult-00350  audioresult-00412 
+audioresult-00472&lt;br&gt;
+audioresult-00270  audioresult-00353  audioresult-00416 
+audioresult-00490&lt;br&gt;
+audioresult-00286  audioresult-00355  audioresult-00422 
+audioresult-00493&lt;/p&gt;
+&lt;p&gt;./frank_richard:&lt;br&gt;
+data_212  data_252  data_285  data_329  data_398  data_433 
+data_479  data_507  data_538&lt;br&gt;
+data_221  data_254  data_291  data_366  data_404  data_436 
+data_491  data_508  data_540&lt;br&gt;
+data_224  data_258  data_295  data_378  data_405  data_439 
+data_494  data_512  data_545&lt;br&gt;
+data_233  data_259  data_316  data_381  data_417  data_444 
+data_500  data_519  data_555&lt;br&gt;
+data_237  data_272  data_323  data_385  data_428  data_461 
+data_503  data_533  NOTES&lt;br&gt;
+data_247  data_273  data_327  data_388  data_429  data_477 
+data_504  data_537&lt;/p&gt;
+&lt;p&gt;./gerdal:&lt;br&gt;
+Data0211  Data0238  Data0269  Data0324  Data0370  Data0426  Data0495 
+Data0541  Data0559&lt;br&gt;
+Data0218  Data0240  Data0279  Data0331  Data0407  Data0446  Data0499 
+Data0543&lt;br&gt;
+Data0220  Data0243  Data0283  Data0338  Data0409  Data0458  Data0505 
+Data0549&lt;br&gt;
+Data0227  Data0245  Data0294  Data0342  Data0413  Data0459  Data0520 
+Data0551&lt;br&gt;
+Data0229  Data0250  Data0307  Data0356  Data0414  Data0468  Data0523 
+Data0552&lt;br&gt;
+Data0230  Data0257  Data0308  Data0365  Data0419  Data0486  Data0528 
+Data0556&lt;br&gt;
+Data0232  Data0263  Data0311  Data0367  Data0424  Data0487  Data0529 
+Data0558&lt;/p&gt;
+&lt;p&gt;./jamesm:&lt;br&gt;
+data_217.txt  data_261.txt  data_312.txt  data_375.txt 
+data_474.txt  data_509.txt&lt;br&gt;
+data_219.txt  data_264.txt  data_325.txt  data_383.txt 
+data_475.txt  data_510.txt&lt;br&gt;
+data_226.txt  data_266.txt  data_326.txt  data_394.txt 
+data_476.txt  data_517.txt&lt;br&gt;
+data_228.txt  data_280.txt  data_343.txt  data_395.txt 
+data_478.txt  data_524.txt&lt;br&gt;
+data_231.txt  data_282.txt  data_360.txt  data_401.txt 
+data_480.txt  data_553.txt&lt;br&gt;
+data_236.txt  data_290.txt  data_368.txt  data_418.txt 
+data_489.txt  NOTES&lt;br&gt;
+data_255.txt  data_293.txt  data_374.txt  data_457.txt 
+data_496.txt&lt;/p&gt;
+&lt;p&gt;./lawrence:&lt;br&gt;
+Data0214  Data0260  Data0300  Data0361  Data0392  Data0430  Data0449 
+Data0492  Data0526&lt;br&gt;
+Data0225  Data0271  Data0310  Data0362  Data0400  Data0437  Data0452 
+Data0506  Data0531&lt;br&gt;
+Data0234  Data0275  Data0313  Data0363  Data0403  Data0440  Data0455 
+Data0511  Data0544&lt;br&gt;
+Data0248  Data0276  Data0335  Data0371  Data0410  Data0441  Data0456 
+Data0515  Data0554&lt;br&gt;
+Data0251  Data0284  Data0345  Data0382  Data0411  Data0442  Data0463 
+Data0522&lt;br&gt;
+Data0253  Data0296  Data0352  Data0390  Data0423  Data0447  Data0483 
+Data0525&lt;/p&gt;
+&lt;p&gt;./thomas:&lt;br&gt;
+0213  0274  0298  0303  0328  0340  0351  0373  0399  0432  0450  0481 
+0488  0539&lt;br&gt;
+0241  0281  0299  0314  0333  0341  0354  0376  0406  0435  0464  0482 
+0501  0561&lt;br&gt;
+0244  0287  0301  0315  0334  0348  0358  0391  0425  0438  0465  0484 
+0513&lt;br&gt;
+0249  0289  0302  0322  0336  0349  0369  0396  0431  0448  0467  0485 
+0514&lt;/p&gt;
+&lt;p&gt;What do we see from a visual inspection of these? All data files have
+subject number. Some inconsistencies include Notes files, with no
+numbers.&lt;/p&gt;
+&lt;p&gt;Can you give a list of only files that contain number 0 in name? Start
+with directory jamesm:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~/2013-11-14-woodshole/lessons/thw-shell/data$ ls jamesm/*0
+jamesm/data_280.txt  jamesm/data_360.txt  jamesm/data_480.txt  jamesm/data_510.txt
+jamesm/data_290.txt  jamesm/data_401.txt  jamesm/data_509.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The shell, before it prints, looks in directory and looks for patterns
+with string of characters, number 0, then another string of characters.&lt;/p&gt;
+&lt;p&gt;Shell will fill out names into a command.&lt;/p&gt;
+&lt;p&gt;What the shell prints is equivalent to you typing a bunch of the
+commands by hand.&lt;/p&gt;
+&lt;p&gt;ls will echo back.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~/2013-11-14-woodshole/lessons/thw-shell/data$ ls -l jamesm/data_280.txt jamesm/data_290.txt
+-rw-rw-r-- 1 flcellogrl flcellogrl 150 Nov 14 09:11 jamesm/data_280.txt
+-rw-rw-r-- 1 flcellogrl flcellogrl 143 Nov 14 09:11 jamesm/data_290.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Let the computer do the work for you. They are great at remembering
+stuff. We are crap at remembering stuff.&lt;/p&gt;
+&lt;p&gt;Use up arrows to remember commands. Use the computer to remember what
+you did.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;history
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It's like a lab notebook! It records everything you did.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="sx"&gt;!559&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Or&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;history 10
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Will bring back a command in the history. It will only store 500-600
+lines. If you need to, you can change the number of lines it stores.&lt;/p&gt;
+&lt;p&gt;Ctrl-R and 'command' will reverse sesarch&lt;br&gt;
+Ctrl-C will cancel current command.&lt;/p&gt;
+&lt;p&gt;How many files do we have? Which files have data, which are notes files?
+Generate a list of data files, automatically?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;find . -
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;. will look at in home directories&lt;br&gt;
+* wild card&lt;br&gt;
+'foo' protects string from the shell&lt;/p&gt;
+&lt;p&gt;This is different:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;find . -name Data*
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Looks for files in current directory only. Interpolation. Wild card
+expansion in quotes will have it print all files in other directories.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;|
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Pipe. transferrs output to input of the next&lt;/p&gt;
+&lt;p&gt;Will make it fit in your screen. Will stop and give :&lt;br&gt;
+Hit space bar. more forward. Gives another page. Chunks.&lt;br&gt;
+Ctrl-B, back 1 page&lt;br&gt;
+Ctrl-F, next 1 page&lt;br&gt;
+q to get you back to command line.&lt;br&gt;
+Enter will go line by line.&lt;/p&gt;
+&lt;p&gt;Ctrl-Z will halt it.&lt;br&gt;
+Jobs will list stopped processes.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;fg %1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;will bring it back&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;kill %1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Will terminate process.&lt;/p&gt;
+&lt;p&gt;*Aside: This is a good time to talk about the power of silent
+processes. It's easy to remove files. Once they're gone from the kernel,
+they're gone. It will be silent.&lt;/p&gt;
+&lt;p&gt;Moving on.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;2013-11-14-woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;thw-shell&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;find&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nt"&gt;filelist&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;2013-11-14-woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;thw-shell&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;head&lt;/span&gt; &lt;span class="nt"&gt;filelist&lt;/span&gt;
+&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_444&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_491&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_538&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_507&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_237&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_479&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_316&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_503&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;2013-11-14-woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;thw-shell&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;tail&lt;/span&gt; &lt;span class="nt"&gt;filelist&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_389&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_516&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_364&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_397&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_357&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_278&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_530&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_546&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_547&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_469&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;2013-11-14-woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;thw-shell&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;tail&lt;/span&gt; &lt;span class="nt"&gt;-n&lt;/span&gt; &lt;span class="nt"&gt;4&lt;/span&gt; &lt;span class="nt"&gt;filelist&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_530&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_546&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_547&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_469&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Mechanize this. All files we're interested in have numbers. Pick out
+patterns.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;grep
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;(global regular expression print)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;2013-11-14-woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;thw-shell&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;find&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nt"&gt;filelist&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;2013-11-14-woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;thw-shell&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;head&lt;/span&gt; &lt;span class="nt"&gt;filelist&lt;/span&gt;
+&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_444&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_491&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_538&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_507&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_237&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_479&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_316&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;frank_richard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_503&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;2013-11-14-woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;thw-shell&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;tail&lt;/span&gt; &lt;span class="nt"&gt;filelist&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_389&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_516&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_364&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_397&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_357&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_278&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_530&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_546&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_547&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_469&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;2013-11-14-woodshole&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;lessons&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;thw-shell&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;tail&lt;/span&gt; &lt;span class="nt"&gt;-n&lt;/span&gt; &lt;span class="nt"&gt;4&lt;/span&gt; &lt;span class="nt"&gt;filelist&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_530&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_546&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_547&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="nt"&gt;alexander&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;data_469&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;DATA&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Print me every other line that doesn't contain 'NOTES':&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;grep -v &amp;#39;NOTES&amp;#39; filelist |less
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Every file that with a name including these numbers:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;grep &amp;#39;[0123456789]&amp;#39; filelist
+
+grep &amp;#39;[0123456789]&amp;#39; filelist | less
+
+wc --htlp
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Line, word, byte counts for each file.&lt;/p&gt;
+&lt;p&gt;Review:&lt;br&gt;
+grep&lt;br&gt;
+find&lt;/p&gt;
+&lt;p&gt;Let's say you wanted to do one command more than one time? Save command,
+reuse. Editor.&lt;/p&gt;
+&lt;p&gt;Text editor: It is worth learning a cross-platform editor. This is very
+important. Find one of these and use it.&lt;br&gt;
+-&lt;a href="http://www.vim.org/"&gt;VIM&lt;/a&gt;&lt;br&gt;
+- Emacs&lt;br&gt;
+- PyCharm: new Integrated Python IDE&lt;/p&gt;
+&lt;p&gt;Where to save shell script files, which directory? If you don't know
+where your files are, and want to look everywhere for the files, start
+with root directory:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;find / -name 2013-11-14-woodshole*
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will take a while because it's searching through your whole
+computer.&lt;/p&gt;
+&lt;p&gt;Name shell scripts as .sh&lt;/p&gt;
+&lt;p&gt;(For now, I'm using gedit.)&lt;/p&gt;
+&lt;p&gt;If you're in Windows, you have directories with spaces.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir &amp;#39;My Space&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Nice thing about tab completion, it will appropriately escape spaces or
+Chinese characters or whatever.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;rmdir &amp;#39;My Space&amp;#39;
+
+flcellogrl@flcellogrl:~/2013-11-14-woodshole/lessons/thw-shell/data$ grep &amp;#39;Sex: N&amp;#39; $(cat filelist)
+grep: .: Is a directory
+grep: ./frank_richard: Is a directory
+./frank_richard/data_491:Sex: N
+./frank_richard/data_507:Sex: N
+./frank_richard/data_479:Sex: N
+./frank_richard/data_212:Sex: N
+./frank_richard/data_247:Sex: N
+./frank_richard/data_494:Sex: N
+./frank_richard/data_504:Sex: N
+./frank_richard/data_385:Sex: N
+./frank_richard/data_508:Sex: N
+./frank_richard/data_428:Sex: N
+./frank_richard/data_545:Sex: N
+./frank_richard/data_381:Sex: N
+./frank_richard/data_224:Sex: N
+./frank_richard/data_233:Sex: N
+./frank_richard/data_221:Sex: N
+./frank_richard/data_477:Sex: N
+./frank_richard/data_519:Sex: N
+grep: ./bert: Is a directory
+./bert/audioresult-00443:Sex: N
+./bert/audioresult-00239:Sex: N
+./bert/audioresult-00422:Sex: N
+./bert/audioresult-00380:Sex: N
+./bert/audioresult-00445:Sex: N
+./bert/audioresult-00353:Sex: N
+./bert/audioresult-00222:Sex: N
+./bert/audioresult-00521:Sex: N
+./bert/audioresult-00384:Sex: N
+./bert/audioresult-00372:Sex: N
+./bert/audioresult-00246:Sex: N
+./bert/audioresult-00215:Sex: N
+./bert/audioresult-00321:Sex: N
+./bert/audioresult-00235:Sex: N
+./bert/audioresult-00320:Sex: N
+./bert/audioresult-00270:Sex: N
+grep: ./lawrence: Is a directory
+./lawrence/Data0526:Sex: N
+./lawrence/Data0363:Sex: N
+./lawrence/Data0371:Sex: N
+./lawrence/Data0492:Sex: N
+./lawrence/Data0463:Sex: N
+./lawrence/Data0234:Sex: N
+./lawrence/Data0525:Sex: N
+./lawrence/Data0310:Sex: N
+./lawrence/Data0335:Sex: N
+./lawrence/Data0390:Sex: N
+./lawrence/Data0544:Sex: N
+./lawrence/Data0251:Sex: N
+./lawrence/Data0531:Sex: N
+./lawrence/Data0276:Sex: N
+./lawrence/Data0522:Sex: N
+./lawrence/Data0225:Sex: N
+./lawrence/Data0382:Sex: N
+./lawrence/Data0362:Sex: N
+grep: ./jamesm: Is a directory
+./jamesm/data_325.txt:Sex: N
+./jamesm/data_475.txt:Sex: N
+./jamesm/data_509.txt:Sex: N
+./jamesm/data_264.txt:Sex: N
+./jamesm/data_255.txt:Sex: N
+./jamesm/data_236.txt:Sex: N
+./jamesm/data_457.txt:Sex: N
+./jamesm/data_231.txt:Sex: N
+./jamesm/data_266.txt:Sex: N
+./jamesm/data_480.txt:Sex: N
+./jamesm/data_326.txt:Sex: N
+./jamesm/data_476.txt:Sex: N
+./jamesm/data_226.txt:Sex: N
+./jamesm/data_217.txt:Sex: N
+./jamesm/data_496.txt:Sex: N
+./jamesm/data_383.txt:Sex: N
+grep: ./gerdal: Is a directory
+./gerdal/Data0232:Sex: N
+./gerdal/Data0279:Sex: N
+./gerdal/Data0311:Sex: N
+./gerdal/Data0549:Sex: N
+./gerdal/Data0424:Sex: N
+./gerdal/Data0220:Sex: N
+./gerdal/Data0505:Sex: N
+./gerdal/Data0218:Sex: N
+./gerdal/Data0407:Sex: N
+./gerdal/Data0458:Sex: N
+./gerdal/Data0520:Sex: N
+./gerdal/Data0338:Sex: N
+./gerdal/Data0263:Sex: N
+./gerdal/Data0528:Sex: N
+./gerdal/Data0230:Sex: N
+./gerdal/Data0523:Sex: N
+grep: ./thomas: Is a directory
+./thomas/0328:Sex: N
+./thomas/0333:Sex: N
+./thomas/0334:Sex: N
+./thomas/0373:Sex: N
+./thomas/0369:Sex: N
+./thomas/0432:Sex: N
+./thomas/0464:Sex: N
+./thomas/0287:Sex: N
+./thomas/0213:Sex: N
+grep: ./alexander: Is a directory
+./alexander/data_536.DATA:Sex: N
+./alexander/data_427.DATA:Sex: N
+./alexander/data_527.DATA:Sex: N
+./alexander/data_402.DATA:Sex: N
+./alexander/data_387.DATA:Sex: N
+./alexander/data_548.DATA:Sex: N
+./alexander/data_262.DATA:Sex: N
+./alexander/data_216.DATA:Sex: N
+./alexander/data_364.DATA:Sex: N
+./alexander/data_357.DATA:Sex: N
+./alexander/data_547.DATA:Sex: N
+./alexander/data_469.DATA:Sex: N
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;To get grep to look inside the files, you need to feed them separately.&lt;/p&gt;
+&lt;p&gt;Two ways to use grep:&lt;br&gt;
+1. grep ; looks for patterns, output&lt;br&gt;
+2. grep Gives grep list of filenames. grep will go through each file,
+makes a decision whether it meets criteria, then outputs something with
+match.&lt;/p&gt;
+&lt;p&gt;&amp;gt;&lt;/p&gt;
+&lt;p&gt;creates file&lt;/p&gt;
+&lt;p&gt;instead of [0123456789] just use [0-9]&lt;/p&gt;
+&lt;p&gt;&amp;gt;&amp;gt; appends instead of overwrites files&lt;/p&gt;</content></entry><entry><title>Software Carpentry Boot Camp, setup</title><link href="https://ljcohen.github.io/blog/software-carpentry-boot-camp-setup.html" rel="alternate"></link><published>2013-11-13T20:15:00-08:00</published><updated>2013-11-13T20:15:00-08:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-11-13:/blog/software-carpentry-boot-camp-setup.html</id><summary type="html">&lt;p&gt;&lt;a href="http://wltrimbl.github.io/2013-11-14-woodshole/"&gt;Setup instructions&lt;/a&gt;
+for the &lt;a href="http://software-carpentry.org/bootcamps/2013-11-14-whoi/index.html"&gt;Software Carpentry Boot
+Camp&lt;/a&gt;
+at &lt;a href="http://www.nefsc.noaa.gov/nefsc/woodshole/"&gt;Woods Hole Oceanographic
+Institution&lt;/a&gt; from 14-15 Nov.
+I'm really looking forward to this Boot Camp and setting up something
+similar at HBOI.&lt;/p&gt;
+&lt;p&gt;I already have the Linux command terminal, a text editor, and Python
+IDLE. The workshop will be using Python …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://wltrimbl.github.io/2013-11-14-woodshole/"&gt;Setup instructions&lt;/a&gt;
+for the &lt;a href="http://software-carpentry.org/bootcamps/2013-11-14-whoi/index.html"&gt;Software Carpentry Boot
+Camp&lt;/a&gt;
+at &lt;a href="http://www.nefsc.noaa.gov/nefsc/woodshole/"&gt;Woods Hole Oceanographic
+Institution&lt;/a&gt; from 14-15 Nov.
+I'm really looking forward to this Boot Camp and setting up something
+similar at HBOI.&lt;/p&gt;
+&lt;p&gt;I already have the Linux command terminal, a text editor, and Python
+IDLE. The workshop will be using Python version 2.7. While I use Python
+IDLE version 3.3, I'm unsure of whether this will be ok. I've heard this
+before, that people still use Python version 2 for things, and I don't
+understand why. I will have to ask tomorrow. Python version 3.3 is the
+latest. There are syntax differences between the two versions, &lt;em&gt;e.g.&lt;/em&gt;
+print foo vs. print(foo).&lt;/p&gt;
+&lt;p&gt;I did have to &lt;a href="https://www.digitalocean.com/community/articles/how-to-install-git-on-ubuntu-12-04"&gt;install
+git&lt;/a&gt;. 
+I'm a little fuzzy on the concept of git, which I'm looking forward to
+learning more about tomorrow. This fuzziness is even despite &lt;a href="https://github.com/ljcohen"&gt;my own
+github account&lt;/a&gt;. Github is, coincidentally,
+the subject of a &lt;a href="http://www.molecularecologist.com/2013/11/using-github-with-r-and-rstudio/"&gt;blog post this week on Molecular
+Ecologist&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~$ sudo apt-get install git-core
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libcurl3-nss libnspr4-dev libnss3-dev libssl-dev libssl-doc
+  linux-headers-3.8.0-19 linux-headers-3.8.0-19-generic
+  linux-image-3.8.0-19-generic linux-image-extra-3.8.0-19-generic
+Use &amp;#39;apt-get autoremove&amp;#39; to remove them.
+The following extra packages will be installed:
+  git git-man liberror-perl
+Suggested packages:
+  git-daemon-run git-daemon-sysvinit git-doc git-el git-arch git-cvs git-svn
+  git-email git-gui gitk gitweb
+The following NEW packages will be installed:
+  git git-core git-man liberror-perl
+0 upgraded, 4 newly installed, 0 to remove and 12 not upgraded.
+Need to get 7,417 kB of archives.
+After this operation, 17.3 MB of additional disk space will be used.
+Do you want to continue [Y/n]? y
+Get:1 http://us.archive.ubuntu.com/ubuntu/ raring/main liberror-perl all 0.17-1 [23.8 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ raring/main git-man all 1:1.8.1.2-1 [653 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ raring/main git i386 1:1.8.1.2-1 [6,739 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ raring/main git-core all 1:1.8.1.2-1 [1,392 B]
+Fetched 7,417 kB in 5min 13s (23.7 kB/s)                                       
+Selecting previously unselected package liberror-perl.
+(Reading database ... 438507 files and directories currently installed.)
+Unpacking liberror-perl (from .../liberror-perl_0.17-1_all.deb) ...
+Selecting previously unselected package git-man.
+Unpacking git-man (from .../git-man_1%3a1.8.1.2-1_all.deb) ...
+Selecting previously unselected package git.
+Unpacking git (from .../git_1%3a1.8.1.2-1_i386.deb) ...
+Selecting previously unselected package git-core.
+Unpacking git-core (from .../git-core_1%3a1.8.1.2-1_all.deb) ...
+Processing triggers for man-db ...
+Setting up liberror-perl (0.17-1) ...
+Setting up git-man (1:1.8.1.2-1) ...
+Setting up git (1:1.8.1.2-1) ...
+Setting up git-core (1:1.8.1.2-1) ...
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;As a side note, I think that the &lt;a href="http://software-carpentry.org/index.html"&gt;Software
+Carpentry&lt;/a&gt; concept and
+&lt;a href="http://software-carpentry.org/team.html"&gt;team&lt;/a&gt; are incredibly  cool.
+This is a non-profit organization comprised of a multidisciplinary team
+of instructors (University professors, graduate students, software
+professionals) who are involved with software at various levels. The aim
+is to train post-graduate scientists in computing skills to get us to
+where we need to be: programming and using advanced computing tools in
+our research to help with big data needs. I would love to be a part of
+this as an instructor someday, if I can ever get my skills to a level
+where they should be!&lt;/p&gt;
+&lt;p&gt;I was reading their
+&lt;a href="http://software-carpentry.org/blog/index.html"&gt;blog&lt;/a&gt;, and some of their
+developers posted an interesting report from a project they're working
+on with &lt;a href="http://www.ploscompbiol.org/"&gt;PLOS Computational Biology&lt;/a&gt; and
+partners at Mozilla looking into &lt;a href="http://mozillascience.org/code-review-for-science-what-we-learned/"&gt;code published in scientific
+literature&lt;/a&gt;.&lt;/p&gt;</content></entry></feed>

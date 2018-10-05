@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Articles, Links</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/articles-links.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2013-11-08T09:49:00-08:00</updated><entry><title>What I'm Reading This Week</title><link href="https://ljcohen.github.io/blog/software-assessments.html" rel="alternate"></link><published>2013-11-08T09:49:00-08:00</published><updated>2013-11-08T09:49:00-08:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-11-08:/blog/software-assessments.html</id><summary type="html">&lt;p&gt;A blog that I read (&lt;a href="http://www.molecularecologist.com/2013/11/what-were-reading-mating-advantages-for-rare-males-in-guppies-a-new-species-of-dolphin-in-australian-waters-and-dna-sequencers-on-mars/"&gt;Molecular
+Ecologist&lt;/a&gt;)
+has a Friday post almost every week about what they're reading. I enjoy
+hearing about what other people are reading. It gives me ideas. These
+are some of the things I've been reading this week:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.ebi.ac.uk/about/news/press-releases/RGASP-2013"&gt;Comparing software packages for accuracy and
+efficiency&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.biomedcentral.com/1472-6750/11/109"&gt;Fusion …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;A blog that I read (&lt;a href="http://www.molecularecologist.com/2013/11/what-were-reading-mating-advantages-for-rare-males-in-guppies-a-new-species-of-dolphin-in-australian-waters-and-dna-sequencers-on-mars/"&gt;Molecular
+Ecologist&lt;/a&gt;)
+has a Friday post almost every week about what they're reading. I enjoy
+hearing about what other people are reading. It gives me ideas. These
+are some of the things I've been reading this week:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.ebi.ac.uk/about/news/press-releases/RGASP-2013"&gt;Comparing software packages for accuracy and
+efficiency&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.biomedcentral.com/1472-6750/11/109"&gt;Fusion primer method&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3605921/"&gt;NGS Target Enrichment
+methods&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0042543"&gt;Sequence Identification
+Tags&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.brainpickings.org/index.php/2012/09/18/wonderful-life-with-the-elements-bunpei-yorifuji/"&gt;Present for
+husband&lt;/a&gt;
+(who reads this blog?)&lt;/p&gt;
+&lt;p&gt;My town held local elections. The woman whose sign has been on my lawn
+for the past month (Margot Dorfman)
+&lt;a href="http://www.floridatoday.com/article/20131105/NEWS01/311050052/In-Melbourne-Beach-Simmons-wins-mayor-race?nclick_check=1"&gt;won&lt;/a&gt;!
+Jim Simmons seems like he will be a good mayor. In talking with him
+about housing developments and septic tank issues on our barrier island,
+he seemed to be knowledgeable and very aware of the logistics and the
+situation we're in. I have an optimistic outlook for this new Commission
+and Mayoral administration.&lt;/p&gt;
+&lt;p&gt;There is a &lt;a href="http://www.thefreedictionary.com/glum"&gt;glum&lt;/a&gt; atmosphere at
+work as an unpopular interim Executive Director was named from the
+existing faculty ranks.&lt;/p&gt;
+&lt;p&gt;Exploring
+&lt;a href="http://discover.nci.nih.gov/microarrayAnalysis/Distribution.Signals.jsp"&gt;analyses&lt;/a&gt;
+and
+&lt;a href="http://www.people.vcu.edu/~mreimers/OGMDA/normalize.expression.html"&gt;different&lt;/a&gt;
+&lt;a href="http://nar.oxfordjournals.org/content/32/8/2323.full"&gt;normalization&lt;/a&gt;
+&lt;a href="http://www.nature.com/ng/journal/v32/n4s/full/ng1032.html"&gt;methods&lt;/a&gt; of
+&lt;a href="http://www.biomedcentral.com/1471-2105/7/469"&gt;microarray&lt;/a&gt; intensities
+for a potentially sketchy set of data.&lt;/p&gt;
+&lt;p&gt;Starting an 8-week, "&lt;a href="https://www.coursera.org/course/bioinformatics"&gt;Bioinformatics Algorithms: Part
+1&lt;/a&gt;" course.  I think
+&lt;a href="http://cseweb.ucsd.edu/~ppevzner/"&gt;Dr. Pavel Pevzner&lt;/a&gt; (one of the
+instructors/creators of the course) is cool and has some good ideas for
+teaching bioinformatics. &lt;a href="http://www.sciencemag.org/content/325/5940/541.short"&gt;Biology Education needs
+re-examining&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Plus, he's funny and very charming:&lt;/p&gt;
+&lt;p&gt;http://youtu.be/t5t_nfzdzEg&lt;/p&gt;
+&lt;p&gt;R learning:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://stats.stackexchange.com/questions/8225/how-to-summarize-data-by-group-in-r"&gt;Summarizing data by
+    factors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://cran.r-project.org/web/packages/doBy/index.html"&gt;doBy
+    package&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.statmethods.net/input/exportingdata.html"&gt;Quick-R: Exporting
+    Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://cran.r-project.org/web/packages/xtable/xtable.pdf"&gt;xtable.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://cran.r-project.org/web/packages/tables/tables.pdf"&gt;tables.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/5465314/tools-for-making-latex-tables-in-r"&gt;Tools for making latex tables in R - Stack
+    Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stat.ethz.ch/R-manual/R-devel/library/base/html/make.names.html"&gt;R: Make Syntactically Valid
+    Names&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/ask/advice?"&gt;How to Ask - Stack
+    Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/9162060/special-characters-in-r-language"&gt;Special characters in R language - Stack
+    Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For my students (Week 5, Atmospheric Issues):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.science.smith.edu/~jcardell/Courses/EGR325/Readings/ElecPollution_EnvDef.pdf"&gt;Electricity Generation and Pollution -
+    ElecPollution_EnvDef.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.airnow.gov/"&gt;http://www.airnow.gov/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://airquality.weather.gov/"&gt;http://airquality.weather.gov/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://weather.weatherbug.com/air-quality.html"&gt;http://weather.weatherbug.com/air-quality.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Getting them to look up &lt;a href="http://agency.governmentjobs.com/clarkcounty/default.cfm?action=viewclassspec&amp;amp;ClassSpecID=66713"&gt;job
+    listings&lt;/a&gt;
+    for topics we discuss&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.epa.gov/cleanenergy/energy-resources/calculator.html"&gt;Emissions&lt;/a&gt;
+    &lt;a href="http://airhead.cnt.org/Calculator/"&gt;calculators&lt;/a&gt; and what
+    information goes into a
+    &lt;a href="http://www.epa.gov/cleanenergy/energy-resources/refs.html"&gt;calculation&lt;/a&gt;.
+    According to &lt;a href="http://airhead.cnt.org/Calculator/"&gt;airhead.cnt.org&lt;/a&gt;,
+    I contributed 2395 lbs. of personal emissions in Oct (stupid driving
+    commute):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2013/11/month-profile-graph-php.png"&gt;&lt;img alt="month-profile-graph.php" src="http://monsterbashseq.files.wordpress.com/2013/11/month-profile-graph-php.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-483 width="300"
+height="270"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I was accepted to the &lt;a href="https://evomics.org/workshops/workshop-on-genomics/2014-workshop-on-genomics-cesky-krumlov/"&gt;2014 Workshop on
+Genomics&lt;/a&gt;
+in Český Krumlov, Czech Republic! Now I have to find funding. Commence
+proposal writing. Some references I used:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dudley, J.T. and Butte, A.J. 2009. &lt;a href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1000589"&gt;A Quick Guide for Developing
+    Effective Bioinformatics Programming
+    Skills&lt;/a&gt;.
+    PLoS Computational Biology. 5(12):1-7.&lt;/li&gt;
+&lt;li&gt;Stein, L. 2010. &lt;a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2898083/pdf/gb-2010-11-5-207.pdf"&gt;The case for cloud computing in genome
+    informatics&lt;/a&gt;.
+    &lt;em&gt;Genome Biol.&lt;/em&gt; 11(5): 207.&lt;/li&gt;
+&lt;li&gt;National Human Genome Research Institute (NHGRI). 2013. “DNA
+    Sequencing Costs.” Available at:
+    &lt;a href="http://www.genome.gov/sequencingcosts/"&gt;http://www.genome.gov/sequencingcosts/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.nytimes.com/2011/12/01/business/dna-sequencing-caught-in-deluge-of-data.html?pagewanted=all&amp;amp;_r=0"&gt;DNA Sequencing Caught in Deluge of Data -
+    NYTimes.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mountains of graduate school program websites. &lt;a href="http://www.molecularecologist.com/2012/12/knowing-what-i-know-now-grad-school-katie-lotterhos/#more-2283"&gt;Taking my
+time&lt;/a&gt;
+and
+&lt;a href="http://laserboyfriend.blogspot.com/2012/12/my-laser-boyfriends-grad-school.html"&gt;carefully&lt;/a&gt;
+&lt;a href="http://www.molecularecologist.com/2012/11/knowing-what-i-know-now-grad-school-jeremy-yoder/"&gt;considering&lt;/a&gt;
+. I am
+&lt;a href="http://stearnslab.yale.edu/some-modest-advice-graduate-students"&gt;positive&lt;/a&gt;
+and convinced this is &lt;a href="http://www.molecularecologist.com/2012/12/knowing-what-i-know-now-the-carnival/"&gt;something I want to
+do&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;GRE math:&lt;/p&gt;
+&lt;p&gt;http://youtu.be/eZzSqYgy7lY&lt;/p&gt;
+&lt;p&gt;Some other interesting links:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I heard about a cool &lt;a href="https://www.nanoporetech.com/"&gt;new mini benchtop, field sequencing
+    technology&lt;/a&gt; to be released in the new
+    year.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.mysteriesofvernacular.com/robot.html"&gt;Robots&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Thinking about how to &lt;a href="http://stutterrockstar.com/2013/11/04/making-listeners-comfortable/"&gt;make listeners comfortable when I
+    speak&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Listening to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.ptxofficial.com/music"&gt;Pentatonix&lt;/a&gt; (&lt;a href="http://www.npr.org/2013/11/07/243213446/no-instruments-for-pentatonix-its-no-problem"&gt;all vocals, no
+    instruments or electronic
+    effects&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;http://youtu.be/3MteSlpxCpo&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.chebisabbah.com/"&gt;DJ Cheb i Sabbah&lt;/a&gt;,
+    &lt;a href="http://www.sfbg.com/noise/2013/11/07/cheb-i-sabbah-1947-2013"&gt;RIP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;http://youtu.be/wcPv2LZGvuU&lt;/p&gt;
+&lt;p&gt;http://www.youtube.com/watch?v=5j-SDHjKy8k&amp;amp;feature=youtu.be&amp;amp;t=1h6m19s&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.brainpickings.org/index.php/2012/08/01/carl-sagan-kenley-kristofferson/"&gt;Cosmos: A Three-Movement Choral Suite [Carl Sagan Tribute
+    Series]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;http://youtu.be/617ffRQ8ndE&lt;/p&gt;</content></entry><entry><title>Big Data in Biology</title><link href="https://ljcohen.github.io/blog/big-data-in-biology.html" rel="alternate"></link><published>2013-06-18T22:13:00-07:00</published><updated>2013-06-18T22:13:00-07:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-06-18:/blog/big-data-in-biology.html</id><summary type="html">&lt;p&gt;http://www.nature.com/nature/journal/v498/n7453/full/498255a.html&lt;/p&gt;</summary><content type="html">&lt;p&gt;http://www.nature.com/nature/journal/v498/n7453/full/498255a.html&lt;/p&gt;</content></entry></feed>

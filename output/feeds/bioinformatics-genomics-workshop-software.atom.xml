@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Bioinformatics, Genomics Workshop, software</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/bioinformatics-genomics-workshop-software.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2014-01-21T10:19:00-08:00</updated><entry><title>Workshop on Genomics (Week 2, Day 2) - Metagenomics</title><link href="https://ljcohen.github.io/blog/workshop-on-genomics-week-2-day-2-metagenomics.html" rel="alternate"></link><published>2014-01-21T10:19:00-08:00</published><updated>2014-01-21T10:19:00-08:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2014-01-21:/blog/workshop-on-genomics-week-2-day-2-metagenomics.html</id><summary type="html">&lt;p&gt;Interesting argument for the importance of social media. Rapid analysis
+of data for diagnosis of public health-related issues before
+publications/reports can be written/submitted. Also, public record of
+conversations and advice that might help people learning.&lt;/p&gt;
+&lt;p&gt;Dr. Nick Loman: &lt;a href="http://pathogenomics.bham.ac.uk/blog/"&gt;http://pathogenomics.bham.ac.uk/blog/&lt;/a&gt;&lt;br&gt;
+http://www.flickr.com …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Interesting argument for the importance of social media. Rapid analysis
+of data for diagnosis of public health-related issues before
+publications/reports can be written/submitted. Also, public record of
+conversations and advice that might help people learning.&lt;/p&gt;
+&lt;p&gt;Dr. Nick Loman: &lt;a href="http://pathogenomics.bham.ac.uk/blog/"&gt;http://pathogenomics.bham.ac.uk/blog/&lt;/a&gt;&lt;br&gt;
+http://www.flickr.com/photos/lpcohen/12066175364/&lt;/p&gt;
+&lt;p&gt;Metagenomics Lab 1 Exercise:
+http://nickloman.github.io/2014/01/18/evomics-2014-metagenomics-three-hour-practical/&lt;/p&gt;
+&lt;p&gt;Using &lt;a href="http://huttenhower.sph.harvard.edu/metaphlan"&gt;MetaPhlan&lt;/a&gt; (marker
+gene method) &lt;a href="http://ab.inf.uni-tuebingen.de/software/megan5/"&gt;MEGAN&lt;/a&gt;
+(least common ancestor parameters)&lt;/p&gt;
+&lt;p&gt;Datasets from
+&lt;a href="http://jama.jamanetwork.com/article.aspx?articleid=1677374"&gt;article&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-21-140612.png"&gt;&lt;img alt="Screenshot from 2014-01-21
+14:06:12" src="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-21-140612.png?w=640"&gt;{.alignnone
+.size-large .wp-image-786 width="640"
+height="366"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Paired-end Illumina sequencing data, with sample ID and species names in
+data files.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ubuntu@ip-10-151-69-171:~/shotgun_metagenomics$ seqtk
+
+Usage:   seqtk  
+Version: 1.0-r32
+
+Command: seq       common transformation of FASTA/Q
+         comp      get the nucleotide composition of FASTA/Q
+         sample    subsample sequences
+         subseq    extract subsequences from FASTA/Q
+         trimfq    trim FASTQ using the Phred algorithm
+
+         hety      regional heterozygosity
+         mutfa     point mutate FASTA at specified positions
+         mergefa   merge two FASTA/Q files
+         randbase  choose a random base from hets
+         cutN      cut sequence at long N
+         listhet   extract the position of each het
+
+Usage: seqtk sample [-s seed=11]  |
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Subsample 1000, 10000, 100000, 100000 sequences from dataset:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nf"&gt;%seqtk&lt;/span&gt; &lt;span class="n"&gt;sample&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="mi"&gt;1234&lt;/span&gt; &lt;span class="mi"&gt;2638&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;STEC_1_final&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fastq&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gz&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="mi"&gt;2638&lt;/span&gt;&lt;span class="n"&gt;_1000_1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fastq&lt;/span&gt;
+&lt;span class="nf"&gt;%seqtk&lt;/span&gt; &lt;span class="n"&gt;sample&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="mi"&gt;1234&lt;/span&gt; &lt;span class="mi"&gt;2638&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;STEC_2_final&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fastq&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gz&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="mi"&gt;2638&lt;/span&gt;&lt;span class="n"&gt;_1000_2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fastq&lt;/span&gt;
+&lt;span class="nf"&gt;%cat&lt;/span&gt; &lt;span class="mi"&gt;2638&lt;/span&gt;&lt;span class="n"&gt;_1000_1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fastq&lt;/span&gt; &lt;span class="mi"&gt;2638&lt;/span&gt;&lt;span class="n"&gt;_1000_2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fastq&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="mi"&gt;2638&lt;/span&gt;&lt;span class="n"&gt;_1000&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fastq&lt;/span&gt;
+
+&lt;span class="n"&gt;ubuntu&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;ip&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;151&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;69&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;171&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="n"&gt;shotgun_metagenomics&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;metaphlan&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="mi"&gt;2638&lt;/span&gt;&lt;span class="n"&gt;_1000&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fastq&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;bowtie2db&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;software&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;metaphlan&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bowtie2db&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mpa&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;bt2_ps&lt;/span&gt; &lt;span class="n"&gt;sensitive&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;nproc&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;
+&lt;span class="n"&gt;k__Bacteria&lt;/span&gt;     &lt;span class="mf"&gt;100.0&lt;/span&gt;
+&lt;span class="n"&gt;k__Bacteria&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;p__Proteobacteria&lt;/span&gt;   &lt;span class="mf"&gt;100.0&lt;/span&gt;
+&lt;span class="n"&gt;k__Bacteria&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;p__Proteobacteria&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;c__Gammaproteobacteria&lt;/span&gt;    &lt;span class="mf"&gt;100.0&lt;/span&gt;
+&lt;span class="n"&gt;k__Bacteria&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;p__Proteobacteria&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;c__Gammaproteobacteria&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;o__Enterobacteriales&lt;/span&gt;       &lt;span class="mf"&gt;100.0&lt;/span&gt;
+&lt;span class="n"&gt;k__Bacteria&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;p__Proteobacteria&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;c__Gammaproteobacteria&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;o__Enterobacteriales&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;f__Enterobacteriaceae&lt;/span&gt; &lt;span class="mf"&gt;100.0&lt;/span&gt;
+&lt;span class="n"&gt;k__Bacteria&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;p__Proteobacteria&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;c__Gammaproteobacteria&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;o__Enterobacteriales&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;f__Enterobacteriaceae&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;g__Escherichia&lt;/span&gt;  &lt;span class="mf"&gt;100.0&lt;/span&gt;
+&lt;span class="n"&gt;k__Bacteria&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;p__Proteobacteria&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;c__Gammaproteobacteria&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;o__Enterobacteriales&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;f__Enterobacteriaceae&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;g__Escherichia&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;s__Escherichia_unclassified&lt;/span&gt; &lt;span class="mf"&gt;100.0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;More reads change taxonomic assignment (presumably makes them more
+accurate):&lt;br&gt;
+&lt;a href="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-21-151011.png"&gt;&lt;img alt="Screenshot from 2014-01-21
+15:10:11" src="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-21-151011.png?w=640"&gt;{.alignnone
+.size-large .wp-image-787 width="640"
+height="116"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MEGAN (Metagenomics Analysis tool)&lt;br&gt;
+Demonstration:&lt;br&gt;
+http://youtu.be/R8dpD_lj6Ts&lt;/p&gt;
+&lt;p&gt;Manual:
+http://ab.inf.uni-tuebingen.de/data/software/megan5/download/manual.pdf&lt;/p&gt;
+&lt;p&gt;This is a GUI software package available under the "Other" menu of the
+AWS virtual ubuntu instance.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-21-161839.png"&gt;&lt;img alt="Screenshot from 2014-01-21
+16:18:39" src="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-21-161839.png?w=640"&gt;{.alignnone
+.size-large .wp-image-788 width="640"
+height="342"}&lt;/a&gt;&lt;/p&gt;</content></entry></feed>

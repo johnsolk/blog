@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Data Analyses, Links, Microarray</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/data-analyses-links-microarray.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2013-10-12T00:36:00-07:00</updated><entry><title>Raw Microarray Data Distribution Analyses - MA plotting</title><link href="https://ljcohen.github.io/blog/raw-microarray-data-distribution-analyses-ma-plotting.html" rel="alternate"></link><published>2013-10-12T00:36:00-07:00</published><updated>2013-10-12T00:36:00-07:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-10-12:/blog/raw-microarray-data-distribution-analyses-ma-plotting.html</id><summary type="html">&lt;p&gt;http://en.wikipedia.org/wiki/MA_plot&lt;/p&gt;
+&lt;p&gt;http://cran.r-project.org/web/packages/EMA/vignettes/EMA_vignette.pdf&lt;br&gt;
+http://faculty.ucr.edu/\~tgirke/HTML_Presentations/Manuals/Microarray/arrayBasics.pdf&lt;br&gt;
+http://bioinformatics.oxfordjournals.org/content/18/4/576.full.pdf&lt;br&gt;
+http://bioinformatics.oxfordjournals.org/content/25/3/415.full&lt;br&gt;
+http://www3.it.nuigalway.ie …&lt;/p&gt;</summary><content type="html">&lt;p&gt;http://en.wikipedia.org/wiki/MA_plot&lt;/p&gt;
+&lt;p&gt;http://cran.r-project.org/web/packages/EMA/vignettes/EMA_vignette.pdf&lt;br&gt;
+http://faculty.ucr.edu/\~tgirke/HTML_Presentations/Manuals/Microarray/arrayBasics.pdf&lt;br&gt;
+http://bioinformatics.oxfordjournals.org/content/18/4/576.full.pdf&lt;br&gt;
+http://bioinformatics.oxfordjournals.org/content/25/3/415.full&lt;br&gt;
+http://www3.it.nuigalway.ie/agolden/bioconductor/version1/MicroArrayAnalysis.pdf&lt;br&gt;
+http://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=3&amp;amp;cad=rja&amp;amp;ved=0CDsQFjAC&amp;amp;url=http%3A%2F%2Fwww.cs.princeton.edu%2Fpicasso%2Fmats%2Fmicroarray_analysis_basics_F08&amp;amp;ei=atFYUuKHOYSE9QSl4oDwDg&amp;amp;usg=AFQjCNGEIzdK6iTxhhB2-8xWCMoYPkbp8A&amp;amp;sig2=M5QRF3J3GtQquc-PnPVsKQ&amp;amp;bvm=bv.53899372,d.eWU&lt;br&gt;
+http://www.bioinformatics.wsu.edu/bioinfo_course/notes/Lecture16.pdf&lt;br&gt;
+http://www.biology.gatech.edu/people/pdf/gibson.MetEnz.pdf&lt;br&gt;
+http://www.horizonpress.com/cimb/v/v4/06.pdf&lt;br&gt;
+http://cri.uchicago.edu/wp-content/uploads/2012/05/Analysis-of-Microrrays-with-R-and-Bioconductor.pdf&lt;br&gt;
+http://www.bioss.ac.uk/\~dirk/lectures/gti_jan04/papers/shannon_clustering.pdf&lt;br&gt;
+http://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=8&amp;amp;cad=rja&amp;amp;ved=0CGQQFjAH&amp;amp;url=http%3A%2F%2Fwww.people.vcu.edu%2F\~mreimers%2FHTDA%2FMicroarray%2520Quality%2520Assessment.ppt&amp;amp;ei=-tFYUsjRH4qY9gT7qIDgCg&amp;amp;usg=AFQjCNHPlLvQgZ_BMQg-gWMi_uKY4I76pQ&amp;amp;sig2=GEzbwcGNcbFHvJZMgsx6sw&amp;amp;bvm=bv.53899372,d.eWU&lt;br&gt;
+http://www.pmean.com/99/arrayImport.htm&lt;/p&gt;
+&lt;p&gt;Bioconductor:&lt;br&gt;
+http://www.bioconductor.org/packages/2.12/bioc/vignettes/limma/inst/doc/usersguide.pdf&lt;br&gt;
+http://www.sbforum.org/cmsimages/presentations/BioC.pdf&lt;br&gt;
+http://www.bioconductor.org/help/course-materials/2008/BioC2008/labs/arrayQA/&lt;/p&gt;</content></entry></feed>

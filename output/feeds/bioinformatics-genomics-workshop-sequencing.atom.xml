@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Bioinformatics, Genomics Workshop, Sequencing</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/bioinformatics-genomics-workshop-sequencing.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2014-01-14T08:07:00-08:00</updated><entry><title>Workshop on Genomics (Notes, Day 2) - Sequencing Technologies</title><link href="https://ljcohen.github.io/blog/workshop-on-genomics-notes-day-2-sequencing-technologies.html" rel="alternate"></link><published>2014-01-14T08:07:00-08:00</published><updated>2014-01-14T08:07:00-08:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2014-01-14:/blog/workshop-on-genomics-notes-day-2-sequencing-technologies.html</id><summary type="html">&lt;p&gt;http://www.flickr.com/photos/lpcohen/11945854246/in/photostream&lt;br&gt;
+Dr. Konrad Paszkiewicz, University of Exeter&lt;/p&gt;
+&lt;p&gt;Lecture slides:
+http://evomicsorg.wpengine.netdna-cdn.com/wp-content/uploads/2014/01/Cesky-Krumlov-Lecture-1-ver6.pdf&lt;/p&gt;
+&lt;p&gt;From Sanger -&amp;gt; human genome -&amp;gt; 2nd gen -&amp;gt; 3rd gen -&amp;gt;
+Nanopore (not yet released)&lt;/p&gt;
+&lt;p&gt;Recommended videos on Sanger sequencing:&lt;br&gt;
+http://youtu.be/91294ZAG2hg&lt;br&gt;
+http …&lt;/p&gt;</summary><content type="html">&lt;p&gt;http://www.flickr.com/photos/lpcohen/11945854246/in/photostream&lt;br&gt;
+Dr. Konrad Paszkiewicz, University of Exeter&lt;/p&gt;
+&lt;p&gt;Lecture slides:
+http://evomicsorg.wpengine.netdna-cdn.com/wp-content/uploads/2014/01/Cesky-Krumlov-Lecture-1-ver6.pdf&lt;/p&gt;
+&lt;p&gt;From Sanger -&amp;gt; human genome -&amp;gt; 2nd gen -&amp;gt; 3rd gen -&amp;gt;
+Nanopore (not yet released)&lt;/p&gt;
+&lt;p&gt;Recommended videos on Sanger sequencing:&lt;br&gt;
+http://youtu.be/91294ZAG2hg&lt;br&gt;
+http://youtu.be/bEFLBf5WEtc&lt;/p&gt;
+&lt;p&gt;Illumina - Least expensive and most commonly used&lt;/p&gt;
+&lt;p&gt;Advantages:&lt;br&gt;
+- short run times&lt;br&gt;
+- straight-forward sample prep&lt;br&gt;
+- open source software&lt;/p&gt;
+&lt;p&gt;Disadvantages:&lt;br&gt;
+- short reads&lt;br&gt;
+- pooling samples&lt;br&gt;
+- sequence clusters on flow cell&lt;/p&gt;
+&lt;p&gt;Each cycle uses -&amp;gt; 1.) blocking, 2.) enzyme, 3.) fluorophore&lt;/p&gt;
+&lt;p&gt;* Paired-end sequencing is analyzed based on lane proximities, bridge
+amplification, each dot represents cluster, lane calling&lt;/p&gt;
+&lt;p&gt;Each cycle looks at color and position of dots:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-14-230428.png"&gt;&lt;img alt="Screenshot from 2014-01-14
+23:04:28" src="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-14-230428.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-737 width="300"
+height="210"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Oversimplification of adding bases at each cycle: dye-labeled bases are
+added, then block, then block is washed away, laser excitation, the next
+cycle starts:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-14-230809.png"&gt;&lt;img alt="Screenshot from 2014-01-14
+23:08:09" src="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-14-230809.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-738 width="300"
+height="236"}&lt;/a&gt;
+&lt;a href="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-14-230838.png"&gt;&lt;img alt="Screenshot from 2014-01-14
+23:08:38" src="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-14-230838.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-739 width="300"
+height="254"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The resulting image of the flow cell, at each cycle, looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-14-230924.png"&gt;&lt;img alt="Screenshot from 2014-01-14
+23:09:24" src="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-14-230924.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-740 width="300"
+height="198"}&lt;/a&gt;
+&lt;a href="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-14-230952.png"&gt;&lt;img alt="Screenshot from 2014-01-14
+23:09:52" src="http://monsterbashseq.files.wordpress.com/2014/01/screenshot-from-2014-01-14-230952.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-741 width="300"
+height="153"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Algorithms take into consideration emission wavelengths at each cycle at
+each spot, and the reads are constructed from these. Each cycle looks at
+color and position of the dots.&lt;/p&gt;
+&lt;p&gt;36-150 nucleotides per read, 300 Gb data per run&lt;/p&gt;
+&lt;p&gt;Quality scores decrease as run progresses, error rate of enzyme
+increases&lt;/p&gt;
+&lt;p&gt;2 sets of amplifications - before (library prep, enough sample), during
+(to get enough signal)&lt;/p&gt;
+&lt;p&gt;Issues:&lt;br&gt;
+- cluster merging (&lt;a href="http://www.plosone.org/article/info:doi/10.1371/journal.pone.0016607"&gt;Krueger et al.
+2011&lt;/a&gt;)&lt;br&gt;
+- inverted repeats and GGC motif&lt;/p&gt;
+&lt;p&gt;454 Sequencing: longer read lengths, bead-based adapters at end of bead,
+pyrosequencing, phased out by Roche in 2012&lt;/p&gt;
+&lt;p&gt;SOliD: abandoned by Life Technologies in favor of Ion Torrent recently&lt;/p&gt;
+&lt;p&gt;Benchtop Sequencing:&lt;/p&gt;
+&lt;p&gt;Ion Torrent: no optics, pH sensor detects nucleotide by release of H+
+(different for each base), no incorporation or termination, 400 bp
+reads, 2 hr runtime, various chip types&lt;/p&gt;
+&lt;p&gt;Ion Proton: 200 bp reads, single end, PGM vs. Proton&lt;/p&gt;
+&lt;p&gt;Useful benchtop technology review paper, Loman et al. (2012):
+http://www.nature.com/nbt/journal/v30/n5/full/nbt.2198.html&lt;/p&gt;
+&lt;p&gt;3rd gen: single molecule sequencing - Pac Bio only one on market at the
+moment (RSII)&lt;br&gt;
+- Zero Mode wave (ZMW) guide on an SMRT flow cell (looks like a
+microarray with fixed position&lt;br&gt;
+- camera detection&lt;br&gt;
+- library prep required&lt;br&gt;
+- 100,000-150,000 per run, few hours, \$500/run&lt;br&gt;
+- 300-500Mb&lt;br&gt;
+- distribution of read lengths&lt;br&gt;
+- good for detecting epigenetic changes&lt;br&gt;
+- error rates, but algorithms to correct,&lt;br&gt;
+- look at materials on PacBio github:
+https://github.com/PacificBiosciences/Bioinformatics-Training/wiki&lt;br&gt;
+- Cicular consensus sequencing can be used&lt;/p&gt;
+&lt;p&gt;Nanopore = "very small hole"&lt;br&gt;
+- measures current changes as polymer passes through hole&lt;br&gt;
+- exonuclease to chop DNA&lt;br&gt;
+- cyclodextrin to measure charge across membrane&lt;/p&gt;
+&lt;p&gt;Strand sequencing, MinIon:&lt;br&gt;
+- 512 pore chip&lt;br&gt;
+- 100 Mb-1 Gb per run&lt;br&gt;
+- disposable after 6 hr run&lt;br&gt;
+- 4% error rate in trials&lt;br&gt;
+- requires library prep - introduces loops for feeding to Nanopore&lt;br&gt;
+- more for detection&lt;br&gt;
+- error profiles can be handled with different pore types with
+complimentary error&lt;br&gt;
+- cost is high&lt;/p&gt;
+&lt;p&gt;Illumina still least expensive of all technologies.&lt;/p&gt;
+&lt;p&gt;***Take-home message: Technology is becoming easier to acquire
+massive amounts of data. Bottleneck is now always at bioinformatics
+level.&lt;/p&gt;</content></entry></feed>

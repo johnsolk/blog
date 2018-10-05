@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Microarray, R</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/microarray-r.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2013-10-12T17:01:00-07:00</updated><entry><title>Data Formatting and Experimental Variable Assignments</title><link href="https://ljcohen.github.io/blog/data-formatting-and-experimental-variable-assignments.html" rel="alternate"></link><published>2013-10-12T17:01:00-07:00</published><updated>2013-10-12T17:01:00-07:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-10-12:/blog/data-formatting-and-experimental-variable-assignments.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;gt; source(&amp;#39;~/Dropbox/HBOI/sponge raw data/microarray_data_formatting.R&amp;#39;)
+&amp;amp;gt; names(b)
+ [1] &amp;quot;initial_blockdata.RefNumber&amp;quot; &amp;quot;initial_blockdata.ID&amp;quot;        &amp;quot;initial_blockdata.Name&amp;quot;      &amp;quot;initial_blockdata.Row&amp;quot;       &amp;quot;initial_blockdata.Column&amp;quot;    &amp;quot;Block 1 Chip 1&amp;quot;             
+ [7] &amp;quot;Block 2 Chip 1&amp;quot;              &amp;quot;Block 3 Chip 1&amp;quot;              &amp;quot;Block 4 Chip 1&amp;quot;              &amp;quot;Block 5 Chip 1&amp;quot;              &amp;quot;Block 6 Chip 1&amp;quot;              &amp;quot;Block 7 …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;gt; source(&amp;#39;~/Dropbox/HBOI/sponge raw data/microarray_data_formatting.R&amp;#39;)
+&amp;amp;gt; names(b)
+ [1] &amp;quot;initial_blockdata.RefNumber&amp;quot; &amp;quot;initial_blockdata.ID&amp;quot;        &amp;quot;initial_blockdata.Name&amp;quot;      &amp;quot;initial_blockdata.Row&amp;quot;       &amp;quot;initial_blockdata.Column&amp;quot;    &amp;quot;Block 1 Chip 1&amp;quot;             
+ [7] &amp;quot;Block 2 Chip 1&amp;quot;              &amp;quot;Block 3 Chip 1&amp;quot;              &amp;quot;Block 4 Chip 1&amp;quot;              &amp;quot;Block 5 Chip 1&amp;quot;              &amp;quot;Block 6 Chip 1&amp;quot;              &amp;quot;Block 7 Chip 1&amp;quot;             
+[13] &amp;quot;Block 8 Chip 1&amp;quot;              &amp;quot;Block 1 Chip 2&amp;quot;              &amp;quot;Block 2 Chip 2&amp;quot;              &amp;quot;Block 3 Chip 2&amp;quot;              &amp;quot;Block 4 Chip 2&amp;quot;              &amp;quot;Block 5 Chip 2&amp;quot;             
+[19] &amp;quot;Block 6 Chip 2&amp;quot;              &amp;quot;Block 7 Chip 2&amp;quot;              &amp;quot;Block 8 Chip 2&amp;quot;              &amp;quot;Block 1 Chip 3&amp;quot;              &amp;quot;Block 2 Chip 3&amp;quot;              &amp;quot;Block 3 Chip 3&amp;quot;             
+[25] &amp;quot;Block 4 Chip 3&amp;quot;              &amp;quot;Block 5 Chip 3&amp;quot;              &amp;quot;Block 6 Chip 3&amp;quot;              &amp;quot;Block 7 Chip 3&amp;quot;              &amp;quot;Block 8 Chip 3&amp;quot;              &amp;quot;Block 1 Chip 4&amp;quot;             
+[31] &amp;quot;Block 2 Chip 4&amp;quot;              &amp;quot;Block 3 Chip 4&amp;quot;              &amp;quot;Block 4 Chip 4&amp;quot;              &amp;quot;Block 5 Chip 4&amp;quot;              &amp;quot;Block 6 Chip 4&amp;quot;              &amp;quot;Block 7 Chip 4&amp;quot;             
+[37] &amp;quot;Block 8 Chip 4&amp;quot;              &amp;quot;Block 1 Chip 5&amp;quot;              &amp;quot;Block 2 Chip 5&amp;quot;              &amp;quot;Block 3 Chip 5&amp;quot;              &amp;quot;Block 4 Chip 5&amp;quot;              &amp;quot;Block 5 Chip 5&amp;quot;             
+[43] &amp;quot;Block 6 Chip 5&amp;quot;              &amp;quot;Block 7 Chip 5&amp;quot;              &amp;quot;Block 8 Chip 5&amp;quot;              &amp;quot;Block 1 Chip 6&amp;quot;              &amp;quot;Block 2 Chip 6&amp;quot;              &amp;quot;Block 3 Chip 6&amp;quot;             
+[49] &amp;quot;Block 4 Chip 6&amp;quot;              &amp;quot;Block 5 Chip 6&amp;quot;              &amp;quot;Block 6 Chip 6&amp;quot;              &amp;quot;Block 7 Chip 6&amp;quot;              &amp;quot;Block 8 Chip 6&amp;quot;              &amp;quot;Block 1 Chip 7&amp;quot;             
+[55] &amp;quot;Block 2 Chip 7&amp;quot;              &amp;quot;Block 3 Chip 7&amp;quot;              &amp;quot;Block 4 Chip 7&amp;quot;              &amp;quot;Block 5 Chip 7&amp;quot;              &amp;quot;Block 6 Chip 7&amp;quot;              &amp;quot;Block 7 Chip 7&amp;quot;             
+[61] &amp;quot;Block 8 Chip 7&amp;quot;              &amp;quot;Block 1 Chip 8&amp;quot;              &amp;quot;Block 2 Chip 8&amp;quot;              &amp;quot;Block 3 Chip 8&amp;quot;              &amp;quot;Block 4 Chip 8&amp;quot;              &amp;quot;Block 5 Chip 8&amp;quot;             
+[67] &amp;quot;Block 6 Chip 8&amp;quot;              &amp;quot;Block 7 Chip 8&amp;quot;              &amp;quot;Block 8 Chip 8&amp;quot;              &amp;quot;Block 1 Chip 9&amp;quot;              &amp;quot;Block 2 Chip 9&amp;quot;              &amp;quot;Block 3 Chip 9&amp;quot;             
+[73] &amp;quot;Block 4 Chip 9&amp;quot;              &amp;quot;Block 5 Chip 9&amp;quot;              &amp;quot;Block 6 Chip 9&amp;quot;              &amp;quot;Block 7 Chip 9&amp;quot;              &amp;quot;Block 8 Chip 9&amp;quot;             
+&amp;amp;gt; data_length&amp;amp;lt;-length(names(b))
+&amp;amp;gt; data_info&amp;amp;lt;-read.csv(&amp;quot;targets_experiment_sample_info.csv&amp;quot;)
+&amp;amp;gt; names(data_info)
+[1] &amp;quot;Chip.Number&amp;quot; &amp;quot;File.Name&amp;quot;   &amp;quot;Hyb.Date&amp;quot;    &amp;quot;Tank&amp;quot;        &amp;quot;Treatment&amp;quot;   &amp;quot;Colony&amp;quot;      &amp;quot;Raceway&amp;quot;     &amp;quot;Block&amp;quot;      
+&amp;amp;gt; head(data_info)
+  Chip.Number                   File.Name Hyb.Date Tank Treatment Colony Raceway Block
+1           1 253295110067_2012-08-01.txt 8/1/2012   C3        UC      P       B     1
+2           1 253295110067_2012-08-01.txt 8/1/2012   B2        UD      P       A     2
+3           1 253295110067_2012-08-01.txt 8/1/2012   B2        UD      O       A     3
+4           1 253295110067_2012-08-01.txt 8/1/2012   D3        OD     BL       A     4
+5           1 253295110067_2012-08-01.txt 8/1/2012   D1        OD      O       B     5
+6           1 253295110067_2012-08-01.txt 8/1/2012   C3        UC      O       B     6
+&amp;amp;gt; data_info
+   Chip.Number                   File.Name  Hyb.Date Tank Treatment Colony Raceway Block
+1            1 253295110067_2012-08-01.txt  8/1/2012   C3        UC      P       B     1
+2            1 253295110067_2012-08-01.txt  8/1/2012   B2        UD      P       A     2
+3            1 253295110067_2012-08-01.txt  8/1/2012   B2        UD      O       A     3
+4            1 253295110067_2012-08-01.txt  8/1/2012   D3        OD     BL       A     4
+5            1 253295110067_2012-08-01.txt  8/1/2012   D1        OD      O       B     5
+6            1 253295110067_2012-08-01.txt  8/1/2012   C3        UC      O       B     6
+7            1 253295110067_2012-08-01.txt  8/1/2012   A3        OC      W       A     7
+8            1 253295110067_2012-08-01.txt  8/1/2012   A1        OC      W       A     8
+9            2 253295110050_2012-07-25.txt 7/25/2012   A1        OC     BL       A     1
+10           2 253295110050_2012-07-25.txt 7/25/2012   C2        UC      P       B     2
+&lt;/pre&gt;&lt;/div&gt;</content></entry></feed>

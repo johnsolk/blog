@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Linux</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/linux.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2016-02-02T11:25:00-08:00</updated><entry><title>Downloading masses of files, useful ftp commands</title><link href="https://ljcohen.github.io/blog/downloading-masses-of-files-useful-ftp-commands.html" rel="alternate"></link><published>2016-02-02T11:25:00-08:00</published><updated>2016-02-02T11:25:00-08:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2016-02-02:/blog/downloading-masses-of-files-useful-ftp-commands.html</id><summary type="html">&lt;p&gt;You have finished a sequencing project and now your sequencing facility
+is sending you lots of files! You're eager to see your results. Your
+facility sends you a link with files displayed on a website. Now what
+are you supposed to do?&lt;/p&gt;
+&lt;p&gt;First, log in to your hpc server (AWS …&lt;/p&gt;</summary><content type="html">&lt;p&gt;You have finished a sequencing project and now your sequencing facility
+is sending you lots of files! You're eager to see your results. Your
+facility sends you a link with files displayed on a website. Now what
+are you supposed to do?&lt;/p&gt;
+&lt;p&gt;First, log in to your hpc server (AWS or HPC cluster) where you will
+work with the files.&lt;/p&gt;
+&lt;p&gt;Depending on the type of server where your files have been made
+available (ftp or http), try these commands:&lt;/p&gt;
+&lt;p&gt;If &lt;strong&gt;ftp&lt;/strong&gt; server, with user and password required:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -r --user XXX --password XXX ftp://1234.5678.10
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can also log in to the ftp server, navigate and change directories,
+then &lt;strong&gt;mget&lt;/strong&gt; to &lt;a href="https://www.cs.colostate.edu/helpdocs/ftp.html"&gt;copy multiple files from the remote server to your
+local server&lt;/a&gt;.
+(Although, this will sometimes take longer than wget for some reason.)
+(The -P 2121 is optional, leave it out if you don't know the port.)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ncftp -u XXX -p XXX -P 2121 server.server.edu
+cd /path/to/files
+ls
+mget *
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If &lt;strong&gt;http&lt;/strong&gt; or &lt;strong&gt;https&lt;/strong&gt; server, with user and password. The  -r is
+recursive, -l1 is only level 1, and --no-parent means no files up.
+(These stop wget from automatically downloading files linking files
+being downloaded, which can happen with websites.)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -r -l1 --no-parent --user=user --password=password http://server.server.edu/path/to/files/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;With no user or password required:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -r -l1 --no-parent --no-check-certificate https://server.server.edu/path/to/files
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Most facilities are friendly and will help you download your files. In
+some cases, they will provide temporary &lt;strong&gt;ssh&lt;/strong&gt; access, but other times
+not. It depends on the facility. If you don't know the name of the
+&lt;strong&gt;ftp&lt;/strong&gt; or &lt;strong&gt;http&lt;/strong&gt; server, or the directory where the files are
+located, write to them and ask.&lt;/p&gt;
+&lt;p&gt;[Thanks to Luiz Irber and Dragos Scarlet for the help and motivation for
+working through this problem. :)]{.s1}&lt;/p&gt;</content></entry></feed>

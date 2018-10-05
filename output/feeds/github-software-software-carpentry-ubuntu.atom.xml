@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - github, software, Software Carpentry, Ubuntu</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/github-software-software-carpentry-ubuntu.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2013-11-15T12:14:00-08:00</updated><entry><title>WHOI Software Carpentry notes, Day 2 – morning</title><link href="https://ljcohen.github.io/blog/whoi-software-carpentry-notes-day-2-morning.html" rel="alternate"></link><published>2013-11-15T12:14:00-08:00</published><updated>2013-11-15T12:14:00-08:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-11-15:/blog/whoi-software-carpentry-notes-day-2-morning.html</id><summary type="html">&lt;p&gt;https://etherpad.mozilla.org/swc-whoi-2013&lt;/p&gt;
+&lt;p&gt;Distributed version control systems, e.g. git, bzr, hg, dcvs&lt;/p&gt;
+&lt;p&gt;No master controller. All copies are equivalently complete and
+functional.&lt;/p&gt;
+&lt;p&gt;Yesterday, we ran:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone http://github.com/wltrimbl/2013-11-14-woodshole
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Changes were made last night. Today, we need to update.&lt;/p&gt;
+&lt;p&gt;In terminal, we type:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;https://etherpad.mozilla.org/swc-whoi-2013&lt;/p&gt;
+&lt;p&gt;Distributed version control systems, e.g. git, bzr, hg, dcvs&lt;/p&gt;
+&lt;p&gt;No master controller. All copies are equivalently complete and
+functional.&lt;/p&gt;
+&lt;p&gt;Yesterday, we ran:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone http://github.com/wltrimbl/2013-11-14-woodshole
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Changes were made last night. Today, we need to update.&lt;/p&gt;
+&lt;p&gt;In terminal, we type:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~$ cd 2013-11-14-woodshole/
+flcellogrl@flcellogrl:~/2013-11-14-woodshole$ git pull origin gh-pages
+remote: Counting objects: 47, done.
+remote: Compressing objects: 100% (26/26), done.
+remote: Total 39 (delta 23), reused 29 (delta 13)
+Unpacking objects: 100% (39/39), done.
+From http://github.com/wltrimbl/2013-11-14-woodshole
+ * branch            gh-pages   -&amp;amp;gt; FETCH_HEAD
+Updating 8836b0d..9960092
+Fast-forward
+ lessons/index.html                                 |  34 +-
+ .../matplotlib_and_basemaps.ipynb                  | 578 +++++++++++++++++++++
+ lessons/thw-git/local.md                           |  15 +-
+ lessons/thw-numpy/numpy.ipynb                      | 506 +++++-------------
+ lessons/thw-testing-gc/Readme.md                   | 450 ++++++++++++++++
+ lessons/thw-testing-gc/calculate_gc.py             |   5 +
+ lessons/thw-testing-gc/mean.py                     |   9 +
+ lessons/thw-testing-gc/test_calculate_gc.py        |  35 ++
+ lessons/thw-testing-gc/test_mean.py                |  26 +
+ lessons/thw-testing-gc/test_prod.jpg               | Bin 0 -&amp;amp;gt; 44369 bytes
+ lessons/thw-testing-gc/test_transcribe.py          |   4 +
+ lessons/thw-testing-gc/transcribe.py               |  18 +
+ 12 files changed, 1269 insertions(+), 411 deletions(-)
+ create mode 100644 lessons/misc-python-for-geosciences/matplotlib_and_basemaps.ipynb
+ create mode 100644 lessons/thw-testing-gc/Readme.md
+ create mode 100644 lessons/thw-testing-gc/calculate_gc.py
+ create mode 100644 lessons/thw-testing-gc/mean.py
+ create mode 100644 lessons/thw-testing-gc/test_calculate_gc.py
+ create mode 100644 lessons/thw-testing-gc/test_mean.py
+ create mode 100644 lessons/thw-testing-gc/test_prod.jpg
+ create mode 100644 lessons/thw-testing-gc/test_transcribe.py
+ create mode 100644 lessons/thw-testing-gc/transcribe.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Keep track of who is making changes:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~/2013-11-14-woodshole$ git config --global user.name &amp;quot;Lisa Cohen&amp;quot;
+flcellogrl@flcellogrl:~/2013-11-14-woodshole$ git config user.email &amp;quot;lisa.johnson.cohen@gmail.com&amp;quot;
+
+flcellogrl@flcellogrl:~/2013-11-14-woodshole$ git config --global user.name &amp;quot;Lisa Cohen&amp;quot;
+flcellogrl@flcellogrl:~/2013-11-14-woodshole$ git config user.email &amp;quot;lisa.johnson.cohen@gmail.com&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Start repository:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flcellogrl@flcellogrl:~/2013-11-14-woodshole$ cd
+flcellogrl@flcellogrl:~$ mkdir good_science
+flcellogrl@flcellogrl:~$ cd good_science
+flcellogrl@flcellogrl:~/good_science$ git init
+Initialized empty Git repository in /home/flcellogrl/good_science/.git/
+
+flcellogrl@flcellogrl:~/2013-11-14-woodshole$ cd
+flcellogrl@flcellogrl:~$ mkdir good_science
+flcellogrl@flcellogrl:~$ cd good_science
+flcellogrl@flcellogrl:~/good_science$ git init
+Initialized empty Git repository in /home/flcellogrl/good_science/.git/
+
+flcellogrl@flcellogrl:~/good_science/.git$ ls
+branches  config  description  HEAD  hooks  info  objects  refs
+flcellogrl@flcellogrl:~/good_science/.git$ ls info
+exclude
+flcellogrl@flcellogrl:~/good_science/.git$ cat exclude
+cat: exclude: No such file or directory
+flcellogrl@flcellogrl:~/good_science/.git$ cat info/exclude
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with &amp;#39;#&amp;#39; are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;[history]&lt;br&gt;
+\^&lt;br&gt;
+|&lt;br&gt;
+type: git commit&lt;br&gt;
+|&lt;br&gt;
+[stage]&lt;br&gt;
+\^&lt;br&gt;
+|&lt;br&gt;
+type: git add&lt;br&gt;
+|&lt;br&gt;
+[working directory]&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://marklodato.github.io/visual-git-guide/index-en.html"&gt;&lt;img alt="basic-usage.svg" src="http://monsterbashseq.files.wordpress.com/2013/11/basic-usage-svg.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-601 width="300"
+height="128"}&lt;/a&gt;&lt;br&gt;
+Create file "readme"&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;nano readme.rst &amp;amp;amp;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;List possible git commands.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git help
+
+flcellogrl@flcellogrl:~/good_science$ git commit -m &amp;quot;This is my first commit&amp;quot;
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email &amp;quot;you@example.com&amp;quot;
+  git config --global user.name &amp;quot;Your Name&amp;quot;
+
+to set your account&amp;#39;s default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got &amp;#39;flcellogrl@flcellogrl.(none)&amp;#39;)
+flcellogrl@flcellogrl:~/good_science$ git config --global user.name &amp;quot;Lisa Cohen&amp;quot;flcellogrl@flcellogrl:~/good_science$ git config user.email &amp;quot;lisa.johnson.cohen@gmail.com&amp;quot;
+flcellogrl@flcellogrl:~/good_science$ git config --global user.email &amp;quot;lisa.johnson.cohen@gmail.com&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Write good commit messages. You're probably writing these for yourself
+(and possibly collaborators) to remember what and why you did these
+things, later.&lt;/p&gt;
+&lt;p&gt;vim:&lt;br&gt;
+:q! to quit without saving&lt;br&gt;
+http://stackoverflow.com/questions/11828270/how-to-exit-the-vim-editor&lt;/p&gt;
+&lt;p&gt;Git: Undo a bad change:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;git&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;..&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;ls&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;nano&lt;/span&gt; &lt;span class="nt"&gt;readme&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;rst&lt;/span&gt; &lt;span class="nt"&gt;7&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;nano&lt;/span&gt; &lt;span class="nt"&gt;readme&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;rst&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;amp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="nt"&gt;14169&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;add&lt;/span&gt; &lt;span class="nt"&gt;readme&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;rst&lt;/span&gt;
+&lt;span class="nt"&gt;fatal&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;pathspec&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;readme.rst&amp;#39;&lt;/span&gt; &lt;span class="nt"&gt;did&lt;/span&gt; &lt;span class="nt"&gt;not&lt;/span&gt; &lt;span class="nt"&gt;match&lt;/span&gt; &lt;span class="nt"&gt;any&lt;/span&gt; &lt;span class="nt"&gt;files&lt;/span&gt;
+
+&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;  &lt;span class="nt"&gt;Stopped&lt;/span&gt;                 &lt;span class="nt"&gt;nano&lt;/span&gt; &lt;span class="nt"&gt;readme&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;rst&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;status&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;On&lt;/span&gt; &lt;span class="nt"&gt;branch&lt;/span&gt; &lt;span class="nt"&gt;master&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;Initial&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="nt"&gt;nothing&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;create&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;copy&lt;/span&gt; &lt;span class="nt"&gt;files&lt;/span&gt; &lt;span class="nt"&gt;and&lt;/span&gt; &lt;span class="nt"&gt;use&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;git add&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;track&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;nano&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;ls&lt;/span&gt;
+&lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;add&lt;/span&gt; &lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;status&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;On&lt;/span&gt; &lt;span class="nt"&gt;branch&lt;/span&gt; &lt;span class="nt"&gt;master&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;Initial&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;Changes&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;be&lt;/span&gt; &lt;span class="nt"&gt;committed&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;use&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;git rm --cached ...&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;unstage&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="nt"&gt;new&lt;/span&gt; &lt;span class="nt"&gt;file&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;help&lt;/span&gt;
+&lt;span class="nt"&gt;usage&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nx"&gt;version&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nx"&gt;exec&lt;/span&gt;&lt;span class="na"&gt;-path&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nx"&gt;html&lt;/span&gt;&lt;span class="na"&gt;-path&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nx"&gt;man&lt;/span&gt;&lt;span class="na"&gt;-path&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nx"&gt;info&lt;/span&gt;&lt;span class="na"&gt;-path&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;
+           &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="na"&gt;-p&lt;/span&gt;&lt;span class="o"&gt;|--&lt;/span&gt;&lt;span class="nx"&gt;paginate&lt;/span&gt;&lt;span class="o"&gt;|--&lt;/span&gt;&lt;span class="nx"&gt;no&lt;/span&gt;&lt;span class="na"&gt;-pager&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nx"&gt;no&lt;/span&gt;&lt;span class="na"&gt;-replace-objects&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nx"&gt;bare&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;
+           &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nx"&gt;git&lt;/span&gt;&lt;span class="na"&gt;-dir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nx"&gt;work&lt;/span&gt;&lt;span class="na"&gt;-tree&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;namespace&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;
+           &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="na"&gt;-c&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nx"&gt;help&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;
+            &lt;span class="cp"&gt;[]&lt;/span&gt;
+
+&lt;span class="nt"&gt;The&lt;/span&gt; &lt;span class="nt"&gt;most&lt;/span&gt; &lt;span class="nt"&gt;commonly&lt;/span&gt; &lt;span class="nt"&gt;used&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;commands&lt;/span&gt; &lt;span class="nt"&gt;are&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+   &lt;span class="nt"&gt;add&lt;/span&gt;        &lt;span class="nt"&gt;Add&lt;/span&gt; &lt;span class="nt"&gt;file&lt;/span&gt; &lt;span class="nt"&gt;contents&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;index&lt;/span&gt;
+   &lt;span class="nt"&gt;bisect&lt;/span&gt;     &lt;span class="nt"&gt;Find&lt;/span&gt; &lt;span class="nt"&gt;by&lt;/span&gt; &lt;span class="nt"&gt;binary&lt;/span&gt; &lt;span class="nt"&gt;search&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;change&lt;/span&gt; &lt;span class="nt"&gt;that&lt;/span&gt; &lt;span class="nt"&gt;introduced&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;bug&lt;/span&gt;
+   &lt;span class="nt"&gt;branch&lt;/span&gt;     &lt;span class="nt"&gt;List&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;create&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;or&lt;/span&gt; &lt;span class="nt"&gt;delete&lt;/span&gt; &lt;span class="nt"&gt;branches&lt;/span&gt;
+   &lt;span class="nt"&gt;checkout&lt;/span&gt;   &lt;span class="nt"&gt;Checkout&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;branch&lt;/span&gt; &lt;span class="nt"&gt;or&lt;/span&gt; &lt;span class="nt"&gt;paths&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;working&lt;/span&gt; &lt;span class="nt"&gt;tree&lt;/span&gt;
+   &lt;span class="nt"&gt;clone&lt;/span&gt;      &lt;span class="nt"&gt;Clone&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;repository&lt;/span&gt; &lt;span class="nt"&gt;into&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;new&lt;/span&gt; &lt;span class="nt"&gt;directory&lt;/span&gt;
+   &lt;span class="nt"&gt;commit&lt;/span&gt;     &lt;span class="nt"&gt;Record&lt;/span&gt; &lt;span class="nt"&gt;changes&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;repository&lt;/span&gt;
+   &lt;span class="nt"&gt;diff&lt;/span&gt;       &lt;span class="nt"&gt;Show&lt;/span&gt; &lt;span class="nt"&gt;changes&lt;/span&gt; &lt;span class="nt"&gt;between&lt;/span&gt; &lt;span class="nt"&gt;commits&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="nt"&gt;and&lt;/span&gt; &lt;span class="nt"&gt;working&lt;/span&gt; &lt;span class="nt"&gt;tree&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;etc&lt;/span&gt;
+   &lt;span class="nt"&gt;fetch&lt;/span&gt;      &lt;span class="nt"&gt;Download&lt;/span&gt; &lt;span class="nt"&gt;objects&lt;/span&gt; &lt;span class="nt"&gt;and&lt;/span&gt; &lt;span class="nt"&gt;refs&lt;/span&gt; &lt;span class="nt"&gt;from&lt;/span&gt; &lt;span class="nt"&gt;another&lt;/span&gt; &lt;span class="nt"&gt;repository&lt;/span&gt;
+   &lt;span class="nt"&gt;grep&lt;/span&gt;       &lt;span class="nt"&gt;Print&lt;/span&gt; &lt;span class="nt"&gt;lines&lt;/span&gt; &lt;span class="nt"&gt;matching&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;pattern&lt;/span&gt;
+   &lt;span class="nt"&gt;init&lt;/span&gt;       &lt;span class="nt"&gt;Create&lt;/span&gt; &lt;span class="nt"&gt;an&lt;/span&gt; &lt;span class="nt"&gt;empty&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;repository&lt;/span&gt; &lt;span class="nt"&gt;or&lt;/span&gt; &lt;span class="nt"&gt;reinitialize&lt;/span&gt; &lt;span class="nt"&gt;an&lt;/span&gt; &lt;span class="nt"&gt;existing&lt;/span&gt; &lt;span class="nt"&gt;one&lt;/span&gt;
+   &lt;span class="nt"&gt;log&lt;/span&gt;        &lt;span class="nt"&gt;Show&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="nt"&gt;logs&lt;/span&gt;
+   &lt;span class="nt"&gt;merge&lt;/span&gt;      &lt;span class="nt"&gt;Join&lt;/span&gt; &lt;span class="nt"&gt;two&lt;/span&gt; &lt;span class="nt"&gt;or&lt;/span&gt; &lt;span class="nt"&gt;more&lt;/span&gt; &lt;span class="nt"&gt;development&lt;/span&gt; &lt;span class="nt"&gt;histories&lt;/span&gt; &lt;span class="nt"&gt;together&lt;/span&gt;
+   &lt;span class="nt"&gt;mv&lt;/span&gt;         &lt;span class="nt"&gt;Move&lt;/span&gt; &lt;span class="nt"&gt;or&lt;/span&gt; &lt;span class="nt"&gt;rename&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;file&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;directory&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;or&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;symlink&lt;/span&gt;
+   &lt;span class="nt"&gt;pull&lt;/span&gt;       &lt;span class="nt"&gt;Fetch&lt;/span&gt; &lt;span class="nt"&gt;from&lt;/span&gt; &lt;span class="nt"&gt;and&lt;/span&gt; &lt;span class="nt"&gt;merge&lt;/span&gt; &lt;span class="nt"&gt;with&lt;/span&gt; &lt;span class="nt"&gt;another&lt;/span&gt; &lt;span class="nt"&gt;repository&lt;/span&gt; &lt;span class="nt"&gt;or&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;local&lt;/span&gt; &lt;span class="nt"&gt;branch&lt;/span&gt;
+   &lt;span class="nt"&gt;push&lt;/span&gt;       &lt;span class="nt"&gt;Update&lt;/span&gt; &lt;span class="nt"&gt;remote&lt;/span&gt; &lt;span class="nt"&gt;refs&lt;/span&gt; &lt;span class="nt"&gt;along&lt;/span&gt; &lt;span class="nt"&gt;with&lt;/span&gt; &lt;span class="nt"&gt;associated&lt;/span&gt; &lt;span class="nt"&gt;objects&lt;/span&gt;
+   &lt;span class="nt"&gt;rebase&lt;/span&gt;     &lt;span class="nt"&gt;Forward-port&lt;/span&gt; &lt;span class="nt"&gt;local&lt;/span&gt; &lt;span class="nt"&gt;commits&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;updated&lt;/span&gt; &lt;span class="nt"&gt;upstream&lt;/span&gt; &lt;span class="nt"&gt;head&lt;/span&gt;
+   &lt;span class="nt"&gt;reset&lt;/span&gt;      &lt;span class="nt"&gt;Reset&lt;/span&gt; &lt;span class="nt"&gt;current&lt;/span&gt; &lt;span class="nt"&gt;HEAD&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;specified&lt;/span&gt; &lt;span class="nt"&gt;state&lt;/span&gt;
+   &lt;span class="nt"&gt;rm&lt;/span&gt;         &lt;span class="nt"&gt;Remove&lt;/span&gt; &lt;span class="nt"&gt;files&lt;/span&gt; &lt;span class="nt"&gt;from&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;working&lt;/span&gt; &lt;span class="nt"&gt;tree&lt;/span&gt; &lt;span class="nt"&gt;and&lt;/span&gt; &lt;span class="nt"&gt;from&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;index&lt;/span&gt;
+   &lt;span class="nt"&gt;show&lt;/span&gt;       &lt;span class="nt"&gt;Show&lt;/span&gt; &lt;span class="nt"&gt;various&lt;/span&gt; &lt;span class="nt"&gt;types&lt;/span&gt; &lt;span class="nt"&gt;of&lt;/span&gt; &lt;span class="nt"&gt;objects&lt;/span&gt;
+   &lt;span class="nt"&gt;status&lt;/span&gt;     &lt;span class="nt"&gt;Show&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;working&lt;/span&gt; &lt;span class="nt"&gt;tree&lt;/span&gt; &lt;span class="nt"&gt;status&lt;/span&gt;
+   &lt;span class="nt"&gt;tag&lt;/span&gt;        &lt;span class="nt"&gt;Create&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;list&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;delete&lt;/span&gt; &lt;span class="nt"&gt;or&lt;/span&gt; &lt;span class="nt"&gt;verify&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;tag&lt;/span&gt; &lt;span class="nt"&gt;object&lt;/span&gt; &lt;span class="nt"&gt;signed&lt;/span&gt; &lt;span class="nt"&gt;with&lt;/span&gt; &lt;span class="nt"&gt;GPG&lt;/span&gt;
+
+&lt;span class="nt"&gt;See&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;git help &amp;#39;&lt;/span&gt; &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="nt"&gt;more&lt;/span&gt; &lt;span class="nt"&gt;information&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;specific&lt;/span&gt; &lt;span class="nt"&gt;command&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="nt"&gt;-m&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;This is my first commit&amp;quot;&lt;/span&gt;
+
+&lt;span class="o"&gt;***&lt;/span&gt; &lt;span class="nt"&gt;Please&lt;/span&gt; &lt;span class="nt"&gt;tell&lt;/span&gt; &lt;span class="nt"&gt;me&lt;/span&gt; &lt;span class="nt"&gt;who&lt;/span&gt; &lt;span class="nt"&gt;you&lt;/span&gt; &lt;span class="nt"&gt;are&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+
+&lt;span class="nt"&gt;Run&lt;/span&gt;
+
+  &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;config&lt;/span&gt; &lt;span class="nt"&gt;--global&lt;/span&gt; &lt;span class="nt"&gt;user&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;email&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;you@example.com&amp;quot;&lt;/span&gt;
+  &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;config&lt;/span&gt; &lt;span class="nt"&gt;--global&lt;/span&gt; &lt;span class="nt"&gt;user&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;name&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Your Name&amp;quot;&lt;/span&gt;
+
+&lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;set&lt;/span&gt; &lt;span class="nt"&gt;your&lt;/span&gt; &lt;span class="nt"&gt;account&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;s default identity.&lt;/span&gt;
+&lt;span class="s1"&gt;Omit --global to set the identity only in this repository.&lt;/span&gt;
+
+&lt;span class="s1"&gt;fatal: unable to auto-detect email address (got &amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;.(&lt;/span&gt;&lt;span class="nt"&gt;none&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;)&lt;/span&gt;
+&lt;span class="s1"&gt;flcellogrl@flcellogrl:~/good_science$ git config --global user.name &amp;quot;Lisa Cohen&amp;quot;flcellogrl@flcellogrl:~/good_science$ git config user.email &amp;quot;lisa.johnson.cohen@gmail.com&amp;quot;&lt;/span&gt;
+&lt;span class="s1"&gt;flcellogrl@flcellogrl:~/good_science$ git config --global user.email &amp;quot;lisa.johnson.cohen@gmail.com&amp;quot;&lt;/span&gt;
+&lt;span class="s1"&gt;flcellogrl@flcellogrl:~/good_science$ nano descriptoin&lt;/span&gt;
+&lt;span class="s1"&gt;flcellogrl@flcellogrl:~/good_science$ ls&lt;/span&gt;
+&lt;span class="s1"&gt;description&lt;/span&gt;
+&lt;span class="s1"&gt;flcellogrl@flcellogrl:~/good_science$ nano description&lt;/span&gt;
+&lt;span class="s1"&gt;flcellogrl@flcellogrl:~/good_science$ ls&lt;/span&gt;
+&lt;span class="s1"&gt;description&lt;/span&gt;
+&lt;span class="s1"&gt;flcellogrl@flcellogrl:~/good_science$ git commit descrition&lt;/span&gt;
+&lt;span class="s1"&gt;error: pathspec &amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;descrition&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt; &lt;span class="nt"&gt;did&lt;/span&gt; &lt;span class="nt"&gt;not&lt;/span&gt; &lt;span class="nt"&gt;match&lt;/span&gt; &lt;span class="nt"&gt;any&lt;/span&gt; &lt;span class="nt"&gt;file&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;s&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;known&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="nt"&gt;Aborting&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="nt"&gt;due&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;empty&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="nt"&gt;message&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="nt"&gt;-m&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;This is another commit&amp;quot;&lt;/span&gt;
+&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;master&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;root&lt;/span&gt;&lt;span class="na"&gt;-commit&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nx"&gt;b0992fb&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="nt"&gt;This&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;another&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt;
+ &lt;span class="nt"&gt;1&lt;/span&gt; &lt;span class="nt"&gt;file&lt;/span&gt; &lt;span class="nt"&gt;changed&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;1&lt;/span&gt; &lt;span class="nt"&gt;insertion&lt;/span&gt;&lt;span class="o"&gt;(+)&lt;/span&gt;
+ &lt;span class="nt"&gt;create&lt;/span&gt; &lt;span class="nt"&gt;mode&lt;/span&gt; &lt;span class="nt"&gt;100644&lt;/span&gt; &lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;status&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;On&lt;/span&gt; &lt;span class="nt"&gt;branch&lt;/span&gt; &lt;span class="nt"&gt;master&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;Changes&lt;/span&gt; &lt;span class="nt"&gt;not&lt;/span&gt; &lt;span class="nt"&gt;staged&lt;/span&gt; &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;use&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;git add ...&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;update&lt;/span&gt; &lt;span class="nt"&gt;what&lt;/span&gt; &lt;span class="nt"&gt;will&lt;/span&gt; &lt;span class="nt"&gt;be&lt;/span&gt; &lt;span class="nt"&gt;committed&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;use&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;git checkout -- ...&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;discard&lt;/span&gt; &lt;span class="nt"&gt;changes&lt;/span&gt; &lt;span class="nt"&gt;in&lt;/span&gt; &lt;span class="nt"&gt;working&lt;/span&gt; &lt;span class="nt"&gt;directory&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="nt"&gt;modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="nt"&gt;no&lt;/span&gt; &lt;span class="nt"&gt;changes&lt;/span&gt; &lt;span class="nt"&gt;added&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;use&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;git add&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;and&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;or&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;git commit -a&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;add&lt;/span&gt; &lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;status&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;On&lt;/span&gt; &lt;span class="nt"&gt;branch&lt;/span&gt; &lt;span class="nt"&gt;master&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;Changes&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;be&lt;/span&gt; &lt;span class="nt"&gt;committed&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;use&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;git reset HEAD ...&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;unstage&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="nt"&gt;modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="nt"&gt;-m&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Added phrase change to description.&amp;quot;&lt;/span&gt;
+&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;master&lt;/span&gt; &lt;span class="mi"&gt;752&lt;/span&gt;&lt;span class="nx"&gt;b47e&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="nt"&gt;Added&lt;/span&gt; &lt;span class="nt"&gt;phrase&lt;/span&gt; &lt;span class="nt"&gt;change&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+ &lt;span class="nt"&gt;1&lt;/span&gt; &lt;span class="nt"&gt;file&lt;/span&gt; &lt;span class="nt"&gt;changed&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;1&lt;/span&gt; &lt;span class="nt"&gt;insertion&lt;/span&gt;&lt;span class="o"&gt;(+),&lt;/span&gt; &lt;span class="nt"&gt;1&lt;/span&gt; &lt;span class="nt"&gt;deletion&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;-&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;log&lt;/span&gt;
+&lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="nt"&gt;752b47e16d7645e641300bcbabf440e7b2963a87&lt;/span&gt;
+&lt;span class="nt"&gt;Author&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;Lisa&lt;/span&gt; &lt;span class="nt"&gt;Cohen&lt;/span&gt; 
+&lt;span class="nt"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="nt"&gt;Fri&lt;/span&gt; &lt;span class="nt"&gt;Nov&lt;/span&gt; &lt;span class="nt"&gt;15&lt;/span&gt; &lt;span class="nt"&gt;09&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;56&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;47&lt;/span&gt; &lt;span class="nt"&gt;2013&lt;/span&gt; &lt;span class="nt"&gt;-0500&lt;/span&gt;
+
+    &lt;span class="nt"&gt;Added&lt;/span&gt; &lt;span class="nt"&gt;phrase&lt;/span&gt; &lt;span class="nt"&gt;change&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+
+&lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="nt"&gt;b0992fb1e8669a2ec01fddd32cad33e7b1598fc4&lt;/span&gt;
+&lt;span class="nt"&gt;Author&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;Lisa&lt;/span&gt; &lt;span class="nt"&gt;Cohen&lt;/span&gt; 
+&lt;span class="nt"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="nt"&gt;Fri&lt;/span&gt; &lt;span class="nt"&gt;Nov&lt;/span&gt; &lt;span class="nt"&gt;15&lt;/span&gt; &lt;span class="nt"&gt;09&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;55&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;46&lt;/span&gt; &lt;span class="nt"&gt;2013&lt;/span&gt; &lt;span class="nt"&gt;-0500&lt;/span&gt;
+
+    &lt;span class="nt"&gt;This&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;another&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;nano&lt;/span&gt; &lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;add&lt;/span&gt; &lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;status&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;On&lt;/span&gt; &lt;span class="nt"&gt;branch&lt;/span&gt; &lt;span class="nt"&gt;master&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;Changes&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;be&lt;/span&gt; &lt;span class="nt"&gt;committed&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;use&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;git reset HEAD ...&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;unstage&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="nt"&gt;modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;diff&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;cat&lt;/span&gt; &lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="nt"&gt;Yay&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="nt"&gt;This&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;change&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+
+&lt;span class="nt"&gt;This&lt;/span&gt; &lt;span class="nt"&gt;change&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;no&lt;/span&gt; &lt;span class="nt"&gt;good&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="nt"&gt;-m&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;This change is no good.&amp;quot;&lt;/span&gt;
+&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;master&lt;/span&gt; &lt;span class="mi"&gt;76&lt;/span&gt;&lt;span class="nx"&gt;f4e3a&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="nt"&gt;This&lt;/span&gt; &lt;span class="nt"&gt;change&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;no&lt;/span&gt; &lt;span class="nt"&gt;good&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+ &lt;span class="nt"&gt;1&lt;/span&gt; &lt;span class="nt"&gt;file&lt;/span&gt; &lt;span class="nt"&gt;changed&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;2&lt;/span&gt; &lt;span class="nt"&gt;insertions&lt;/span&gt;&lt;span class="o"&gt;(+)&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;log&lt;/span&gt; &lt;span class="nt"&gt;--oneline&lt;/span&gt;
+&lt;span class="nt"&gt;76f4e3a&lt;/span&gt; &lt;span class="nt"&gt;This&lt;/span&gt; &lt;span class="nt"&gt;change&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;no&lt;/span&gt; &lt;span class="nt"&gt;good&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="nt"&gt;752b47e&lt;/span&gt; &lt;span class="nt"&gt;Added&lt;/span&gt; &lt;span class="nt"&gt;phrase&lt;/span&gt; &lt;span class="nt"&gt;change&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="nt"&gt;b0992fb&lt;/span&gt; &lt;span class="nt"&gt;This&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;another&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;checkout&lt;/span&gt; &lt;span class="nt"&gt;752b47e&lt;/span&gt; &lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;status&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;On&lt;/span&gt; &lt;span class="nt"&gt;branch&lt;/span&gt; &lt;span class="nt"&gt;master&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;Changes&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;be&lt;/span&gt; &lt;span class="nt"&gt;committed&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;use&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;git reset HEAD ...&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;unstage&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="nt"&gt;modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;add&lt;/span&gt; &lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="nt"&gt;-m&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Undid the bad change.&amp;quot;&lt;/span&gt;
+&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;master&lt;/span&gt; &lt;span class="mi"&gt;67&lt;/span&gt;&lt;span class="nx"&gt;c8be5&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="nt"&gt;Undid&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;bad&lt;/span&gt; &lt;span class="nt"&gt;change&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+ &lt;span class="nt"&gt;1&lt;/span&gt; &lt;span class="nt"&gt;file&lt;/span&gt; &lt;span class="nt"&gt;changed&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;2&lt;/span&gt; &lt;span class="nt"&gt;deletions&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;-&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;log&lt;/span&gt; &lt;span class="nt"&gt;--oneline&lt;/span&gt;
+&lt;span class="nt"&gt;67c8be5&lt;/span&gt; &lt;span class="nt"&gt;Undid&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;bad&lt;/span&gt; &lt;span class="nt"&gt;change&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="nt"&gt;76f4e3a&lt;/span&gt; &lt;span class="nt"&gt;This&lt;/span&gt; &lt;span class="nt"&gt;change&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;no&lt;/span&gt; &lt;span class="nt"&gt;good&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="nt"&gt;752b47e&lt;/span&gt; &lt;span class="nt"&gt;Added&lt;/span&gt; &lt;span class="nt"&gt;phrase&lt;/span&gt; &lt;span class="nt"&gt;change&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="nt"&gt;b0992fb&lt;/span&gt; &lt;span class="nt"&gt;This&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;another&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;echo&lt;/span&gt; &lt;span class="nt"&gt;Hello&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nt"&gt;one&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;txt&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;echo&lt;/span&gt; &lt;span class="nt"&gt;This&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;test&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nt"&gt;two&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;txt&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;echo&lt;/span&gt; &lt;span class="nt"&gt;Hi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="nt"&gt;Hi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;ls&lt;/span&gt; &lt;span class="nt"&gt;-l&lt;/span&gt;
+&lt;span class="nt"&gt;total&lt;/span&gt; &lt;span class="nt"&gt;12&lt;/span&gt;
+&lt;span class="nt"&gt;-rw-rw-r--&lt;/span&gt; &lt;span class="nt"&gt;1&lt;/span&gt; &lt;span class="nt"&gt;flcellogrl&lt;/span&gt; &lt;span class="nt"&gt;flcellogrl&lt;/span&gt; &lt;span class="nt"&gt;23&lt;/span&gt; &lt;span class="nt"&gt;Nov&lt;/span&gt; &lt;span class="nt"&gt;15&lt;/span&gt; &lt;span class="nt"&gt;09&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;59&lt;/span&gt; &lt;span class="nt"&gt;description&lt;/span&gt;
+&lt;span class="nt"&gt;-rw-rw-r--&lt;/span&gt; &lt;span class="nt"&gt;1&lt;/span&gt; &lt;span class="nt"&gt;flcellogrl&lt;/span&gt; &lt;span class="nt"&gt;flcellogrl&lt;/span&gt;  &lt;span class="nt"&gt;6&lt;/span&gt; &lt;span class="nt"&gt;Nov&lt;/span&gt; &lt;span class="nt"&gt;15&lt;/span&gt; &lt;span class="nt"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;03&lt;/span&gt; &lt;span class="nt"&gt;one&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;txt&lt;/span&gt;
+&lt;span class="nt"&gt;-rw-rw-r--&lt;/span&gt; &lt;span class="nt"&gt;1&lt;/span&gt; &lt;span class="nt"&gt;flcellogrl&lt;/span&gt; &lt;span class="nt"&gt;flcellogrl&lt;/span&gt; &lt;span class="nt"&gt;15&lt;/span&gt; &lt;span class="nt"&gt;Nov&lt;/span&gt; &lt;span class="nt"&gt;15&lt;/span&gt; &lt;span class="nt"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;03&lt;/span&gt; &lt;span class="nt"&gt;two&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;txt&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;add&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;txt&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;status&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;On&lt;/span&gt; &lt;span class="nt"&gt;branch&lt;/span&gt; &lt;span class="nt"&gt;master&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nt"&gt;Changes&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;be&lt;/span&gt; &lt;span class="nt"&gt;committed&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;use&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;git reset HEAD ...&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;unstage&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="nt"&gt;new&lt;/span&gt; &lt;span class="nt"&gt;file&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="nt"&gt;one&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;txt&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;   &lt;span class="nt"&gt;new&lt;/span&gt; &lt;span class="nt"&gt;file&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="nt"&gt;two&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;txt&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="nt"&gt;-m&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Added two small text files&amp;quot;&lt;/span&gt;
+&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;master&lt;/span&gt; &lt;span class="mi"&gt;6996&lt;/span&gt;&lt;span class="nx"&gt;e83&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="nt"&gt;Added&lt;/span&gt; &lt;span class="nt"&gt;two&lt;/span&gt; &lt;span class="nt"&gt;small&lt;/span&gt; &lt;span class="nt"&gt;text&lt;/span&gt; &lt;span class="nt"&gt;files&lt;/span&gt;
+ &lt;span class="nt"&gt;2&lt;/span&gt; &lt;span class="nt"&gt;files&lt;/span&gt; &lt;span class="nt"&gt;changed&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;2&lt;/span&gt; &lt;span class="nt"&gt;insertions&lt;/span&gt;&lt;span class="o"&gt;(+)&lt;/span&gt;
+ &lt;span class="nt"&gt;create&lt;/span&gt; &lt;span class="nt"&gt;mode&lt;/span&gt; &lt;span class="nt"&gt;100644&lt;/span&gt; &lt;span class="nt"&gt;one&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;txt&lt;/span&gt;
+ &lt;span class="nt"&gt;create&lt;/span&gt; &lt;span class="nt"&gt;mode&lt;/span&gt; &lt;span class="nt"&gt;100644&lt;/span&gt; &lt;span class="nt"&gt;two&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;txt&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;log&lt;/span&gt; &lt;span class="nt"&gt;--one&lt;/span&gt;
+&lt;span class="nt"&gt;fatal&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;unrecognized&lt;/span&gt; &lt;span class="nt"&gt;argument&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;--one&lt;/span&gt;
+&lt;span class="nt"&gt;flcellogrl&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;flcellogrl&lt;/span&gt;&lt;span class="o"&gt;:~/&lt;/span&gt;&lt;span class="nt"&gt;good_science&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;git&lt;/span&gt; &lt;span class="nt"&gt;log&lt;/span&gt; &lt;span class="nt"&gt;--oneline&lt;/span&gt;
+&lt;span class="nt"&gt;6996e83&lt;/span&gt; &lt;span class="nt"&gt;Added&lt;/span&gt; &lt;span class="nt"&gt;two&lt;/span&gt; &lt;span class="nt"&gt;small&lt;/span&gt; &lt;span class="nt"&gt;text&lt;/span&gt; &lt;span class="nt"&gt;files&lt;/span&gt;
+&lt;span class="nt"&gt;67c8be5&lt;/span&gt; &lt;span class="nt"&gt;Undid&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt; &lt;span class="nt"&gt;bad&lt;/span&gt; &lt;span class="nt"&gt;change&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="nt"&gt;76f4e3a&lt;/span&gt; &lt;span class="nt"&gt;This&lt;/span&gt; &lt;span class="nt"&gt;change&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;no&lt;/span&gt; &lt;span class="nt"&gt;good&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="nt"&gt;752b47e&lt;/span&gt; &lt;span class="nt"&gt;Added&lt;/span&gt; &lt;span class="nt"&gt;phrase&lt;/span&gt; &lt;span class="nt"&gt;change&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="nt"&gt;b0992fb&lt;/span&gt; &lt;span class="nt"&gt;This&lt;/span&gt; &lt;span class="nt"&gt;is&lt;/span&gt; &lt;span class="nt"&gt;another&lt;/span&gt; &lt;span class="nt"&gt;commit&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Undoing a commit?&lt;/p&gt;
+&lt;p&gt;How do you list files in the git branch?&lt;/p&gt;
+&lt;p&gt;Creating and merging branches.&lt;/p&gt;
+&lt;p&gt;Resolving conflicting file versions.&lt;/p&gt;
+&lt;p&gt;Good for collecting students' homework assignments. "Your code has to be
+posted to this repository by a certain date/time."&lt;/p&gt;
+&lt;p&gt;Forking, cloning&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git remote add upstream http://github.com/wltrimbl/testrepo-2013-11-14-woodshole.git
+
+flcellogrl@flcellogrl:~/testrepo-2013-11-14-woodshole$ git remote -v
+origin  https://github.com/ljcohen/testrepo-2013-11-14-woodshole/ (fetch)
+origin  https://github.com/ljcohen/testrepo-2013-11-14-woodshole/ (push)
+upstream    http://github.com/wltrimbl/testrepo-2013-11-14-woodshole.git (fetch)
+upstream    http://github.com/wltrimbl/testrepo-2013-11-14-woodshole.git (push)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Green compare and review button.&lt;br&gt;
+Must press green "Push request" button.&lt;/p&gt;</content></entry></feed>

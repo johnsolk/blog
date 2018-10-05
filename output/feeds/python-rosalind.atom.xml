@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - Python, Rosalind</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/python-rosalind.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2013-09-16T13:32:00-07:00</updated><entry><title>Rosalind Amoeba</title><link href="https://ljcohen.github.io/blog/176.html" rel="alternate"></link><published>2013-09-16T13:32:00-07:00</published><updated>2013-09-16T13:32:00-07:00</updated><author><name>monsterbashseq</name></author><id>tag:ljcohen.github.io,2013-09-16:/blog/176.html</id><summary type="html">&lt;p&gt;&lt;a href="http://rosalind.info/problems/list-view/"&gt;&lt;img alt="amoeba" src="http://monsterbashseq.files.wordpress.com/2013/09/amoeba.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-177 width="300"
+height="278"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;"Amoeba" level on &lt;a href="http://rosalind.info/users/johnsolk/"&gt;Rosalind&lt;/a&gt;
+achieved after 8 problems solved!&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://rosalind.info/problems/list-view/"&gt;&lt;img alt="amoeba" src="http://monsterbashseq.files.wordpress.com/2013/09/amoeba.png?w=300"&gt;{.alignnone
+.size-medium .wp-image-177 width="300"
+height="278"}&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;"Amoeba" level on &lt;a href="http://rosalind.info/users/johnsolk/"&gt;Rosalind&lt;/a&gt;
+achieved after 8 problems solved!&lt;/p&gt;</content></entry></feed>
