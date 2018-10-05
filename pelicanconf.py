@@ -17,14 +17,15 @@ OUTPUT_PATH = 'output'
 THEME = './theme'
 # https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
 
-LINKS = [("Titus Brown's DIB Lab","http://ivory.idyll.org/lab/",
-          "Andrew Whitehead's Lab, Environmental Genomics",'https://whiteheadresearch.wordpress.com/',
-          'UCD DIB Training','https://dib-training.readthedocs.io/en/pub/',
-          'NSF-XSEDE Jetstream login','https://use.jetstream-cloud.org/application/dashboard',
-          'Python conda environment docs','https://conda.io/docs/user-guide/tasks/manage-environments.html',
-          'hackmd.io','https://hackmd.io/',
-          'osf','https://osf.io/',
-          'EvidentialGene, killifish genome project','http://arthropods.eugenes.org/EvidentialGene/killifish/')]
+
+LINKS = [("Titus Brown's DIB Lab","http://ivory.idyll.org/lab/"),
+         ("Andrew Whitehead's Lab, Environmental Genomics",'https://whiteheadresearch.wordpress.com/'),
+         ('UCD DIB Training','https://dib-training.readthedocs.io/en/pub/'),
+         ('NSF-XSEDE Jetstream login','https://use.jetstream-cloud.org/application/dashboard'),
+         ('Python conda environment docs','https://conda.io/docs/user-guide/tasks/manage-environments.html'),
+         ('hackmd.io','https://hackmd.io/'),
+         ('osf','https://osf.io/'),
+         ('EvidentialGene, killifish genome project','http://arthropods.eugenes.org/EvidentialGene/killifish/')]
 
 DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
 SEARCH_URL = '/blog/search.html'
@@ -33,7 +34,7 @@ DISPLAY_CATEGORIES_ON_MENU = True
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.youtube', 'liquid_tags.vimeo',
-           'liquid_tags.include_code', 'liquid_tags.notebook',
+           'liquid_tags.include_code',
            'tipue_search','i18n_subsites']
 
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
