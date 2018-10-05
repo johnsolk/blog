@@ -29,8 +29,7 @@ LINKS = [("Titus Brown's DIB Lab","http://ivory.idyll.org/lab/"),
 
 DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
 SEARCH_URL = '/blog/search.html'
-DISPLAY_CATEGORIES_ON_MENU = True
-
+DISPLAY_PAGES_ON_MENU = True
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.youtube', 'liquid_tags.vimeo',
