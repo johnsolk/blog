@@ -55,7 +55,7 @@ SOCIAL = (('twitter', 'https://twitter.com/monsterbashseq'),
           ('github', 'https://github.com/ljcohen'),
           ('flickr','https://www.flickr.com/155690017@N06/'),
           ('linkedin','https://www.linkedin.com/in/johnsolk/'),
-          ('email','mailto:ljcohen@ucdavis.edu'))
+          ('envelope','mailto:ljcohen@ucdavis.edu'))
 
 DISQUS_SITENAME = "johnson_lk"
 
