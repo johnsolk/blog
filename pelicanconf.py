@@ -56,7 +56,7 @@ SOCIAL = (('twitter', 'https://twitter.com/monsterbashseq'),
           ('linkedin','https://www.linkedin.com/in/johnsolk/'),
           ('envelope','mailto:ljcohen@ucdavis.edu'))
 
-DISQUS_SITENAME = "johnson_lk"
+DISQUS_SITENAME = "https-ljcohen-github-io-blog"
 
 #GOOGLE_ANALYTICS = ""
 
