@@ -41,7 +41,7 @@ STATIC_PATHS = ['img']
 
 READERS = {'html': None}
 
-CC_LICENSE = 'zero'
+#CC_LICENSE = 'zero'
 
 SOCIAL = (('twitter', 'https://twitter.com/monsterbashseq'),
           ('github', 'https://github.com/ljcohen'),
