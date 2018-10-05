@@ -11,6 +11,7 @@ python-gettext = "*"
 "beautifulsoup4" = "*"
 ipython = "*"
 lxml = "*"
+nbconvert = "*"
 
 [dev-packages]
 
