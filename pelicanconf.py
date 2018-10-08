@@ -29,7 +29,20 @@ LINKS = [("Titus Brown's DIB Lab","http://ivory.idyll.org/lab/"),
 
 DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
 SEARCH_URL = '/blog/search.html'
-DISPLAY_PAGES_ON_MENU = True
+
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
+
+MENUITEMS = (
+    ('Main','https://ljcohen.github.io/'),
+    ('About','https://ljcohen.github.io/about.html'),
+    ('Publications','https://ljcohen.github.io/publications.html'),
+    ('Teaching','https://ljcohen.github.io/teaching.html'),
+    ('Blog', '/category/blog.html'),
+    ('Old Blog','https://monsterbashseq.wordpress.com/')
+    )
+
+
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.youtube', 'liquid_tags.vimeo',
