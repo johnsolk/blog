@@ -46,7 +46,7 @@ MENUITEMS = (
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.youtube', 'liquid_tags.vimeo',
-           'liquid_tags.include_code',
+           'liquid_tags.include_code', 'liquid_tags.flickr',
            'tipue_search','i18n_subsites']
 
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
