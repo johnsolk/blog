@@ -13,13 +13,13 @@
 
         <meta name="author" content="Lisa K. Johnson" />
         <meta name="keywords" content="pelican" />
-        <meta name="description" content="In Lab Learning Opportunity (ILLO) by Data Intensive Biology (DIB) lab mate, Luiz Irber." />
+        <meta name="description" content="In Lab Learning Opportunity (ILLO) by Data Intensive Biology (DIB) fellow grad student, Luiz Irber." />
 
         <meta property="og:site_name" content="monsteRbashSeq" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Blogging with Pelican"/>
         <meta property="og:url" content="https://ljcohen.github.io/blog/blogging-with-pelican.html"/>
-        <meta property="og:description" content="In Lab Learning Opportunity (ILLO) by Data Intensive Biology (DIB) lab mate, Luiz Irber."/>
+        <meta property="og:description" content="In Lab Learning Opportunity (ILLO) by Data Intensive Biology (DIB) fellow grad student, Luiz Irber."/>
         <meta property="article:published_time" content="2018-09-06" />
             <meta property="article:section" content="Python" />
             <meta property="article:tag" content="pelican" />
@@ -60,12 +60,12 @@ monsteRbashSeq            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                        <li >
-                            <a href="https://ljcohen.github.io/blog/category/biotech-sequencing.html">Biotech, sequencing</a>
-                        </li>
-                        <li class="active">
-                            <a href="https://ljcohen.github.io/blog/category/python.html">Python</a>
-                        </li>
+                    <li><a href="https://ljcohen.github.io/">Main</a></li>
+                    <li><a href="https://ljcohen.github.io/about.html">About</a></li>
+                    <li><a href="https://ljcohen.github.io/publications.html">Publications</a></li>
+                    <li><a href="https://ljcohen.github.io/teaching.html">Teaching</a></li>
+                    <li><a href="/category/blog.html">Blog</a></li>
+                    <li><a href="https://monsterbashseq.wordpress.com/">Old Blog</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><span>
@@ -128,7 +128,7 @@ monsteRbashSeq            </a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>Luiz was gratious in spending some time walking us through how to set up a blog with Pelican, host it on <a href="https://pages.github.com/">github.io</a>, and have <a href="https://travis-ci.com/">travis-ci</a> test and deploy.</p>
+                <p><a href="https://github.com/luizirber">Luiz Irber</a> was gratious in spending time to walk us through how to set up a blog with Pelican, host it on <a href="https://pages.github.com/">github.io</a>, and have <a href="https://travis-ci.com/">travis-ci</a> test and deploy.</p>
 <p>Video: </p>
 <p><span class="videobox">
                 <iframe width="640" height="390"
@@ -137,12 +137,11 @@ monsteRbashSeq            </a>
                     allowFullScreen>
                 </iframe>
             </span></p>
-<p>We started with the tutorial from <a href="https://git.charlesreid1.com/charlesreid1/how-do-i-pelican">Charles Reid</a>, which has <a href="https://github.com/charlesreid1/magic-flying-pelican/pelican/">practice content</a>.</p>
 <h2>Some Background</h2>
-<p>Over the past few years as a PhD student in Dr. Titus Brown's <a href="http://ivory.idyll.org/lab/">DIB Lab</a> at UC Davis, I've been fortunate to be able to expand my data science toolkit. This has included a range of skills from <a href="https://www.biorxiv.org/content/early/2018/05/17/323576">automated genomic-scale data analysis &amp; visualization</a> to time-saving tricks like note-taking in <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">markdown</a>. Markdown is a <a href="https://en.wikipedia.org/wiki/Markdown">simple text-formatting language</a>, sorta like html. At the encouragement of Titus a few years ago during our summer <a href="http://ivory.idyll.org/dibsi/">DIBSI workshop</a>, I started taking notes on the online collaborative document site, <a href="https://hackmd.io/">hackmd.io</a>. This cool site lets you write in markdown, and immediately see it rendered on the right side. The link can be shared with collaborators, and the document can be exported to <code>.pdf</code>, <code>.html</code>, or <code>.md</code> formats.</p>
-<p>I've had <a href="https://monsterbashseq.wordpress.com/">a blog</a> that I started when I was learning and developing computational skills for genomics research <a href="http://vosslab.weebly.com/lab-alumni.html">as a lab technician at HBOI in FL</a>. Wordpress blogs are great for quickly publishing a post, with capacity for formatting pictures (screenshots) and links to Tweets. But manually converting <code>.md</code> documents and code chunks in the online wordpress user interface is tedious. </p>
-<p>This week, when <a href="https://github.com/luizirber">Luiz Irber</a> re-instated our weekly chain of lab group emails outlining our past week's accomplishments and goals for the coming week, I casually mentioned in my summary that I wanted to migrate from wordpress to a more markdown-friendly format for my blog. I've tried <a href="https://jekyllrb.com/">Jekyll</a> in the past, and have been slowly migrating <a href="https://ljcohen.github.io/">my website</a> to something markdown-friendly, but haven't quite hit my stride yet with migrating my blog over. Luiz immediately chimed in that <a href="http://docs.getpelican.com/en/3.6.3/quickstart.html">Pelican</a> is great! And uses it for his <a href="https://blog.luizirber.org/">blog</a>. It turns out that <a href="http://ivory.idyll.org/blog/">Titus' blog</a> and other lab mate, <a href="https://charlesreid1.com/">Charles Reid</a> both have their blogs in Pelican as well. One of the many advantages of Pelican is that it is written in Python, unlike Jekyll which is written in Ruby. (I'm more comfortable coding and debugging in Python than in Ruby.) And Charles provided lots of documentation on how to use Pelican! It's great to be in a lab group where people have such useful and encouraging advice.</p>
+<p>I've had <a href="https://monsterbashseq.wordpress.com/">a blog</a> that I started when I was first learning and developing computational skills. Wordpress blogs are great for quickly publishing a post, with capacity for formatting pictures and links to Tweets. At the encouragement of Titus a few years ago during our <a href="http://ivory.idyll.org/dibsi/">summer DIBSI workshop</a>, I started taking notes on the online collaborative document site, <a href="https://hackmd.io/">hackmd.io</a>. This cool site lets you write in markdown and immediately see it rendered. The link can be shared with collaborators, and the document can be exported to <code>.pdf</code>, <code>.html</code>, or <code>.md</code> formats. I started writing all of my notes with markdown. But then wanting to write a blog post with my notes? Manually converting <code>.md</code> documents and code chunks into the online wordpress user interface is tedious. </p>
+<p>This week, I casually mentioned that I wanted to migrate from wordpress to a more markdown-friendly format for my blog. Luiz immediately chimed in that <a href="http://docs.getpelican.com/en/3.6.3/quickstart.html">Pelican</a> is great! And uses it for his <a href="https://blog.luizirber.org/">blog</a>. It turns out that <a href="http://ivory.idyll.org/blog/">Titus' blog</a> and other lab mate, <a href="https://charlesreid1.com/">Charles Reid</a> both have their blogs in Pelican as well. One of the many advantages of Pelican is that it is written in Python, unlike Jekyll which is written in Ruby. (I'm more comfortable coding and debugging in Python than in Ruby.) And Charles provided lots of documentation on how to use Pelican! It's great to be in a lab group where people have such useful and encouraging advice.</p>
 <h2>Tutorial</h2>
+<p>We started with the tutorial from <a href="https://git.charlesreid1.com/charlesreid1/how-do-i-pelican">Charles Reid</a>, which has <a href="https://github.com/charlesreid1/magic-flying-pelican/pelican/">practice content</a>.</p>
 <p>Make a working directory for your blog:</p>
 <div class="highlight"><pre><span></span>mkdir blog
 cd blog/
@@ -228,8 +227,8 @@ vi 2018-09-05.md
 </pre></div>
 
 
-<p>(Go to http://localhost:8000/output/)</p>
-<p>At anytime, you can remove <code>output/</code>, because this is what is generated when running <code>pelican</code>.</p>
+<p>(Go to <a href="http://localhost:8000/output/">http://localhost:8000/output/</a>)</p>
+<p>At anytime, you can remove the <code>output/</code> directory, because this is what is generated when running <code>pelican</code>.</p>
 <div class="highlight"><pre><span></span>rm -rf output/
 </pre></div>
 
@@ -325,7 +324,7 @@ vi pelicanconf.py
         <div id="disqus_thread"></div>
         <script type="text/javascript">
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'johnson_lk'; // required: replace example with your forum shortname
+            var disqus_shortname = 'https-ljcohen-github-io-blog'; // required: replace example with your forum shortname
 
                     var disqus_identifier = 'blogging-with-pelican';
                 var disqus_url = 'https://ljcohen.github.io/blog/blogging-with-pelican.html';
@@ -375,8 +374,8 @@ vi pelicanconf.py
 <li class="list-group-item">
   <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
   <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="https://ljcohen.github.io/blog/killifish-promethion-data-sharing.html">Killifish PromethION data sharing</a></li>
     <li class="list-group-item"><a href="https://ljcohen.github.io/blog/blogging-with-pelican.html">Blogging with Pelican</a></li>
-    <li class="list-group-item"><a href="https://ljcohen.github.io/blog/adventures-with-ont-minion-at-mbls-microbial-diversity-course.html">Adventures with ONT MinION at MBL's Microbial Diversity Course</a></li>
   </ul>
 </li>
 <!-- End Sidebar/Recent Posts -->
@@ -445,7 +444,7 @@ vi pelicanconf.py
     <!-- Disqus -->
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'johnson_lk'; // required: replace example with your forum shortname
+        var disqus_shortname = 'https-ljcohen-github-io-blog'; // required: replace example with your forum shortname
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function () {
