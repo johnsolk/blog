@@ -20,11 +20,7 @@ THEME = './theme'
 
 LINKS = [("Titus Brown's DIB Lab","http://ivory.idyll.org/lab/"),
          ("Andrew Whitehead's Lab, Environmental Genomics",'https://whiteheadresearch.wordpress.com/'),
-         ('UCD DIB Training','https://dib-training.readthedocs.io/en/pub/'),
-         ('hackmd.io','https://hackmd.io/'),
-         ('osf','https://osf.io/'),
-         ('EvidentialGene, killifish genome project','http://arthropods.eugenes.org/EvidentialGene/killifish/'),
-         ('Ensembl, killifish F. heteroclitus genome database','http://uswest.ensembl.org/Fundulus_heteroclitus/Info/Index')]
+         ('UCD DIB Training','https://dib-training.readthedocs.io/en/pub/')]
 
 DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
 SEARCH_URL = '/blog/search.html'
@@ -46,6 +42,18 @@ PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'tipue_search','i18n_subsites']
 
 FLICKR_API_KEY = '69966a6b3945b8b8f8801aea09d7c54c'
+
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {
+            'css_class': 'highlight',
+        },
+        'markdown.extensions.extra': {},
+        # optionally, more extensions,
+        # e.g. markdown.extensions.meta
+    },
+    'output_format': 'html5',
+}
 
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 
