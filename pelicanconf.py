@@ -24,7 +24,7 @@ LINKS = [("Titus Brown's DIB Lab","http://ivory.idyll.org/lab/"),
          ('hackmd.io','https://hackmd.io/'),
          ('osf','https://osf.io/'),
          ('EvidentialGene, killifish genome project','http://arthropods.eugenes.org/EvidentialGene/killifish/'),
-         ('Ensembl, killifish F. heteroclitus genome database','http://uswest.ensembl.org/Fundulus_heteroclitus/Info/Index')]]
+         ('Ensembl, killifish F. heteroclitus genome database','http://uswest.ensembl.org/Fundulus_heteroclitus/Info/Index')]
 
 DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
 SEARCH_URL = '/blog/search.html'
