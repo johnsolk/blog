@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Blogging with Pelican</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/category/python.html">Python</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/blogging-with-pelican.html" rel="bookmark"
+           title="Permalink to Blogging with Pelican">Blogging with Pelican</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2018-09-06T00:00:00+00:00">
+                Published: Thu 06 September 2018
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/lisa-k-johnson.html">Lisa K. Johnson</a>
+        </address>
+<p>In <a href="/category/python.html">Python</a>.</p>
+<p>tags: <a href="/tag/pelican.html">pelican</a> </p>
+</footer><!-- /.post-info -->      <p><a href="https://github.com/luizirber">Luiz Irber</a> was gratious in spending time to walk us through how to set up a blog with Pelican, host it on <a href="https://pages.github.com/">github.io</a>, and have <a href="https://travis-ci.com/">travis-ci</a> test and deploy.</p>
+<p>Video: </p>
+<p>{% youtube QhC9yjUQL6o %}</p>
+<h2>Some Background</h2>
+<p>I've had <a href="https://monsterbashseq.wordpress.com/">a blog</a> that I started when I was first learning and developing computational skills. Wordpress blogs are great for quickly publishing a post, with capacity for formatting pictures and links to Tweets. At the encouragement of Titus a few years ago during our <a href="http://ivory.idyll.org/dibsi/">summer DIBSI workshop</a>, I started taking notes on the online collaborative document site, <a href="https://hackmd.io/">hackmd.io</a>. This cool site lets you write in markdown and immediately see it rendered. The link can be shared with collaborators, and the document can be exported to <code>.pdf</code>, <code>.html</code>, or <code>.md</code> formats. I started writing all of my notes with markdown. But then wanting to write a blog post with my notes? Manually converting <code>.md</code> documents and code chunks into the online wordpress user interface is tedious. </p>
+<p>This week, I casually mentioned that I wanted to migrate from wordpress to a more markdown-friendly format for my blog. Luiz immediately chimed in that <a href="http://docs.getpelican.com/en/3.6.3/quickstart.html">Pelican</a> is great! And uses it for his <a href="https://blog.luizirber.org/">blog</a>. It turns out that <a href="http://ivory.idyll.org/blog/">Titus' blog</a> and other lab mate, <a href="https://charlesreid1.com/">Charles Reid</a> both have their blogs in Pelican as well. One of the many advantages of Pelican is that it is written in Python, unlike Jekyll which is written in Ruby. (I'm more comfortable coding and debugging in Python than in Ruby.) And Charles provided lots of documentation on how to use Pelican! It's great to be in a lab group where people have such useful and encouraging advice.</p>
+<h2>Tutorial</h2>
+<p>We started with the tutorial from <a href="https://git.charlesreid1.com/charlesreid1/how-do-i-pelican">Charles Reid</a>, which has <a href="https://github.com/charlesreid1/magic-flying-pelican/pelican/">practice content</a>.</p>
+<p>Make a working directory for your blog:</p>
+<div class="highlight"><pre><span></span>mkdir blog
+cd blog/
+git init
+</pre></div>
+
+
+<p>Get the configuration file, <code>pelicanconf.py</code>:</p>
+<div class="highlight"><pre><span></span>wget https://raw.githubusercontent.com/charlesreid1/magic-flying-pelican/master/pelican/pelicanconf.py
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>mkdir content
+cd content/
+</pre></div>
+
+
+<p>Navigate to some of the example posts and download:</p>
+<div class="highlight"><pre><span></span>wget https://raw.githubusercontent.com/charlesreid1/magic-flying-pelican/master/pelican/content/posts/hello-world-1.md
+</pre></div>
+
+
+<p>Taking a look, we see that each <code>.md</code> post file must have this header:</p>
+<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">Hello</span> <span class="n">world</span> <span class="n">number</span> <span class="n">one</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">13</span> <span class="mi">22</span><span class="o">:</span><span class="mi">00</span>
+<span class="n">Category</span><span class="o">:</span> <span class="n">Python</span>
+<span class="n">Tags</span><span class="o">:</span> <span class="n">pelican</span>
+<span class="n">Author</span><span class="o">:</span> <span class="n">charlesreid1</span>
+<span class="n">Summary</span><span class="o">:</span> <span class="n">First</span> <span class="n">hello</span> <span class="n">world</span> <span class="n">post</span>
+</pre></div>
+
+
+<p>Now we have to install Pelican and markdown. Luiz uses <a href="https://pipenv.readthedocs.io/en/latest/"><code>pipenv</code></a>. This will activate a new virtualenv with pelican and markdown available without messing with dependencies in your computer's $PATH.</p>
+<div class="highlight"><pre><span></span>pip install --user pipenv
+export PATH=~/.local/bin:$PATH
+pipenv install pelican markdown
+pipenv shell
+</pre></div>
+
+
+<p>Now we need some Pelican <a href="http://www.pelicanthemes.com/">themes</a>. (All themes are downloaded, so put them in a different location.)</p>
+<div class="highlight"><pre><span></span>cd ../../
+git clone --recursive https://github.com/getpelican/pelican-themes
+cd pelican-themes
+pelican-themes -i bootstrap
+</pre></div>
+
+
+<p>Change the path location of the theme in the <code>pelicanconf.py</code> file: </p>
+<div class="highlight"><pre><span></span>cd blog
+cp -a ../pelican-themes/bootstrap theme
+vi pelicanconf.py 
+</pre></div>
+
+
+<p>Specify the path where the theme will be saved to (this was copied with the command above).</p>
+<div class="highlight"><pre><span></span>THEME = &#39;./theme&#39;
+</pre></div>
+
+
+<p>Change other information, such as your name and site name and site url in the <code>pelicanconf.py</code> file.</p>
+<div class="highlight"><pre><span></span>wget https://raw.githubusercontent.com/charlesreid1/magic-flying-pelican/master/pelican/content/posts/hello-world-1.md
+mkdir posts
+mv hello-world-1.md posts/
+mv hello-world-1.md 2018-09-05.md
+vi 2018-09-05.md 
+</pre></div>
+
+
+<p>Then run:</p>
+<div class="highlight"><pre><span></span>pelican
+</pre></div>
+
+
+<p>This will produce output like this:</p>
+<div class="highlight"><pre><span></span><span class="n">WARNING</span><span class="o">:</span> <span class="n">Removed</span> <span class="n">extraneous</span> <span class="n">trailing</span> <span class="n">slash</span> <span class="n">from</span> <span class="n">SITEURL</span><span class="o">.</span>
+<span class="n">Done</span><span class="o">:</span> <span class="n">Processed</span> <span class="mi">2</span> <span class="n">articles</span><span class="o">,</span> <span class="mi">0</span> <span class="n">drafts</span><span class="o">,</span> <span class="mi">0</span> <span class="n">pages</span> <span class="n">and</span> <span class="mi">0</span> <span class="n">hidden</span> <span class="n">pages</span> <span class="k">in</span> <span class="mf">0.55</span> <span class="n">seconds</span><span class="o">.</span>
+</pre></div>
+
+
+<p>Check how it looks:</p>
+<div class="highlight"><pre><span></span>python -m http.server
+</pre></div>
+
+
+<p>(Go to <a href="http://localhost:8000/output/">http://localhost:8000/output/</a>)</p>
+<p>At anytime, you can remove the <code>output/</code> directory, because this is what is generated when running <code>pelican</code>.</p>
+<div class="highlight"><pre><span></span>rm -rf output/
+</pre></div>
+
+
+<h3>Hosting on github.io</h3>
+<p>Add/commit changes, then set up a repository on GitHub (don't initialize with <code>README.md</code>) to add as remote.</p>
+<div class="highlight"><pre><span></span>git add --all
+git status
+git commit -m &quot;first commit&quot;
+git remote add origin https://github.com/ljcohen/blog.git
+git push -u origin master
+</pre></div>
+
+
+<p>Install ghp-import:</p>
+<div class="highlight"><pre><span></span><span class="n">pipenv</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
+<span class="nn">pipenv</span> <span class="nn">install</span> <span class="nn">ghp</span><span class="o">-</span><span class="kn">import</span>
+<span class="nn">git</span> <span class="nn">status</span>
+<span class="n">git</span> <span class="n">diff</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
+<span class="nn">which</span> <span class="nn">ghp</span><span class="o">-</span><span class="kn">import</span>
+<span class="nn">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">--</span><span class="n">help</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="nn">pelican</span>
+<span class="n">pelican</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="nn">output</span>
+<span class="n">git</span> <span class="n">branch</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">p</span> <span class="n">output</span>
+</pre></div>
+
+
+<h3>Using travis-ci</h3>
+<p>Make a travis <code>.yml</code> file:</p>
+<div class="highlight"><pre><span></span>vi .travis.yml
+</pre></div>
+
+
+<p>With this content:</p>
+<div class="highlight"><pre><span></span><span class="n">language</span><span class="o">:</span> <span class="n">python</span>
+<span class="n">dist</span><span class="o">:</span> <span class="n">xenial</span>
+<span class="n">python</span><span class="o">:</span> <span class="s1">&#39;3.6&#39;</span>
+<span class="n">branches</span><span class="o">:</span>
+  <span class="n">only</span><span class="o">:</span>
+  <span class="o">-</span> <span class="n">master</span>
+<span class="n">install</span><span class="o">:</span>
+<span class="o">-</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pipenv</span>
+<span class="o">-</span> <span class="n">pipenv</span> <span class="n">install</span>
+<span class="n">script</span><span class="o">:</span>
+<span class="o">-</span> <span class="n">pipenv</span> <span class="n">run</span> <span class="n">pelican</span>
+<span class="n">deploy</span><span class="o">:</span>
+  <span class="n">provider</span><span class="o">:</span> <span class="n">pages</span>
+  <span class="n">skip</span><span class="o">-</span><span class="n">cleanup</span><span class="o">:</span> <span class="kc">true</span>
+  <span class="n">local</span><span class="o">-</span><span class="n">dir</span><span class="o">:</span> <span class="n">output</span>
+  <span class="n">github</span><span class="o">-</span><span class="n">token</span><span class="o">:</span> <span class="n">$GITHUB_TOKEN</span> <span class="err">#</span> <span class="n">Set</span> <span class="k">in</span> <span class="n">the</span> <span class="n">settings</span> <span class="n">page</span> <span class="n">of</span> <span class="n">your</span> <span class="n">repository</span>
+  <span class="n">on</span><span class="o">:</span>
+    <span class="n">branch</span><span class="o">:</span> <span class="n">master</span>
+</pre></div>
+
+
+<p>Add/commit:</p>
+<div class="highlight"><pre><span></span>git add .travis.yml 
+git commit -m &quot;added travis-ci&quot;
+git push -u origin master
+</pre></div>
+
+
+<ol>
+<li>Go to <a href="https://travis-ci.com/">travis-ci</a> and login to GitHub. </li>
+<li>Set up your <a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/">personal access tokens</a> on your GitHub account. </li>
+<li>Go to 'Settings', 'Integration &amp; services' in the GitHub repository to configure Travis CI with a key to give push access.</li>
+<li>Add the repository to Travis CI: https://travis-ci.com/ljcohen/blog</li>
+</ol>
+<p>You're done!</p>
+<p>Now add more posts!</p>
+<div class="highlight"><pre><span></span>vi 2018-09-05_b.md 
+vi 2018-09-05_b.md 
+git add 2018-09-05_b.md 
+git commit -m &quot;new post&quot;
+git push
+vi pelicanconf.py 
+</pre></div>
+
+
+<p>Travis CI will automatically run pelican and push to github.</p>
+<p>With Pelican, you can also <a href="http://docs.getpelican.com/en/stable/importer.html#">import an existing site, like from WordPress</a>.</p>
+<p>Thank you, Luiz!</p>
+<p><img src="img/dib.jpg"></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

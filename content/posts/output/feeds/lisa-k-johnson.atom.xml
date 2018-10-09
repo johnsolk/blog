@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog - Lisa K. Johnson</title><link href="/" rel="alternate"></link><link href="/feeds/lisa-k-johnson.atom.xml" rel="self"></link><id>/</id><updated>2018-10-08T00:00:00+00:00</updated><entry><title>Killifish PromethION data sharing</title><link href="/killifish-promethion-data-sharing.html" rel="alternate"></link><published>2018-10-08T00:00:00+00:00</published><updated>2018-10-08T00:00:00+00:00</updated><author><name>Lisa K. Johnson</name></author><id>tag:None,2018-10-08:/killifish-promethion-data-sharing.html</id><summary type="html">&lt;p&gt;Sharing PromethION sequencing data from 4 species of Fundulus killifish&lt;/p&gt;</summary><content type="html">&lt;p&gt;We have some new long-read &lt;a href=""&gt;ONT PromethION&lt;/a&gt; genomic DNA sequencing data from killifish! While we're working with the data and preparing for publication, we wanted to share this information and data in case it is useful for anyone. Since there are not many PromethION instruments available, these are probably some of the first data to be shared. At least from killifish.&lt;/p&gt;
+&lt;p&gt;This is a collaborative effort between my two advisors, Dr. Titus Brown and Dr. Andrew Whitehead. (Seriously, a grad student could not be luckier than I am to have two great advisors and collaborative support from great labs and colleagues.) Other contributors are Dr. Ruta and Tony Gill. Special thanks to PoreCamp, Texas A&amp;amp;M Agrilife Sequencing. And Dr. David Duvernell for sending us fish. And thank you to supported provided by the Moore Foundation Data-Driven-Discovery investigator award to Dr. Titus Brown.&lt;/p&gt;
+&lt;h1&gt;New PromethION instrument at the UC Davis Genome Center&lt;/h1&gt;
+&lt;p&gt;In &lt;a href="https://twitter.com/meganamsu/status/997216050247864322"&gt;May 2018&lt;/a&gt;, the &lt;a href="http://dnatech.genomecenter.ucdavis.edu/nanopore-sequencing-ont-promethion/"&gt;UC Davis Genome Center&lt;/a&gt; received its PromethION from Oxford Nanopore. &lt;/p&gt;
+&lt;p&gt;This was part of a collaborative effort to acquire this instrument through the early release program, back in 2016 by Genome Center faculty: Dr. Richard Michelmore, Dr. Megan Dennis, and Dr. Titus Brown.&lt;/p&gt;
+&lt;p&gt;{% flickr 40821422010 [small] ["PromethION at UC Davis"] %}&lt;/p&gt;
+&lt;p&gt;{% flickr 42629095711 [small] ["PromethION at UC Davis2"] %}&lt;/p&gt;
+&lt;p&gt;I have been working with the ONT MinION to see if it is feasible to use for genome assemblies of eukaryotic organisms. &lt;/p&gt;
+&lt;p&gt;https://twitter.com/monsterbashseq/status/963592729241382912&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;MinION Costs: https://twitter.com/monsterbashseq/status/963154668942589952&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I went to Porecamp: https://twitter.com/monsterbashseq/status/959153636445073408&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Turns out that it is not. But the PromethION has been great for our purposes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;PromethION promises &lt;a href="https://nanoporetech.com/about-us/news/promethion-wild-high-yield-data-announcements-human-and-plant-dna"&gt;higher yield&lt;/a&gt; than MinION, allowing it to be more feasible for &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;&lt;em&gt;Fundulus&lt;/em&gt; killifish&lt;/h1&gt;
+&lt;p&gt;&lt;img align="right" height="300" src="https://images-na.ssl-images-amazon.com/images/I/81SpSNXaFfL.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;These species of killifish have never been sequenced before. Live samples were gratiously shipped to UC Davis by &lt;a href="http://people.mst.edu/faculty/duvernelld/index.html"&gt;Dr. David Duvernell at Missouri University of Science &amp;amp; Technology&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;{% flickr 24012654907 [small] ["shipping container"] %}&lt;/p&gt;
+&lt;p&gt;{% flickr 25007459318 [small] ["breathe bag"] %}&lt;/p&gt;
+&lt;p&gt;https://twitter.com/monsterbashseq/status/1048308106596245504&lt;/p&gt;
+&lt;p&gt;Very important fish for comparative genomics:&lt;/p&gt;
+&lt;p&gt;{% flickr 31318668498 [medium] ["Fundulus 3 clades"] %}&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.ncbi.nlm.nih.gov/pubmed/20100216"&gt;Whitehead et al. 2010. Phylogeny of killifish osmotic tolerance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3076822/"&gt;Whitehead et al. 2011. Genomic mechanisms of evolved physiological plasticity in killifish distributed along an environmental salinity gradient&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://jeb.biologists.org/content/218/8/1212"&gt;Brennan et al. 2015. Reciprocal osmotic challenges reveal mechanisms of divergence in phenotypic plasticity in the killifish Fundulus heteroclitus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Recently, &lt;a href="https://fishtreeoflife.org/taxonomy/family/Fundulidae/"&gt;Fundulidae tree of life&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;DNA extractions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;long-reads protocol by Joshua Quick and Nick Loman: https://twitter.com/Scalene/status/955091398285582337&lt;/li&gt;
+&lt;li&gt;Agilent protocol, found by Tony&lt;/li&gt;
+&lt;li&gt;Fresh is better than frozen&lt;/li&gt;
+&lt;li&gt;Tried other protocols&lt;/li&gt;
+&lt;li&gt;Ruta found that adding urea to lysis buffer helped&lt;/li&gt;
+&lt;li&gt;DNA was difficult to get into solution.&lt;/li&gt;
+&lt;li&gt;With the MinION, our sample was not utilizing the pores as efficiently as it could be. ONT has mentioned that this is a fish-specific sample issue. Has anyone else found this to be the case with fish hmw DNA? Brittle and breaking easily. &lt;/li&gt;
+&lt;li&gt;Show gels.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;https://twitter.com/monsterbashseq/status/852655158160904192&lt;/p&gt;
+&lt;p&gt;https://twitter.com/nanopore/status/872910510508953605&lt;/p&gt;
+&lt;h1&gt;Sequencing&lt;/h1&gt;
+&lt;p&gt;Species |  native physiology | clade | ONT data |  Illumina | best N50 | |
+--- | --- | --- | --- | --- | --- | --- | --- | 
+&lt;em&gt;Fundulus catenatus&lt;/em&gt; | Freshwater | 1 | TBD | TBD | TBD | &lt;img src="https://nature.mdc.mo.gov/sites/default/files/styles/centered_full/public/media/images/2010/05/northern_studfish.jpg?itok=kLYZJ6V4"&gt;
+&lt;em&gt;Adinia xenica&lt;/em&gt; | Marine  | 3 | 38 Gb | TBD | 369,038; n = 794 | &lt;img src="https://biodiversity.utexas.edu/images/easyblog_articles/3681/adinia_xenica.jpg"&gt; 
+&lt;em&gt;Fundulus olivaceus&lt;/em&gt; | Freshwater | 3 | 4.9 Gb | 180 Gb | 42,823; n=7,616 (Masurca) | &lt;img src="https://nature.mdc.mo.gov/sites/default/files/styles/centered_full/public/media/images/2010/05/blackspotted_topminnow.jpg?itok=1V78GVZI"&gt;
+&lt;em&gt;Fundulus nottii&lt;/em&gt; | Freshwater | 3 | 33 Gb | TBD | 2 Mb; n = 151 | &lt;a href="http://www.nanfa.org/ac/fundulus-notti-starhead-toopminnow.pdf"&gt;&lt;img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1B0oYaT8isujaT2qLP3decYTRvuiLZGvinMEEkR0algWfnrzV"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Other species of freshwater killifish (&lt;em&gt;Lucania parva&lt;/em&gt; and &lt;em&gt;Lucania goodei&lt;/em&gt;) are being sequenced by &lt;a href="http://beckyfullerlab.weebly.com/"&gt;Dr. Becky Fuller's lab at U. Illinois Urbana-Champaign&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Preliminary data products&lt;/h2&gt;
+&lt;p&gt;Rough assemblies and QC:&lt;/p&gt;
+&lt;p&gt;https://osf.io/zjv86/&lt;/p&gt;
+&lt;h1&gt;Our plan from here:&lt;/h1&gt;
+&lt;h2&gt;1. Post data&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.ebi.ac.uk/ena/submit/sequence-submission"&gt;European Nucleotide Archive (ENA)&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="http://help.zenodo.org/"&gt;zenodo has recently upgraded their file size limits to 50 GB&lt;/a&gt;, however they require a request, which I've submitted 3 and no response in 12 days.&lt;/li&gt;
+&lt;li&gt;NCBI - is ridiculous&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;2. Data note&lt;/h2&gt;
+&lt;p&gt;Either:
+- &lt;a href="https://f1000research.com/for-authors/article-guidelines/data-notes"&gt;F1000 research&lt;/a&gt;
+- &lt;a href="https://academic.oup.com/gigascience/pages/data_note"&gt;GigaScience&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;3. Science!&lt;/h2&gt;
+&lt;p&gt;Comparative genomics. Scan for regulatory regions of interest, e.g. &lt;a href="http://www.pnas.org/content/114/13/E2729"&gt;salinity-responsive enhancing elements (OSRE)&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Questions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;What to do with millions of fast5 files? Our fastq are 70-100 GB, but the directory of raw fast5 signal files are &amp;gt;600 GB. &lt;a href="https://github.com/jts/nanopolish"&gt;Nanopolish&lt;/a&gt; uses the raw fast5 signal files to correct. How can these be shared efficiently?&lt;/li&gt;
+&lt;li&gt;Is sharing the data useful for anyone? &lt;/li&gt;
+&lt;li&gt;Any advice, questions, or comments?&lt;/li&gt;
+&lt;/ul&gt;</content><category term="sequencing"></category><category term="killifish"></category><category term="Oxford Nanopore Technologies"></category></entry><entry><title>Blogging with Pelican</title><link href="/blogging-with-pelican.html" rel="alternate"></link><published>2018-09-06T00:00:00+00:00</published><updated>2018-09-06T00:00:00+00:00</updated><author><name>Lisa K. Johnson</name></author><id>tag:None,2018-09-06:/blogging-with-pelican.html</id><summary type="html">&lt;p&gt;In Lab Learning Opportunity (ILLO) by Data Intensive Biology (DIB) fellow grad student, Luiz Irber.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://github.com/luizirber"&gt;Luiz Irber&lt;/a&gt; was gratious in spending time to walk us through how to set up a blog with Pelican, host it on &lt;a href="https://pages.github.com/"&gt;github.io&lt;/a&gt;, and have &lt;a href="https://travis-ci.com/"&gt;travis-ci&lt;/a&gt; test and deploy.&lt;/p&gt;
+&lt;p&gt;Video: &lt;/p&gt;
+&lt;p&gt;{% youtube QhC9yjUQL6o %}&lt;/p&gt;
+&lt;h2&gt;Some Background&lt;/h2&gt;
+&lt;p&gt;I've had &lt;a href="https://monsterbashseq.wordpress.com/"&gt;a blog&lt;/a&gt; that I started when I was first learning and developing computational skills. Wordpress blogs are great for quickly publishing a post, with capacity for formatting pictures and links to Tweets. At the encouragement of Titus a few years ago during our &lt;a href="http://ivory.idyll.org/dibsi/"&gt;summer DIBSI workshop&lt;/a&gt;, I started taking notes on the online collaborative document site, &lt;a href="https://hackmd.io/"&gt;hackmd.io&lt;/a&gt;. This cool site lets you write in markdown and immediately see it rendered. The link can be shared with collaborators, and the document can be exported to &lt;code&gt;.pdf&lt;/code&gt;, &lt;code&gt;.html&lt;/code&gt;, or &lt;code&gt;.md&lt;/code&gt; formats. I started writing all of my notes with markdown. But then wanting to write a blog post with my notes? Manually converting &lt;code&gt;.md&lt;/code&gt; documents and code chunks into the online wordpress user interface is tedious. &lt;/p&gt;
+&lt;p&gt;This week, I casually mentioned that I wanted to migrate from wordpress to a more markdown-friendly format for my blog. Luiz immediately chimed in that &lt;a href="http://docs.getpelican.com/en/3.6.3/quickstart.html"&gt;Pelican&lt;/a&gt; is great! And uses it for his &lt;a href="https://blog.luizirber.org/"&gt;blog&lt;/a&gt;. It turns out that &lt;a href="http://ivory.idyll.org/blog/"&gt;Titus' blog&lt;/a&gt; and other lab mate, &lt;a href="https://charlesreid1.com/"&gt;Charles Reid&lt;/a&gt; both have their blogs in Pelican as well. One of the many advantages of Pelican is that it is written in Python, unlike Jekyll which is written in Ruby. (I'm more comfortable coding and debugging in Python than in Ruby.) And Charles provided lots of documentation on how to use Pelican! It's great to be in a lab group where people have such useful and encouraging advice.&lt;/p&gt;
+&lt;h2&gt;Tutorial&lt;/h2&gt;
+&lt;p&gt;We started with the tutorial from &lt;a href="https://git.charlesreid1.com/charlesreid1/how-do-i-pelican"&gt;Charles Reid&lt;/a&gt;, which has &lt;a href="https://github.com/charlesreid1/magic-flying-pelican/pelican/"&gt;practice content&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Make a working directory for your blog:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir blog
+cd blog/
+git init
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Get the configuration file, &lt;code&gt;pelicanconf.py&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://raw.githubusercontent.com/charlesreid1/magic-flying-pelican/master/pelican/pelicanconf.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir content
+cd content/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Navigate to some of the example posts and download:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://raw.githubusercontent.com/charlesreid1/magic-flying-pelican/master/pelican/content/posts/hello-world-1.md
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Taking a look, we see that each &lt;code&gt;.md&lt;/code&gt; post file must have this header:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="n"&gt;world&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="n"&gt;one&lt;/span&gt;
+&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;05&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;
+&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;
+&lt;span class="n"&gt;Tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
+&lt;span class="n"&gt;Author&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;charlesreid1&lt;/span&gt;
+&lt;span class="n"&gt;Summary&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;First&lt;/span&gt; &lt;span class="n"&gt;hello&lt;/span&gt; &lt;span class="n"&gt;world&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now we have to install Pelican and markdown. Luiz uses &lt;a href="https://pipenv.readthedocs.io/en/latest/"&gt;&lt;code&gt;pipenv&lt;/code&gt;&lt;/a&gt;. This will activate a new virtualenv with pelican and markdown available without messing with dependencies in your computer's $PATH.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install --user pipenv
+export PATH=~/.local/bin:$PATH
+pipenv install pelican markdown
+pipenv shell
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now we need some Pelican &lt;a href="http://www.pelicanthemes.com/"&gt;themes&lt;/a&gt;. (All themes are downloaded, so put them in a different location.)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd ../../
+git clone --recursive https://github.com/getpelican/pelican-themes
+cd pelican-themes
+pelican-themes -i bootstrap
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Change the path location of the theme in the &lt;code&gt;pelicanconf.py&lt;/code&gt; file: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd blog
+cp -a ../pelican-themes/bootstrap theme
+vi pelicanconf.py 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Specify the path where the theme will be saved to (this was copied with the command above).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;THEME = &amp;#39;./theme&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Change other information, such as your name and site name and site url in the &lt;code&gt;pelicanconf.py&lt;/code&gt; file.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://raw.githubusercontent.com/charlesreid1/magic-flying-pelican/master/pelican/content/posts/hello-world-1.md
+mkdir posts
+mv hello-world-1.md posts/
+mv hello-world-1.md 2018-09-05.md
+vi 2018-09-05.md 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pelican
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will produce output like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;WARNING&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Removed&lt;/span&gt; &lt;span class="n"&gt;extraneous&lt;/span&gt; &lt;span class="n"&gt;trailing&lt;/span&gt; &lt;span class="n"&gt;slash&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;SITEURL&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Done&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Processed&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="n"&gt;articles&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;drafts&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;pages&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;hidden&lt;/span&gt; &lt;span class="n"&gt;pages&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="mf"&gt;0.55&lt;/span&gt; &lt;span class="n"&gt;seconds&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Check how it looks:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python -m http.server
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;(Go to &lt;a href="http://localhost:8000/output/"&gt;http://localhost:8000/output/&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;At anytime, you can remove the &lt;code&gt;output/&lt;/code&gt; directory, because this is what is generated when running &lt;code&gt;pelican&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;rm -rf output/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Hosting on github.io&lt;/h3&gt;
+&lt;p&gt;Add/commit changes, then set up a repository on GitHub (don't initialize with &lt;code&gt;README.md&lt;/code&gt;) to add as remote.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git add --all
+git status
+git commit -m &amp;quot;first commit&amp;quot;
+git remote add origin https://github.com/ljcohen/blog.git
+git push -u origin master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Install ghp-import:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pipenv&lt;/span&gt; &lt;span class="n"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt;
+&lt;span class="nn"&gt;pipenv&lt;/span&gt; &lt;span class="nn"&gt;install&lt;/span&gt; &lt;span class="nn"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt;
+&lt;span class="nn"&gt;git&lt;/span&gt; &lt;span class="nn"&gt;status&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;diff&lt;/span&gt;
+&lt;span class="n"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt;
+&lt;span class="nn"&gt;which&lt;/span&gt; &lt;span class="nn"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt;
+&lt;span class="nn"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;help&lt;/span&gt;
+&lt;span class="n"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pelican&lt;/span&gt;
+&lt;span class="n"&gt;pelican&lt;/span&gt;
+&lt;span class="n"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;output&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;branch&lt;/span&gt;
+&lt;span class="n"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Using travis-ci&lt;/h3&gt;
+&lt;p&gt;Make a travis &lt;code&gt;.yml&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vi .travis.yml
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;With this content:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;language&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;
+&lt;span class="n"&gt;dist&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;xenial&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;3.6&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;branches&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;only&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+  &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;pipenv&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;pipenv&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt;
+&lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;pipenv&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
+&lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;provider&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;pages&lt;/span&gt;
+  &lt;span class="n"&gt;skip&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cleanup&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
+  &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dir&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;
+  &lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;token&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;$GITHUB_TOKEN&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="n"&gt;Set&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;settings&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;repository&lt;/span&gt;
+  &lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;branch&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Add/commit:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git add .travis.yml 
+git commit -m &amp;quot;added travis-ci&amp;quot;
+git push -u origin master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Go to &lt;a href="https://travis-ci.com/"&gt;travis-ci&lt;/a&gt; and login to GitHub. &lt;/li&gt;
+&lt;li&gt;Set up your &lt;a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/"&gt;personal access tokens&lt;/a&gt; on your GitHub account. &lt;/li&gt;
+&lt;li&gt;Go to 'Settings', 'Integration &amp;amp; services' in the GitHub repository to configure Travis CI with a key to give push access.&lt;/li&gt;
+&lt;li&gt;Add the repository to Travis CI: https://travis-ci.com/ljcohen/blog&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You're done!&lt;/p&gt;
+&lt;p&gt;Now add more posts!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vi 2018-09-05_b.md 
+vi 2018-09-05_b.md 
+git add 2018-09-05_b.md 
+git commit -m &amp;quot;new post&amp;quot;
+git push
+vi pelicanconf.py 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Travis CI will automatically run pelican and push to github.&lt;/p&gt;
+&lt;p&gt;With Pelican, you can also &lt;a href="http://docs.getpelican.com/en/stable/importer.html#"&gt;import an existing site, like from WordPress&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thank you, Luiz!&lt;/p&gt;
+&lt;p&gt;&lt;img src="img/dib.jpg"&gt;&lt;/p&gt;</content><category term="pelican"></category></entry></feed>

@@ -49,6 +49,8 @@ PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.flickr',
            'tipue_search','i18n_subsites']
 
+FLICKR_API_KEY = '69966a6b3945b8b8f8801aea09d7c54c'
+
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 
 DISPLAY_PAGES_ON_MENU = True
