@@ -21,11 +21,10 @@ THEME = './theme'
 LINKS = [("Titus Brown's DIB Lab","http://ivory.idyll.org/lab/"),
          ("Andrew Whitehead's Lab, Environmental Genomics",'https://whiteheadresearch.wordpress.com/'),
          ('UCD DIB Training','https://dib-training.readthedocs.io/en/pub/'),
-         ('NSF-XSEDE Jetstream login','https://use.jetstream-cloud.org/application/dashboard'),
-         ('Python conda environment docs','https://conda.io/docs/user-guide/tasks/manage-environments.html'),
          ('hackmd.io','https://hackmd.io/'),
          ('osf','https://osf.io/'),
-         ('EvidentialGene, killifish genome project','http://arthropods.eugenes.org/EvidentialGene/killifish/')]
+         ('EvidentialGene, killifish genome project','http://arthropods.eugenes.org/EvidentialGene/killifish/'),
+         ('Ensembl, killifish F. heteroclitus genome database','http://uswest.ensembl.org/Fundulus_heteroclitus/Info/Index')]]
 
 DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
 SEARCH_URL = '/blog/search.html'
@@ -36,9 +35,6 @@ DISPLAY_CATEGORIES_ON_MENU = False
 MENUITEMS = (
     ('Main','https://ljcohen.github.io/'),
     ('About','https://ljcohen.github.io/about.html'),
-    ('Publications','https://ljcohen.github.io/publications.html'),
-    ('Teaching','https://ljcohen.github.io/teaching.html'),
-    ('Blog', '/category/blog.html'),
     ('Old Blog','https://monsterbashseq.wordpress.com/')
     )
 
