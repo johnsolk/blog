@@ -12,8 +12,8 @@ PATH = 'content'
 
 OUTPUT_PATH = 'output'
 
-#CUSTOM_CSS = 'static/css/custom.css'
-
+CUSTOM_CSS = 'static/css/custom.css'
+CUSTOM_JS = 'static/js/custom.js'
 THEME = './theme'
 # https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
 

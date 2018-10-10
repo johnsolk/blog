@@ -1,135 +1,379 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/all-en.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2018-10-08T00:00:00-07:00</updated><entry><title>Killifish PromethION data sharing</title><link href="https://ljcohen.github.io/blog/killifish-promethion-data-sharing.html" rel="alternate"></link><published>2018-10-08T00:00:00-07:00</published><updated>2018-10-08T00:00:00-07:00</updated><author><name>Lisa K. Johnson</name></author><id>tag:ljcohen.github.io,2018-10-08:/blog/killifish-promethion-data-sharing.html</id><summary type="html">&lt;p&gt;Sharing PromethION sequencing data from 4 species of Fundulus killifish&lt;/p&gt;</summary><content type="html">&lt;p&gt;We have some new long-read &lt;a href=""&gt;ONT PromethION&lt;/a&gt; genomic DNA sequencing data from killifish! While we're working with the data, generating Illumina PE150 data for each, and preparing a manuscript for publication, we wanted to share this information and data in case it is useful for anyone. Since there are not many PromethION instruments available, these are probably some of the first data available, at least from killifish.&lt;/p&gt;
-&lt;p&gt;This is a collaborative effort between my two advisors, Dr. Titus Brown and Dr. Andrew Whitehead. (Seriously, a grad student could not be luckier than me to have two great, supportive advisors and collaborative support from labs and colleagues. I can't believe how lucky I am.) Other contributors are Dr. Ruta and Tony Gill. Special thanks to PoreCamp, Texas A&amp;amp;M Agrilife Sequencing. And Dr. David Duvernell for sending us fish. And thank you to support provided by the Moore Foundation Data-Driven-Discovery investigator award to Dr. Titus Brown.&lt;/p&gt;
-&lt;h1&gt;New PromethION instrument at the UC Davis Genome Center&lt;/h1&gt;
-&lt;p&gt;In &lt;a href="https://twitter.com/meganamsu/status/997216050247864322"&gt;May 2018&lt;/a&gt;, the &lt;a href="http://dnatech.genomecenter.ucdavis.edu/nanopore-sequencing-ont-promethion/"&gt;UC Davis Genome Center&lt;/a&gt; received its PromethION from Oxford Nanopore. &lt;/p&gt;
-&lt;p&gt;This was part of a collaborative effort to acquire this instrument through the early release program, back in 2016 by Genome Center faculty: Dr. Richard Michelmore, Dr. Megan Dennis (who is on my dissertation committee!), and Dr. Titus Brown.&lt;/p&gt;
-&lt;p&gt;I have been working with the ONT MinION to see if it is feasible to use for genome assemblies of eukaryotic organisms. &lt;/p&gt;
-&lt;p&gt;https://twitter.com/monsterbashseq/status/963592729241382912&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq</title><link href="https://ljcohen.github.io/blog/" rel="alternate"></link><link href="https://ljcohen.github.io/blog/feeds/all-en.atom.xml" rel="self"></link><id>https://ljcohen.github.io/blog/</id><updated>2018-10-08T00:00:00-07:00</updated><entry><title>Killifish PromethION data sharing</title><link href="https://ljcohen.github.io/blog/killifish-promethion-data-sharing.html" rel="alternate"></link><published>2018-10-08T00:00:00-07:00</published><updated>2018-10-08T00:00:00-07:00</updated><author><name>Lisa K. Johnson</name></author><id>tag:ljcohen.github.io,2018-10-08:/blog/killifish-promethion-data-sharing.html</id><summary type="html">&lt;p&gt;Sharing PromethION sequencing data from 4 species of &lt;em&gt;Fundulus&lt;/em&gt; killifish&lt;/p&gt;</summary><content type="html">&lt;p&gt;We have new long-read &lt;a href="https://nanoporetech.com/products/promethion"&gt;ONT PromethION&lt;/a&gt; genomic DNA sequencing data from 4 species of killifish! While we're working with it and generating new Illumina PE150 data for each species, we wanted to share this information and data. Since there are not many PromethION instruments out there, to my knowledge, these data are probably some of the first of its kind to be shared, besides &lt;a href="https://www.ebi.ac.uk/ena/data/view/PRJEB26791"&gt;human data&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;Questions for the community&lt;/h1&gt;
+&lt;p&gt;The purpose of this blog post is mainly to share our plan, seek advice, and see if anyone is interested in these data. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Would anyone be interested in collaborating with us on an &lt;a href="https://academic.oup.com/gigascience/article/2/1/2047-217X-2-10/2656129"&gt;assemblathon&lt;/a&gt;-like project with these ONT data to come up with some best-practices? If so, please contact me! (&lt;a href="https://twitter.com/monsterbashseq"&gt;twitter&lt;/a&gt; or &lt;a href="mailto:ljcohen@ucdavis.edu"&gt;email&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We're generating these ONT data for the purpose of assembling reference genomes for organisms where we already have a closely-related (5-20 million years diverged) &lt;a href="https://www.ncbi.nlm.nih.gov/genome/?term=txid8078%5Borgn%5D"&gt;genome from a sister species, (&lt;em&gt;Fundulus heteroclitus&lt;/em&gt;)&lt;/a&gt;. We're in the process of generating Illumina data to improve the consensus. By &lt;a href="https://twitter.com/olgabot/status/1017127050014949381"&gt;today's standards of genome assembly&lt;/a&gt;, this project is not the most sophisticated. We're not planning to do anything fancy to improve the scaffolding with optical and chromatin interaction mapping. Just quick and dirty genomes for around $3500 each. This is also by no means a perfect data set by ONT standards. Our DNA samples - from all species - have consistently not been utilizing the pores as efficiently as possible on either MinION or PromethION flowcells, despite using fresh tissue and troubleshooting efforts with different DNA extraction and cleanup methods. Therefore, our yields from ONT sequencing have not been as high as other groups have gotten. But, from our experience, this is what can happen when new species are sequenced with a new technology. &lt;/p&gt;
+&lt;p&gt;Despite these shortcomings, 20-30Gb/species ONT data are great to have! Better than Illumina data alone. Since this is a new type of ONT data from the PromethION, we're in unchartered territory here about some things.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;MinION Costs: https://twitter.com/monsterbashseq/status/963154668942589952&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;I went to Porecamp: https://twitter.com/monsterbashseq/status/959153636445073408&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Turns out that it is not. But the PromethION has been great for our purposes.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;PromethION promises &lt;a href="https://nanoporetech.com/about-us/news/promethion-wild-high-yield-data-announcements-human-and-plant-dna"&gt;higher yield&lt;/a&gt; than MinION, allowing it to be more feasible for &lt;/li&gt;
+&lt;li&gt;What does one do with the millions of raw fast5 signal files from the PromethION? Our basecalled fastq are 70-100 GB, but the directory of raw fast5 signal files is &amp;gt;600 GB for each run! Wow. To our knowledge, the only software that uses these files to polish the reads is &lt;a href="https://github.com/jts/nanopolish"&gt;Nanopolish&lt;/a&gt; by &lt;a href="https://twitter.com/jaredtsimpson?lang=en"&gt;Jared Simpson's group&lt;/a&gt;. Since the files are so large, I haven't tried using Nanopolish yet. It it a good idea to try? What is the best way to share &amp;gt;600 GB of millions of fast5 files with people who might be interested in using it?&lt;/li&gt;
+&lt;li&gt;Data are unfiltered. Should we remove DNA CS lambda phage spike-in before sharing in a public repository? &lt;/li&gt;
+&lt;li&gt;What is the best way to look for reads suspected as errors (&amp;gt;900 Mb)? Should these be removed before sharing in a public repository?&lt;/li&gt;
+&lt;li&gt;What is the best workflow and tools to use for assembly with ONT and Illumina data?&lt;/li&gt;
+&lt;li&gt;Where is the best place to share these sequencing data? Even though &lt;a href="http://help.zenodo.org/"&gt;zenodo has recently upgraded their file size limits to 50 GB&lt;/a&gt;, it is not a good place to store these data based on their response to my request:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1&gt;&lt;em&gt;Fundulus&lt;/em&gt; killifish&lt;/h1&gt;
-&lt;p&gt;&lt;img align="right" height="300" src="https://images-na.ssl-images-amazon.com/images/I/81SpSNXaFfL.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;These species of killifish have never been sequenced before. Live samples were gratiously shipped to UC Davis by &lt;a href="http://people.mst.edu/faculty/duvernelld/index.html"&gt;Dr. David Duvernell at Missouri University of Science &amp;amp; Technology&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;https://twitter.com/monsterbashseq/status/1048308106596245504&lt;/p&gt;
-&lt;p&gt;Very important fish for comparative genomics:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.flickr.com/photos/uprootedfeet/4303408795/"&gt;&lt;img src="https://farm5.staticflickr.com/4054/4303408795_7676d2578e_n.jpg" alt="zenodo email"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Any other advice, questions, or comments on things that perhaps we are not considering?&lt;/strong&gt;&lt;/p&gt;
+&lt;h1&gt;Our plan from here:&lt;/h1&gt;
+&lt;h4&gt;1. Post data to a public nucleic acid repository&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://www.ebi.ac.uk/ena/submit/sequence-submission"&gt;European Nucleotide Archive (ENA)-EBI&lt;/a&gt; or SRA-NCBI?
+(I will post links to the records here once they are available.)&lt;/p&gt;
+&lt;p&gt;What to do with the raw fast5 signal files?&lt;/p&gt;
+&lt;h4&gt;2. Write a data note&lt;/h4&gt;
+&lt;p&gt;Either &lt;a href="https://f1000research.com/for-authors/article-guidelines/data-notes"&gt;F1000 research&lt;/a&gt; or &lt;a href="https://academic.oup.com/gigascience/pages/data_note"&gt;GigaScience&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;3. Use the genome assemblies!&lt;/h4&gt;
+&lt;p&gt;The ultimate goal is to do some comparative genomics analyses between these genomes, use them as references for RNAseq data, and scan for regulatory regions of interest, e.g. &lt;a href="http://www.pnas.org/content/114/13/E2729"&gt;salinity-responsive enhancing elements (OSRE)&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Thank you!&lt;/h1&gt;
+&lt;p&gt;This is a collaborative effort between my two advisors, Dr. Titus Brown and Dr. Andrew Whitehead. (Seriously, I can't believe how fortunate I am to have two such supportive advisors and a willingly collaborative network of lab members and colleagues.) Other contributors to this project have been &lt;a href="http://dnatech.genomecenter.ucdavis.edu/people/"&gt;Dr. Ruta Madhusudan&lt;/a&gt; and &lt;a href="https://twitter.com/tonygill3?lang=en"&gt;Tony Gill&lt;/a&gt;. Special thanks to &lt;a href="http://porecamp.github.io/texas/"&gt;instructors at PoreCamp, Texas&lt;/a&gt;, &lt;a href="https://twitter.com/BioMath?lang=en"&gt;Dr. Charlie Johnson&lt;/a&gt; and &lt;a href="https://twitter.com/DNA_hole?lang=en"&gt;Dr. Richard Metz&lt;/a&gt; at &lt;a href="http://www.txgen.tamu.edu/#aboutus"&gt;Texas A&amp;amp;M Agrilife Research Sequencing Facility&lt;/a&gt; (where PoreCamp was held) for Illumina NovaSeq data from &lt;a href="https://twitter.com/nanopore/status/872910510508953605"&gt;&lt;em&gt;Fundulus olivaceus&lt;/em&gt;&lt;/a&gt;). THANK YOU to &lt;a href="http://people.mst.edu/faculty/duvernelld/index.html"&gt;Dr. David Duvernell at Missouri University of Science &amp;amp; Technology&lt;/a&gt; and &lt;a href="http://ichthyology.usm.edu/"&gt;Dr. Jake Schaefer at the University of Southern Mississippi&lt;/a&gt; for sending us all of these fish to us, live! &lt;/p&gt;
+&lt;p&gt;All of this is made possible by funding support from the Moore Foundation Data-Driven-Discovery investigator award to Dr. Titus Brown.&lt;/p&gt;
+&lt;p&gt;Below is a bit of background on the project, methods, preliminary results, references, and a list of some tools I've compiled.&lt;/p&gt;
+&lt;h1&gt;New PromethION instrument at the UC Davis Genome Center&lt;/h1&gt;
+&lt;p&gt;In &lt;a href="https://twitter.com/meganamsu/status/997216050247864322"&gt;May 2018&lt;/a&gt;, the &lt;a href="http://dnatech.genomecenter.ucdavis.edu/"&gt;UC Davis Genome Center&lt;/a&gt; received its PromethION from Oxford Nanopore! This was part of a collaborative effort to acquire this instrument through the &lt;a href="https://www.genomeweb.com/sequencing-technology/early-access-oxford-nanopore-promethion-requires-75k-deposit-24k-access-fee#.W70sSpNKhTY"&gt;PromethION early release program (PEAP)&lt;/a&gt; back in early 2016 by Genome Center faculty: &lt;a href="https://biology.ucdavis.edu/people/richard-michelmore"&gt;Dr. Richard Michelmore&lt;/a&gt;, &lt;a href="https://biology.ucdavis.edu/people/megan-dennis"&gt;Dr. Megan Dennis&lt;/a&gt; (who is on my dissertation committee!), &lt;a href="https://biology.ucdavis.edu/people/luis-g-carvajal-carmona"&gt;Dr. Luis Carvajal-Carmona&lt;/a&gt;, and &lt;a href="http://genomecenter.ucdavis.edu/people/faculty/name/c-titus-brown/"&gt;Dr. Titus Brown&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.flickr.com/photos/155690017@N06/42629095711/"&gt;&lt;img src="https://farm2.staticflickr.com/1734/42629095711_7c68253644_n.jpg" alt="PromethION at UC Davis2"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;When I began my PhD proram in 2015, &lt;a href="https://twitter.com/monsterbashseq/status/963592729241382912"&gt;I started working with the ONT MinION&lt;/a&gt; to see if it is feasible to use for genome assemblies of eukaryotic organisms. It turns out that it is not, at least for these killifish. To achieve 30-50x coverage for a genome assembly of a 1-1.1 Gb killifish genome, we would need to use 30-50 MinION flowcells. At a &lt;a href="https://docs.google.com/spreadsheets/d/1yBncz75kgwExCXy7sC9LsMaDGs8OJJJGg9f4o3DcoQE/edit?usp=sharing"&gt;cost of $800-900/flowcell&lt;/a&gt;, that is not a reasonably affordable genome ($24,000-45,000). Whereas it took &lt;a href="https://www.biorxiv.org/content/early/2017/04/20/128835"&gt;39 flowcells to get ~30x (90Gb) coverage of the human genome&lt;/a&gt;, one PromethION flowcells has sequenced &lt;a href="https://gigabaseorgigabyte.wordpress.com/2018/05/24/promethion-human-genome-na19240/"&gt;~80x coverage of human genome&lt;/a&gt;. PromethION promises &lt;a href="https://nanoporetech.com/about-us/news/promethion-wild-high-yield-data-announcements-human-and-plant-dna"&gt;higher yield&lt;/a&gt; than MinION, allowing it to be more feasible for larger genomes &amp;gt;1 Gb. The cost of one &lt;a href="http://dnatech.genomecenter.ucdavis.edu/nanopore-sequencing-ont-promethion/"&gt;PromethION run at UC Davis&lt;/a&gt; is $2,880. As you see below, we have not achieved this high of a yield on Promethtion, but we have at least achieved 20-30x coverage of our killifish genomes.&lt;/p&gt;
+&lt;p&gt;The avalance of data commences!&lt;/p&gt;
+&lt;h1&gt;Four species of &lt;em&gt;Fundulus&lt;/em&gt; killifish&lt;/h1&gt;
+&lt;p&gt;&lt;img style="float: right;" src="https://images-na.ssl-images-amazon.com/images/I/81SpSNXaFfL.jpg" width="200px"&gt;&lt;/p&gt;
+&lt;p&gt;These species of killifish have never been sequenced before. We have a genome for the &lt;a href="https://www.sciencedirect.com/science/article/pii/S1744117X0700072X"&gt;classic laboratory and field model&lt;/a&gt; species, &lt;a href="http://uswest.ensembl.org/Fundulus_heteroclitus/Info/Index"&gt;&lt;em&gt;Fundulus heteroclitus&lt;/em&gt;&lt;/a&gt; for understanding how organisms and populations interact with the external environment. But we do not have any genomic information from other important related freshwater species of &lt;em&gt;Fundulus&lt;/em&gt;. &lt;/p&gt;
+&lt;h4&gt;Why killifish?&lt;/h4&gt;
+&lt;p&gt;The &lt;em&gt;Fundulus heteroclitus&lt;/em&gt; killifish has been well-studied because of its physiological resilience to environmental change. It has also been found to have &lt;a href="http://science.sciencemag.org/content/354/6317/1305"&gt;rapidly evolved to polluted environments&lt;/a&gt;. I am most interested in the Fundulus as a flexible model for resilience to salinity change. While &lt;em&gt;F. heteroclitus&lt;/em&gt; is flexible to salinity change, some of its sister species are not.&lt;/p&gt;
+&lt;p&gt;The physiological requirement for high (or low) concentrations of salt ions in the water has affected geographic distributions of aquatic animals throughout evolutionary history and will continue to impact species worldwide in view of future changes in climate. To study the history of adaptation to different salinities and understand the mechanisms of evolution at the molecular level, we have been studying this group of related killifish from the genus &lt;em&gt;Fundulus&lt;/em&gt;, which contains species that are natively adapted to different salinities. Some &lt;em&gt;Fundulus&lt;/em&gt; species tolerate a range of salinities (euryhaline) while others require a more narrow salinity range (stenohaline) in either fresh or marine waters. Unique to this family of killifish is evidence that some species from the genus &lt;em&gt;Fundulus&lt;/em&gt; have radiated into fresh water bodies on three separate, parallel occasions between 5-25 million years ago, and have lost their ability to tolerate higher salinities like their euryhaline relatives. We use &lt;em&gt;Fundulus&lt;/em&gt; as a comparative model system for studying the physiological and genetic mechanisms that diverge between euryhaline and stenohaline freshwater species. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.flickr.com/photos/155690017@N06/31318668498/"&gt;&lt;img src="https://farm2.staticflickr.com/1929/31318668498_ac0e15aee0_n.jpg" alt="Fundulus phylogeny"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.ncbi.nlm.nih.gov/pubmed/20100216"&gt;Whitehead et al. 2010. Phylogeny of killifish osmotic tolerance&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3076822/"&gt;Whitehead et al. 2011. Genomic mechanisms of evolved physiological plasticity in killifish distributed along an environmental salinity gradient&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://jeb.biologists.org/content/218/8/1212"&gt;Brennan et al. 2015. Reciprocal osmotic challenges reveal mechanisms of divergence in phenotypic plasticity in the killifish Fundulus heteroclitus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Recently, &lt;a href="https://fishtreeoflife.org/taxonomy/family/Fundulidae/"&gt;Fundulidae tree of life&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Whitehead et al. 2010. &lt;a href="https://www.ncbi.nlm.nih.gov/pubmed/20100216"&gt;Phylogeny of killifish osmotic tolerance.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Whitehead et al. 2011. &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3076822/"&gt;Genomic mechanisms of evolved physiological plasticity in killifish distributed along an environmental salinity gradient.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Brennan et al. 2015. &lt;a href="http://jeb.biologists.org/content/218/8/1212"&gt;Reciprocal osmotic challenges reveal mechanisms of divergence in phenotypic plasticity in the killifish Fundulus heteroclitus.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Brennan et al. 2018. &lt;a href="https://academic.oup.com/mbe/advance-article/doi/10.1093/molbev/msy154/5068378?guestAccessKey=89fdd3c9-8894-4a89-acac-548f2e3a06d2"&gt;Integrative Population and Physiological Genomics Reveals Mechanisms of Adaptation in Killifish.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;DNA extractions&lt;/h1&gt;
+&lt;p&gt;Live samples were shipped to UC Davis by &lt;a href="https://scholar.google.com/citations?hl=en&amp;amp;user=QQIh3CsAAAAJ&amp;amp;view_op=list_works&amp;amp;sortby=pubdate"&gt;Dr. David Duvernell&lt;/a&gt; and &lt;a href="http://ichthyology.usm.edu/"&gt;Dr. Jake Schaefer&lt;/a&gt;. When possible (all but Fundulus catenatus), samples were extracted from fresh tissue. Fish heads were used for high molecular weight (hmw) DNA extractions.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;long-reads protocol by Joshua Quick and Nick Loman: https://twitter.com/Scalene/status/955091398285582337&lt;/li&gt;
-&lt;li&gt;Agilent protocol, found by Tony&lt;/li&gt;
-&lt;li&gt;Fresh is better than frozen&lt;/li&gt;
-&lt;li&gt;Tried other protocols&lt;/li&gt;
-&lt;li&gt;Ruta found that adding urea to lysis buffer helped&lt;/li&gt;
-&lt;li&gt;DNA was difficult to get into solution.&lt;/li&gt;
-&lt;li&gt;With the MinION, our sample was not utilizing the pores as efficiently as it could be. ONT has mentioned that this is a fish-specific sample issue. Has anyone else found this to be the case with fish hmw DNA? Brittle and breaking easily. &lt;/li&gt;
-&lt;li&gt;Show gels.&lt;/li&gt;
+&lt;li&gt;&lt;a href="ttps://www.protocols.io/view/ultra-long-read-sequencing-protocol-for-rad004-mrxc57n"&gt;Ultra-long read sequencing protocol by Josh Quick and Nick Loman&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.agilent.com/cs/library/usermanuals/public/200600.pdf"&gt;Agilent #200600 DNA extraction kit&lt;/a&gt; found by Tony&lt;/li&gt;
+&lt;li&gt;Tony Gil and I found that fresh is better than frozen&lt;/li&gt;
+&lt;li&gt;With Dr. Ruta, we tried &lt;a href="https://www.qiagen.com/us/resources/resourcedetail?id=a9e6a609-4600-4b03-afbd-974318590ce5&amp;amp;lang=en"&gt;Qiagen&lt;/a&gt; - p. 39 "DNA purification from tissue using the Gentra puregene Tissue Kit"&lt;/li&gt;
+&lt;li&gt;DNA was difficult to get into solution. (show pic)&lt;/li&gt;
+&lt;li&gt;Dr. Ruta found that adding urea to lysis buffer helped the final DNA pellet to be less brittle and go into solution easier &lt;a href="https://www.ncbi.nlm.nih.gov/pubmed/14641478"&gt;Wasko et al. 2003&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Something weird with our samples. ONT has mentioned that this could a fish-specific sample issue, based on experiences with other customers. Has anyone else found this to be the case with fish hmw DNA? Brittle and breaking easily?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;https://twitter.com/monsterbashseq/status/852655158160904192&lt;/p&gt;
-&lt;p&gt;https://twitter.com/nanopore/status/872910510508953605&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://twitter.com/monsterbashseq/status/852655158160904192"&gt;Good pf gel, thanks Tony&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;Sequencing&lt;/h1&gt;
-&lt;p&gt;Species |  native physiology | clade | ONT data |  Illumina | best N50 | |
---- | --- | --- | --- | --- | --- | --- | --- | 
-&lt;em&gt;Fundulus catenatus&lt;/em&gt; | Freshwater | 1 | TBD | TBD | TBD | &lt;img src="https://nature.mdc.mo.gov/sites/default/files/styles/centered_full/public/media/images/2010/05/northern_studfish.jpg?itok=kLYZJ6V4"&gt;
-&lt;em&gt;Adinia xenica&lt;/em&gt; | Marine  | 3 | 38 Gb | TBD | 369,038; n = 794 | &lt;img src="https://biodiversity.utexas.edu/images/easyblog_articles/3681/adinia_xenica.jpg"&gt; 
-&lt;em&gt;Fundulus olivaceus&lt;/em&gt; | Freshwater | 3 | 4.9 Gb | 180 Gb | 42,823; n=7,616 (Masurca) | &lt;img src="https://nature.mdc.mo.gov/sites/default/files/styles/centered_full/public/media/images/2010/05/blackspotted_topminnow.jpg?itok=1V78GVZI"&gt;
-&lt;em&gt;Fundulus nottii&lt;/em&gt; | Freshwater | 3 | 33 Gb | TBD | 2 Mb; n = 151 | &lt;a href="http://www.nanfa.org/ac/fundulus-notti-starhead-toopminnow.pdf"&gt;&lt;img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1B0oYaT8isujaT2qLP3decYTRvuiLZGvinMEEkR0algWfnrzV"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here are the ONT PromethION sequencing data we have so far:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Species&lt;/th&gt;
+&lt;th&gt;bases called&lt;/th&gt;
+&lt;th&gt;n reads&lt;/th&gt;
+&lt;th&gt;avg length&lt;/th&gt;
+&lt;th&gt;largest&lt;/th&gt;
+&lt;th&gt;reads N50&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Adinia xenica&lt;/td&gt;
+&lt;td&gt;38,467,326,719&lt;/td&gt;
+&lt;td&gt;15,704,522&lt;/td&gt;
+&lt;td&gt;2,449&lt;/td&gt;
+&lt;td&gt;953,774&lt;/td&gt;
+&lt;td&gt;5,733, n = 1,373,426&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Fundulus nottii&lt;/td&gt;
+&lt;td&gt;33,440,866,723&lt;/td&gt;
+&lt;td&gt;5,160,367&lt;/td&gt;
+&lt;td&gt;6,480&lt;/td&gt;
+&lt;td&gt;667,947&lt;/td&gt;
+&lt;td&gt;12,995, n=700,534&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;F. catenatus&lt;/td&gt;
+&lt;td&gt;40,274,806,587&lt;/td&gt;
+&lt;td&gt;23,701,206&lt;/td&gt;
+&lt;td&gt;1,699&lt;/td&gt;
+&lt;td&gt;590,485&lt;/td&gt;
+&lt;td&gt;3,439, n = 2,687,295&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Fundulus olivaceus&lt;/td&gt;
+&lt;td&gt;4,962,626,713 (MinION)&lt;/td&gt;
+&lt;td&gt;740,248&lt;/td&gt;
+&lt;td&gt;6,704&lt;/td&gt;
+&lt;td&gt;973,552&lt;/td&gt;
+&lt;td&gt;12726, n = 117202&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;(We're planning to do a PromethION run with &lt;em&gt;F. olivaceus&lt;/em&gt; in the next week.)&lt;/p&gt;
+&lt;p&gt;There is evidence that the &lt;a href="http://www.g3journal.org/content/early/2018/08/07/g3.118.200160"&gt;consensus assembly can be improved by using the pilon/racon program with Illumina data&lt;/a&gt; (Miller et al. 2018).&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Species&lt;/th&gt;
+&lt;th&gt;native physiology&lt;/th&gt;
+&lt;th&gt;clade&lt;/th&gt;
+&lt;th&gt;ONT data&lt;/th&gt;
+&lt;th&gt;Illumina&lt;/th&gt;
+&lt;th&gt;best assembly N50&lt;/th&gt;
+&lt;th&gt;miniasm assembly size&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;Fundulus catenatus&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Freshwater&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;TBD&lt;/td&gt;
+&lt;td&gt;TBD&lt;/td&gt;
+&lt;td&gt;TBD&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;Adinia xenica&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Marine&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;38 Gb&lt;/td&gt;
+&lt;td&gt;TBD&lt;/td&gt;
+&lt;td&gt;369,038; n = 794&lt;/td&gt;
+&lt;td&gt;961,615,159&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;Fundulus olivaceus&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Freshwater&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4.9 Gb&lt;/td&gt;
+&lt;td&gt;180 Gb&lt;/td&gt;
+&lt;td&gt;42,823; n=7,616 (Masurca)&lt;/td&gt;
+&lt;td&gt;1,134,160,060&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;Fundulus nottii&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Freshwater&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;33 Gb&lt;/td&gt;
+&lt;td&gt;TBD&lt;/td&gt;
+&lt;td&gt;2 Mb; n = 151&lt;/td&gt;
+&lt;td&gt;1,141,443,860&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;p&gt;Other species of freshwater and brackish water killifish (&lt;em&gt;Lucania parva&lt;/em&gt; and &lt;em&gt;Lucania goodei&lt;/em&gt;) from Clade 2 are being sequenced by &lt;a href="http://beckyfullerlab.weebly.com/"&gt;Dr. Becky Fuller's lab at U. Illinois Urbana-Champaign&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Fundulus catenatus (freshwater native, Clade 1) read stats:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;(ONT) johnsolk@barbera:/share/pilot-johnsolk/ONT_killifish/F_catenatus$ assembly-stats F_cat.fq 
-stats for F_cat.fq
-sum = 40274806587, n = 23701206, ave = 1699.27, largest = 590485
-N50 = 3439, n = 2687295
-N60 = 2464, n = 4076415
-N70 = 1739, n = 6027668
-N80 = 1178, n = 8844065
-N90 = 718, n = 13205064
-N100 = 5, n = 23701206
-N_count = 0
-Gaps = 0
+&lt;p&gt;Assemblies of &lt;em&gt;Fundulus olivaceus&lt;/em&gt; data:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Seq data input&lt;/th&gt;
+&lt;th&gt;Tool&lt;/th&gt;
+&lt;th&gt;bases&lt;/th&gt;
+&lt;th&gt;n_contigs&lt;/th&gt;
+&lt;th&gt;average&lt;/th&gt;
+&lt;th&gt;largest&lt;/th&gt;
+&lt;th&gt;N50&lt;/th&gt;
+&lt;th&gt;BUSCO (eukaryota)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ONT&lt;/td&gt;
+&lt;td&gt;Canu&lt;/td&gt;
+&lt;td&gt;9,804,264&lt;/td&gt;
+&lt;td&gt;540&lt;/td&gt;
+&lt;td&gt;18,156&lt;/td&gt;
+&lt;td&gt;365,191&lt;/td&gt;
+&lt;td&gt;40,681, n = 43&lt;/td&gt;
+&lt;td&gt;0.7%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ONT&lt;/td&gt;
+&lt;td&gt;Miniasm&lt;/td&gt;
+&lt;td&gt;4,917,546&lt;/td&gt;
+&lt;td&gt;153&lt;/td&gt;
+&lt;td&gt;32,140&lt;/td&gt;
+&lt;td&gt;233,136&lt;/td&gt;
+&lt;td&gt;50,056, n = 25&lt;/td&gt;
+&lt;td&gt;0.0 %&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Illumina&lt;/td&gt;
+&lt;td&gt;Megahit&lt;/td&gt;
+&lt;td&gt;1,183,861,293&lt;/td&gt;
+&lt;td&gt;1038799&lt;/td&gt;
+&lt;td&gt;1,139&lt;/td&gt;
+&lt;td&gt;88,218&lt;/td&gt;
+&lt;td&gt;3,846, n = 77,800&lt;/td&gt;
+&lt;td&gt;45.6 %&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Illumina&lt;/td&gt;
+&lt;td&gt;ABySS&lt;/td&gt;
+&lt;td&gt;1,381,148,284&lt;/td&gt;
+&lt;td&gt;1024759&lt;/td&gt;
+&lt;td&gt;1,347&lt;/td&gt;
+&lt;td&gt;140629&lt;/td&gt;
+&lt;td&gt;9833, n = 37,013&lt;/td&gt;
+&lt;td&gt;77.9%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hybrid&lt;/td&gt;
+&lt;td&gt;Alpaca&lt;/td&gt;
+&lt;td&gt;xxx&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hybrid&lt;/td&gt;
+&lt;td&gt;Masurca&lt;/td&gt;
+&lt;td&gt;1,134,160,060&lt;/td&gt;
+&lt;td&gt;90,237&lt;/td&gt;
+&lt;td&gt;12,568&lt;/td&gt;
+&lt;td&gt;386,222&lt;/td&gt;
+&lt;td&gt;42,823, n = 7,616&lt;/td&gt;
+&lt;td&gt;86.2%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hybrid&lt;/td&gt;
+&lt;td&gt;SSPACE&lt;/td&gt;
+&lt;td&gt;xxx&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1&gt;Preliminary data products&lt;/h1&gt;
+&lt;p&gt;Rough assemblies and QC are available on &lt;a href="https://osf.io/zjv86/"&gt;osf&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install osfclient
+export OSF_PASSWORD=password
+export OSF_USERNAME=email.address
+# list files in OSF
+osf -p zjv86 ls
+# copy files from OSF to local (or hpc - wherever you&amp;#39;re working)
+osf -p zjv86 clone Folivaceus_hybrid_genome_assembly 
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Fundulus nottii (freshwater antive, Clade 3) read stats:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;(ONT) [ljcohen@dev-intel14 F_nottii_PromethION]$ assembly-stats Fnottii_combined.fastq
-stats for Fnottii_combined.fastq
-sum = 33440866723, n = 5160367, ave = 6480.33, largest = 667947
-N50 = 12995, n = 700534
-N60 = 9878, n = 996409
-N70 = 7391, n = 1388376
-N80 = 5305, n = 1921978
-N90 = 3399, n = 2702711
-N100 = 5, n = 5160367
-N_count = 0
-Gaps = 0
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Adinia xenica (marine native, Clade 3) read stats:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;(ONT) [ljcohen@dev-intel14 A_xenica_PromethION]$ assembly-stats A_xenica_combined.fastq
-stats for A_xenica_combined.fastq
-sum = 38467326719, n = 15704522, ave = 2449.44, largest = 953774
-N50 = 5733, n = 1373426
-N60 = 3884, n = 2193610
-N70 = 2601, n = 3408866
-N80 = 1661, n = 5265095
-N90 = 952, n = 8322903
-N100 = 5, n = 15704522
-N_count = 0
-Gaps = 0
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;Preliminary data products&lt;/h2&gt;
-&lt;p&gt;Rough assemblies and QC:&lt;/p&gt;
-&lt;p&gt;https://osf.io/zjv86/&lt;/p&gt;
-&lt;h1&gt;Our plan from here:&lt;/h1&gt;
-&lt;h2&gt;1. Post data&lt;/h2&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;p&gt;Jain M et al. 2017. &lt;a href="https://www.biorxiv.org/content/early/2017/03/24/103812"&gt;A Fast Approximate Algorithm for Mapping Long Reads to Large Reference Databases.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Loose et al. 2016. &lt;a href="https://www.biorxiv.org/content/early/2016/02/03/038760"&gt;Real time selective sequencing using nanopore technology.&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The anticipated increasing speed of nanopore sequencing ('fast mode') and
+the scaling up of the MinION to 3,000 channels, and the PromethION with 144,000 channels, will challenge the implementation of 'Read Until' in real time and require algorithmic enhancements and computational power&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Jain C et al. 2017. &lt;a href="https://www.biorxiv.org/content/biorxiv/early/2017/04/20/128835.full.pdf"&gt;Nanopore sequencing and assembly of a human genome with ultra-long reads.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://f1000research.com/slides/7-367"&gt;Nice slides by Benjamin Schwessinger explainig wet lab comparisons for hmw DNA prep.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Tan et al. 2018. &lt;a href="https://academic.oup.com/gigascience/article/7/3/gix137/4803946"&gt;Finding Nemo: hybrid assembly with Oxford Nanopore and Illumina reads greatly improves the clownfish (&lt;em&gt;Amphiprion ocellaris&lt;/em&gt;) genome assembly.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Miller et al. 2018. &lt;a href="http://www.g3journal.org/content/early/2018/08/07/g3.118.200160"&gt;GENOME REPORT: Highly Contiguous Genome Assemblies of 15 Drosophila Species Generated Using Nanopore Sequencing.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Duc Cao et al. 2016. &lt;a href="https://www.biorxiv.org/content/early/2016/05/22/054783"&gt;Scaffolding and Completing Genome Assemblies in Real-time with Nanopore Sequencing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Tyler et al. 2018. &lt;a href="https://www.nature.com/articles/s41598-018-29334-5.pdf"&gt;Evaluation of Oxford Nanopore’s MinION Sequencing Device for Microbial Whole Genome Sequencing Applications&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;De Roeck et al. 2018. &lt;a href="https://www.biorxiv.org/content/early/2018/10/09/439026"&gt;Accurate characterization of expanded tandem repeat length and sequence through whole genome long-read sequencing on PromethION.&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;List of available tools for ONT data:&lt;/h1&gt;
+&lt;p&gt;Suggestions for additions to this list are welcome! (Especially if you have experience with them working well!)&lt;/p&gt;
+&lt;h3&gt;QC &amp;amp; Evaluation:&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.ebi.ac.uk/ena/submit/sequence-submission"&gt;European Nucleotide Archive (ENA)-EBI&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;SRA-NCBI - is ridiculous&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/rrwick/Porechop"&gt;Porechop&lt;/a&gt;: removing adapters&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://anaconda.org/bioconda/nanoplot"&gt;NanoPlot&lt;/a&gt;: quality report&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://sourmash.readthedocs.io/en/latest/tutorials.html"&gt;sourmash&lt;/a&gt;: identify contamination&lt;/li&gt;
+&lt;li&gt;&lt;a href="chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://gitlab.com/ezlab/busco/raw/master/BUSCO_v3_userguide.pdf"&gt;BUSCO&lt;/a&gt;: content evaluation&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/wdecoster/nanocomp"&gt;Nanocomp&lt;/a&gt;: compare multiple ONT runs&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/marbl/MashMap"&gt;mashmap&lt;/a&gt;: for visualization (replaces nucmer)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;2. Data note&lt;/h2&gt;
-&lt;p&gt;Either:
-- &lt;a href="https://f1000research.com/for-authors/article-guidelines/data-notes"&gt;F1000 research&lt;/a&gt;
-- &lt;a href="https://academic.oup.com/gigascience/pages/data_note"&gt;GigaScience&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;3. Do the science!&lt;/h2&gt;
-&lt;p&gt;Comparative genomics. Scan for regulatory regions of interest, e.g. &lt;a href="http://www.pnas.org/content/114/13/E2729"&gt;salinity-responsive enhancing elements (OSRE)&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;Questions&lt;/h1&gt;
+&lt;h3&gt;Assemblers:&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;What to do with millions of fast5 files? Our fastq are 70-100 GB, but the directory of raw fast5 signal files are &amp;gt;600 GB. &lt;a href="https://github.com/jts/nanopolish"&gt;Nanopolish&lt;/a&gt; uses the raw fast5 signal files to correct. How can these be shared efficiently?&lt;/li&gt;
-&lt;li&gt;Data are unfiltered, should we remove DNA CS lambda phage spike-in?&lt;/li&gt;
-&lt;li&gt;Where is the best place to share these data? Even though &lt;a href="http://help.zenodo.org/"&gt;zenodo has recently upgraded their file size limits to 50 GB&lt;/a&gt;, it is not a good place:&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/marbl/canu/releases"&gt;canu, long reads&lt;/a&gt;: &lt;a href="http://canu.readthedocs.io/en/latest/quick-start.html"&gt;quick start&lt;/a&gt;, &lt;a href="https://github.com/marbl/canu/blob/master/documentation/source/tutorial.rst"&gt;tutorial&lt;/a&gt; and &lt;a href="http://genome.cshlp.org/content/27/5/722.full"&gt;paper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/alekseyzimin/masurca"&gt;masurca, hybrid assembly&lt;/a&gt; (on &lt;a href="https://anaconda.org/bioconda/masurca"&gt;conda&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://cab.spbu.ru/files/release3.11.1/manual.html"&gt;SPAdes hybrid assembly&lt;/a&gt; (for bacteria)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/VicugnaPacos/ALPACA/"&gt;Alpaca, hybrid assembly&lt;/a&gt; and &lt;a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-017-3927-8"&gt;paper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.baseclear.com/genomics/bioinformatics/basetools/SSPACE-longread"&gt;SSPACE-LongRead scaffolding&lt;/a&gt;
+(no instructions, but a &lt;a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-15-211"&gt;paper&lt;/a&gt;!), here are &lt;a href="https://github.com/ljcohen/hybrid_genome_assembly/blob/master/SSPACE/README.md"&gt;my instructions for SSPACE-LongRead&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Dear Lisa,
+&lt;h3&gt;Polishing and consensus improvement:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/rrwick/Unicycler/blob/master/docs/unicycler-polish.md"&gt;Unicycler polish&lt;/a&gt; ([paper])(http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005595)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/nanoporetech/ont-assembly-polish"&gt;Nanopore polish, input ONT assembly with Illumina data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/jts/nanopolish"&gt;Nanopolish&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/jgurtowski/nanocorr"&gt;Nanocorr&lt;/a&gt;: error correction (See &lt;a href="http://schatzlab.cshl.edu/presentations/2015/2015.02.28.AGBT%20Nanocorr%20Assembly.pdf"&gt;presentation&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/isovic/racon"&gt;racon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/broadinstitute/pilon"&gt;pilon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mdcao/npScarf"&gt;npScarf&lt;/a&gt;, &lt;a href="https://www.nature.com/articles/ncomms14515"&gt;paper&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is the &lt;a href="https://github.com/danrdanny/Drosophila15GenomesProject/"&gt;pipeline&lt;/a&gt; from &lt;a href="http://www.g3journal.org/content/ggg/8/10/3131.full.pdf"&gt;Miller et al. 2018 15 Drosophila genomes paper&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;Example rough workflow steps:&lt;/h1&gt;
+&lt;p&gt;Install miniconda Python package manager:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh -b
+echo export PATH=&amp;quot;$HOME/miniconda3/bin:$PATH&amp;quot; &amp;gt;&amp;gt; ~/.bashrc
+source ~/.bashrc
+&lt;/pre&gt;&lt;/div&gt;
 
-We&amp;#39;re terribly sorry for the delay in response. Upload quota increase requests for bigger datasets have to be passed up the hierarchy, which usually takes time.
 
-I&amp;#39;m sorry to inform you that we, unfortunately, will not be able to host the dataset as it surpasses our max allowed quota increase too much. By default, we provide a one-time quota increase up to 100GB for a dataset that will be cited from a peer-reviewed article.
+&lt;p&gt;Create a conda environment for software installation:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;conda create -n ONT python=3
+source activate ONT
+conda config --add channels defaults
+conda config --add channels conda-forge
+conda config --add channels bioconda
+&lt;/pre&gt;&lt;/div&gt;
 
-Zenodo is a free-to-use service, an in order to keep it this way, we have to restrict the incoming data volume rate as very large datasets contribute significantly to the overall data volume in Zenodo. Unfortunately, at this point, we also cannot receive payment for quota increases, though we do hope that this will be possible in the future, at which point we will announce this possibility.
+
+&lt;p&gt;Install &lt;a href="https://github.com/lh3/minimap2"&gt;minimap2&lt;/a&gt; (minimap2-2.12), &lt;a href="https://github.com/lh3/miniasm"&gt;miniasm&lt;/a&gt; and other tools:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;conda install assembly-stats minimap2 miniasm bwa samtools busco pilon mashmap
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Assemble:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Overlap
+minimap2 -x ava-ont -t8 A_xenica_combined.fastq | gzip -1 &amp;gt; A_xenica_reads.paf.gz
+# Layout
+miniasm -f A_xenica_combined.fastq A_xenica_reads.paf.gz &amp;gt; reads.gfa
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Use pilon to improve consensus:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;bwa index &amp;lt;genome.fasta&amp;gt;
+bwa mem -t 4 genome.fasta R1.fq R2.fq | samtools view -Sb - | samtools sort - -o ecto_old_paired_qc.sorted.bam
+samtools index ecto_old_paired_qc.sorted.bam
+pilon --genome F_olivaceus.canu.ONT.unitigs.fasta --bam F_olivaceus_ONT_polished.sorted.bam --threads 8
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;BUSCO for evaluation:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;run_BUSCO.py -i F_nottii_miniasm_ONT.fa -l &lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;BUSCO_LINEAGE&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;/eukaryota_odb9 -o F_nottii_miniasm --mode genome -c 8
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Visualize, run &lt;a href="https://github.com/marbl/MashMap"&gt;mashmap&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mashmap \
+-r /mnt/home/ljcohen/reference/GCF_000826765.1_Fundulus_heteroclitus-3.0.2_genomic.fna \
+-q ../../masurca_Folivaceus/CA.mr.41.15.15.0.02/final.genome.scf.fasta
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Plot:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;generateDotPlot png large mashmap.out
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Edit the &lt;code&gt;out.gp&lt;/code&gt; file, because of reasons.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vi out.gp
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
-&lt;li&gt;Is sharing the data useful for anyone? &lt;/li&gt;
-&lt;li&gt;Any advice, questions, or comments?&lt;/li&gt;
-&lt;/ul&gt;</content><category term="sequencing"></category><category term="killifish"></category><category term="Oxford Nanopore Technologies"></category></entry><entry><title>Blogging with Pelican</title><link href="https://ljcohen.github.io/blog/blogging-with-pelican.html" rel="alternate"></link><published>2018-09-06T00:00:00-07:00</published><updated>2018-09-06T00:00:00-07:00</updated><author><name>Lisa K. Johnson</name></author><id>tag:ljcohen.github.io,2018-09-06:/blog/blogging-with-pelican.html</id><summary type="html">&lt;p&gt;In Lab Learning Opportunity (ILLO) by Data Intensive Biology (DIB) fellow grad student, Luiz Irber.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://github.com/luizirber"&gt;Luiz Irber&lt;/a&gt; was gratious in spending time to walk us through how to set up a blog with Pelican, host it on &lt;a href="https://pages.github.com/"&gt;github.io&lt;/a&gt;, and have &lt;a href="https://travis-ci.com/"&gt;travis-ci&lt;/a&gt; test and deploy.&lt;/p&gt;
+&lt;li&gt;Delete word 'tiny' in first line&lt;/li&gt;
+&lt;li&gt;Comment out 3 lines with word 'mouse' in them.
+Then run:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gnuplot out.gp
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;which will then produce the png file.&lt;/p&gt;</content><category term="sequencing"></category><category term="killifish"></category><category term="Oxford Nanopore Technologies"></category></entry><entry><title>Blogging with Pelican</title><link href="https://ljcohen.github.io/blog/blogging-with-pelican.html" rel="alternate"></link><published>2018-09-06T00:00:00-07:00</published><updated>2018-09-06T00:00:00-07:00</updated><author><name>Lisa K. Johnson</name></author><id>tag:ljcohen.github.io,2018-09-06:/blog/blogging-with-pelican.html</id><summary type="html">&lt;p&gt;In Lab Learning Opportunity (ILLO) by Data Intensive Biology (DIB) fellow grad student, Luiz Irber.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://github.com/luizirber"&gt;Luiz Irber&lt;/a&gt; was gratious in spending time to walk us through how to set up a blog with Pelican, host it on &lt;a href="https://pages.github.com/"&gt;github.io&lt;/a&gt;, and have &lt;a href="https://travis-ci.com/"&gt;travis-ci&lt;/a&gt; test and deploy.&lt;/p&gt;
 &lt;p&gt;Video: &lt;/p&gt;
 &lt;p&gt;&lt;span class="videobox"&gt;
                 &lt;iframe width="640" height="390"
