@@ -77,7 +77,7 @@ SOCIAL = (('twitter', 'https://twitter.com/monsterbashseq'),
 
 DISQUS_SITENAME = "https-ljcohen-github-io-blog"
 
-#GOOGLE_ANALYTICS = ""
+GOOGLE_ANALYTICS = "UA-127427728-1"
 
 
 ### Theme specific settings
