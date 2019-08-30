@@ -4,7 +4,7 @@ import markdown
 
 AUTHOR = u'Lisa Johnson'
 SITENAME = u'monsteRbashSeq'
-SITEURL = 'https://ljcohen.github.io/blog'
+SITEURL = 'https://johnsolk.github.io/blog'
 TIMEZONE = 'America/Los_Angeles'
 DEFAULT_LANG = u'en'
 
@@ -29,8 +29,8 @@ DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
 
 MENUITEMS = (
-    ('Main','https://ljcohen.github.io/'),
-    ('About','https://ljcohen.github.io/about.html'),
+    ('Main','https://johnsolk.github.io/'),
+    ('About','https://johnsolk.github.io/about.html'),
     ('Old Blog','https://monsterbashseq.wordpress.com/')
     )
 
