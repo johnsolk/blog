@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>New vs. Old versions of Trinity - monsteRbashSeq</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://johnsolk.github.io/blog/new-vs-old-versions-of-trinity.html">
+
+        <meta name="author" content="Lisa K. Johnson" />
+        <meta name="keywords" content="comparative,transcriptome,re-assemblies" />
+        <meta name="description" content="Does the newer version of Trinity (v2.8.4) make better transcriptome assemblies (for killifish) than the old (v2.2.0)?" />
+
+        <meta property="og:site_name" content="monsteRbashSeq" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="New vs. Old versions of Trinity"/>
+        <meta property="og:url" content="https://johnsolk.github.io/blog/new-vs-old-versions-of-trinity.html"/>
+        <meta property="og:description" content="Does the newer version of Trinity (v2.8.4) make better transcriptome assemblies (for killifish) than the old (v2.2.0)?"/>
+        <meta property="article:published_time" content="2018-12-08" />
+            <meta property="article:section" content="transcriptome" />
+            <meta property="article:tag" content="comparative" />
+            <meta property="article:tag" content="transcriptome" />
+            <meta property="article:tag" content="re-assemblies" />
+            <meta property="article:author" content="Lisa K. Johnson" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://johnsolk.github.io/blog/theme/css/bootstrap.simplex.min.css" type="text/css"/>
+    <link href="https://johnsolk.github.io/blog/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://johnsolk.github.io/blog/theme/css/pygments/native.css" rel="stylesheet">
+    <link href="https://johnsolk.github.io/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://johnsolk.github.io/blog/theme/css/style.css" type="text/css"/>
+        <link href="https://johnsolk.github.io/blog/theme/css/custom.css" rel="stylesheet">
+
+        <link href="https://johnsolk.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="monsteRbashSeq ATOM Feed"/>
+
+
+
+        <link href="https://johnsolk.github.io/blog/feeds/transcriptome.atom.xml" type="application/atom+xml" rel="alternate"
+              title="monsteRbashSeq transcriptome ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://johnsolk.github.io/blog/" class="navbar-brand">
+monsteRbashSeq            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="https://johnsolk.github.io/">Main</a></li>
+                    <li><a href="https://johnsolk.github.io/about.html">About</a></li>
+                    <li><a href="https://monsterbashseq.wordpress.com/">Old Blog</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><span>
+                <form class="navbar-search" action="/blog/search.html">
+                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("https://johnsolk.github.io/blog//img/sanomacoast.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+		<div class="copy">
+			<h1>monsteRbashSeq</h1>
+				<p class="intro">Lisa K. Johnson</p>
+		</div>
+	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://johnsolk.github.io/blog/new-vs-old-versions-of-trinity.html"
+                       rel="bookmark"
+                       title="Permalink to New vs. Old versions of Trinity">
+                        New vs. Old versions of Trinity
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2018-12-08T00:00:00-08:00"> Sat 08 December 2018</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://johnsolk.github.io/blog/tag/comparative.html">comparative</a>
+        /
+	<a href="https://johnsolk.github.io/blog/tag/transcriptome.html">transcriptome</a>
+        /
+	<a href="https://johnsolk.github.io/blog/tag/re-assemblies.html">re-assemblies</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <h4>Does the newer version of Trinity (v2.8.4) make better transcriptome assemblies (for killifish) than the old (v2.2.0)?</h4>
+<p>tl;dr Yes.</p>
+<h1>XSEDE Computing Resources</h1>
+<p>Since I'm overdrawn on my new XSEDE allocation on the <a href="https://www.psc.edu/bridges/user-guide/running-jobs">PSC Bridges LM (large memory) partition</a> after receiving it on 11/26/2018, a report is required to apply for more. </p>
+<p>In case you couldn't tell, I'm a really big fan of the PSC Bridges hpc! I've used 1862 SU out of the 1000 SU they allocated to me on the LM partition and 11484 out of 13000 SU on the RM (regular memory).  </p>
+<p>In case it might benefit others, here is roughly the progress report that I will submit with my request.</p>
+<h1>Re-assembling 17 <em>Fundulus</em> killifish transcriptomes</h1>
+<p>Since receiving my allocation to the PSC Bridges LM partition on 11/26/2018, I have re-assembled 17 transcriptomes from 16 species of <em>Fundulus</em> killifish using the <a href="(https://github.com/trinityrnaseq/trinityrnaseq)">Trinity <em>de novo</em> transcriptome assembler</a> version 2.8.4. I originally <a href="https://figshare.com/articles/De_novo_assemblies_annotations_and_gene_expression_profiling_of_gill_epithelium_from_16_species_of_Fundulus_killifish_in_response_to_salinity_change_/6827201">assembled transcriptomes from the 16 Fundulus species</a> using Trinity version 2.2.0.</p>
+<p>There is <a href="https://github.com/johnsolk/MMETSP/blob/master/notebooks/Supplemental%20Notebook%202%20-%20Trinity_version_comparisons.ipynb">some evidence</a> that assemblies can be improved by using the updated versions of Trinity. I wanted to re-assemble these killifish transcriptomes to see if the assemblies could be improved.</p>
+<p>These transcriptomes will be used for the purpose of studying the <a href="https://www.ncbi.nlm.nih.gov/pubmed/20100216">history of adaptation to different salinities</a>. Some <em>Fundulus</em> species can tolerate a range of salinities (euryhaline) by switching osmoregulatory mechanisms while others require a more narrow salinity range (stenohaline) in either fresh or marine waters. This large set of RNAseq data from multiple species is going to help us better characterize the divergence of these molecular osmoregulatory mechanisms between euryhaline and stenohaline freshwater species. To that end, I am attempting to develop a <a href="https://github.com/johnsolk/RNAseq_15killifish">pipeline for orthologous gene expression profiling analysis across species</a>.</p>
+<p>This profiling analysis will enable us to compare expression patterns of salinity-responsive genes, e.g. <a href="https://www.ebi.ac.uk/interpro/entry/IPR023275">aquaporin 3</a> (shown below) across clades of species.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/115b2d8eaf1485b6e8e248f36912d619de089b8a/aqu3.png"></p>
+<p>The nature of the fragmented assembly output from Trinity makes it especially challenging in our attempt to develop this pipeline. We want to make sure that the reference transcriptomes are the best that they can be so that expression profiles are accurately reflected across species.</p>
+<h2>Are there differences between the v2.2.0 and v2.8.4 assemblies?</h2>
+<p>Yes. Are they better? It seems so. But, there are a few items to investigate further.</p>
+<p>Below are comparisons of various evaluation metrics between the 17 old v2.2.0 (blue) and new v2.8.4 (green) Trinity assemblies. On the left are slope graphs comparing the metric between both assemblies and on the right are split violin plots showing the distributions of all the assemblies.</p>
+<p>Shout out to <a href="https://www.whoi.edu/profile/halexander">Dr. Harriet Alexander</a> for helping with the code to visualize these types of comparisons for <a href="http://dx.doi.org/10.5524/100522">our paper comparing re-assemblies for the MMETSP - coming out soon in GigaScience</a>!</p>
+<p>Code for making these plots is <a href="https://github.com/WhiteheadLab/RNAseq_15killifish/blob/master/notebooks/evaluation_figures.ipynb">here</a>.</p>
+<h3>There are fewer contigs.</h3>
+<p>However, the large numbers &gt;100,000 contigs indicates that these assemblies are still very fragmented. <a href="https://johnsolk.github.io/blog/explorations-with-orthofinder.html">Orthogroup/ortholog prediction</a> is required for downstream analysis. </p>
+<p><img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/master/evaluation/contigs.png"></p>
+<h3>The BUSCO scores are higher.</h3>
+<p>What makes these assemblies especially appealing is their higher scores with the <a href="https://busco.ezlab.org/">Benchmarking Universal Single-Copy Ortholog (BUSCO)</a> assessment tool. One species, <em>Lucania goodei</em> had 100%! The distribution of scores is tighter for the new assemblies compared to the old.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/master/evaluation/busco_euk.png"> <img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/master/evaluation/busco_metazoa.png"></p>
+<h3>Lower % ORF?</h3>
+<p>For some reason, mean % ORF decreases. This was not expected.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/master/evaluation/orf_perc.png"></p>
+<h3>Number of contigs with ORF</h3>
+<p>This is roughly the same and a very low number.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/master/evaluation/n_orf.png"></p>
+<h3>Similar unique k-mers</h3>
+<p>The number of unique k-mers (k=25) does not really change. This means that the content is similar.
+<img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/master/evaluation/kmers.png">
+<img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/master/evaluation/kmers_scatter.png"></p>
+<h3>Conditional Reciprocal Best Blast</h3>
+<p>Using <a href="http://hibberdlab.com/transrate/metrics.html">transrate <code>--assembly</code> reference mode</a> to examine the comparative metrics with <a href="https://github.com/cboursnell/crb-blast">Conditional Reciprocal Best BLAST (CRBB)</a> between assemblies consistently did not work, for some reason. (Whereas it did work for comparison with the <a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/Fundulus_heteroclitus/RNA/">NCBI version of the <em>Fundulus heteroclitus</em> sister species</a>) This requires further investigation.</p>
+<p>Version:</p>
+<div class="highlight"><pre><span></span>Transrate v1.0.3
+by Richard Smith-Unna, Chris Boursnell, Rob Patro,
+   Julian Hibberd, and Steve Kelly
+</pre></div>
+
+
+<p>Command:</p>
+<div class="highlight"><pre><span></span>transrate --assembly=/pylon5/bi5fpmp/ljcohen/kfish_trinity/F_parvapinis.trinity_out.Trinity.fasta --reference=/pylon5/bi5fpmp/ljcohen/kfish_assemblies_old/F_parvapinis.trinity_out.Trinity.fasta --threads=8 --output=/pylon5/bi5fpmp/ljcohen/kfish_transrate/F_parvapinis_trinity_v_old/
+</pre></div>
+
+
+<p>Output:</p>
+<div class="highlight"><pre><span></span>[ INFO] 2018-12-06 22:23:47 : Loading assembly: /pylon5/bi5fpmp/ljcohen/kfish_trinity/F_parvapinis.trinity_out.Trinity.fasta
+[ INFO] 2018-12-06 22:24:45 : Analysing assembly: /pylon5/bi5fpmp/ljcohen/kfish_trinity/F_parvapinis.trinity_out.Trinity.fasta
+[ INFO] 2018-12-06 22:24:45 : Results will be saved in /pylon5/bi5fpmp/ljcohen/kfish_transrate/F_parvapinis_trinity_v_old/F_parvapinis.trinity_out.Trinity
+[ INFO] 2018-12-06 22:24:45 : Calculating contig metrics...
+[ INFO] 2018-12-06 22:25:37 : Contig metrics:
+[ INFO] 2018-12-06 22:25:37 : -----------------------------------
+[ INFO] 2018-12-06 22:25:37 : n seqs                       298549
+[ INFO] 2018-12-06 22:25:37 : smallest                        183
+[ INFO] 2018-12-06 22:25:37 : largest                       27771
+[ INFO] 2018-12-06 22:25:37 : n bases                   310786992
+[ INFO] 2018-12-06 22:25:37 : mean len                    1040.98
+[ INFO] 2018-12-06 22:25:37 : n under 200                      15
+[ INFO] 2018-12-06 22:25:37 : n over 1k                     77121
+[ INFO] 2018-12-06 22:25:37 : n over 10k                      802
+[ INFO] 2018-12-06 22:25:37 : n with orf                    62453
+[ INFO] 2018-12-06 22:25:37 : mean orf percent              43.26
+[ INFO] 2018-12-06 22:25:37 : n90                             340
+[ INFO] 2018-12-06 22:25:37 : n70                            1141
+[ INFO] 2018-12-06 22:25:37 : n50                            2512
+[ INFO] 2018-12-06 22:25:37 : n30                            4111
+[ INFO] 2018-12-06 22:25:37 : n10                            6966
+[ INFO] 2018-12-06 22:25:37 : gc                             0.46
+[ INFO] 2018-12-06 22:25:37 : bases n                           0
+[ INFO] 2018-12-06 22:25:37 : proportion n                    0.0
+[ INFO] 2018-12-06 22:25:37 : Contig metrics done in 52 seconds
+[ INFO] 2018-12-06 22:25:37 : No reads provided, skipping read diagnostics
+[ INFO] 2018-12-06 22:25:37 : Calculating comparative metrics...
+[ INFO] 2018-12-06 23:23:24 : Comparative metrics:
+[ INFO] 2018-12-06 23:23:24 : -----------------------------------
+[ INFO] 2018-12-06 23:23:24 : CRBB hits                         0
+[ INFO] 2018-12-06 23:23:24 : n contigs with CRBB               0
+[ INFO] 2018-12-06 23:23:24 : p contigs with CRBB             0.0
+[ INFO] 2018-12-06 23:23:24 : rbh per reference               0.0
+[ INFO] 2018-12-06 23:23:24 : n refs with CRBB                  0
+[ INFO] 2018-12-06 23:23:24 : p refs with CRBB                0.0
+[ INFO] 2018-12-06 23:23:24 : cov25                             0
+[ INFO] 2018-12-06 23:23:24 : p cov25                         0.0
+[ INFO] 2018-12-06 23:23:24 : cov50                             0
+[ INFO] 2018-12-06 23:23:24 : p cov50                         0.0
+[ INFO] 2018-12-06 23:23:24 : cov75                             0
+[ INFO] 2018-12-06 23:23:24 : p cov75                         0.0
+[ INFO] 2018-12-06 23:23:24 : cov85                             0
+[ INFO] 2018-12-06 23:23:24 : p cov85                         0.0
+[ INFO] 2018-12-06 23:23:24 : cov95                             0
+[ INFO] 2018-12-06 23:23:24 : p cov95                         0.0
+[ INFO] 2018-12-06 23:23:24 : reference coverage              0.0
+[ INFO] 2018-12-06 23:23:24 : Comparative metrics done in 3467 seconds
+[ INFO] 2018-12-06 23:23:24 : -----------------------------------
+[ INFO] 2018-12-06 23:23:24 : Writing contig metrics for each contig to /pylon5/bi5fpmp/ljcohen/kfish_transrate/F_parvapinis_trinity_v_old/F_parvapinis.trinity_out.Trinity/contigs.csv
+[ INFO] 2018-12-06 23:23:43 : Writing analysis results to assemblies.csv
+</pre></div>
+
+
+<h3>Conclusion</h3>
+<p>Trinity v2.8.4 is better than v2.2.0. While v2.8.4 still produces very fragmented assemblies, the higher BUSCO content is exciting. </p>
+<h3>There are questions requiring further investigation</h3>
+<ul>
+<li>Why, if the unique k-mer content is similiar, would the BUSCO scores improve between versions?</li>
+<li>ORF content (number of contigs with ORF and mean ORF %) are parodoxical. Why would the ORF content decrease in the newer assemblies?</li>
+<li>Why wouldn't transrate <code>---reference</code> work to get CRBB metrics between these assemblies?</li>
+</ul>
+<h1>What has improved in Trinity v2.8.4?</h1>
+<p>According to the <a href="https://github.com/trinityrnaseq/trinityrnaseq/releases">release notes</a> from Trinity, major improvements have included using <a href="https://salmon.readthedocs.io/en/latest/">salmon expression quantification</a> to help with filtering out assembly artifacts and overhauling the "supertranscript module" to deal with high polymorphism situations. Since killifish are highly heterozygous, we are likely benefitting from these improvements.</p>
+<h1>Future directions</h1>
+<p>In addition to annotating these transcritomes and continuing to investigate the questions above, I would also like to try Matt MacManes' <a href="https://oyster-river-protocol.readthedocs.io/en/latest/">Oyster River Protocol</a> and accompanying <a href="https://github.com/macmanes-lab/Oyster_River_Protocol/blob/master/orthofuser.mk">'orthofuser' script</a> to combine contigs from different assemblers.</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'https-ljcohen-github-io-blog'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'new-vs-old-versions-of-trinity';
+                var disqus_url = 'https://johnsolk.github.io/blog/new-vs-old-versions-of-trinity.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://twitter.com/monsterbashseq"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/johnsolk"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+    <li class="list-group-item"><a href="https://www.flickr.com/155690017@N06/"><i class="fa fa-flickr fa-lg"></i> flickr</a></li>
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/johnsolk/"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+    <li class="list-group-item"><a href="mailto:ljcohen@ucdavis.edu"><i class="fa fa-envelope fa-lg"></i> envelope</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/17-sets-how-to-display-all-intersections-with-upsetr-plot.html">17 sets, how to display all intersections with UpSetR plot?</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/xsede-login-with-bridges.html">XSEDE login with bridges</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/annotating-multiple-de-novo-transcriptome-assemblies.html">Annotating multiple de novo transcriptome assemblies</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/running-clust-on-jetstream.html">Running clust on Jetstream</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/xrac-research-proposal.html">XRAC research proposal</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="http://ivory.idyll.org/lab/" target="_blank">Titus Brown's DIB Lab</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://whiteheadresearch.wordpress.com/" target="_blank">Andrew Whitehead's Lab, Environmental Genomics</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://dib-training.readthedocs.io/en/pub/" target="_blank">UCD DIB Training</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2019 Lisa Johnson
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://johnsolk.github.io/blog/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://johnsolk.github.io/blog/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://johnsolk.github.io/blog/theme/js/respond.min.js"></script>
+
+    <script src="https://johnsolk.github.io/blog/theme/js/custom.js"></script>
+
+    <script src="https://johnsolk.github.io/blog/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'https-ljcohen-github-io-blog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-127427728-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+</body>
+</html>

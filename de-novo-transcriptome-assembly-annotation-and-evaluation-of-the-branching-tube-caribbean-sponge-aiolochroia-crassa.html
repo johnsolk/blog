@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>De novo transcriptome assembly, annotation and evaluation of the branching tube Caribbean sponge, Aiolochroia crassa - monsteRbashSeq</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://johnsolk.github.io/blog/de-novo-transcriptome-assembly-annotation-and-evaluation-of-the-branching-tube-caribbean-sponge-aiolochroia-crassa.html">
+
+        <meta name="author" content="Lisa K. Johnson, Sara Edge" />
+        <meta name="keywords" content="sequencing,sponge,RNAseq,transcriptomes" />
+        <meta name="description" content="Sharing and seeking advice on a de novo transcriptome assembly and raw RNAseq data" />
+
+        <meta property="og:site_name" content="monsteRbashSeq" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="De novo transcriptome assembly, annotation and evaluation of the branching tube Caribbean sponge, Aiolochroia crassa"/>
+        <meta property="og:url" content="https://johnsolk.github.io/blog/de-novo-transcriptome-assembly-annotation-and-evaluation-of-the-branching-tube-caribbean-sponge-aiolochroia-crassa.html"/>
+        <meta property="og:description" content="Sharing and seeking advice on a de novo transcriptome assembly and raw RNAseq data"/>
+        <meta property="article:published_time" content="2018-10-20" />
+            <meta property="article:section" content="transcriptomes" />
+            <meta property="article:tag" content="sequencing" />
+            <meta property="article:tag" content="sponge" />
+            <meta property="article:tag" content="RNAseq" />
+            <meta property="article:tag" content="transcriptomes" />
+            <meta property="article:author" content="Lisa K. Johnson, Sara Edge" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://johnsolk.github.io/blog/theme/css/bootstrap.simplex.min.css" type="text/css"/>
+    <link href="https://johnsolk.github.io/blog/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://johnsolk.github.io/blog/theme/css/pygments/native.css" rel="stylesheet">
+    <link href="https://johnsolk.github.io/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://johnsolk.github.io/blog/theme/css/style.css" type="text/css"/>
+        <link href="https://johnsolk.github.io/blog/theme/css/custom.css" rel="stylesheet">
+
+        <link href="https://johnsolk.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="monsteRbashSeq ATOM Feed"/>
+
+
+
+        <link href="https://johnsolk.github.io/blog/feeds/transcriptomes.atom.xml" type="application/atom+xml" rel="alternate"
+              title="monsteRbashSeq transcriptomes ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://johnsolk.github.io/blog/" class="navbar-brand">
+monsteRbashSeq            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="https://johnsolk.github.io/">Main</a></li>
+                    <li><a href="https://johnsolk.github.io/about.html">About</a></li>
+                    <li><a href="https://monsterbashseq.wordpress.com/">Old Blog</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><span>
+                <form class="navbar-search" action="/blog/search.html">
+                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("https://johnsolk.github.io/blog//img/sanomacoast.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+		<div class="copy">
+			<h1>monsteRbashSeq</h1>
+				<p class="intro">Lisa K. Johnson</p>
+		</div>
+	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://johnsolk.github.io/blog/de-novo-transcriptome-assembly-annotation-and-evaluation-of-the-branching-tube-caribbean-sponge-aiolochroia-crassa.html"
+                       rel="bookmark"
+                       title="Permalink to De novo transcriptome assembly, annotation and evaluation of the branching tube Caribbean sponge, Aiolochroia crassa">
+                        De novo transcriptome assembly, annotation and evaluation of the branching tube Caribbean sponge, Aiolochroia crassa
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2018-10-20T00:00:00-07:00"> Sat 20 October 2018</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://johnsolk.github.io/blog/tag/sequencing.html">sequencing</a>
+        /
+	<a href="https://johnsolk.github.io/blog/tag/sponge.html">sponge</a>
+        /
+	<a href="https://johnsolk.github.io/blog/tag/rnaseq.html">RNAseq</a>
+        /
+	<a href="https://johnsolk.github.io/blog/tag/transcriptomes.html">transcriptomes</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Authors: Lisa K. Johnson and Sara Edge</p>
+<p>This blog post was inspired by attending the <a href="https://gigaiii.weebly.com/">Global Invertebrate Genomics Alliance (GIGA) conference</a> in Curaçao (Oct. 19-21, 2018). There is a <a href="https://academic.oup.com/jhered/article/105/1/1/858593">paucity of invertebrate sequencing information available</a>, especially for Poriferans. Invertebrate genomes and transcriptomes allow us to better understand global biodiversity towards conservation efforts.</p>
+<p>This is raw RNA-seq data and an assembled transcriptome that has been sitting on servers since 2013. We want to release it so that perhaps this can help anyone who is interested.</p>
+<p>Writing manuscripts for publication is time consuming. Submitting raw reads and transcriptomes to ENA or NCBI, SRA and TSA is also time consuming and confusing. Since this is an old project that is not related to my dissertation research, instead of spending valuable research time on these efforts, we make these data and information available.</p>
+<p>Link to the data: <a href="https://doi.org/10.17605/OSF.IO/B972E">https://doi.org/10.17605/OSF.IO/B972E</a></p>
+<p>Citation:</p>
+<div class="highlight"><pre><span></span>Johnson, L., &amp; Edge, S. (2018, August 13). De novo transcriptome of the branching tube Caribbean sponge, Aiolochroia crassa. https://doi.org/10.17605/OSF.IO/B972E
+</pre></div>
+
+
+<p>Eventually, we would like to write and submit. GIGA provides a <a href="http://giga-cos.org/">central resource</a> for submitting these data as well. I should probably release these data there as well. In the meantime, here you go! If you are interested, please get in touch. Advice and comments welcome below for the time when we do work towards a publishable manuscript. In particular, what additional information, analysis and discussion would be needed with these data that would be required for an original and useful publication in this field? </p>
+<h2>Special thanks</h2>
+<p>This work was done at <a href="http://www.fau.edu/hboi/">FAU-HBOI</a> in 2012 when I worked for the <a href="http://www.fau.edu/hboi/meh/crrobertson.php">Robertson Coral Reef Research Program</a>. <a href="https://www.ratemyteachers.com/ameer-ahmed-tohamy/7315033-t">Ameer Tohamy</a> and Thomas Camacho provided assistance while conducting the exposure experiment in 2012. <a href="https://cnso.nova.edu/lopez/microlab/About%20Dr.Lopez.html">Dr. Joe Lopez</a> provided logistics and assistance in arranging for the NSEU diving boat for sample collections. <a href="http://www.fau.edu/hboi/mbbr/spongebio.php">Dr. Shirley Pomponi</a> for sample identification and consultation with the experiment. <a href="http://vosslab.weebly.com/dr-joshua-voss.html">Dr. Joshua Voss</a> provided support while finishing out the project in 2013. Funding for this project and sequencing was provided to <a href="https://scholar.google.com/citations?user=E-Ktuu8AAAAJ&amp;hl=en">Dr. Sara Edge</a> through the FAU-HBOI Foundation <a href="https://www.flhsmv.gov/dmv/specialtytags/environmental/Save_Our_Seas.html">'Save Our Seas' specialty license plate</a> funds awarded in June 2011. </p>
+<p>Thank you to the Moore Foundation Data-Driven-Discovery award to my advisor, <a href="http://ivory.idyll.org/lab/">Dr. C. Titus Brown</a> at UC Davis, for funding my time while I am currently working on my PhD, towards projects related to open science, reproducibility and data sharing. Thank you to Titus and the DIB lab for advice, support and development of the <a href="https://khmer-protocols.readthedocs.io/en/latest/mrnaseq/index.html">Eel Pond Protocol</a>, <a href="https://eel-pond.readthedocs.io/en/latest/">old version</a> and <a href="https://github.com/dib-lab/eelpond">new (with snakemake, by Dr. Tessa Pierce</a>.</p>
+<h1>Summary</h1>
+<ul>
+<li><a href="https://doi.org/10.17605/OSF.IO/B972E"><em>Aiolochroia crassa</em></a> is a common sponge species found on FL reefs</li>
+<li>Samples from six colonies of <em>Aiolochroia crassa</em> collected off Fort Lauderdale, FL in 2012</li>
+<li>Samples were fragmented and exposed (in a balanced experimental design) to an acute 40 hrs challenge in 100 ppm crude WAF (Water accomodated fraction) oil and 10 ppm dispersant (Corexit 9500A, Nalco)</li>
+<li>Sponge cDNA samples were hybridized to a cDNA coral microarray (n=72)</li>
+<li>RNAseq data from pooled samples (n=18) in each treatment group (4 groups)</li>
+<li><em>De novo</em> transcriptome assembly and annotation was performed using the <a href="https://eel-pond.readthedocs.io/en/latest/">eel pond protocol</a>, <a href="https://osf.io/b972e/">files available</a></li>
+</ul>
+<p>Download all files via commandline:</p>
+<div class="highlight"><pre><span></span>pip install osfclient
+osf -p b972e clone A_crassa
+</pre></div>
+
+
+<ul>
+<li>This sequencing effort adds to the <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=261677">sparse sequencing information available from this species</a></li>
+</ul>
+<p><img alt="" src="https://i.imgur.com/rOZjgng.png"></p>
+<h1>Introduction</h1>
+<p>Porifera are among the major phyla inhabiting marine hard substrate benthos, in terms of number of species and biomass (Carballo et al. 1996). As sessile filter-feeders, sponges are sensitive to stressors and thus are important indicator species of environmental perturbations (Carballo et al., 1996; Bachinski et al., 1997).</p>
+<p>Gene expression profiling has been used as a method for identifying suites of genes in functional pathways expressed under certain controlled conditions in reef-building corals (Edge et al. 2005) and verified as a tool to detect similar sub-lethal responses from ex situ environmental coral samples (Edge et al. 2012, Edge et al. 2008). Applying similar gene expression profiling methods to sponges under controlled conditions, such as exposure to oil and dispersant, could assist resource managers in monitoring the effects of these stressors on reef sponges. </p>
+<p>The experiment aimed to assess the responses of a single sponge species following exposure to oil with a similar composition to the MC252 Macondo wellhead after the Deepwater Horizon event and to the dispersant used during clean-up efforts.</p>
+<p>A reference <em>de novo</em> transcriptome was assembled and annotated for <em>Aiolochroia crassa</em>. This sequence information is the first from this species (aside from <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=261677">25 NCBI nucleotide records</a>). </p>
+<p><strong>TO DO: check to see if these genes are repsented in the transcriptome</strong>.</p>
+<h1>Methods</h1>
+<p>Fragments from six <em>Aiolocroia crassa</em> sponge colonies were collected from a Ft. Lauderdale reef and transported to the aquaculture facility at Harbor Branch Oceanographic Institute at Florida Atlantic University within two hours of collection (29 May 2012). Sponges were maintained in aerated raceways with filtered and UV-sterilized seawater (32 ppt, 28◦C) pumped from the Indian River Lagoon. Each sponge colony was cut into twelve pieces (4-6 cm2) resulting in 72 fragments. Colored plastic zip ties were used to identify sponge colonies and secure fragments to twelve 20 cm by 45 cm PVC grids (Figure 1). </p>
+<table>
+<thead>
+<tr>
+<th>Treatment</th>
+<th>Description</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OD</td>
+<td>oil, dispersant</td>
+<td>18</td>
+</tr>
+<tr>
+<td>OC</td>
+<td>oil, no dispersant</td>
+<td>18</td>
+</tr>
+<tr>
+<td>UD</td>
+<td>no oil, dispersant</td>
+<td>18</td>
+</tr>
+<tr>
+<td>UC</td>
+<td>no oil, no dispersant</td>
+<td>18</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="https://i.imgur.com/uU2HFFY.png">
+Figure 1. Sponge fragments from each parent colony attached to PVC grid and assigned a unique colored cable tie for identification. One grid per tank x 12 tanks, four treatment groups x 3 replicates per treatment.</p>
+<h3>Experimental Exposures</h3>
+<p>After 24 hours of acclimation, fragmented sponges were placed into twelve 5 gallon aquaria filled with 15 L of UV-treated seawater. Aquaria were randomly distributed between two aquaculture raceways. There were four treatment groups, each replicated three times, in a randomized block experimental design.</p>
+<p>Treatments consisted of exposure to 100 ppm oil and 10 ppm dispersant (Corexit 9500A, Nalco) (OD), oil and no dispersant (OC), dispersant and no oil (UD) and a control (UC). Oil used for the experiment was a fresh oil/source sample collected by Cardno ENTRIX for British Petroleum from near the MS252 Macondo wellhead (Coordinates: 28.866014, -88.056264, Sample ID: SO-20110212-HMPA4-003) on 12 February 2011. A 3,000 ppm stock solution of oil was made by mixing with sea water and stirring continuously on low heat for 18 hrs. Oil concentration was based on previously-published experiments (Epstein et al. 2000, Dodge et al 1984, Cook and Knap 1983) and dispersant concentration was based on the Environmental Protection Agency’s recommended application range (dispersant to oil ratio of 1:50 to 1:10, EPA).</p>
+<p>Environmental conditions were consistent throughout the exposures. Salinity was adjusted to 32 ppt in each tank using Instant Ocean® while temperature was maintained at approximately 28◦C. During the exposure period, tank chemistry, including dissolved oxygen, pH, salinity, and temperature, were recorded three times daily. Additionally, 80% of the water in all aquaria was replaced and the same concentrations of oil and dispersant, or seawater only, were added 15 hours after the initial exposure. Sponges in each tank were photographed twice daily and monitored for visible signs of stress. After 40 hours, all samples were collected, preserved in TRIzol nucleic acid preservative (Invitrogen, Inc.) and frozen at -80◦C for molecular analyses.</p>
+<h3>Microarray</h3>
+<p>A custom stress-focused microarray with 1,695 scleractinian coral genes divided into 51 functional groups was used to assess gene expression profiles (Agilent Technologies). Gene functions range from normal cellular responses, such as metabolism, signaling and protein binding, to a suite of responsive genes related to biotransformation, apoptosis, DNA damage and repair, xenobiotics, drug metabolism, oxidative stress and antioxidant defense. Probes on the microarray consist of 60 base pair oligonucleotides that are representative of coral gene exon open reading frames (ORF) coding for a specific protein. The coral microarray can be used with sponge samples to test the similarity between these metazoan species.</p>
+<h3>Sample processing for molecular analyses</h3>
+<p>Total RNA was extracted from each sponge sample, reverse transcribed then copy RNA was synthesized and labeled with Cy3 dye following the manufacturer’s protocol (Agilent Technologies, Catalogue# 5190-2305). All Cy3-labeled cRNA samples were hybridized to individual microarrays using methods described in the manufacturer’s protocol (Agilent Technologies). Microarray chips were hybridized at 65ºC for 17 hrs then washed using solutions from Agilent. Chips were scanned and imaged at 535 nm using a high-resolution fluorescent GenePix® 4200A microarray scanner (Axon, Molecular Devices, California, USA).  </p>
+<h3>RNA-Seq</h3>
+<p>Total RNA samples from each colony were combined by treatment group to yield 10 µg at a concentration of &gt;200 ng/µL. The quality and quantity of the pooled samples were verified on a Nanodrop 1000 and Agilent Bioanalyzer 2100. RNA samples were shipped on dry ice to BaseClear (Netherlands) in November 2012 for library preparation and sequencing on an Illumina HiSeq 2000.</p>
+<h3>Microarray Data analyses</h3>
+<p>Raw intensity data were extracted from scanned images using GenePixPro 6.0 software (Molecular Devices) and imported into the R statistical computing environment. LIMMA (Linear Models for Microarray Data) was used for microarray analysis and data  quality was assessed using arrayQualityMetrics. </p>
+<h1>Computational resources</h1>
+<ul>
+<li>NSF-XSEDE Jetstream cloud computing resources were used (allocation TG-BIO160028 to LKJ)</li>
+<li>s1.xxlarge (CPU: 44, Mem: 120 GB, Disk: 480 GB, Disk: 480 GB root)</li>
+<li>Ubuntu 16.04 Devel and Docker v1.13</li>
+<li>Trinity v2.6.6 Patch Release</li>
+<li><a href="http://eel-pond.readthedocs.io/en/latest/">Eel Pond protocol</a></li>
+</ul>
+<h1>Results</h1>
+<h3>Data files storage:</h3>
+<ul>
+<li>OSF respository: https://osf.io/b972e/</li>
+</ul>
+<div class="highlight"><pre><span></span>DOI 10.17605/OSF.IO/B972E
+</pre></div>
+
+
+<h3>Raw reads, trimming</h3>
+<ul>
+<li>TruSeq Poly-A library</li>
+<li>PEx50</li>
+</ul>
+<p><img alt="" src="https://i.imgur.com/AFq5yvv.png"></p>
+<h3>Diginorm</h3>
+<div class="highlight"><pre><span></span>read 231786047 reads, 11815700653 bp
+wrote 67649858 reads, 3433851077 bp
+looked at 63961781 reads twice (1.28 passes)
+removed 164136189 reads and trimmed 3055905 reads (72.13%)
+trimmed or removed 70.94%% of bases (8381849576 total)
+231786047 reads were high coverage (100.00%);
+skipped 0 reads/0 bases because of low coverage
+fp rate estimated to be 0.019
+output streamed to stdout
+DONE; read 67649858 sequences, 32964374 pairs and 1721110 singletons
+wrote to: paired.fq.gz and single.fq.gz
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>DONE; split 65928748 sequences (32964374 left, 32964374 right, 0 orphans)
+/1 reads in paired.fq.gz.1
+/2 reads in paired.fq.gz.2
+</pre></div>
+
+
+<h3>Assembly</h3>
+<p>Total reads for assembly:</p>
+<div class="highlight"><pre><span></span>58,354,750
+</pre></div>
+
+
+<p>Trinity version: Trinity-v2.6.6</p>
+<div class="highlight"><pre><span></span><span class="gh">Statistics:</span>
+<span class="gh">===========</span>
+Trinity Version:      Trinity-v2.6.6
+Compiler:             GCC
+Trinity Parameters:   --left left.fq --right right.fq --seqType fq --max_memory 14G --CPU 16
+Paired mode
+ Input data
+  Left.fasta    2903 MByte
+  Right.fasta   2902 MByte
+  Number of unique KMERs: 419308215
+  Number of reads:        58354750 Output data
+  Trinity.fasta 80 MByte
+
+<span class="gh">Runtime</span>
+<span class="gh">=======</span>
+Start:       Sat May  5 21:19:46 EDT 2018
+End:         Sun May  6 08:06:56 EDT 2018
+Trinity   38830 seconds
+  Inchworm (phase 1 - read clustering)  2967 seconds
+  Chrysalis (phase 1 - read clustering) 33642 seconds
+  Rest (phase 2 - parallel assembly)       2221 seconds
+</pre></div>
+
+
+<p>Trinity new version:</p>
+<div class="highlight"><pre><span></span>[ INFO] 2018-05-06 21:52:20 : Loading assembly: /home/ljcohen/A_crassa/assembly/trinity_out_dir/Trinity.fasta
+[ INFO] 2018-05-06 21:52:36 : Analysing assembly: /home/ljcohen/A_crassa/assembly/trinity_out_dir/Trinity.fasta
+[ INFO] 2018-05-06 21:52:36 : Results will be saved in /home/ljcohen/A_crassa/assembly/A_crassa_transrate/Trinity
+[ INFO] 2018-05-06 21:52:36 : Calculating contig metrics...
+[ INFO] 2018-05-06 21:52:51 : Contig metrics:
+[ INFO] 2018-05-06 21:52:51 : -----------------------------------
+[ INFO] 2018-05-06 21:52:51 : n seqs                       119109
+[ INFO] 2018-05-06 21:52:51 : smallest                        201
+[ INFO] 2018-05-06 21:52:51 : largest                        9126
+[ INFO] 2018-05-06 21:52:51 : n bases                    70503595
+[ INFO] 2018-05-06 21:52:51 : mean len                     591.93
+[ INFO] 2018-05-06 21:52:51 : n under 200                       0
+[ INFO] 2018-05-06 21:52:51 : n over 1k                     16468
+[ INFO] 2018-05-06 21:52:51 : n over 10k                        0
+[ INFO] 2018-05-06 21:52:51 : n with orf                    37747
+[ INFO] 2018-05-06 21:52:51 : mean orf percent              82.28
+[ INFO] 2018-05-06 21:52:51 : n90                             262
+[ INFO] 2018-05-06 21:52:51 : n70                             458
+[ INFO] 2018-05-06 21:52:51 : n50                             787
+[ INFO] 2018-05-06 21:52:51 : n30                            1373
+[ INFO] 2018-05-06 21:52:51 : n10                            2748
+[ INFO] 2018-05-06 21:52:51 : gc                             0.52
+[ INFO] 2018-05-06 21:52:51 : bases n                           0
+[ INFO] 2018-05-06 21:52:51 : proportion n                    0.0
+</pre></div>
+
+
+<p>Trinity 2014 version</p>
+<div class="highlight"><pre><span></span>[ INFO] 2018-05-06 21:55:00 : Loading assembly: /home/ljcohen/baseclear/sponge_Trinity_old.fasta
+[ INFO] 2018-05-06 21:55:13 : Analysing assembly: /home/ljcohen/baseclear/sponge_Trinity_old.fasta
+[ INFO] 2018-05-06 21:55:13 : Results will be saved in /home/ljcohen/baseclear/transrate_results/sponge_Trinity_old
+[ INFO] 2018-05-06 21:55:13 : Calculating contig metrics...
+[ INFO] 2018-05-06 21:55:24 : Contig metrics:
+[ INFO] 2018-05-06 21:55:24 : -----------------------------------
+[ INFO] 2018-05-06 21:55:24 : n seqs                        95532
+[ INFO] 2018-05-06 21:55:24 : smallest                        201
+[ INFO] 2018-05-06 21:55:24 : largest                       14515
+[ INFO] 2018-05-06 21:55:24 : n bases                    57208347
+[ INFO] 2018-05-06 21:55:24 : mean len                     598.84
+[ INFO] 2018-05-06 21:55:24 : n under 200                       0
+[ INFO] 2018-05-06 21:55:24 : n over 1k                     13778
+[ INFO] 2018-05-06 21:55:24 : n over 10k                        3
+[ INFO] 2018-05-06 21:55:24 : n with orf                    30120
+[ INFO] 2018-05-06 21:55:24 : mean orf percent              84.06
+[ INFO] 2018-05-06 21:55:24 : n90                             252
+[ INFO] 2018-05-06 21:55:24 : n70                             456
+[ INFO] 2018-05-06 21:55:24 : n50                             860
+[ INFO] 2018-05-06 21:55:24 : n30                            1558
+[ INFO] 2018-05-06 21:55:24 : n10                            3151
+[ INFO] 2018-05-06 21:55:24 : gc                             0.53
+[ INFO] 2018-05-06 21:55:24 : bases n                           0
+[ INFO] 2018-05-06 21:55:24 : proportion n                    0.0
+[ INFO] 2018-05-06 21:55:24 : Contig metrics done in 12 seconds
+[ INFO] 2018-05-06 21:55:24 : No reads provided, skipping read diagnostics
+[ INFO] 2018-05-06 21:55:24 : No reference provided, skipping comparative diagnostics
+[ INFO] 2018-05-06 21:55:24 : Writing contig metrics for each contig to /home/ljcohen/baseclear/transrate_results/sponge_Trinity_old/contigs.csv
+[ INFO] 2018-05-06 21:55:28 : Writing analysis results to assemblies.csv
+</pre></div>
+
+
+<h4>BUSCO</h4>
+<p>Benchmarking universal single-copy orthologs (BUSCO) is a metric for assessing the completeness of a transcriptome against databases of genes expected to be found in a group of species <a href="https://academic.oup.com/bioinformatics/article/31/19/3210/211866">Simão et al. 2015</a>.</p>
+<p>This <em>A. crassa</em> transcriptome had an approximately 75% complete BUSCO scores compared to both the metazoan and eukaryota databases.</p>
+<p>Metazoa</p>
+<div class="highlight"><pre><span></span># BUSCO version is: 3.0.2 
+# The lineage dataset is: metazoa_odb9 (Creation date: 2016-02-13, number of species: 65, number of BUSCOs: 978)
+# To reproduce this run: python /home/ljcohen/busco/scripts/run_BUSCO.py -i /home/ljcohen/A_crassa/assembly/A_crassa.Trinity.fasta -o A_crassa.busco.metazoa -l /home/ljcohen/reference/metazoa_odb9/ -m transcriptome -c 4
+#
+# Summarized benchmarking in BUSCO notation for file /home/ljcohen/A_crassa/assembly/A_crassa.Trinity.fasta
+# BUSCO was run in mode: transcriptome
+
+    C:75.0%[S:47.3%,D:27.7%],F:12.4%,M:12.6%,n:978
+
+    734 Complete BUSCOs (C)
+    463 Complete and single-copy BUSCOs (S)
+    271 Complete and duplicated BUSCOs (D)
+    121 Fragmented BUSCOs (F)
+    123 Missing BUSCOs (M)
+    978 Total BUSCO groups searched
+</pre></div>
+
+
+<p>Eukaryota</p>
+<div class="highlight"><pre><span></span># BUSCO version is: 3.0.2 
+# The lineage dataset is: eukaryota_odb9 (Creation date: 2016-11-02, number of species: 100, number of BUSCOs: 303)
+# To reproduce this run: python /home/ljcohen/busco/scripts/run_BUSCO.py -i /home/ljcohen/A_crassa/assembly/A_crassa.Trinity.fasta -o A_crassa.euk -l /home/ljcohen/reference/eukaryota_odb9/ -m transcriptome -c 4
+#
+# Summarized benchmarking in BUSCO notation for file /home/ljcohen/A_crassa/assembly/A_crassa.Trinity.fasta
+# BUSCO was run in mode: transcriptome
+
+    C:75.2%[S:42.2%,D:33.0%],F:16.2%,M:8.6%,n:303
+
+    228 Complete BUSCOs (C)
+    128 Complete and single-copy BUSCOs (S)
+    100 Complete and duplicated BUSCOs (D)
+    49  Fragmented BUSCOs (F)
+    26  Missing BUSCOs (M)
+    303 Total BUSCO groups searched
+</pre></div>
+
+
+<h3>Annotation</h3>
+<ul>
+<li><a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/Amphimedon_queenslandica/protein/">Used protein .fa from <em>Amphimedon queenslandica</em> on NCBI, RefSeq</a></li>
+<li>75.6% of contigs (90,047 out of 119,109) had annotations</li>
+<li>59,136 annotations from <em>Amphimedon queenslandica</em> including isoforms.</li>
+<li>Filtering those with E-value &lt; 1e-05, dropping those with "NA" in gene name and choosing only one gene name per contig with top E-value score = 63,084 annotations with 1,910 (3%) from <em>Amphimedon queenslandica</em>.</li>
+</ul>
+<h3>Quantification</h3>
+<p>With salmon v0.9.1. Files are here:
+https://osf.io/b972e/</p>
+<div class="highlight"><pre><span></span>./UC_CTTGTA.quant/aux_info/meta_info.json:    &quot;percent_mapped&quot;: 77.32713084784302,
+./OC_GCCAAT.quant/aux_info/meta_info.json:    &quot;percent_mapped&quot;: 79.4706051208496,
+./OD_CGATGT.quant/aux_info/meta_info.json:    &quot;percent_mapped&quot;: 79.15476656959088,
+./UD_TGACCA.quant/aux_info/meta_info.json:    &quot;percent_mapped&quot;: 79.85752052382412,
+</pre></div>
+
+
+<h3>Comparison with the coral microarray</h3>
+<p>Assembly of these data with the Trinity software package, 2014 version had fewer hits to the microarray than the latest version in 2018.</p>
+<div class="highlight"><pre><span></span>makeblastdb -in sponge_Trinity_old.fasta -dbtype nucl
+blastn -query Agilent_microarray.fasta -db sponge_Trinity_old.fasta -out microarray_v_Trinity -evalue 1e-5 -outfmt 6 -max_target_seqs 1
+blastn -query ../microarray/032951_1467726033734/FASTA\032951_D_Fasta_20110309.txt -db sponge_Trinity_old.fasta -out microarray_v_Trinity -evalue 1e-5 -outfmt 6 -max_target_seqs 1
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>ljcohen@js-156-111:~$ cat  Trinity_v_microarray
+comp789632_c0_seq1  CUST_3_PI426266271  100.00  29  0   0   641 669 17  45  8e-09   54.7
+comp936137_c4_seq3  CUST_33_PI426226915 94.83   58  3   0   714 771 58  1   6e-20   91.6
+comp936137_c4_seq4  CUST_33_PI426226915 94.83   58  3   0   719 776 58  1   6e-20   91.6
+comp936137_c4_seq5  CUST_33_PI426226915 94.83   58  3   0   714 771 58  1   6e-20   91.6
+comp937294_c5_seq3  CUST_3_PI426226915  100.00  35  0   0   92  126 10  44  1e-12   65.8
+comp937846_c1_seq1  CUST_372_PI426266615    93.33   60  4   0   2516    2575    60  1   6e-19   89.8
+ljcohen@js-156-111:~$ cat microarray_v_Trinity 
+CUST_371_PI426266615    comp937846_c1_seq1  93.33   60  4   0   1   60  2574    2515    2e-18   89.8
+CUST_3_PI426226915  comp937294_c5_seq3  100.00  35  0   0   10  44  92  126 3e-11   65.8
+CUST_3_PI426266271  comp789632_c0_seq1  100.00  29  0   0   17  45  641 669 7e-08   54.7
+CUST_370_PI426266615    comp937846_c1_seq1  93.33   60  4   0   1   60  2571    2512    2e-18   89.8
+CUST_33_PI426226915 comp936137_c4_seq5  94.83   58  3   0   1   58  771 714 6e-19   91.6
+CUST_372_PI426266615    comp937846_c1_seq1  93.33   60  4   0   1   60  2575    2516    2e-18   89.8
+</pre></div>
+
+
+<p>Trinity 2.6.6</p>
+<div class="highlight"><pre><span></span>makeblastdb -in /home/ljcohen/A_crassa/assembly/A_crassa.Trinity.fasta -dbtype nucl
+blastn -query /home/ljcohen/A_crassa/assembly/A_crassa.Trinity.fasta -db /home/ljcohen/microarray/032951_1467726033734/Agilent_microarray.fasta -out microarray_v_Trinity.2.6.6 -evalue 1e-5 -outfmt 6 -max_target_seqs 1
+blastn -query /home/ljcohen/microarray/032951_1467726033734/Agilent_microarray.fasta -db /home/ljcohen/A_crassa/assembly/A_crassa.Trinity.fasta -out Trinity.2.6.6_v_microarray -evalue 1e-5 -outfmt 6 -max_target_seqs 1
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>ljcohen@js-156-111:~/A_crassa/assembly$ cat Trinity.2.6.6_v_microarray
+CUST_395_PI426266615    TRINITY_DN48401_c7_g1_i10   93.18   44  2   1   12  55  5   47  1e-10   63.9
+CUST_301_PI426266615    TRINITY_DN49097_c3_g1_i20   89.47   57  5   1   5   60  184 240 9e-13   71.3
+CUST_396_PI426266615    TRINITY_DN48401_c7_g1_i10   93.18   44  2   1   13  56  5   47  1e-10   63.9
+CUST_371_PI426266615    TRINITY_DN48711_c1_g1_i3    96.67   60  2   0   1   60  300 359 1e-21   100
+CUST_3_PI426226915  TRINITY_DN49097_c3_g1_i5    98.11   53  1   0   1   53  224 276 2e-19   93.5
+CUST_12_PI426227955 TRINITY_DN47826_c2_g1_i1    94.74   38  2   0   12  49  74  111 2e-09   60.2
+CUST_3_PI426266271  TRINITY_DN36002_c0_g1_i1    100.00  29  0   0   17  45  641 669 9e-08   54.7
+CUST_394_PI426266615    TRINITY_DN48401_c7_g1_i10   93.18   44  2   1   11  54  5   47  1e-10   63.9
+CUST_370_PI426266615    TRINITY_DN48711_c1_g1_i3    96.67   60  2   0   1   60  303 362 1e-21   100
+CUST_33_PI426226915 TRINITY_DN50786_c0_g2_i3    94.83   58  3   0   1   58  120 63  7e-19   91.6
+CUST_372_PI426266615    TRINITY_DN48711_c1_g1_i3    96.67   60  2   0   1   60  299 358 1e-21   100
+CUST_106_PI426266615    TRINITY_DN45854_c4_g1_i1    90.00   60  6   0   1   60  130 189 5e-15   78.7
+CUST_302_PI426266615    TRINITY_DN49097_c3_g1_i20   89.29   56  5   1   6   60  184 239 3e-12   69.4
+ljcohen@js-156-111:~/A_crassa/assembly$ cat microarray_v_Trinity.2.6.6
+TRINITY_DN49097_c3_g1_i18   CUST_3_PI426226915  98.11   53  1   0   144 196 1   53  3e-21   93.5
+TRINITY_DN49097_c3_g1_i5    CUST_3_PI426226915  98.11   53  1   0   224 276 1   53  4e-21   93.5
+TRINITY_DN49097_c3_g1_i15   CUST_301_PI426266615    89.47   57  5   1   184 240 5   60  3e-14   71.3
+TRINITY_DN49097_c3_g1_i20   CUST_301_PI426266615    89.47   57  5   1   184 240 5   60  3e-14   71.3
+TRINITY_DN49097_c3_g2_i1    CUST_3_PI426226915  95.45   44  2   0   96  139 10  53  2e-14   71.3
+TRINITY_DN49097_c3_g2_i3    CUST_3_PI426226915  95.45   44  2   0   96  139 10  53  2e-14   71.3
+TRINITY_DN45854_c4_g1_i1    CUST_106_PI426266615    90.00   60  6   0   130 189 1   60  7e-17   78.7
+TRINITY_DN47826_c2_g1_i1    CUST_12_PI426227955 94.74   38  2   0   74  111 12  49  3e-11   60.2
+TRINITY_DN47776_c2_g1_i2    CUST_394_PI426266615    97.14   35  1   0   209 243 23  57  4e-11   60.2
+TRINITY_DN47776_c2_g1_i4    CUST_394_PI426266615    97.14   35  1   0   209 243 23  57  4e-11   60.2
+TRINITY_DN47776_c2_g1_i3    CUST_394_PI426266615    97.14   35  1   0   245 279 23  57  5e-11   60.2
+TRINITY_DN48711_c1_g1_i2    CUST_372_PI426266615    93.33   60  4   0   299 358 1   60  3e-19   89.8
+TRINITY_DN48711_c1_g1_i3    CUST_372_PI426266615    96.67   60  2   0   299 358 1   60  5e-23   100
+TRINITY_DN48711_c1_g1_i6    CUST_372_PI426266615    93.33   60  4   0   299 358 1   60  7e-20   89.8
+TRINITY_DN48711_c1_g1_i7    CUST_372_PI426266615    93.33   60  4   0   299 358 1   60  1e-19   89.8
+TRINITY_DN48711_c1_g1_i8    CUST_372_PI426266615    93.33   60  4   0   299 358 1   60  1e-19   89.8
+TRINITY_DN48401_c7_g1_i10   CUST_394_PI426266615    93.18   44  2   1   5   47  11  54  3e-12   63.9
+TRINITY_DN51186_c1_g1_i1    CUST_33_PI426226915 94.83   58  3   0   600 657 58  1   5e-20   91.6
+TRINITY_DN51186_c1_g1_i4    CUST_33_PI426226915 94.83   58  3   0   605 662 58  1   5e-20   91.6
+TRINITY_DN51186_c1_g1_i2    CUST_33_PI426226915 94.83   58  3   0   600 657 58  1   4e-20   91.6
+TRINITY_DN51186_c1_g1_i11   CUST_33_PI426226915 94.83   58  3   0   605 662 58  1   4e-20   91.6
+TRINITY_DN51186_c1_g1_i15   CUST_33_PI426226915 94.83   58  3   0   616 673 58  1   6e-20   91.6
+TRINITY_DN51186_c1_g1_i14   CUST_33_PI426226915 94.83   58  3   0   600 657 58  1   6e-20   91.6
+TRINITY_DN51186_c1_g1_i13   CUST_33_PI426226915 94.83   58  3   0   616 673 58  1   6e-20   91.6
+TRINITY_DN51186_c1_g1_i18   CUST_33_PI426226915 94.83   58  3   0   616 673 58  1   6e-20   91.6
+TRINITY_DN51186_c1_g1_i9    CUST_33_PI426226915 94.83   58  3   0   605 662 58  1   7e-20   91.6
+TRINITY_DN51186_c1_g1_i19   CUST_33_PI426226915 94.83   58  3   0   605 662 58  1   7e-20   91.6
+TRINITY_DN51186_c1_g1_i20   CUST_33_PI426226915 94.83   58  3   0   370 427 58  1   2e-20   91.6
+TRINITY_DN51186_c1_g1_i17   CUST_33_PI426226915 94.83   58  3   0   600 657 58  1   6e-20   91.6
+TRINITY_DN51186_c1_g1_i6    CUST_33_PI426226915 94.83   58  3   0   605 662 58  1   7e-20   91.6
+TRINITY_DN51186_c1_g1_i12   CUST_33_PI426226915 94.83   58  3   0   605 662 58  1   6e-20   91.6
+TRINITY_DN36002_c0_g1_i1    CUST_3_PI426266271  100.00  29  0   0   641 669 17  45  8e-09   54.7
+TRINITY_DN50786_c0_g1_i15   CUST_33_PI426226915 97.22   36  1   0   1   36  36  1   3e-11   62.1
+TRINITY_DN50786_c0_g1_i9    CUST_33_PI426226915 97.22   36  1   0   1   36  36  1   3e-11   62.1
+TRINITY_DN50786_c0_g1_i12   CUST_33_PI426226915 97.22   36  1   0   1   36  36  1   1e-11   62.1
+TRINITY_DN50786_c0_g2_i5    CUST_33_PI426226915 94.83   58  3   0   132 189 58  1   1e-20   91.6
+TRINITY_DN50786_c0_g2_i3    CUST_33_PI426226915 94.83   58  3   0   63  120 58  1   2e-20   91.6
+TRINITY_DN49887_c4_g2_i14   CUST_3_PI426226915  100.00  34  0   0   1   34  5   38  4e-12   63.9
+</pre></div>
+
+
+<h1>References</h1>
+<p><a href="https://academic.oup.com/mbe/article/31/5/1102/993377">The Analysis of Eight Transcriptomes from All Poriferan Classes Reveals Surprising Genetic Complexity in Sponges</a></p>
+<p><a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-015-1588-z">Deep developmental transcriptome sequencing uncovers numerous new genes and enhances gene annotation in the sponge Amphimedon queenslandica</a></p>
+<p><a href="https://www.biorxiv.org/content/biorxiv/early/2017/03/28/120998.full.pdf">The genome of the contractile demosponge Tethya wilhelma and the evolution of metazoan neural signalling pathways</a></p>
+<p><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0165368">Gene Expression Dynamics Accompanying the Sponge Thermal Stress Response</a></p>
+<p><a href="https://www.cell.com/current-biology/fulltext/S0960-9822(17)30199-9">A Large and Consistent Phylogenomic Dataset Supports Sponges as the Sister Group to All Other Animals</a></p>
+<p><a href="http://jeb.biologists.org/content/218/4/581">Elements of a ‘nervous system’ in sponges</a></p>
+<p><a href="https://www.nature.com/articles/srep18774">Comparative transcriptome analysis reveals insights into the streamlined genomes of haplosclerid demosponges</a></p>
+<p><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0183002">Transcriptome sequencing and delimitation of sympatric Oscarella species (O. carmela and O. pearsei sp. nov) from California, USA</a></p>
+<p>Carballo, JL et al. 1996. Use of marine sponges as stress indicators in marine ecosystems at Algeciras Bay (southern Iberian Peninsula). <a href="http://www.int-res.com/abstracts/meps/v135/p109-122/">Marine Ecology Progress Series. 135:109-122</a>.</p>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S0168952510002088">A genomic view of 500 million years of cnidarian evolution</a></p>
+<h2>Existing Genome/Transcriptome resources for other sponge species</h2>
+<ul>
+<li><a href="https://www.ncbi.nlm.nih.gov/genome/?term=txid400682[Organism:noexp]"><em>Amphimedon queenslandica</em> genome (model sponge species)</a></li>
+<li><a href="http://amphimedon.qcloud.qcif.edu.au/index.html">A. queenslandica transcriptome and annotation resources</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/genome/67299"><em>Aplysina aerophoba</em></a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/sra/?term=txid6040[Organism:exp]">1,360 Porifera SRA records, 475 RNAseq</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/nuccore/GFAV00000000">Haliclona tubifera</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/nuccore/?term=txid6040%5BOrganism%3Aexp%5D+TSA">transcriptome shotgun sequencing (TSA) porifera</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/bioproject/230415"> Oscarella carmela</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=261677">only 25 NCBI Nucleotide records for <em>Aiolochroia crassa</em></a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3553142/">Reconstruction of Family-Level Phylogenetic Relationships within Demospongiae (Porifera) Using Nuclear Encoded Housekeeping Genes</a><ul>
+<li><a href="https://www.ncbi.nlm.nih.gov/nuccore/JQ606737">aldolase (ALD)</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/nuccore/JQ606713">catalase (CAT)</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/nuccore/JQ606687">EF1alpha</a></li>
+</ul>
+</li>
+<li><a href="https://trace.ddbj.nig.ac.jp/DRASearch/study?acc=SRP045752">metagenomes collected from sponge</a></li>
+</ul>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'https-ljcohen-github-io-blog'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'de-novo-transcriptome-assembly-annotation-and-evaluation-of-the-branching-tube-caribbean-sponge-aiolochroia-crassa';
+                var disqus_url = 'https://johnsolk.github.io/blog/de-novo-transcriptome-assembly-annotation-and-evaluation-of-the-branching-tube-caribbean-sponge-aiolochroia-crassa.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://twitter.com/monsterbashseq"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/johnsolk"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+    <li class="list-group-item"><a href="https://www.flickr.com/155690017@N06/"><i class="fa fa-flickr fa-lg"></i> flickr</a></li>
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/johnsolk/"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+    <li class="list-group-item"><a href="mailto:ljcohen@ucdavis.edu"><i class="fa fa-envelope fa-lg"></i> envelope</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/17-sets-how-to-display-all-intersections-with-upsetr-plot.html">17 sets, how to display all intersections with UpSetR plot?</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/xsede-login-with-bridges.html">XSEDE login with bridges</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/annotating-multiple-de-novo-transcriptome-assemblies.html">Annotating multiple de novo transcriptome assemblies</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/running-clust-on-jetstream.html">Running clust on Jetstream</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/xrac-research-proposal.html">XRAC research proposal</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="http://ivory.idyll.org/lab/" target="_blank">Titus Brown's DIB Lab</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://whiteheadresearch.wordpress.com/" target="_blank">Andrew Whitehead's Lab, Environmental Genomics</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://dib-training.readthedocs.io/en/pub/" target="_blank">UCD DIB Training</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2019 Lisa Johnson
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://johnsolk.github.io/blog/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://johnsolk.github.io/blog/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://johnsolk.github.io/blog/theme/js/respond.min.js"></script>
+
+    <script src="https://johnsolk.github.io/blog/theme/js/custom.js"></script>
+
+    <script src="https://johnsolk.github.io/blog/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'https-ljcohen-github-io-blog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-127427728-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+</body>
+</html>

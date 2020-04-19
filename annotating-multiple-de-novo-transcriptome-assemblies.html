@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Annotating multiple de novo transcriptome assemblies - monsteRbashSeq</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://johnsolk.github.io/blog/annotating-multiple-de-novo-transcriptome-assemblies.html">
+
+        <meta name="author" content="Lisa K. Johnson" />
+        <meta name="keywords" content="sequencing,killifish,RNAseq,differential expression analysis,multispecies" />
+        <meta name="description" content="Checking orthogroups (OGs) and comparing with transcript-level annotations" />
+
+        <meta property="og:site_name" content="monsteRbashSeq" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Annotating multiple de novo transcriptome assemblies"/>
+        <meta property="og:url" content="https://johnsolk.github.io/blog/annotating-multiple-de-novo-transcriptome-assemblies.html"/>
+        <meta property="og:description" content="Checking orthogroups (OGs) and comparing with transcript-level annotations"/>
+        <meta property="article:published_time" content="2019-02-05" />
+            <meta property="article:section" content="data" />
+            <meta property="article:tag" content="sequencing" />
+            <meta property="article:tag" content="killifish" />
+            <meta property="article:tag" content="RNAseq" />
+            <meta property="article:tag" content="differential expression analysis" />
+            <meta property="article:tag" content="multispecies" />
+            <meta property="article:author" content="Lisa K. Johnson" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://johnsolk.github.io/blog/theme/css/bootstrap.simplex.min.css" type="text/css"/>
+    <link href="https://johnsolk.github.io/blog/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://johnsolk.github.io/blog/theme/css/pygments/native.css" rel="stylesheet">
+    <link href="https://johnsolk.github.io/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://johnsolk.github.io/blog/theme/css/style.css" type="text/css"/>
+        <link href="https://johnsolk.github.io/blog/theme/css/custom.css" rel="stylesheet">
+
+        <link href="https://johnsolk.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="monsteRbashSeq ATOM Feed"/>
+
+
+
+        <link href="https://johnsolk.github.io/blog/feeds/data.atom.xml" type="application/atom+xml" rel="alternate"
+              title="monsteRbashSeq data ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://johnsolk.github.io/blog/" class="navbar-brand">
+monsteRbashSeq            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="https://johnsolk.github.io/">Main</a></li>
+                    <li><a href="https://johnsolk.github.io/about.html">About</a></li>
+                    <li><a href="https://monsterbashseq.wordpress.com/">Old Blog</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><span>
+                <form class="navbar-search" action="/blog/search.html">
+                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("https://johnsolk.github.io/blog//img/sanomacoast.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+		<div class="copy">
+			<h1>monsteRbashSeq</h1>
+				<p class="intro">Lisa K. Johnson</p>
+		</div>
+	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://johnsolk.github.io/blog/annotating-multiple-de-novo-transcriptome-assemblies.html"
+                       rel="bookmark"
+                       title="Permalink to Annotating multiple de novo transcriptome assemblies">
+                        Annotating multiple de novo transcriptome assemblies
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2019-02-05T00:00:00-08:00"> Tue 05 February 2019</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://johnsolk.github.io/blog/tag/sequencing.html">sequencing</a>
+        /
+	<a href="https://johnsolk.github.io/blog/tag/killifish.html">killifish</a>
+        /
+	<a href="https://johnsolk.github.io/blog/tag/rnaseq.html">RNAseq</a>
+        /
+	<a href="https://johnsolk.github.io/blog/tag/differential-expression-analysis.html">differential expression analysis</a>
+        /
+	<a href="https://johnsolk.github.io/blog/tag/multispecies.html">multispecies</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Collapsing contigs by annotation is an appropriate method for a <em>de novo</em> transcriptome assembly to be used as a reference for differential expression analysis.</p>
+<h2>Background</h2>
+<p>I have been working with RNAseq data for several years now, which we're using for a cross-species differential expression analysis. This is not a trivial analysis, and I've had to go back and re-do everything a few times now because the annotations and/or quantification results haven't made sense for various reasons. I'm hoping that we're getting closer.</p>
+<p><em>De novo</em> transcriptome assemblies were made with <a href="https://github.com/trinityrnaseq/trinityrnaseq">Trinity</a> (version 2.8.4) from 17 different species of North American <em>Fundulus</em> killifish (17 separate assemblies with input ranging from 50 million to ~450 million PEx100 reads each). Expression was quantified using <a href="https://github.com/COMBINE-lab/salmon">salmon</a> (version 0.12.0) with the trimmed reads against Trinity assemblies. I've annotated the Trinity assemblies using the <a href="http://dib-lab.github.io/dammit/">dammit</a> pipeline (version 1.1).</p>
+<p>I would like to use OrthoFinder to guide a cross-species comparison of differential expression. I was thinking this would be a good way to ensure that we are comparing the same genes across all species. I ran OrthoFinder version 2.2.7 (<a href="https://anaconda.org/bioconda/orthofinder">conda install in a python 2 conda environment</a>) with all of the translated Trinity assemblies (.pep files from <a href="https://github.com/TransDecoder/TransDecoder/wiki">Transdecoder</a> version 3.0.1). From the <code>Orthogroups.csv</code> output, I assigned OGs to their corresponding transcript ID from Trinity. Then, I summarized OG expression per species by collapsing multiple contigs per OG with <a href="https://bioconductor.org/packages/release/bioc/html/tximport.html">tximport</a>. I did the same for the NCBI annotations, collapsing multiple contigs per gene ID.</p>
+<p>However, I found that the expression tables per species summarized by OGs did not appear to be as specific as they are when summarized by NCBI genes.</p>
+<p>OGs:
+<img alt="" src="https://i.imgur.com/odHwv7Y.png">
+NCBI:
+<img alt="" src="https://i.imgur.com/JepCVev.png"></p>
+<p>This was confusing, so I went digging a little further and posted this <a href="https://github.com/davidemms/OrthoFinder/issues/240">question</a> on the OrthoFinder repository. </p>
+<p>Is this what one might expect from expression summarized by OGs? There might be a different way to incorporate OrthoFinder results to this analysis. (Open to suggestions!)</p>
+<p>After going through this exercise, I'm further convinced that it is fine to use counts summarized by NCBI genes (or another annotation database). Decisions for what gene to assign to a contig might need some tweaking. This was helpful to go through by hand. Below I've pasted pieces of output files that I've created through scripts and various tools.</p>
+<h2>Example 1: What do the salmon quantification counts look like?</h2>
+<p>I started off by looking at the annotations and raw salmon output from each replicate for one of my species, <em>Adinia xenica</em> (the diamond killfish). </p>
+<p>Since <a href="https://github.com/trinityrnaseq/trinityrnaseq/wiki/Output-of-Trinity-Assembly">Trinity groups contigs based on shared sequence content</a>, we would expect this transcript cluster to encode for mostly same gene. According to the Trinity assembler, these contigs should be grouped together. </p>
+<div class="highlight"><pre><span></span>TrinityID   seqid
+TRINITY_DN8_c0_g1_i7    Transcript_0
+TRINITY_DN8_c0_g1_i6    Transcript_1
+TRINITY_DN8_c0_g1_i1    Transcript_2
+TRINITY_DN8_c0_g1_i9    Transcript_3
+TRINITY_DN8_c0_g1_i4    Transcript_4
+TRINITY_DN8_c0_g1_i5    Transcript_5
+TRINITY_DN8_c0_g1_i2    Transcript_6
+TRINITY_DN8_c0_g1_i3    Transcript_7
+TRINITY_DN8_c0_g2_i1    Transcript_8
+TRINITY_DN8_c1_g1_i8    Transcript_9
+TRINITY_DN8_c1_g1_i1    Transcript_10
+TRINITY_DN8_c1_g1_i6    Transcript_11
+TRINITY_DN8_c1_g1_i9    Transcript_12
+TRINITY_DN8_c1_g1_i3    Transcript_13
+TRINITY_DN8_c1_g1_i4    Transcript_14
+TRINITY_DN8_c1_g1_i7    Transcript_15
+TRINITY_DN8_c1_g1_i5    Transcript_16
+TRINITY_DN8_c6_g1_i2    Transcript_17
+TRINITY_DN8_c6_g1_i7    Transcript_18
+TRINITY_DN8_c6_g1_i4    Transcript_19
+TRINITY_DN8_c6_g1_i1    Transcript_20
+TRINITY_DN8_c12_g1_i1   Transcript_21
+</pre></div>
+
+
+<p>At a glance, the transcript-level quantification results for the same block of transcripts <code>TRINITY_DN8</code> seem reasonably consistent across samples.</p>
+<p>A_xenica_BW_1.quant</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN8_c0_g1_i7    1034    813.841 99.087379   1090.219
+TRINITY_DN8_c0_g1_i6    1035    814.841 508.960349  5606.770
+TRINITY_DN8_c0_g1_i1    3195    2974.841    174.769095  7028.853
+TRINITY_DN8_c0_g1_i9    2874    2653.841    142.575381  5115.352
+TRINITY_DN8_c0_g1_i4    2155    1934.841    121.333793  3173.826
+TRINITY_DN8_c0_g1_i5    2107    1886.841    62.580847   1596.367
+TRINITY_DN8_c0_g1_i2    1083    862.841 648.745796  7567.654
+TRINITY_DN8_c0_g1_i3    986 766.007 75.482570   781.692
+TRINITY_DN8_c0_g2_i1    961 741.012 5.490111    55.000
+TRINITY_DN8_c1_g1_i8    5552    5331.841    0.213893    15.418
+TRINITY_DN8_c1_g1_i1    4350    4129.841    14.202186   792.948
+TRINITY_DN8_c1_g1_i6    1785    1564.841    2.334244    49.382
+TRINITY_DN8_c1_g1_i9    5729    5508.841    0.000000    0.000
+TRINITY_DN8_c1_g1_i3    1920    1699.841    25.058676   575.867
+TRINITY_DN8_c1_g1_i4    4375    4154.841    0.000000    0.000
+TRINITY_DN8_c1_g1_i7    4198    3977.841    37.372865   2009.833
+TRINITY_DN8_c1_g1_i5    5704    5483.841    1.180930    87.552
+TRINITY_DN8_c6_g1_i2    2373    2152.841    0.000000    0.000
+TRINITY_DN8_c6_g1_i7    2371    2150.841    1.360954    39.574
+TRINITY_DN8_c6_g1_i4    1995    1774.841    0.309493    7.426
+TRINITY_DN8_c6_g1_i1    2369    2148.841    0.000000    0.000
+TRINITY_DN8_c12_g1_i1   391 172.918 0.855528    2.000
+</pre></div>
+
+
+<p>A_xenica_BW_2.quant</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN8_c0_g1_i7    1034    784.489 59.392151   460.803
+TRINITY_DN8_c0_g1_i6    1035    785.489 388.568757  3018.610
+TRINITY_DN8_c0_g1_i1    3195    2945.489    51.097357   1488.521
+TRINITY_DN8_c0_g1_i9    2874    2624.489    425.297355  11039.176
+TRINITY_DN8_c0_g1_i4    2155    1905.489    118.953657  2241.731
+TRINITY_DN8_c0_g1_i5    2107    1857.489    41.453127   761.523
+TRINITY_DN8_c0_g1_i2    1083    833.489 793.453684  6540.645
+TRINITY_DN8_c0_g1_i3    986 736.730 31.564827   229.991
+TRINITY_DN8_c0_g2_i1    961 711.735 1.136507    8.000
+TRINITY_DN8_c1_g1_i8    5552    5302.489    0.544643    28.562
+TRINITY_DN8_c1_g1_i1    4350    4100.489    9.770186    396.221
+TRINITY_DN8_c1_g1_i6    1785    1535.489    2.184526    33.174
+TRINITY_DN8_c1_g1_i9    5729    5479.489    0.000000    0.000
+TRINITY_DN8_c1_g1_i3    1920    1670.489    13.325110   220.147
+TRINITY_DN8_c1_g1_i4    4375    4125.489    0.000000    0.000
+TRINITY_DN8_c1_g1_i7    4198    3948.489    34.021297   1328.560
+TRINITY_DN8_c1_g1_i5    5704    5454.489    1.822869    98.335
+TRINITY_DN8_c6_g1_i2    2373    2123.489    1.634330    34.323
+TRINITY_DN8_c6_g1_i7    2371    2121.489    0.000000    0.000
+TRINITY_DN8_c6_g1_i4    1995    1745.489    1.429456    24.677
+TRINITY_DN8_c6_g1_i1    2369    2119.489    0.000000    0.000
+TRINITY_DN8_c12_g1_i1   391 148.487 0.680946    1.000
+</pre></div>
+
+
+<p>A_xenica_BW_3.quant</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN8_c0_g1_i7    1034    806.011 81.299939   878.686
+TRINITY_DN8_c0_g1_i6    1035    807.011 419.558693  4540.195
+TRINITY_DN8_c0_g1_i1    3195    2967.011    110.800505  4408.222
+TRINITY_DN8_c0_g1_i9    2874    2646.011    364.374601  12928.325
+TRINITY_DN8_c0_g1_i4    2155    1927.011    102.662765  2652.770
+TRINITY_DN8_c0_g1_i5    2107    1879.011    47.025571   1184.857
+TRINITY_DN8_c0_g1_i2    1083    855.011 752.616894  8628.753
+TRINITY_DN8_c0_g1_i3    986 758.184 44.182512   449.188
+TRINITY_DN8_c0_g2_i1    961 733.190 1.118854    11.000
+TRINITY_DN8_c1_g1_i8    5552    5324.011    1.615538    115.334
+TRINITY_DN8_c1_g1_i1    4350    4122.011    14.339296   792.573
+TRINITY_DN8_c1_g1_i6    1785    1557.011    1.727863    36.075
+TRINITY_DN8_c1_g1_i9    5729    5501.011    0.000000    0.000
+TRINITY_DN8_c1_g1_i3    1920    1692.011    15.569566   353.250
+TRINITY_DN8_c1_g1_i4    4375    4147.011    0.000000    0.000
+TRINITY_DN8_c1_g1_i7    4198    3970.011    33.733068   1795.767
+TRINITY_DN8_c1_g1_i5    5704    5476.011    0.000000    0.000
+TRINITY_DN8_c6_g1_i2    2373    2145.011    0.000000    0.000
+TRINITY_DN8_c6_g1_i7    2371    2143.011    0.000000    0.000
+TRINITY_DN8_c6_g1_i4    1995    1767.011    0.832253    19.720
+TRINITY_DN8_c6_g1_i1    2369    2141.011    1.890698    54.280
+TRINITY_DN8_c12_g1_i1   391 165.937 0.449423    1.000
+</pre></div>
+
+
+<p>A_xenica_FW_1.quant</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN8_c0_g1_i7    1034    788.009 47.336066   401.851
+TRINITY_DN8_c0_g1_i6    1035    789.009 312.887387  2659.571
+TRINITY_DN8_c0_g1_i1    3195    2949.009    112.315309  3568.261
+TRINITY_DN8_c0_g1_i9    2874    2628.009    324.583185  9189.553
+TRINITY_DN8_c0_g1_i4    2155    1909.009    148.931103  3062.915
+TRINITY_DN8_c0_g1_i5    2107    1861.009    63.996918   1283.066
+TRINITY_DN8_c0_g1_i2    1083    837.009 673.591852  6073.912
+TRINITY_DN8_c0_g1_i3    986 740.278 12.936307   103.168
+TRINITY_DN8_c0_g2_i1    961 715.285 1.816801    14.000
+TRINITY_DN8_c1_g1_i8    5552    5306.009    0.334470    19.119
+TRINITY_DN8_c1_g1_i1    4350    4104.009    6.898364    304.997
+TRINITY_DN8_c1_g1_i6    1785    1539.009    1.348775    22.363
+TRINITY_DN8_c1_g1_i9    5729    5483.009    0.000000    0.000
+TRINITY_DN8_c1_g1_i3    1920    1674.009    7.257498    130.884
+TRINITY_DN8_c1_g1_i4    4375    4129.009    0.211485    9.407
+TRINITY_DN8_c1_g1_i7    4198    3952.009    29.853242   1271.016
+TRINITY_DN8_c1_g1_i5    5704    5458.009    1.330174    78.214
+TRINITY_DN8_c6_g1_i2    2373    2127.009    1.172117    26.859
+TRINITY_DN8_c6_g1_i7    2371    2125.009    0.000000    0.000
+TRINITY_DN8_c6_g1_i4    1995    1749.009    0.236377    4.454
+TRINITY_DN8_c6_g1_i1    2369    2123.009    0.292400    6.688
+TRINITY_DN8_c12_g1_i1   391 151.312 0.613457    1.000
+</pre></div>
+
+
+<p>A_xenica_FW_2.quant</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN8_c0_g1_i7    1034    774.910 26.168216   92.852
+TRINITY_DN8_c0_g1_i6    1035    775.910 368.774479  1310.196
+TRINITY_DN8_c0_g1_i1    3195    2935.910    65.835643   885.050
+TRINITY_DN8_c0_g1_i9    2874    2614.910    344.014191  4119.052
+TRINITY_DN8_c0_g1_i4    2155    1895.910    96.229381   835.391
+TRINITY_DN8_c0_g1_i5    2107    1847.910    46.501945   393.474
+TRINITY_DN8_c0_g1_i2    1083    823.910 763.951306  2882.103
+TRINITY_DN8_c0_g1_i3    986 727.293 18.882308   62.882
+TRINITY_DN8_c0_g2_i1    961 702.316 0.932878    3.000
+TRINITY_DN8_c1_g1_i8    5552    5292.910    1.212649    29.390
+TRINITY_DN8_c1_g1_i1    4350    4090.910    1.688974    31.638
+TRINITY_DN8_c1_g1_i6    1785    1525.910    0.000000    0.000
+TRINITY_DN8_c1_g1_i9    5729    5469.910    0.000000    0.000
+TRINITY_DN8_c1_g1_i3    1920    1660.910    14.384900   109.400
+TRINITY_DN8_c1_g1_i4    4375    4115.910    3.276124    61.743
+TRINITY_DN8_c1_g1_i7    4198    3938.910    19.118940   344.829
+TRINITY_DN8_c1_g1_i5    5704    5444.910    0.000000    0.000
+TRINITY_DN8_c6_g1_i2    2373    2113.910    0.000000    0.000
+TRINITY_DN8_c6_g1_i7    2371    2111.910    0.000000    0.000
+TRINITY_DN8_c6_g1_i4    1995    1735.910    1.028673    8.177
+TRINITY_DN8_c6_g1_i1    2369    2109.910    0.602774    5.823
+TRINITY_DN8_c12_g1_i1   391 145.374 0.000000    0.000
+</pre></div>
+
+
+<p>A_xenica_FW_3.quant</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN8_c0_g1_i7    1034    792.418 22.799205   135.849
+TRINITY_DN8_c0_g1_i6    1035    793.418 367.594140  2193.075
+TRINITY_DN8_c0_g1_i1    3195    2953.418    174.862317  3883.328
+TRINITY_DN8_c0_g1_i9    2874    2632.418    237.778604  4706.635
+TRINITY_DN8_c0_g1_i4    2155    1913.418    122.259545  1759.039
+TRINITY_DN8_c0_g1_i5    2107    1865.418    54.748614   767.949
+TRINITY_DN8_c0_g1_i2    1083    841.418 639.029431  4043.110
+TRINITY_DN8_c0_g1_i3    986 744.682 1.430236    8.009
+TRINITY_DN8_c0_g2_i1    961 719.700 2.032631    11.000
+TRINITY_DN8_c1_g1_i8    5552    5310.418    1.565068    62.495
+TRINITY_DN8_c1_g1_i1    4350    4108.418    5.263584    162.607
+TRINITY_DN8_c1_g1_i6    1785    1543.418    5.029330    58.368
+TRINITY_DN8_c1_g1_i9    5729    5487.418    0.000000    0.000
+TRINITY_DN8_c1_g1_i3    1920    1678.418    10.760137   135.800
+TRINITY_DN8_c1_g1_i4    4375    4133.418    3.783087    117.581
+TRINITY_DN8_c1_g1_i7    4198    3956.418    22.526090   670.148
+TRINITY_DN8_c1_g1_i5    5704    5462.418    0.000000    0.000
+TRINITY_DN8_c6_g1_i2    2373    2131.418    0.000000    0.000
+TRINITY_DN8_c6_g1_i7    2371    2129.418    0.000000    0.000
+TRINITY_DN8_c6_g1_i4    1995    1753.418    1.050799    13.854
+TRINITY_DN8_c6_g1_i1    2369    2127.418    0.509199    8.146
+TRINITY_DN8_c12_g1_i1   391 156.028 1.704682    2.000
+</pre></div>
+
+
+<p>A_xenica_transfer_1.quant</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN8_c0_g1_i7    1034    761.427 42.045850   183.616
+TRINITY_DN8_c0_g1_i6    1035    762.427 421.240379  1841.993
+TRINITY_DN8_c0_g1_i1    3195    2922.427    82.092914   1375.969
+TRINITY_DN8_c0_g1_i9    2874    2601.427    431.688220  6440.822
+TRINITY_DN8_c0_g1_i4    2155    1882.427    119.424714  1289.353
+TRINITY_DN8_c0_g1_i5    2107    1834.427    49.064477   516.211
+TRINITY_DN8_c0_g1_i2    1083    810.427 626.969454  2914.204
+TRINITY_DN8_c0_g1_i3    986 713.872 24.696449   101.115
+TRINITY_DN8_c0_g2_i1    961 688.889 1.012398    4.000
+TRINITY_DN8_c1_g1_i8    5552    5279.427    1.365849    41.357
+TRINITY_DN8_c1_g1_i1    4350    4077.427    19.437530   454.555
+TRINITY_DN8_c1_g1_i6    1785    1512.427    0.000000    0.000
+TRINITY_DN8_c1_g1_i9    5729    5456.427    0.000000    0.000
+TRINITY_DN8_c1_g1_i3    1920    1647.427    32.650452   308.500
+TRINITY_DN8_c1_g1_i4    4375    4102.427    0.000000    0.000
+TRINITY_DN8_c1_g1_i7    4198    3925.427    37.025857   833.588
+TRINITY_DN8_c1_g1_i5    5704    5431.427    0.000000    0.000
+TRINITY_DN8_c6_g1_i2    2373    2100.427    0.000000    0.000
+TRINITY_DN8_c6_g1_i7    2371    2098.427    0.000000    0.000
+TRINITY_DN8_c6_g1_i4    1995    1722.427    1.187644    11.732
+TRINITY_DN8_c6_g1_i1    2369    2096.427    2.683661    32.268
+TRINITY_DN8_c12_g1_i1   391 135.535 0.000000    0.000
+</pre></div>
+
+
+<p>A_xenica_transfer_2.quant</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN8_c0_g1_i7    1034    771.393 39.898805   341.813
+TRINITY_DN8_c0_g1_i6    1035    772.393 1003.467606 8607.854
+TRINITY_DN8_c0_g1_i1    3195    2932.393    230.111051  7493.986
+TRINITY_DN8_c0_g1_i9    2874    2611.393    256.161817  7429.162
+TRINITY_DN8_c0_g1_i4    2155    1892.393    56.405708   1185.462
+TRINITY_DN8_c0_g1_i5    2107    1844.393    43.565650   892.382
+TRINITY_DN8_c0_g1_i2    1083    820.393 1091.461340 9944.513
+TRINITY_DN8_c0_g1_i3    986 723.703 23.367980   187.817
+TRINITY_DN8_c0_g2_i1    961 698.716 3.092980    24.001
+TRINITY_DN8_c1_g1_i8    5552    5289.393    1.448678    85.100
+TRINITY_DN8_c1_g1_i1    4350    4087.393    5.006828    227.281
+TRINITY_DN8_c1_g1_i6    1785    1522.393    3.087889    52.209
+TRINITY_DN8_c1_g1_i9    5729    5466.393    0.000000    0.000
+TRINITY_DN8_c1_g1_i3    1920    1657.393    9.252460    170.308
+TRINITY_DN8_c1_g1_i4    4375    4112.393    4.877161    222.749
+TRINITY_DN8_c1_g1_i7    4198    3935.393    32.406373   1416.354
+TRINITY_DN8_c1_g1_i5    5704    5441.393    0.000000    0.000
+TRINITY_DN8_c6_g1_i2    2373    2110.393    0.261327    6.125
+TRINITY_DN8_c6_g1_i7    2371    2108.393    0.000000    0.000
+TRINITY_DN8_c6_g1_i4    1995    1732.393    0.159295    3.065
+TRINITY_DN8_c6_g1_i1    2369    2106.393    2.257490    52.810
+TRINITY_DN8_c12_g1_i1   391 138.140 1.303641    2.000
+</pre></div>
+
+
+<p>A_xenica_transfer_3.quant</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN8_c0_g1_i7    1034    782.654 60.180869   339.372
+TRINITY_DN8_c0_g1_i6    1035    783.654 448.120287  2530.270
+TRINITY_DN8_c0_g1_i1    3195    2943.654    154.230800  3271.191
+TRINITY_DN8_c0_g1_i9    2874    2622.654    303.041947  5726.533
+TRINITY_DN8_c0_g1_i4    2155    1903.654    109.596180  1503.251
+TRINITY_DN8_c0_g1_i5    2107    1855.654    43.912369   587.127
+TRINITY_DN8_c0_g1_i2    1083    831.654 780.203110  4675.179
+TRINITY_DN8_c0_g1_i3    986 734.924 35.517974   188.078
+TRINITY_DN8_c0_g2_i1    961 709.935 2.736916    14.000
+TRINITY_DN8_c1_g1_i8    5552    5300.654    0.000000    0.000
+TRINITY_DN8_c1_g1_i1    4350    4098.654    6.297119    185.965
+TRINITY_DN8_c1_g1_i6    1785    1533.654    6.600886    72.942
+TRINITY_DN8_c1_g1_i9    5729    5477.654    1.543412    60.915
+TRINITY_DN8_c1_g1_i3    1920    1668.654    33.524846   403.071
+TRINITY_DN8_c1_g1_i4    4375    4123.654    7.936309    235.803
+TRINITY_DN8_c1_g1_i7    4198    3946.654    50.227757   1428.305
+TRINITY_DN8_c1_g1_i5    5704    5452.654    0.000000    0.000
+TRINITY_DN8_c6_g1_i2    2373    2121.654    0.000000    0.000
+TRINITY_DN8_c6_g1_i7    2371    2119.654    0.000000    0.000
+TRINITY_DN8_c6_g1_i4    1995    1743.654    1.010916    12.701
+TRINITY_DN8_c6_g1_i1    2369    2117.654    1.658089    25.299
+TRINITY_DN8_c12_g1_i1   391 146.630 0.000000    0.000
+</pre></div>
+
+
+<p>Each of these contigs in theory represent a transcript. What are they?</p>
+<h2>Annotations from the dammit pipeline</h2>
+<p>I have annotated each transcriptome using Camille Scott's <a href="http://dib-lab.github.io/dammit/">dammit</a> (version 1.1) pipeline using three custom amino acid databases from <a href="http://uswest.ensembl.org/Fundulus_heteroclitus/Info/Index">Ensembl</a>, <a href="http://arthropods.eugenes.org/EvidentialGene/vertebrates/killifish/Genes/">EviGene</a>, and <a href="https://www.ncbi.nlm.nih.gov/genome/743">NCBI</a> annotations of the <em>Fundulus heteroclitus</em> genome. Several steps were taken to choose which annotation to assign to each contig. </p>
+<ol>
+<li>Make .csv file: <a href="https://github.com/WhiteheadLab/RNAseq_15killifish/blob/master/notebooks/dammit-Trinity_conversions.ipynb">connect Trinity transcript ID to dammit transcript ID</a></li>
+<li>Append .csv file <a href="https://github.com/WhiteheadLab/RNAseq_15killifish/blob/master/notebooks/makeEnsemblannotationstablefromdammit.ipynb">connecting to transcript annotations from each database (NCBI, Ensembl, EviGene)</a>. Assumes one transcript makes one protein. Picks the annotation from each database with the highest length and drops all other duplicates from the same transcript/database. Ends up with three columns of annotations for each transcript, one from each database.</li>
+<li><a href="https://github.com/WhiteheadLab/RNAseq_15killifish/blob/master/notebooks/annotations_addingOG.ipynb">Connect annotation table to OGs</a></li>
+</ol>
+<p>The resulting file <a href="https://osf.io/ux3tn/">A_xenica.annotations.OGs.merged.csv</a> contains all merged annotations for this one species, <em>Adinia xenica</em>. </p>
+<p>The transcript, <code>TRINITY_DN8_c0_g1_i7</code> is also known as <code>Transcript_0</code> (the dammit pipeline renames the transcripts) and matches with the annotations <code>Funhe2EKm033401t1</code> and <code>XP_012730079.1</code>, which is a <a href="https://www.ncbi.nlm.nih.gov/gene/?term=XP_012730079.1">cold-inducible RNA-binding protein isoform X2 from the <em>Fundulus heteroclitus</em> genome</a>. </p>
+<p>Transcripts 17-21 have no annotation from any of the databases provided to the dammit pipeline. Were they quantified by salmon? Not really. See last 5 contigs in each list above. They are consistently lower compared to quant of other contigs, which supposedly are the same thing. This indicates a potential assembly mishap with these contigs.</p>
+<p>There is no OG for this grouping. Why not?</p>
+<p>Now, let's compare the 3 different annotation types that we have available: NCBI, EviGene, and Ensembl.</p>
+<p>Therea are five NCBI IDs that match to sequences in this transcript block:</p>
+<div class="highlight"><pre><span></span><span class="n">NCBI</span>    <span class="n">start_x</span> <span class="n">end_x</span>   <span class="n">length_x</span>
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_012730079</span><span class="mf">.1</span><span class="o">|</span> <span class="n">cold</span><span class="o">-</span><span class="n">inducible</span> <span class="n">RNA</span><span class="o">-</span><span class="n">binding</span> <span class="n">protein</span> <span class="n">isoform</span> <span class="n">X2</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>   <span class="mi">82</span>  <span class="mi">258</span> <span class="mi">176</span>
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_012730080</span><span class="mf">.1</span><span class="o">|</span> <span class="n">cold</span><span class="o">-</span><span class="n">inducible</span> <span class="n">RNA</span><span class="o">-</span><span class="n">binding</span> <span class="n">protein</span> <span class="n">isoform</span> <span class="n">X3</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>   <span class="mi">82</span>  <span class="mi">244</span> <span class="mi">162</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_2</span><span class="p">)</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_3</span><span class="p">)</span>                      
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_012730079</span><span class="mf">.1</span><span class="o">|</span> <span class="n">cold</span><span class="o">-</span><span class="n">inducible</span> <span class="n">RNA</span><span class="o">-</span><span class="n">binding</span> <span class="n">protein</span> <span class="n">isoform</span> <span class="n">X2</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>   <span class="mi">82</span>  <span class="mi">259</span> <span class="mi">177</span>
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_012730081</span><span class="mf">.1</span><span class="o">|</span> <span class="n">cold</span><span class="o">-</span><span class="n">inducible</span> <span class="n">RNA</span><span class="o">-</span><span class="n">binding</span> <span class="n">protein</span> <span class="n">isoform</span> <span class="n">X4</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>   <span class="mi">82</span>  <span class="mi">243</span> <span class="mi">161</span>
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_012730076</span><span class="mf">.1</span><span class="o">|</span> <span class="n">cold</span><span class="o">-</span><span class="n">inducible</span> <span class="n">RNA</span><span class="o">-</span><span class="n">binding</span> <span class="n">protein</span> <span class="n">isoform</span> <span class="n">X1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>   <span class="mi">82</span>  <span class="mi">260</span> <span class="mi">178</span>
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_012730080</span><span class="mf">.1</span><span class="o">|</span> <span class="n">cold</span><span class="o">-</span><span class="n">inducible</span> <span class="n">RNA</span><span class="o">-</span><span class="n">binding</span> <span class="n">protein</span> <span class="n">isoform</span> <span class="n">X3</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>   <span class="mi">82</span>  <span class="mi">242</span> <span class="mi">160</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_8</span><span class="p">)</span>
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_012735776</span><span class="mf">.1</span><span class="o">|</span> <span class="n">zinc</span> <span class="n">finger</span> <span class="n">protein</span> <span class="n">aebp2</span> <span class="n">isoform</span> <span class="n">X1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>    <span class="mi">394</span> <span class="mi">604</span> <span class="mi">210</span>
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_012735776</span><span class="mf">.1</span><span class="o">|</span> <span class="n">zinc</span> <span class="n">finger</span> <span class="n">protein</span> <span class="n">aebp2</span> <span class="n">isoform</span> <span class="n">X1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>    <span class="mi">445</span> <span class="mi">657</span> <span class="mi">212</span>
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_012735776</span><span class="mf">.1</span><span class="o">|</span> <span class="n">zinc</span> <span class="n">finger</span> <span class="n">protein</span> <span class="n">aebp2</span> <span class="n">isoform</span> <span class="n">X1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>    <span class="mi">394</span> <span class="mi">499</span> <span class="mi">105</span>
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_012735776</span><span class="mf">.1</span><span class="o">|</span> <span class="n">zinc</span> <span class="n">finger</span> <span class="n">protein</span> <span class="n">aebp2</span> <span class="n">isoform</span> <span class="n">X1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>    <span class="mi">453</span> <span class="mi">663</span> <span class="mi">210</span>
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_012735776</span><span class="mf">.1</span><span class="o">|</span> <span class="n">zinc</span> <span class="n">finger</span> <span class="n">protein</span> <span class="n">aebp2</span> <span class="n">isoform</span> <span class="n">X1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>    <span class="mi">394</span> <span class="mi">595</span> <span class="mi">201</span>
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_012735776</span><span class="mf">.1</span><span class="o">|</span> <span class="n">zinc</span> <span class="n">finger</span> <span class="n">protein</span> <span class="n">aebp2</span> <span class="n">isoform</span> <span class="n">X1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>    <span class="mi">453</span> <span class="mi">665</span> <span class="mi">212</span>
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_012735776</span><span class="mf">.1</span><span class="o">|</span> <span class="n">zinc</span> <span class="n">finger</span> <span class="n">protein</span> <span class="n">aebp2</span> <span class="n">isoform</span> <span class="n">X1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>    <span class="mi">394</span> <span class="mi">606</span> <span class="mi">212</span>
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_012735776</span><span class="mf">.1</span><span class="o">|</span> <span class="n">zinc</span> <span class="n">finger</span> <span class="n">protein</span> <span class="n">aebp2</span> <span class="n">isoform</span> <span class="n">X1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>    <span class="mi">445</span> <span class="mi">655</span> <span class="mi">210</span>
+</pre></div>
+
+
+<p>Ensembl IDs are slightly different:</p>
+<div class="highlight"><pre><span></span>Ensembl_info    start   end length
+ENSFHEP00000001828  82  259 177
+ENSFHEP00000001826  82  244 162
+(missing Transcript_2)
+ENSFHEP00000001828  82  243 161
+(missing Transcript_4)
+ENSFHEP00000022306  82  243 161
+ENSFHEP00000001826  82  260 178
+ENSFHEP00000001828  82  243 161
+(missing Transcript_8)
+ENSFHEP00000025887  394 604 210
+ENSFHEP00000025887  445 657 212
+ENSFHEP00000025887  394 499 105
+ENSFHEP00000025887  453 663 210
+ENSFHEP00000025887  394 595 201
+ENSFHEP00000025887  453 665 212
+ENSFHEP00000025887  394 606 212
+ENSFHEP00000025887  445 655 210
+</pre></div>
+
+
+<p>and EviGene simliar to Ensembl:</p>
+<div class="highlight"><pre><span></span>EviGene_transcript  start_y end_y   length_y
+Funhe2EKm033401t1   82  258 176
+Funhe2EKm033401t1   82  244 162
+(missing Transcript_2)
+Funhe2EKm033401t1   82  242 160
+(missing Transcript_4)  
+Funhe2EKm033401t1   82  242 160
+Funhe2EKm033401t1   82  260 178
+Funhe2EKm033401t1   82  242 160
+(missing Transcript_8)  
+Funhe2EKm038372t1   394 604 210
+Funhe2EKm038372t1   445 657 212
+Funhe2EKm038372t2   394 499 105
+Funhe2EKm038372t1   453 663 210
+Funhe2EKm038372t1   394 595 201
+Funhe2EKm038372t1   453 665 212
+Funhe2EKm038372t2   394 606 212
+Funhe2EKm038372t1   445 655 210
+</pre></div>
+
+
+<h2>Collapsing with tximport</h2>
+<p>The Bioconductor package, <a href="http://bioconductor.org/packages/release/bioc/html/tximport.html">tximport</a> by <a href="https://f1000research.com/articles/4-1521/">Soneson et al. 2015</a> (awesome paper showing that gene-level analysis is more accurate than transcript-level) collapses/summarizes the counts for the same gene ID together.</p>
+<p>From <a href="https://f1000research.com/articles/4-1521/">Soneson et al. 2015</a>:</p>
+<blockquote>
+<p>"...isoform quantification is more complex than the simple counting, due to the high degree of overlap among transcripts. Currently, there is no consensus regarding the optimal resolution or method for quantification and downstream analysis of transcriptomic output."</p>
+</blockquote>
+<p>The steps for tximport:</p>
+<ol>
+<li>Make <a href="https://github.com/WhiteheadLab/RNAseq_15killifish/blob/933769272ad2d9b5ba6e97f50bff980dddb3683d/notebooks/make_tx2gene.ipynb">separate tx2gene files for Ensembl, Evigene, NCBI</a></li>
+<li>Run <a href="https://github.com/WhiteheadLab/RNAseq_15killifish/blob/master/DE_scripts/tximport_annotations_species_29Jan2019.R">tximport 3 times (1 for each database) to collapse transcript counts by unique protein annotation ID</a></li>
+<li>Summarize counts tables across species, one table for each: <a href="https://github.com/WhiteheadLab/RNAseq_15killifish/blob/933769272ad2d9b5ba6e97f50bff980dddb3683d/scripts/4_merge_counts_tables_Evigene.ipynb">Evigene</a>, <a href="https://github.com/WhiteheadLab/RNAseq_15killifish/blob/933769272ad2d9b5ba6e97f50bff980dddb3683d/scripts/4_merge_counts_tables_NCBI.ipynb">NCBI</a>, <a href="https://github.com/WhiteheadLab/RNAseq_15killifish/blob/933769272ad2d9b5ba6e97f50bff980dddb3683d/scripts/4_merge_counts_tables_Ensembl.ipynb">Ensembl</a></li>
+</ol>
+<p>A file called 'tx2gene` is required for tximport, which consists of two columns:</p>
+<div class="highlight"><pre><span></span>tx2gene_ncbi <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="s">&quot;A_xenica_ncbi.tx2gene.csv&quot;</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="kp">colnames</span><span class="p">(</span>tx2gene_ncbi<span class="p">)</span><span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">,</span><span class="s">&quot;NCBI&quot;</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="kp">head</span><span class="p">(</span>tx2gene_ncbi<span class="p">)</span>
+                     Name           NCBI
+<span class="m">1</span>    TRINITY_DN8_c0_g1_i7 XP_012730079.1
+<span class="m">2</span>    TRINITY_DN8_c0_g1_i6 XP_012730080.1
+<span class="m">3</span>    TRINITY_DN8_c1_g1_i1 XP_012735776.1
+<span class="m">4</span>   TRINITY_DN14_c1_g1_i8 XP_021179903.1
+<span class="m">5</span> TRINITY_DN7641_c0_g1_i5 XP_012714310.2
+<span class="m">6</span> TRINITY_DN7606_c0_g2_i4 XP_012735011.1
+<span class="o">&gt;</span> <span class="kp">dim</span><span class="p">(</span>tx2gene_ncbi<span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="m">70774</span>     <span class="m">2</span>
+</pre></div>
+
+
+<p>The tx2gene file contains the information for which transcripts/contigs are to be collapsed by unique gene ID. The tximport function is run with the counts file, and summarized. 70,774 annotations get reduced to 21,650 genes. Note that the majority of the fragments (230,890) from the transcriptome are not annotated.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;</span> txi_ncbi.salmon <span class="o">&lt;-</span> tximport<span class="p">(</span>files<span class="p">,</span> type <span class="o">=</span> <span class="s">&quot;salmon&quot;</span><span class="p">,</span> tx2gene <span class="o">=</span> tx2gene_ncbi<span class="p">)</span>
+reading <span class="kr">in</span> files with read_tsv
+<span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span> <span class="m">7</span> <span class="m">8</span> <span class="m">9</span> 
+transcripts missing from tx2gene<span class="o">:</span> <span class="m">230890</span>
+summarizing abundance
+summarizing counts
+summarizing <span class="kp">length</span>
+<span class="o">&gt;</span> <span class="kp">print</span><span class="p">(</span><span class="kp">dim</span><span class="p">(</span>txi_ncbi.salmon<span class="o">$</span>counts<span class="p">))</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="m">21650</span>     <span class="m">9</span>
+write.csv<span class="p">(</span>txi_ncbi.salmon<span class="o">$</span>counts<span class="p">,</span><span class="s">&quot;A_xenica_counts.ncbi.csv&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Output after <code>tximport</code>:</p>
+<h3>ENSEMBL</h3>
+<div class="highlight"><pre><span></span>ENSFHEP00000001828  6991.557    11733.51    14262.502   9701.572    4274.786    4851.493    6727.553    7969.737    6261.57
+ENSFHEP00000001826  13174.424   9559.255    13168.948   8733.483    4192.299    6236.185    4756.197    18552.367   7205.449
+ENSFHEP00000022306  1596.367    761.523 1184.857    1283.066    393.474 767.949 516.211 892.382 587.127
+ENSFHEP00000025887  4019    2385.999    3483.999    2027    669 1378.999    1836    2428.001    2801.001
+</pre></div>
+
+
+<h3>NCBI:</h3>
+<div class="highlight"><pre><span></span>XP_012730079.1  4277.751    2712.994    3543.154    3477.77 937.243 1899.893    1479.687    1532.331    1847.036
+XP_012730080.1  6390.756    3251.141    4992.686    2762.739    1373.078    2201.084    1944.108    8803.616    2723.935
+XP_012730081.1  1596.367    761.523 1184.857    1283.066    393.474 767.949 516.211 892.382 587.127
+XP_012730076.1  7578.476    6542.645    8633.753    6080.608    2888.103    4047.111    2917.204    9949.523    4679.179
+XP_012735776.1  4019    2385.999    3483.999    2027    669 1378.999    1836    2428.001    2801.001
+</pre></div>
+
+
+<h3>EviGene (collapses at gene level)</h3>
+<div class="highlight"><pre><span></span>Funhe2EKm033401 21786.876   22063.317   28626.56    19730.832   8872.15 11863.633   12008.679   27422.497   14058.146
+Funhe2EKm038372 3934    2331.999    3389.999    1992    630 1326.999    1778    2366.001    2674.001
+</pre></div>
+
+
+<p>Which one is correct?</p>
+<h2>Example 2: Which transcripts have OGs?</h2>
+<p>From this block of Trinity contigs, there are two OGs:</p>
+<div class="highlight"><pre><span></span>    TRINITY_DN18_c0_g1_i16  Transcript_22
+    TRINITY_DN18_c0_g1_i6   Transcript_23
+    TRINITY_DN18_c0_g1_i17  Transcript_24
+    TRINITY_DN18_c0_g1_i4   Transcript_25
+    TRINITY_DN18_c0_g1_i8   Transcript_26
+    TRINITY_DN18_c0_g1_i21  Transcript_27
+    TRINITY_DN18_c0_g1_i9   Transcript_28
+    TRINITY_DN18_c0_g1_i3   Transcript_29
+    TRINITY_DN18_c0_g1_i11  Transcript_30
+    TRINITY_DN18_c0_g1_i15  Transcript_31
+    TRINITY_DN18_c0_g1_i7   Transcript_32
+OG0001688   TRINITY_DN18_c0_g1_i10  Transcript_33
+    TRINITY_DN18_c0_g1_i5   Transcript_34
+OG0006300   TRINITY_DN18_c0_g1_i14  Transcript_35
+    TRINITY_DN18_c0_g2_i1   Transcript_36
+    TRINITY_DN18_c1_g1_i1   Transcript_37
+</pre></div>
+
+
+<p>Why only these two contigs?</p>
+<div class="highlight"><pre><span></span>OG0001688   TRINITY_DN18_c0_g1_i10  Transcript_33
+OG0006300   TRINITY_DN18_c0_g1_i14  Transcript_35
+</pre></div>
+
+
+<p>The other contigs in the block have the same annotations.
+Ensembl:</p>
+<div class="highlight"><pre><span></span>Ensembl_info    start   end length
+ENSFHEP00000034241.1    149 705 556
+ENSFHEP00000034241.1    180 283 103
+ENSFHEP00000034241.1    149 299 150
+ENSFHEP00000034241.1    149 705 556
+ENSFHEP00000034241.1    149 705 556
+ENSFHEP00000034241.1    149 705 556
+ENSFHEP00000034241.1    149 705 556
+ENSFHEP00000034241.1    149 239 90
+ENSFHEP00000034241.1    149 705 556
+ENSFHEP00000034241.1    149 705 556
+ENSFHEP00000034241.1    149 705 556
+(missing Transcript_33)
+ENSFHEP00000034241.1    149 705 556
+ENSFHEP00000034241.1    0   208 208
+(missing Transcript_36)
+(missing Transcript_37)
+</pre></div>
+
+
+<p>NCBI:</p>
+<div class="highlight"><pre><span></span><span class="n">NCBI</span>    <span class="n">start_x</span> <span class="n">end_x</span>   <span class="n">length_x</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">115</span> <span class="mi">1937</span>    <span class="mi">1822</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">180</span> <span class="mi">283</span> <span class="mi">103</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">115</span> <span class="mi">299</span> <span class="mi">184</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">115</span> <span class="mi">1170</span>    <span class="mi">1055</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">115</span> <span class="mi">1440</span>    <span class="mi">1325</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">115</span> <span class="mi">1834</span>    <span class="mi">1719</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">115</span> <span class="mi">1472</span>    <span class="mi">1357</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">115</span> <span class="mi">239</span> <span class="mi">124</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">115</span> <span class="mi">1622</span>    <span class="mi">1507</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">115</span> <span class="mi">1418</span>    <span class="mi">1303</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">115</span> <span class="mi">1418</span>    <span class="mi">1303</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">182</span> <span class="mi">1225</span>    <span class="mi">1043</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">115</span> <span class="mi">1709</span>    <span class="mi">1594</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">0</span>   <span class="mi">216</span> <span class="mi">216</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_36</span><span class="p">)</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_37</span><span class="p">)</span>
+</pre></div>
+
+
+<p>EviGene:</p>
+<div class="highlight"><pre><span></span>EviGene_transcript  start_y end_y   length_y
+Funhe2EKm036495t2   249 1937    1688
+Funhe2EKm036495t2   180 283 103
+Funhe2EKm036495t1   115 299 184
+Funhe2EKm036495t1   115 1170    1055
+Funhe2EKm036495t4   115 1514    1399
+Funhe2EKm036495t2   249 1834    1585
+Funhe2EKm036495t4   115 1457    1342
+Funhe2EKm036495t1   115 239 124
+Funhe2EKm036495t2   249 1622    1373
+Funhe2EKm036495t1   115 1418    1303
+Funhe2EKm036495t1   115 1418    1303
+Funhe2EKm036495t2   182 1225    1043
+Funhe2EKm036495t2   249 1709    1460
+Funhe2EKm036495t7   0   254 254
+(missing Transcript_36)
+(missing Transcript_37)
+</pre></div>
+
+
+<p>Here are the quantifications from salmon:</p>
+<p>A_xenica_BW_1</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN18_c0_g1_i16  6454    6233.841    30.846165   2599.639
+TRINITY_DN18_c0_g1_i6   849 629.036 1.393892    11.854
+TRINITY_DN18_c0_g1_i17  1091    870.841 0.578251    6.808
+TRINITY_DN18_c0_g1_i4   4712    4491.841    3.797259    230.595
+TRINITY_DN18_c0_g1_i8   6533    6312.841    0.000000    0.000
+TRINITY_DN18_c0_g1_i21  7883    7662.841    0.256581    26.581
+TRINITY_DN18_c0_g1_i9   6587    6366.841    0.256579    22.085
+TRINITY_DN18_c0_g1_i3   884 664.026 0.327397    2.939
+TRINITY_DN18_c0_g1_i11  5220    4999.841    0.501775    33.917
+TRINITY_DN18_c0_g1_i15  6566    6345.841    0.333891    28.645
+TRINITY_DN18_c0_g1_i7   6645    6424.841    0.000000    0.000
+TRINITY_DN18_c0_g1_i10  3678    3457.841    0.219124    10.244
+TRINITY_DN18_c0_g1_i5   5585    5364.841    0.064707    4.693
+TRINITY_DN18_c0_g1_i14  765 545.061 0.000000    0.000
+TRINITY_DN18_c0_g2_i1   871 651.029 0.568085    5.000
+TRINITY_DN18_c1_g1_i1   364 147.523 1.002797    2.000
+</pre></div>
+
+
+<p>A_xenica_BW_2</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN18_c0_g1_i16  6454    6204.489    22.527351   1382.342
+TRINITY_DN18_c0_g1_i6   849 599.790 0.216304    1.283
+TRINITY_DN18_c0_g1_i17  1091    841.489 1.008484    8.393
+TRINITY_DN18_c0_g1_i4   4712    4462.489    1.861701    82.165
+TRINITY_DN18_c0_g1_i8   6533    6283.489    0.000000    0.000
+TRINITY_DN18_c0_g1_i21  7883    7633.489    0.537603    40.587
+TRINITY_DN18_c0_g1_i9   6587    6337.489    0.000000    0.000
+TRINITY_DN18_c0_g1_i3   884 634.776 0.000000    0.000
+TRINITY_DN18_c0_g1_i11  5220    4970.489    0.364668    17.927
+TRINITY_DN18_c0_g1_i15  6566    6316.489    0.536235    33.499
+TRINITY_DN18_c0_g1_i7   6645    6395.489    0.510573    32.295
+TRINITY_DN18_c0_g1_i10  3678    3428.489    0.606792    20.575
+TRINITY_DN18_c0_g1_i5   5585    5335.489    0.207233    10.935
+TRINITY_DN18_c0_g1_i14  765 515.845 0.000000    0.000
+TRINITY_DN18_c0_g2_i1   871 621.778 0.487850    3.000
+TRINITY_DN18_c1_g1_i1   364 125.722 0.000000    0.000
+</pre></div>
+
+
+<p>A_xenica_BW_3</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN18_c0_g1_i16  6454    6226.011    24.577486   2051.870
+TRINITY_DN18_c0_g1_i6   849 621.219 0.514900    4.289
+TRINITY_DN18_c0_g1_i17  1091    863.011 0.000000    0.000
+TRINITY_DN18_c0_g1_i4   4712    4484.011    1.503027    90.372
+TRINITY_DN18_c0_g1_i8   6533    6305.011    0.000000    0.000
+TRINITY_DN18_c0_g1_i21  7883    7655.011    0.604365    62.037
+TRINITY_DN18_c0_g1_i9   6587    6359.011    0.100474    8.567
+TRINITY_DN18_c0_g1_i3   884 656.210 0.191564    1.686
+TRINITY_DN18_c0_g1_i11  5220    4992.011    0.496279    33.220
+TRINITY_DN18_c0_g1_i15  6566    6338.011    0.606954    51.584
+TRINITY_DN18_c0_g1_i7   6645    6417.011    0.394091    33.910
+TRINITY_DN18_c0_g1_i10  3678    3450.011    0.445096    20.591
+TRINITY_DN18_c0_g1_i5   5585    5357.011    0.457638    32.874
+TRINITY_DN18_c0_g1_i14  765 537.258 0.000000    0.000
+TRINITY_DN18_c0_g2_i1   871 643.215 0.463769    4.000
+TRINITY_DN18_c1_g1_i1   364 140.974 0.000000    0.000
+</pre></div>
+
+
+<p>A_xenica_FW_1</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN18_c0_g1_i16  6454    6208.009    28.137333   1881.814
+TRINITY_DN18_c0_g1_i6   849 603.321 0.805496    5.235
+TRINITY_DN18_c0_g1_i17  1091    845.009 0.401774    3.658
+TRINITY_DN18_c0_g1_i4   4712    4466.009    0.113310    5.452
+TRINITY_DN18_c0_g1_i8   6533    6287.009    0.588066    39.830
+TRINITY_DN18_c0_g1_i21  7883    7637.009    0.466627    38.391
+TRINITY_DN18_c0_g1_i9   6587    6341.009    0.000000    0.000
+TRINITY_DN18_c0_g1_i3   884 638.311 0.000000    0.000
+TRINITY_DN18_c0_g1_i11  5220    4974.009    0.312379    16.739
+TRINITY_DN18_c0_g1_i15  6566    6320.009    0.447333    30.457
+TRINITY_DN18_c0_g1_i7   6645    6399.009    0.000000    0.000
+TRINITY_DN18_c0_g1_i10  3678    3432.009    0.838865    31.016
+TRINITY_DN18_c0_g1_i5   5585    5339.009    0.076627    4.407
+TRINITY_DN18_c0_g1_i14  765 519.364 0.000000    0.000
+TRINITY_DN18_c0_g2_i1   871 625.314 0.148443    1.000
+TRINITY_DN18_c1_g1_i1   364 128.239 0.000000    0.000
+</pre></div>
+
+
+<p>A_xenica_FW_2</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN18_c0_g1_i16  6454    6194.910    30.603870   868.112
+TRINITY_DN18_c0_g1_i6   849 590.386 0.000000    0.000
+TRINITY_DN18_c0_g1_i17  1091    831.910 0.000000    0.000
+TRINITY_DN18_c0_g1_i4   4712    4452.910    1.350102    27.528
+TRINITY_DN18_c0_g1_i8   6533    6273.910    0.404081    11.608
+TRINITY_DN18_c0_g1_i21  7883    7623.910    0.267190    9.327
+TRINITY_DN18_c0_g1_i9   6587    6327.910    0.000000    0.000
+TRINITY_DN18_c0_g1_i3   884 625.368 0.000000    0.000
+TRINITY_DN18_c0_g1_i11  5220    4960.910    0.360567    8.191
+TRINITY_DN18_c0_g1_i15  6566    6306.910    0.000000    0.000
+TRINITY_DN18_c0_g1_i7   6645    6385.910    0.000000    0.000
+TRINITY_DN18_c0_g1_i10  3678    3418.910    0.589855    9.234
+TRINITY_DN18_c0_g1_i5   5585    5325.910    0.000000    0.000
+TRINITY_DN18_c0_g1_i14  765 506.466 0.000000    0.000
+TRINITY_DN18_c0_g2_i1   871 612.375 0.000000    0.000
+TRINITY_DN18_c1_g1_i1   364 124.670 0.000000    0.000
+</pre></div>
+
+
+<p>A_xenica_FW_3</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN18_c0_g1_i16  6454    6212.418    28.368698   1325.205
+TRINITY_DN18_c0_g1_i6   849 607.760 0.000000    0.000
+TRINITY_DN18_c0_g1_i17  1091    849.418 0.000000    0.000
+TRINITY_DN18_c0_g1_i4   4712    4470.418    2.193529    73.735
+TRINITY_DN18_c0_g1_i8   6533    6291.418    0.000000    0.000
+TRINITY_DN18_c0_g1_i21  7883    7641.418    0.525952    30.221
+TRINITY_DN18_c0_g1_i9   6587    6345.418    0.000000    0.000
+TRINITY_DN18_c0_g1_i3   884 642.740 1.555589    7.518
+TRINITY_DN18_c0_g1_i11  5220    4978.418    0.596278    22.321
+TRINITY_DN18_c0_g1_i15  6566    6324.418    0.000000    0.000
+TRINITY_DN18_c0_g1_i7   6645    6403.418    0.000000    0.000
+TRINITY_DN18_c0_g1_i10  3678    3436.418    0.000000    0.000
+TRINITY_DN18_c0_g1_i5   5585    5343.418    0.000000    0.000
+TRINITY_DN18_c0_g1_i14  765 523.809 0.000000    0.000
+TRINITY_DN18_c0_g2_i1   871 629.746 0.000000    0.000
+TRINITY_DN18_c1_g1_i1   364 132.991 0.999992    1.000
+</pre></div>
+
+
+<p>A_xenica_transfer_1</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN18_c0_g1_i16  6454    6181.427    31.122892   1103.388
+TRINITY_DN18_c0_g1_i6   849 576.983 1.439049    4.762
+TRINITY_DN18_c0_g1_i17  1091    818.427 0.000000    0.000
+TRINITY_DN18_c0_g1_i4   4712    4439.427    3.659486    93.176
+TRINITY_DN18_c0_g1_i8   6533    6260.427    0.000000    0.000
+TRINITY_DN18_c0_g1_i21  7883    7610.427    0.463348    20.224
+TRINITY_DN18_c0_g1_i9   6587    6314.427    0.000000    0.000
+TRINITY_DN18_c0_g1_i3   884 611.950 3.059572    10.738
+TRINITY_DN18_c0_g1_i11  5220    4947.427    0.730161    20.718
+TRINITY_DN18_c0_g1_i15  6566    6293.427    0.000000    0.000
+TRINITY_DN18_c0_g1_i7   6645    6372.427    0.208309    7.613
+TRINITY_DN18_c0_g1_i10  3678    3405.427    1.070710    20.912
+TRINITY_DN18_c0_g1_i5   5585    5312.427    0.179431    5.467
+TRINITY_DN18_c0_g1_i14  765 493.125 0.000000    0.000
+TRINITY_DN18_c0_g2_i1   871 598.958 0.582203    2.000
+TRINITY_DN18_c1_g1_i1   364 114.839 1.518283    1.000
+</pre></div>
+
+
+<p>A_xenica_transfer_2</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN18_c0_g1_i16  6454    6191.393    22.196557   1526.255
+TRINITY_DN18_c0_g1_i6   849 586.777 0.601647    3.921
+TRINITY_DN18_c0_g1_i17  1091    828.393 0.173338    1.595
+TRINITY_DN18_c0_g1_i4   4712    4449.393    1.696002    83.807
+TRINITY_DN18_c0_g1_i8   6533    6270.393    0.287994    20.055
+TRINITY_DN18_c0_g1_i21  7883    7620.393    0.326335    27.618
+TRINITY_DN18_c0_g1_i9   6587    6324.393    0.327247    22.985
+TRINITY_DN18_c0_g1_i3   884 621.753 0.228701    1.579
+TRINITY_DN18_c0_g1_i11  5220    4957.393    0.340199    18.730
+TRINITY_DN18_c0_g1_i15  6566    6303.393    0.000000    0.000
+TRINITY_DN18_c0_g1_i7   6645    6382.393    0.000000    0.000
+TRINITY_DN18_c0_g1_i10  3678    3415.393    0.257022    9.749
+TRINITY_DN18_c0_g1_i5   5585    5322.393    0.417951    24.705
+TRINITY_DN18_c0_g1_i14  765 502.823 0.000000    0.000
+TRINITY_DN18_c0_g2_i1   871 608.760 0.000000    0.000
+TRINITY_DN18_c1_g1_i1   364 116.576 0.772392    1.000
+</pre></div>
+
+
+<p>A_xenica_transfer_3</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN18_c0_g1_i16  6454    6202.654    30.796098   1376.326
+TRINITY_DN18_c0_g1_i6   849 598.002 0.000000    0.000
+TRINITY_DN18_c0_g1_i17  1091    839.654 0.477857    2.891
+TRINITY_DN18_c0_g1_i4   4712    4460.654    0.216472    6.957
+TRINITY_DN18_c0_g1_i8   6533    6281.654    0.000000    0.000
+TRINITY_DN18_c0_g1_i21  7883    7631.654    0.848633    46.665
+TRINITY_DN18_c0_g1_i9   6587    6335.654    0.287240    13.112
+TRINITY_DN18_c0_g1_i3   884 632.982 0.812986    3.708
+TRINITY_DN18_c0_g1_i11  5220    4968.654    0.316341    11.325
+TRINITY_DN18_c0_g1_i15  6566    6314.654    0.000000    0.000
+TRINITY_DN18_c0_g1_i7   6645    6393.654    0.000000    0.000
+TRINITY_DN18_c0_g1_i10  3678    3426.654    0.243650    6.016
+TRINITY_DN18_c0_g1_i5   5585    5333.654    0.000000    0.000
+TRINITY_DN18_c0_g1_i14  765 514.064 0.000000    0.000
+TRINITY_DN18_c0_g2_i1   871 619.987 0.223856    1.000
+TRINITY_DN18_c1_g1_i1   364 123.766 0.000000    0.000
+</pre></div>
+
+
+<p>After <code>tximport</code>, they all get collapsed.
+Ensembl</p>
+<div class="highlight"><pre><span></span>ENSFHEP00000034241.1    2968.756    1609.426    2370.409    2025.983    924.766 1459    1266.086    1731.25 1461.984
+</pre></div>
+
+
+<p>NCBI:</p>
+<div class="highlight"><pre><span></span>XP_012733577.2  2979    1630.001    2391    2056.999    934 1459    1286.998    1740.999    1468
+</pre></div>
+
+
+<p>EviGene:</p>
+<div class="highlight"><pre><span></span>Funhe2EKm036495 2979    1630.001    2391    2056.999    934 1459    1286.998    1740.999    1468
+</pre></div>
+
+
+<p>But, if we were to have quantified by OG we would get this:</p>
+<div class="highlight"><pre><span></span>OG0001688   10.244  20.575  20.591  31.016  9.234   0   20.912  9.749   6.016
+OG0006300   0   0   0   0   0   0   0   0   0
+</pre></div>
+
+
+<p>In <em>Fundulus heteroclitus</em> (MDPL population), <code>OG0001688</code> corresponds to these contigs:</p>
+<div class="highlight"><pre><span></span>OG0001688   TRINITY_DN5678_c0_g1_i10    Transcript_90605
+OG0006300   TRINITY_DN5678_c0_g1_i1 Transcript_90601
+</pre></div>
+
+
+<p>This is the block of transcripts identified by Trinity:</p>
+<div class="highlight"><pre><span></span>TRINITY_DN5678_c0_g1_i1 Transcript_90601
+TRINITY_DN5678_c0_g1_i4 Transcript_90602
+TRINITY_DN5678_c0_g1_i5 Transcript_90603
+TRINITY_DN5678_c0_g1_i3 Transcript_90604
+TRINITY_DN5678_c0_g1_i10    Transcript_90605
+TRINITY_DN5678_c0_g1_i8 Transcript_90606
+TRINITY_DN5678_c0_g1_i9 Transcript_90607
+TRINITY_DN5678_c0_g1_i6 Transcript_90608
+TRINITY_DN5678_c0_g1_i7 Transcript_90609
+TRINITY_DN5678_c0_g1_i2 Transcript_90610
+TRINITY_DN5678_c1_g1_i5 Transcript_90611
+TRINITY_DN5678_c1_g1_i4 Transcript_90612
+TRINITY_DN5678_c1_g1_i6 Transcript_90613
+TRINITY_DN5678_c1_g1_i1 Transcript_90614
+TRINITY_DN5678_c1_g1_i7 Transcript_90615
+</pre></div>
+
+
+<p>Evigene</p>
+<div class="highlight"><pre><span></span>EviGene_transcript  start_y end_y   length_y
+Funhe2EKm036495t7   0   332 332
+Funhe2EKm036495t1   0   182 182
+Funhe2EKm036495t2   0   173 173
+Funhe2EKm036495t2   825 1570    745
+Funhe2EKm036495t11  97  1172    1075
+Funhe2EKm036495t9   440 496 56
+Funhe2EKm036495t2   0   173 173
+Funhe2EKm036495t2   0   1372    1372
+Funhe2EKm036495t2   0   1372    1372
+Funhe2EKm036495t2   231 1916    1685
+(missing Transcript_90611)
+(missing Transcript_90612)
+(missing Transcript_90613)
+Funhe2EKm036495t5   0   29  29
+(missing Transcript_90615)
+</pre></div>
+
+
+<p>NCBI:</p>
+<div class="highlight"><pre><span></span><span class="n">NCBI</span>    <span class="n">start_x</span> <span class="n">end_x</span>   <span class="n">length_x</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_90601</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">0</span>   <span class="mi">182</span> <span class="mi">182</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_90603</span><span class="p">)</span>  
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">0</span>   <span class="mi">630</span> <span class="mi">630</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">97</span>  <span class="mi">1172</span>    <span class="mi">1075</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_90606</span><span class="p">)</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_90607</span><span class="p">)</span>      
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">0</span>   <span class="mi">1372</span>    <span class="mi">1372</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">0</span>   <span class="mi">1372</span>    <span class="mi">1372</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">97</span>  <span class="mi">1916</span>    <span class="mi">1819</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_90611</span><span class="p">)</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_90612</span><span class="p">)</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_90613</span><span class="p">)</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_90614</span><span class="p">)</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_90615</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Ensembl:</p>
+<div class="highlight"><pre><span></span>Ensembl_info    start   end length
+(missing Transcript_90601)
+(missing Transcript_90602)
+(missing Transcript_90603)
+(missing Transcript_90604)
+ENSFHEP00000034241.1    131 687 556
+(missing Transcript_90606)
+(missing Transcript_90607)
+(missing Transcript_90608)
+(missing Transcript_90609)
+ENSFHEP00000034241.1    131 687 556
+(missing Transcript_90611)
+(missing Transcript_90612)
+(missing Transcript_90613)
+(missing Transcript_90614)
+(missing Transcript_90615)
+</pre></div>
+
+
+<p>In <em>Fundulus parvipinnis</em> (the California killifish!), <code>OG0001688</code> corresponds to a block of Trinity contigs that actually includes another OG <code>OG0013423</code>, unlike the previous 2 species we looked at.</p>
+<div class="highlight"><pre><span></span>    TRINITY_DN2419_c0_g1_i7 Transcript_38462
+OG0013423   TRINITY_DN2419_c0_g1_i1 Transcript_38463
+    TRINITY_DN2419_c0_g1_i4 Transcript_38464
+OG0001688   TRINITY_DN2419_c0_g1_i2 Transcript_38465
+    TRINITY_DN2419_c0_g1_i5 Transcript_38466
+    TRINITY_DN2419_c0_g1_i10    Transcript_38467
+    TRINITY_DN2419_c0_g1_i9 Transcript_38468
+OG0006300   TRINITY_DN2419_c0_g1_i11    Transcript_38469
+</pre></div>
+
+
+<p>Going back to <em>A. xenica</em>, this additional <code>OG0013423</code> is there, but annotated to a different set of contigs:</p>
+<div class="highlight"><pre><span></span>OG0013423   TRINITY_DN25142_c0_g1_i1    Transcript_171197
+OG0034594   TRINITY_DN25142_c0_g2_i1    Transcript_171198
+    TRINITY_DN25142_c0_g3_i1    Transcript_171199
+    TRINITY_DN25142_c0_g3_i3    Transcript_171200
+    TRINITY_DN25142_c0_g4_i1    Transcript_171201
+</pre></div>
+
+
+<p>In <em>F. heteroclitus MDPL</em>, <code>OG0013423</code> corresponds to the contigs TRINITY_DN103077_c0_g1_i1 Transcript_365057, which annotate as</p>
+<div class="highlight"><pre><span></span><span class="n">ENSFHEP00000008638</span>  <span class="mi">0</span>   <span class="mi">128</span> <span class="mi">128</span>
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_021177365</span><span class="mf">.1</span><span class="o">|</span> <span class="n">kelch</span><span class="o">-</span><span class="n">like</span> <span class="n">protein</span> <span class="mi">32</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>   <span class="mi">0</span>   <span class="mi">128</span> <span class="mi">128</span>
+<span class="n">Funhe2EKm031909t4</span>   <span class="mi">0</span>   <span class="mi">128</span> <span class="mi">128</span>
+</pre></div>
+
+
+<p>In <em>A. xenica</em>, <code>OG0013423</code> corresponds to the contigs TRINITY_DN25142_c0_g1_i1 Transcript_171197, which annotate to:</p>
+<div class="highlight"><pre><span></span><span class="n">ENSFHEP00000008638</span>  <span class="mi">137</span> <span class="mi">263</span> <span class="mi">126</span>
+<span class="n">ref</span><span class="o">|</span><span class="n">XP_021177365</span><span class="mf">.1</span><span class="o">|</span> <span class="n">kelch</span><span class="o">-</span><span class="n">like</span> <span class="n">protein</span> <span class="mi">32</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>   <span class="mi">137</span> <span class="mi">263</span> <span class="mi">126</span>
+<span class="n">Funhe2EKm031909t4</span>   <span class="mi">137</span> <span class="mi">263</span> <span class="mi">126</span>
+</pre></div>
+
+
+<p>The kelch-like protein 32 is.</p>
+<p>Back to <em>F. parvipinnis</em>, Ensembl annotations:</p>
+<div class="highlight"><pre><span></span>Ensembl_info    start   end length
+(missing Transcript_38462)          
+ENSFHEP00000008638  0   441 441
+(missing Transcript_38464)
+ENSFHEP00000021212  129 986 857
+ENSFHEP00000021212  129 986 857
+ENSFHEP00000008638  33  87  54
+(missing Transcript_38468)  
+(missing Transxript_38469)
+</pre></div>
+
+
+<p>NCBI:</p>
+<div class="highlight"><pre><span></span><span class="n">NCBI</span>    <span class="n">start_x</span> <span class="n">end_x</span>   <span class="n">length_x</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">19</span>  <span class="mi">647</span> <span class="mi">628</span>
+<span class="n">XP_021177365</span><span class="mf">.1</span>   <span class="n">kelch</span><span class="o">-</span><span class="n">like</span> <span class="n">protein</span> <span class="mi">32</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">0</span>   <span class="mi">441</span> <span class="mi">441</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_38464</span><span class="p">)</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">96</span>  <span class="mi">1898</span>    <span class="mi">1802</span>
+<span class="n">XP_012733577</span><span class="mf">.2</span>   <span class="n">extended</span> <span class="n">synaptotagmin</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">like</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">96</span>  <span class="mi">1587</span>    <span class="mi">1491</span>
+<span class="n">XP_021177365</span><span class="mf">.1</span>   <span class="n">kelch</span><span class="o">-</span><span class="n">like</span> <span class="n">protein</span> <span class="mi">32</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">33</span>  <span class="mi">87</span>  <span class="mi">54</span>
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_38468</span><span class="p">)</span>  
+<span class="p">(</span><span class="n">missing</span> <span class="n">Transcript_38469</span><span class="p">)</span>
+</pre></div>
+
+
+<p>EviGene (all contigs in group annotated):</p>
+<div class="highlight"><pre><span></span>EviGene_transcript  start_y end_y   length_y
+Funhe2EKm036495t2   19  647 628
+Funhe2EKm031909t4   0   389 389
+Funhe2EKm036495t9   573 629 56
+Funhe2EKm036495t2   230 1898    1668
+Funhe2EKm036495t2   230 1587    1357
+Funhe2EKm031909t1   33  87  54
+Funhe2EKm036495t9   19  309 290
+Funhe2EKm036495t9   390 581 191
+</pre></div>
+
+
+<p>The annotations for this group of transcripts in <em>F. parvipinnis</em> are mixed between "synaptotagmin 1-like" and "kelch-like protein 32". The kelch-like protein 32 is what <code>OG0013423</code> annotates to in <em>A. xenica</em> and <em>F. heteroclitus</em> (MDPL population).</p>
+<p>In <em>F. parvipinnis</em>, <code>OG0013423</code> is <code>TRINITY_DN2419_c0_g1_i1</code>, which according to the annotation table is XP_021177365.1 "kelch-like protein 32 [Fundulus heteroclitus]". Taking the sequence from this contig and searching with blastx (translated nucleotide to protein). This comes up with a very strong hit (alignment score &gt;200) as "extended synaptotagmin-1-like".</p>
+<p><img alt="" src="https://i.imgur.com/WBZm6fK.png"></p>
+<p>Which suggests that there is something funny going on with the decision-making when choosing which annotation should correspond to each contig. Rightnow I am chosing the best annotation based on the longest length of the annotation. Perhaps I should choose by E-value. (Which I have also tried, but this can lead to short annotations, so I was trying to avoid that. A combination would be nice! Titus has also suggested word clouds.) </p>
+<p>For quantification, we shouldn't be trusting isoform-level analysis. Basically, we don't have enough resolution with short-read sequencing to be confident in isoforms. Although, it would be nice. </p>
+<p>With tximport, we summarize transcript-level quantifications to the gene-level. </p>
+<p>From <em>F. parvipinnis</em>, here are the quantifications:</p>
+<div class="highlight"><pre><span></span>OG0001688   46.069  66.116  120.001 0   109.918 78.347  129.212 185.894
+OG0006300   0   0   0   0   0   0   43.543  0
+</pre></div>
+
+
+<p>vs. NCBI:</p>
+<div class="highlight"><pre><span></span>XP_012733577.2  786.135 699.509 692.094 555.582 808.328 676.633 1736.456    1815.904
+</pre></div>
+
+
+<p>And then <em>F. heteroclitus</em> (MDPL population)*,</p>
+<div class="highlight"><pre><span></span>OG0006300   130.249 0   0   0   0   0   0   0
+OG0001688   3.466   0   0   3.313   3.408   4.225   10.299  0
+</pre></div>
+
+
+<p>vs. NCBI:</p>
+<div class="highlight"><pre><span></span>XP_012733577.2  1680.51 1375.509    348.41  1772.139    1438.372    2272.3  2194.189    2298.48 5350.611
+</pre></div>
+
+
+<h2>Example 3: More OGs, new species, new block of transcripts</h2>
+<p>From the species, <em>F. diaphanus</em>, we see 5 OGs in a block of transcripts:</p>
+<div class="highlight"><pre><span></span>OG0001948   TRINITY_DN28_c0_g1_i1   Transcript_72
+    TRINITY_DN28_c0_g1_i6   Transcript_73
+    TRINITY_DN28_c0_g1_i8   Transcript_74
+    TRINITY_DN28_c0_g1_i9   Transcript_75
+    TRINITY_DN28_c0_g1_i3   Transcript_76
+    TRINITY_DN28_c0_g1_i11  Transcript_77
+    TRINITY_DN28_c0_g1_i2   Transcript_78
+    TRINITY_DN28_c0_g1_i12  Transcript_79
+OG0010233   TRINITY_DN28_c0_g1_i10  Transcript_80
+    TRINITY_DN28_c0_g1_i5   Transcript_81
+OG0063265   TRINITY_DN28_c1_g1_i7   Transcript_82
+    TRINITY_DN28_c1_g1_i5   Transcript_83
+    TRINITY_DN28_c1_g1_i4   Transcript_84
+OG0006676   TRINITY_DN28_c1_g1_i1   Transcript_85
+    TRINITY_DN28_c1_g1_i3   Transcript_86
+    TRINITY_DN28_c1_g1_i8   Transcript_87
+OG0014822   TRINITY_DN28_c1_g1_i6   Transcript_88
+    TRINITY_DN28_c1_g2_i1   Transcript_89
+    TRINITY_DN28_c2_g1_i2   Transcript_90
+</pre></div>
+
+
+<p>Annotations:</p>
+<div class="highlight"><pre><span></span><span class="n">XP_012721991</span><span class="mf">.1</span>   <span class="n">heterogeneous</span> <span class="n">nuclear</span> <span class="n">ribonucleoprotein</span> <span class="n">A1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span> <span class="mi">51</span>  <span class="mi">385</span> <span class="mi">334</span>
+
+<span class="n">XP_012721990</span><span class="mf">.1</span>   <span class="n">transcription</span> <span class="n">factor</span> <span class="n">NF</span><span class="o">-</span><span class="n">E2</span> <span class="mi">45</span> <span class="n">kDa</span> <span class="n">subunit</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">100</span> <span class="mi">584</span> <span class="mi">484</span>
+<span class="n">XP_012721990</span><span class="mf">.1</span>   <span class="n">transcription</span> <span class="n">factor</span> <span class="n">NF</span><span class="o">-</span><span class="n">E2</span> <span class="mi">45</span> <span class="n">kDa</span> <span class="n">subunit</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">100</span> <span class="mi">584</span> <span class="mi">484</span>
+<span class="n">XP_012721990</span><span class="mf">.1</span>   <span class="n">transcription</span> <span class="n">factor</span> <span class="n">NF</span><span class="o">-</span><span class="n">E2</span> <span class="mi">45</span> <span class="n">kDa</span> <span class="n">subunit</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">100</span> <span class="mi">584</span> <span class="mi">484</span>
+<span class="n">XP_012721990</span><span class="mf">.1</span>   <span class="n">transcription</span> <span class="n">factor</span> <span class="n">NF</span><span class="o">-</span><span class="n">E2</span> <span class="mi">45</span> <span class="n">kDa</span> <span class="n">subunit</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">100</span> <span class="mi">584</span> <span class="mi">484</span>
+<span class="n">XP_012721990</span><span class="mf">.1</span>   <span class="n">transcription</span> <span class="n">factor</span> <span class="n">NF</span><span class="o">-</span><span class="n">E2</span> <span class="mi">45</span> <span class="n">kDa</span> <span class="n">subunit</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">100</span> <span class="mi">584</span> <span class="mi">484</span>
+<span class="n">XP_012721990</span><span class="mf">.1</span>   <span class="n">transcription</span> <span class="n">factor</span> <span class="n">NF</span><span class="o">-</span><span class="n">E2</span> <span class="mi">45</span> <span class="n">kDa</span> <span class="n">subunit</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">100</span> <span class="mi">584</span> <span class="mi">484</span>
+<span class="n">XP_012721990</span><span class="mf">.1</span>   <span class="n">transcription</span> <span class="n">factor</span> <span class="n">NF</span><span class="o">-</span><span class="n">E2</span> <span class="mi">45</span> <span class="n">kDa</span> <span class="n">subunit</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>  <span class="mi">100</span> <span class="mi">584</span> <span class="mi">484</span>
+
+<span class="n">XP_012730480</span><span class="mf">.1</span>   <span class="n">proto</span><span class="o">-</span><span class="n">oncogene</span> <span class="n">c</span><span class="o">-</span><span class="n">Rel</span> <span class="n">isoform</span> <span class="n">X1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>    <span class="mi">36</span>  <span class="mi">343</span> <span class="mi">307</span>
+<span class="n">XP_012730480</span><span class="mf">.1</span>   <span class="n">proto</span><span class="o">-</span><span class="n">oncogene</span> <span class="n">c</span><span class="o">-</span><span class="n">Rel</span> <span class="n">isoform</span> <span class="n">X1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>    <span class="mi">410</span> <span class="mi">864</span> <span class="mi">454</span>
+<span class="n">XP_012730480</span><span class="mf">.1</span>   <span class="n">proto</span><span class="o">-</span><span class="n">oncogene</span> <span class="n">c</span><span class="o">-</span><span class="n">Rel</span> <span class="n">isoform</span> <span class="n">X1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>    <span class="mi">399</span> <span class="mi">853</span> <span class="mi">454</span>
+<span class="n">XP_012730480</span><span class="mf">.1</span>   <span class="n">proto</span><span class="o">-</span><span class="n">oncogene</span> <span class="n">c</span><span class="o">-</span><span class="n">Rel</span> <span class="n">isoform</span> <span class="n">X1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>    <span class="mi">0</span>   <span class="mi">453</span> <span class="mi">453</span>
+<span class="n">XP_012730480</span><span class="mf">.1</span>   <span class="n">proto</span><span class="o">-</span><span class="n">oncogene</span> <span class="n">c</span><span class="o">-</span><span class="n">Rel</span> <span class="n">isoform</span> <span class="n">X1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>    <span class="mi">13</span>  <span class="mi">509</span> <span class="mi">496</span>
+
+<span class="n">XP_012730480</span><span class="mf">.1</span>   <span class="n">proto</span><span class="o">-</span><span class="n">oncogene</span> <span class="n">c</span><span class="o">-</span><span class="n">Rel</span> <span class="n">isoform</span> <span class="n">X1</span> <span class="p">[</span><span class="n">Fundulus</span> <span class="n">heteroclitus</span><span class="p">]</span>    <span class="mi">36</span>  <span class="mi">667</span> <span class="mi">631</span>
+</pre></div>
+
+
+<p>Collapsing by annotation (NCBI):</p>
+<div class="highlight"><pre><span></span>XP_012721991.1  2777.577    3299.293    2789.927    4046.443    5003.293    1929.718
+XP_012721990.1  1688.422    2243.942    1822.958    2403.199    3567.872    1152.61
+XP_012730480.1  676 714 653.055 920.826 1305.761    490.443
+</pre></div>
+
+
+<p>vs. OG</p>
+<div class="highlight"><pre><span></span>OG0001948   2776.577    3295.293    2788.927    4042.443    4999.264    1928.718
+OG0010233   61.159  0   0   0   370.132 41.857
+OG0063265   141.881 90.625  133.878 186.441 387.625 96.307
+OG0006676   45.707  50.631  46.917  57.028  61.177  71.572
+OG0014822   359.112 530.675 280.426 659.912 0   196.781
+</pre></div>
+
+
+<p>Comparing to another species, <em>F. sciadicus</em> same anntoated transcripts (NCBI):</p>
+<div class="highlight"><pre><span></span>XP_012721991.1  10.508  3.071   1.219   4.901
+XP_012721990.1  12205.829   3600.654    2652.671    5755.092
+XP_012730480.1  2452.693    647.976 253.854 771.763
+</pre></div>
+
+
+<p>vs OGs:</p>
+<div class="highlight"><pre><span></span>OG0001948   1.458   0   1.219   2.901
+OG0010233   452.224 145.99  174.95  159.422
+OG0063265 (not found)
+OG0006676   23.076  3.142   3.247   7.264
+OG0014822   2054.963    530.163 205.123 640.771
+</pre></div>
+
+
+<p>And <em>F. grandis</em>:</p>
+<div class="highlight"><pre><span></span>XP_012721991.1  32290.661   1879.991    5055.72 13800.499   4881.964    5493.489    9913.475    4481.443    6775.423
+XP_012721990.1  4515.679    248.354 650.991 1928.787    639.807 1168.021    1649.781    594.402 1059.746
+XP_012730480.1  4292.514    207 729.779 1492.156    502.695 233.242 752.895 359.399 638.298
+</pre></div>
+
+
+<p>vs OGs:</p>
+<div class="highlight"><pre><span></span>OG0001948   0   0   0   0   0   0   0   0   0
+OG0010233   2391.307    130.033 241.47  882.285 273.383 463.887 637.584 324.89  346.008
+OG0063265 (not found)
+OG0006676   148.906 0   0   51.066  67.894  0   21.345  0   0
+OG0014822   600.002 0   361.017 1011.995    90.218  101.711 165.621 148.755 159.42
+</pre></div>
+
+
+<p>What's interesting is in the annotations above, <code>XP_012721990</code> length 484 annotates to seven contigs from positions 100-584 of each contig. Is this an error in the assemblies?</p>
+<div class="highlight"><pre><span></span>TRINITY_DN28_c0_g1_i8   Transcript_74
+TRINITY_DN28_c0_g1_i9   Transcript_75
+TRINITY_DN28_c0_g1_i3   Transcript_76
+TRINITY_DN28_c0_g1_i11  Transcript_77
+TRINITY_DN28_c0_g1_i2   Transcript_78
+TRINITY_DN28_c0_g1_i12  Transcript_79
+TRINITY_DN28_c0_g1_i10  Transcript_80
+</pre></div>
+
+
+<p>Let's take a look.
+TRINITY_DN28_c0_g1_i8, length 3373
+<img alt="" src="https://i.imgur.com/sGWOpUW.png"></p>
+<p>TRINITY_DN28_c0_g1_i9, length 4352
+<img alt="" src="https://i.imgur.com/zKctPu0.png"></p>
+<p>TRINITY_DN28_c0_g1_i3, length 3246
+<img alt="" src="https://i.imgur.com/kpvKqbS.png"></p>
+<p>TRINITY_DN28_c0_g1_i2, length 4109
+<img alt="" src="https://i.imgur.com/WDDDrrG.png"></p>
+<p>I can see that these are all strongly matching to the same transcription factor. Why are they separate contigs?</p>
+<p>Let's look at how salmon quantified them. If they have overlapping k-mers, quantification should be spread across.</p>
+<p>F_diaphanus_BW_1.quant</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN28_c0_g1_i8   3373    3122.308    0.000000    0.000
+TRINITY_DN28_c0_g1_i9   4352    4101.308    0.000000    0.000
+TRINITY_DN28_c0_g1_i3   3246    2995.308    6.292499    120.594
+TRINITY_DN28_c0_g1_i11  4267    4016.308    26.524225   681.604
+TRINITY_DN28_c0_g1_i2   4109    3858.308    33.421724   825.065
+TRINITY_DN28_c0_g1_i12  3531    3280.308    0.000000    0.000
+TRINITY_DN28_c0_g1_i10  4194    3943.308    2.424037    61.159
+</pre></div>
+
+
+<p>F_diaphanus_BW_2.quant</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN28_c0_g1_i8   3373    3088.446    1.202113    29.068
+TRINITY_DN28_c0_g1_i9   4352    4067.446    2.716526    86.510
+TRINITY_DN28_c0_g1_i3   3246    2961.446    3.098616    71.846
+TRINITY_DN28_c0_g1_i11  4267    3982.446    33.779057   1053.242
+TRINITY_DN28_c0_g1_i2   4109    3824.446    33.505880   1003.276
+TRINITY_DN28_c0_g1_i12  3531    3246.446    0.000000    0.000
+TRINITY_DN28_c0_g1_i10  4194    3909.446    0.000000    0.000
+</pre></div>
+
+
+<p>F_diaphanus_FW_2.quant</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN28_c0_g1_i8   3373    3091.748    0.519804    11.942
+TRINITY_DN28_c0_g1_i9   4352    4070.748    2.246743    67.960
+TRINITY_DN28_c0_g1_i3   3246    2964.748    1.067882    23.525
+TRINITY_DN28_c0_g1_i11  4267    3985.748    29.020612   859.486
+TRINITY_DN28_c0_g1_i2   4109    3827.748    30.238159   860.045
+TRINITY_DN28_c0_g1_i12  3531    3249.748    0.000000    0.000
+TRINITY_DN28_c0_g1_i10  4194    3912.748    0.000000    0.000
+</pre></div>
+
+
+<p>F_diaphanus_FW_3.quant</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN28_c0_g1_i8   3373    3104.285    0.000000    0.000
+TRINITY_DN28_c0_g1_i9   4352    4083.285    3.412720    143.858
+TRINITY_DN28_c0_g1_i3   3246    2977.285    4.401957    135.298
+TRINITY_DN28_c0_g1_i11  4267    3998.285    20.861407   861.076
+TRINITY_DN28_c0_g1_i2   4109    3840.285    29.953996   1187.523
+TRINITY_DN28_c0_g1_i12  3531    3262.285    2.240168    75.444
+TRINITY_DN28_c0_g1_i10  4194    3925.285    0.000000    0.000
+</pre></div>
+
+
+<p>F_diaphanus_transfer_1.quant</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN28_c0_g1_i8   3373    3140.825    4.490605    235.962
+TRINITY_DN28_c0_g1_i9   4352    4119.825    0.000000    0.000
+TRINITY_DN28_c0_g1_i3   3246    3013.825    5.011654    252.693
+TRINITY_DN28_c0_g1_i11  4267    4034.825    19.506568   1316.738
+TRINITY_DN28_c0_g1_i2   4109    3876.825    21.467309   1392.347
+TRINITY_DN28_c0_g1_i12  3531    3298.825    0.000000    0.000
+TRINITY_DN28_c0_g1_i10  4194    3961.825    5.584293    370.132
+</pre></div>
+
+
+<p>F_diaphanus_transfer_2.quant</p>
+<div class="highlight"><pre><span></span>Name    Length  EffectiveLength TPM NumReads
+TRINITY_DN28_c0_g1_i8   3373    3053.084    0.871097    12.774
+TRINITY_DN28_c0_g1_i9   4352    4032.084    0.000000    0.000
+TRINITY_DN28_c0_g1_i3   3246    2926.084    3.676537    51.672
+TRINITY_DN28_c0_g1_i11  4267    3947.084    27.276491   517.125
+TRINITY_DN28_c0_g1_i2   4109    3789.084    29.076399   529.182
+TRINITY_DN28_c0_g1_i12  3531    3211.084    0.000000    0.000
+TRINITY_DN28_c0_g1_i10  4194    3874.084    2.249432    41.857
+</pre></div>
+
+
+<p>This is why <a href="https://combine-lab.github.io/salmon/">salmon quantification software</a> comes in handy. Even though these contigs are probably assembly confusions (the contigs were produced by the Trinity assembler but they probably belong to the same transcript), it is okay because salmon is calculating the probability that the read will be sampled based on the availability of the sequence in the graph. Since pieces occur multiple times, the quantification will be distributed among the fragments. Whereas with other quant programs, the quantification might be artificially inflated (or deflated) given the presence of nearly identical fragments.</p>
+<p>After talking to fellow DIB lab PhD student, <a href="http://www.camillescott.org/">Camille Scott</a>, she helped me to see this with some cool figures of compact de Bruijn graphs that she made. The graph structure produced from this block of assembled sequences shows two different components:</p>
+<div class="highlight"><pre><span></span>TRINITY_DN28_c0_g1_i6   Transcript_73
+    TRINITY_DN28_c0_g1_i8   Transcript_74
+    TRINITY_DN28_c0_g1_i9   Transcript_75
+    TRINITY_DN28_c0_g1_i3   Transcript_76
+    TRINITY_DN28_c0_g1_i11  Transcript_77
+    TRINITY_DN28_c0_g1_i2   Transcript_78
+    TRINITY_DN28_c0_g1_i12  Transcript_79
+OG0010233   TRINITY_DN28_c0_g1_i10  Transcript_80
+    TRINITY_DN28_c0_g1_i5   Transcript_81
+OG0063265   TRINITY_DN28_c1_g1_i7   Transcript_82
+    TRINITY_DN28_c1_g1_i5   Transcript_83
+    TRINITY_DN28_c1_g1_i4   Transcript_84
+OG0006676   TRINITY_DN28_c1_g1_i1   Transcript_85
+    TRINITY_DN28_c1_g1_i3   Transcript_86
+    TRINITY_DN28_c1_g1_i8   Transcript_87
+OG0014822   TRINITY_DN28_c1_g1_i6   Transcript_88
+    TRINITY_DN28_c1_g2_i1   Transcript_89
+    TRINITY_DN28_c2_g1_i2   Transcript_90
+</pre></div>
+
+
+<p>Full block:
+<img alt="" src="https://i.imgur.com/gNYWGa2.png">
+Separated into 2 components:
+<img alt="" src="https://i.imgur.com/sSX6S3d.png"></p>
+<p>So, (in my own words) when salmon goes through and quantifies the reads, if it sees k-mers that have been already seen before, it then distributes the counts across the pieces with similar known kmers. (Please correct me if I am mis-using terms here.) Even though contigs are annotated as the same protein, since they have a similar sequence, they will not get counted twice. Instead, counts will be distributed across all similar contigs. That is why tximport is great for summarizing the counts for contigs that have annotated as a cluster.</p>
+<h3>Conclusion</h3>
+<p>OG-annotated transcripts are single contigs. Looking at expression of only OGs misses the other contigs associated with that gene. </p>
+<p>Collapsing annotated contigs by unique gene ID is the best way to quantify expression with <em>de novo</em> transcriptome assemblies, based on the above and then use salmon and tximport to summarize counts by similar contigs. </p>
+<h2>Questions that have come up:</h2>
+<ul>
+<li>Are we really picking the right annotation per contig? What I'm doing now is to to sort by custom annotation and then pick the longest. Titus has suggested using word clouds.</li>
+</ul>
+<p><strong>Yes, I might want to try this. There is an example below where one Trinity set of contigs has multiple annotations, but mixed across species. Possible that top annotations got mixed up. e.g. kelch-like and synaptotagmin. Still need to take a look at original dammit annotations to see how the decision was made. We are picking annotation-type (based on databases), then the longest annotation (not-evalue) as long as e-value was e-05 (or something like that, check the exact code and include). How would it look if we picked by e-value?</strong> </p>
+<ul>
+<li>Is collapsing contigs annotated with the same ID artificially inflating expression? What if the contig was constructed because there was a slightly alternative path in the assembly graph, which was not really a separate transcript? The principle of tximport is to <a href="https://f1000research.com/articles/4-1521/">collapse transcripts/contigs by gene</a>, since alternative splicing is nearly impossible to measure with short-read sequencing. However, the case of de novo assembly further complicates this matter with messy assemblies and heterozygous animals.</li>
+</ul>
+<p><strong>No. This is why salmon is so awesome. Because it is modeling the sampling probability from the sequences available. It takes into consideration multi-mapping. If a contig has the same identity, or nearly the same, as another contig, reads will map fewer times to it becuase of the model.</strong></p>
+<ul>
+<li>How can we distinguish different fragments of the transcript vs. the same fragment just assembled slightly differently? (There might be some examples below where there are multiple contigs that are the same exact size. Look at the quantification. Salmon takes into consideration multi-mapping, where reads are seemingly matching  to k-mers in found in multiple contigs. The probabilities of aligning should be taken into consideration. Theoretically, if multiple contigs have simliar sequences, the overall quantification of a block of contigs should be adjusted. Is this correct?</li>
+</ul>
+<p><strong>Yes, but salmon is doing this for us. Major conclusion: Salmon is great. :)</strong></p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'https-ljcohen-github-io-blog'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'annotating-multiple-de-novo-transcriptome-assemblies';
+                var disqus_url = 'https://johnsolk.github.io/blog/annotating-multiple-de-novo-transcriptome-assemblies.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://twitter.com/monsterbashseq"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/johnsolk"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+    <li class="list-group-item"><a href="https://www.flickr.com/155690017@N06/"><i class="fa fa-flickr fa-lg"></i> flickr</a></li>
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/johnsolk/"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+    <li class="list-group-item"><a href="mailto:ljcohen@ucdavis.edu"><i class="fa fa-envelope fa-lg"></i> envelope</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/17-sets-how-to-display-all-intersections-with-upsetr-plot.html">17 sets, how to display all intersections with UpSetR plot?</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/xsede-login-with-bridges.html">XSEDE login with bridges</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/annotating-multiple-de-novo-transcriptome-assemblies.html">Annotating multiple de novo transcriptome assemblies</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/running-clust-on-jetstream.html">Running clust on Jetstream</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/xrac-research-proposal.html">XRAC research proposal</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="http://ivory.idyll.org/lab/" target="_blank">Titus Brown's DIB Lab</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://whiteheadresearch.wordpress.com/" target="_blank">Andrew Whitehead's Lab, Environmental Genomics</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://dib-training.readthedocs.io/en/pub/" target="_blank">UCD DIB Training</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2019 Lisa Johnson
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://johnsolk.github.io/blog/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://johnsolk.github.io/blog/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://johnsolk.github.io/blog/theme/js/respond.min.js"></script>
+
+    <script src="https://johnsolk.github.io/blog/theme/js/custom.js"></script>
+
+    <script src="https://johnsolk.github.io/blog/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'https-ljcohen-github-io-blog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-127427728-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+</body>
+</html>

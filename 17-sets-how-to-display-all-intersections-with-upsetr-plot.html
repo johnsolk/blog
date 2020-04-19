@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>17 sets, how to display all intersections with UpSetR plot? - monsteRbashSeq</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://johnsolk.github.io/blog/17-sets-how-to-display-all-intersections-with-upsetr-plot.html">
+
+        <meta name="author" content="Lisa K. Johnson" />
+        <meta name="keywords" content="R,plotting,annotation" />
+        <meta name="description" content="There are overlapping identities between all 17 sets." />
+
+        <meta property="og:site_name" content="monsteRbashSeq" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="17 sets, how to display all intersections with UpSetR plot?"/>
+        <meta property="og:url" content="https://johnsolk.github.io/blog/17-sets-how-to-display-all-intersections-with-upsetr-plot.html"/>
+        <meta property="og:description" content="There are overlapping identities between all 17 sets."/>
+        <meta property="article:published_time" content="2019-08-30" />
+            <meta property="article:section" content="visualizations" />
+            <meta property="article:tag" content="R" />
+            <meta property="article:tag" content="plotting" />
+            <meta property="article:tag" content="annotation" />
+            <meta property="article:author" content="Lisa K. Johnson" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://johnsolk.github.io/blog/theme/css/bootstrap.simplex.min.css" type="text/css"/>
+    <link href="https://johnsolk.github.io/blog/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://johnsolk.github.io/blog/theme/css/pygments/native.css" rel="stylesheet">
+    <link href="https://johnsolk.github.io/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://johnsolk.github.io/blog/theme/css/style.css" type="text/css"/>
+        <link href="https://johnsolk.github.io/blog/theme/css/custom.css" rel="stylesheet">
+
+        <link href="https://johnsolk.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="monsteRbashSeq ATOM Feed"/>
+
+
+
+        <link href="https://johnsolk.github.io/blog/feeds/visualizations.atom.xml" type="application/atom+xml" rel="alternate"
+              title="monsteRbashSeq visualizations ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://johnsolk.github.io/blog/" class="navbar-brand">
+monsteRbashSeq            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="https://johnsolk.github.io/">Main</a></li>
+                    <li><a href="https://johnsolk.github.io/about.html">About</a></li>
+                    <li><a href="https://monsterbashseq.wordpress.com/">Old Blog</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><span>
+                <form class="navbar-search" action="/blog/search.html">
+                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("https://johnsolk.github.io/blog//img/sanomacoast.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+		<div class="copy">
+			<h1>monsteRbashSeq</h1>
+				<p class="intro">Lisa K. Johnson</p>
+		</div>
+	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://johnsolk.github.io/blog/17-sets-how-to-display-all-intersections-with-upsetr-plot.html"
+                       rel="bookmark"
+                       title="Permalink to 17 sets, how to display all intersections with UpSetR plot?">
+                        17 sets, how to display all intersections with UpSetR plot?
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2019-08-30T00:00:00-07:00"> Fri 30 August 2019</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://johnsolk.github.io/blog/tag/r.html">R</a>
+        /
+	<a href="https://johnsolk.github.io/blog/tag/plotting.html">plotting</a>
+        /
+	<a href="https://johnsolk.github.io/blog/tag/annotation.html">annotation</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Hello! Trying to make an UpSetR plot showing overlapping gene annotations between 17 transcriptomes. </p>
+<p>What am I doing wrong?</p>
+<p>Is there a bug in the UpSetR library? </p>
+<p>I posted on the UpSetR library's community <a href="https://github.com/hms-dbmi/UpSetR/issues/170">GitHub forum</a>, but did not really get an answer to my questions. My R language expert colleagues at UC Davis could not seem to figure it out either.</p>
+<p>Here is what I know:</p>
+<p>There ARE overlapping identities between all 17 of my sets (see code and output below).</p>
+<p>However, my UpSetR plots do not reflect this. </p>
+<p>Below is some R code with a downloadable set of data.</p>
+<div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">UpSetR</span><span class="p">)</span>
+<span class="c1"># https://cran.r-project.org/web/packages/UpSetR/</span>
+<span class="c1"># https://cran.r-project.org/web/packages/UpSetR/vignettes/basic.usage.html</span>
+
+<span class="c1"># Download and import to a data.frame</span>
+<span class="k">if</span><span class="p">(</span><span class="err">!</span><span class="nb">file</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;presence_absence.csv&#39;</span><span class="p">)){</span><span class="n">download</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/johnsolk/RNAseq_15killifish/master/evaluation/presence_absence.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;presence_absence.csv&#39;</span><span class="p">)}</span>
+<span class="n">pa</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s2">&quot;presence_absence.csv&quot;</span><span class="p">)</span>
+<span class="n">pa</span> <span class="o">&lt;-</span> <span class="n">pa</span><span class="p">[,</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span>
+<span class="n">rownames</span><span class="p">(</span><span class="n">pa</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">pa</span><span class="err">$</span><span class="n">Ensembl</span>
+<span class="n">pa</span> <span class="o">&lt;-</span> <span class="n">pa</span><span class="p">[,</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span>
+</pre></div>
+
+
+<p>This plot will display 4 intersects. THIS WORKS. This is what we should see for all 17 sets.</p>
+<div class="highlight"><pre><span></span>upset(pa, sets = c(c(&quot;A_xenica&quot;,&quot;F_catanatus&quot;),c(&quot;F_chrysotus&quot;,&quot;F_diaphanus&quot;)),mb.ratio = c(0.55, 0.45),keep.order = F)
+</pre></div>
+
+
+<p><img alt="" src="https://i.imgur.com/pdki8ff.png"></p>
+<p>But, as soon as I move to 6, I am confused - there is no longer a bar crossing all 6 sets.</p>
+<div class="highlight"><pre><span></span>upset(pa, sets = c(c(&quot;A_xenica&quot;,&quot;F_catanatus&quot;,&quot;F_notatus&quot;), c(&quot;F_chrysotus&quot;,&quot;F_diaphanus&quot;,&quot;F_nottii&quot;)),mb.ratio = c(0.55, 0.45),nsets = 6,keep.order = F)
+</pre></div>
+
+
+<p><img alt="" src="https://i.imgur.com/mokSySy.png"></p>
+<p>The full 17 sets does not make any sense</p>
+<div class="highlight"><pre><span></span>upset(pa, sets = c(c(&quot;A_xenica&quot;,&quot;F_catanatus&quot;),c(&quot;F_chrysotus&quot;,&quot;F_diaphanus&quot;),c(&quot;F_grandis&quot;,&quot;F_heteroclitusMDPL&quot;),c(&quot;F_heteroclitusMDPP&quot;,&quot;F_notatus&quot;),c(&quot;F_nottii&quot;,&quot;F_olivaceous&quot;),c(&quot;F_parvapinis&quot;,&quot;F_rathbuni&quot;),c(&quot;F_sciadicus&quot;,&quot;F_similis&quot;),c(&quot;F_zebrinus&quot;,&quot;L_goodei&quot;),c(&quot;L_parva&quot;)),mb.ratio = c(0.55, 0.45),keep.order = F)
+</pre></div>
+
+
+<p><img alt="" src="https://i.imgur.com/vbPSOYk.png"></p>
+<p>This confirms that there are overlaps between all 17 sets (and 16, 15, 14, etc)</p>
+<div class="highlight"><pre><span></span>test<span class="o">&lt;-</span> <span class="kp">rowSums</span><span class="p">(</span>pa<span class="p">)</span>
+test<span class="o">&lt;-</span> <span class="kp">as.data.frame</span><span class="p">(</span>test<span class="p">)</span>
+<span class="kp">colnames</span><span class="p">(</span>test<span class="p">)</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;sum&quot;</span><span class="p">)</span>
+<span class="kp">sum</span><span class="p">(</span>test<span class="o">$</span>sum <span class="o">==</span> <span class="m">17</span><span class="p">)</span>
+<span class="kp">sum</span><span class="p">(</span>test<span class="o">$</span>sum <span class="o">==</span> <span class="m">16</span><span class="p">)</span>
+<span class="kp">sum</span><span class="p">(</span>test<span class="o">$</span>sum <span class="o">==</span> <span class="m">15</span><span class="p">)</span>
+<span class="kp">sum</span><span class="p">(</span>test<span class="o">$</span>sum <span class="o">==</span> <span class="m">14</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Output:</p>
+<div class="highlight"><pre><span></span>&gt; sum(test$sum == 17)
+[1] 10897
+&gt; sum(test$sum == 16)
+[1] 2979
+&gt; sum(test$sum == 15)
+[1] 1585
+&gt; sum(test$sum == 14)
+[1] 1247
+</pre></div>
+
+
+<p>I'm wondering if there is a bug in the UpSetR library that prevents displaying overlaps from such a large number of sets. I remembered <a href="https://github.com/dib-lab/2017-ectocooler/blob/master/Ectocooler-genes.ipynb">Titus made a similar set of data looking at annotations from a few species with the python library, pyupset</a>. When I made a <a href="https://github.com/johnsolk/RNAseq_15killifish/blob/master/notebooks/pyupset_annotations.ipynb">similar notebook using pyupset with my data</a>, there was a performance issue. The notebook ran overnight and didn't produce any output. This makes me think that it might not be possible to produce a plot with 17 intersections?</p>
+<p>Any insight anyone has would be greatly appreciated!</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'https-ljcohen-github-io-blog'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = '17-sets-how-to-display-all-intersections-with-upsetr-plot';
+                var disqus_url = 'https://johnsolk.github.io/blog/17-sets-how-to-display-all-intersections-with-upsetr-plot.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://twitter.com/monsterbashseq"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/johnsolk"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+    <li class="list-group-item"><a href="https://www.flickr.com/155690017@N06/"><i class="fa fa-flickr fa-lg"></i> flickr</a></li>
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/johnsolk/"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+    <li class="list-group-item"><a href="mailto:ljcohen@ucdavis.edu"><i class="fa fa-envelope fa-lg"></i> envelope</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/17-sets-how-to-display-all-intersections-with-upsetr-plot.html">17 sets, how to display all intersections with UpSetR plot?</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/xsede-login-with-bridges.html">XSEDE login with bridges</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/annotating-multiple-de-novo-transcriptome-assemblies.html">Annotating multiple de novo transcriptome assemblies</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/running-clust-on-jetstream.html">Running clust on Jetstream</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/xrac-research-proposal.html">XRAC research proposal</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="http://ivory.idyll.org/lab/" target="_blank">Titus Brown's DIB Lab</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://whiteheadresearch.wordpress.com/" target="_blank">Andrew Whitehead's Lab, Environmental Genomics</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://dib-training.readthedocs.io/en/pub/" target="_blank">UCD DIB Training</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2019 Lisa Johnson
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://johnsolk.github.io/blog/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://johnsolk.github.io/blog/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://johnsolk.github.io/blog/theme/js/respond.min.js"></script>
+
+    <script src="https://johnsolk.github.io/blog/theme/js/custom.js"></script>
+
+    <script src="https://johnsolk.github.io/blog/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'https-ljcohen-github-io-blog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-127427728-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+</body>
+</html>

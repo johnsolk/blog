@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - computing</title><link href="https://johnsolk.github.io/blog/" rel="alternate"></link><link href="https://johnsolk.github.io/blog/feeds/computing.atom.xml" rel="self"></link><id>https://johnsolk.github.io/blog/</id><updated>2019-04-15T00:00:00-07:00</updated><entry><title>XSEDE login with bridges</title><link href="https://johnsolk.github.io/blog/xsede-login-with-bridges.html" rel="alternate"></link><published>2019-04-15T00:00:00-07:00</published><updated>2019-04-15T00:00:00-07:00</updated><author><name>Lisa K. Johnson</name></author><id>tag:johnsolk.github.io,2019-04-15:/blog/xsede-login-with-bridges.html</id><summary type="html">&lt;p&gt;Logging in, orientation, and running jobs on PSC Bridges with XSEDE&lt;/p&gt;</summary><content type="html">&lt;p&gt;Quick tutorial for how to use PSC Bridges with an &lt;a href="https://www.xsede.org/"&gt;XSEDE&lt;/a&gt; allocation. &lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://johnsolk.github.io/blog/xrac-research-proposal.html"&gt;here&lt;/a&gt; for our &lt;a href="https://portal.xsede.org/allocations/research"&gt;research proposal&lt;/a&gt; and &lt;a href="https://github.com/johnsolk/jetstream-xsede-illo/tree/master/xsede_applications"&gt;here&lt;/a&gt; for examples of &lt;a href="https://portal.xsede.org/allocations/startup"&gt;startup allocation&lt;/a&gt; proposals.&lt;/p&gt;
+&lt;h1&gt;1. Login&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://portal.xsede.org/psc-bridges"&gt;login info&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There are two ways. (Pick one. If one doesn't work, try the other.)&lt;/p&gt;
+&lt;h4&gt;A. &lt;a href="https://portal.xsede.org/psc-bridges"&gt;Direct login to bridges&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ssh -p 2222 ljcohen@bridges.psc.xsede.org
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;password
+select DUO option&lt;/p&gt;
+&lt;p&gt;Now you're on bridges. The command prompt should look similar to this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[ljcohen@login006 ~]$ 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;B. &lt;a href="https://portal.xsede.org/single-sign-on-hub"&gt;SSO (single sign-on hub)&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ssh ljcohen@login.xsede.org
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;password
+select DUO option&lt;/p&gt;
+&lt;p&gt;Prompt will then look like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[ljcohen@ssohub ~]$
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gsissh bridges
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now you're on bridges. The command prompt should look similar to this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[ljcohen@login018 ~]$ 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;2. Where are we?&lt;/h1&gt;
+&lt;p&gt;Type:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;projects
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will show you the allocations we have.&lt;/p&gt;
+&lt;p&gt;We have &lt;a href="https://johnsolk.github.io/blog/xrac-research-proposal.html"&gt;three separate PSC bridges allocations&lt;/a&gt;. Keep track of how much allocation you're using with this &lt;code&gt;projects&lt;/code&gt; command.
+1. Storage
+2. RM
+3. LM&lt;/p&gt;
+&lt;p&gt;Under "BRIDGES PYLON STORAGE", it will list the directories path where the Lustre storage is located. All users who are on the allocation will have their own directory within this project. By default, you do not have read or write access to other users' directories, only your own. So, don't worry about making a mistake and deleting someone else's work.&lt;/p&gt;
+&lt;p&gt;Note that space in your &lt;code&gt;~/&lt;/code&gt; home directory is limited. &lt;a href="https://www.psc.edu/bridges/user-guide/file-spaces"&gt;PSC says 10GB&lt;/a&gt;, but I've run out of space installing miniconda software, so I think it's more like 10 or 100 MB. (but haven't confirmed this)&lt;/p&gt;
+&lt;p&gt;Because of this limited space in home, all files should go in your Lustre storage directory. For example, I've setup miniconda to install software in my storage directory:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/pylon5/bi5fpmp/ljcohen/miniconda3/bin
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you're on more than one allocation, your working directories should be in account-specific, project-specific storage. For example, I'm on 2 allocations:&lt;/p&gt;
+&lt;p&gt;Allocation 1:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd /pylon5/bi5fpmp/ljcohen/
+ls -lah
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Allocation 2:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd /pylon5/mc5phkp/ljcohen/
+ls -lah
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;3. Computing Things.&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.psc.edu/bridges/user-guide/"&gt;PSC bridges user guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.psc.edu/bridges/user-guide/running-jobs"&gt;Running jobs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;There are generally 3 compute node &lt;a href="https://www.psc.edu/bridges/user-guide/running-jobs#partitions"&gt;partitions available&lt;/a&gt;, depending on what you need to do: &lt;ul&gt;
+&lt;li&gt;Large Memory (LM)&lt;/li&gt;
+&lt;li&gt;Regular Memory (RM)&lt;/li&gt;
+&lt;li&gt;Regular Memory-Interactive (RM-interactive), for interactive login to test commands so they don't run on the head node.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Examples:&lt;/h2&gt;
+&lt;p&gt;Run an interactive job for 1 hr to see if commands/software will run. (It might take a little while, ~5-10 min for job to be queued, so be patient):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;interact -p RM-shared --ntasks-per-node=4 -N 1 -t 1:00:00
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;LM job example script:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash -l&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH -D /pylon5/mc5phkp/ljcohen/kfish_abyss&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH -J Axen-abyss&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH -o /pylon5/mc5phkp/ljcohen/kfish_abyss/abyss-Axen%j.o&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH -e /pylon5/mc5phkp/ljcohen/kfish_abyss/abyss-Axen%j.o&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH -t 120:00:00&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH -p LM&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH --mem=1000GB&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH --ntasks-per-node 14&lt;/span&gt;
+&lt;span class="nb"&gt;source&lt;/span&gt; ~/.bashrc
+&lt;span class="nb"&gt;source&lt;/span&gt; activate assembly
+&lt;span class="nb"&gt;cd&lt;/span&gt; /pylon5/mc5phkp/ljcohen/kfish_abyss
+
+&lt;span class="nv"&gt;SPECIES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Axen
+&lt;span class="nv"&gt;PROJECTDIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$LOCAL&lt;/span&gt;/&lt;span class="nv"&gt;$SPECIES&lt;/span&gt;/
+mkdir &lt;span class="nv"&gt;$PROJECTDIR&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="nv"&gt;$PROJECTDIR&lt;/span&gt;
+cp /pylon5/mc5phkp/ljcohen/kfish_abyss/Axenica_USPD16092508-N706-AK391_HV3JCCCXY_L6_1.qc.fq.gz .
+cp /pylon5/mc5phkp/ljcohen/kfish_abyss/Axenica_USPD16092508-N706-AK391_HV3JCCCXY_L6_2.qc.fq.gz .
+cp /pylon5/mc5phkp/ljcohen/kfish_abyss/Axenica_USPD16092508-N706-AK391_HV3JCCCXY_L7_1.qc.fq.gz .
+cp /pylon5/mc5phkp/ljcohen/kfish_abyss/Axenica_USPD16092508-N706-AK391_HV3JCCCXY_L7_2.qc.fq.gz .
+
+abyss-pe &lt;span class="nv"&gt;k&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;51&lt;/span&gt; &lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Axen_abyss &lt;span class="nv"&gt;in&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Axenica_USPD16092508-N706-AK391_HV3JCCCXY_L6_1.qc.fq.gz Axenica_USPD16092508-N706-AK391_HV3JCCCXY_L6_2.qc.fq.gz Axenica_USPD16092508-N706-AK391_HV3JCCCXY_L7_1.qc.fq.gz Axenica_USPD16092508-N706-AK391_HV3JCCCXY_L7_2.qc.fq.gz&amp;quot;&lt;/span&gt; contigs
+
+&lt;span class="c1"&gt;# Grab output assembly files and copy to your storage&lt;/span&gt;
+cp &lt;span class="nv"&gt;$PROJECTDIR&lt;/span&gt;/Axen_abyss /pylon5/mc5phkp/ljcohen/kfish_abyss/
+
+&lt;span class="c1"&gt;# remove temp files on $LOCAL&lt;/span&gt;
+rm -rf &lt;span class="nv"&gt;$PROJECTDIR&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;RM job example script:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash -l&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH -D /pylon5/mc5phkp/ljcohen/kfish_Illumina/&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH -J Axen-diginorm&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH -o /pylon5/mc5phkp/ljcohen/kfish_Illumina/diginorm-Axen%j.o&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH -e /pylon5/mc5phkp/ljcohen/kfish_Illumina/diginorm-Axen%j.o&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH -t 48:00:00&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH -p RM&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH --ntasks-per-node 8&lt;/span&gt;
+&lt;span class="c1"&gt;#SBATCH --cpus-per-task 1&lt;/span&gt;
+
+&lt;span class="nb"&gt;source&lt;/span&gt; /home/ljcohen/.bashrc
+&lt;span class="nb"&gt;source&lt;/span&gt; activate sourmash_conda
+&lt;span class="nb"&gt;cd&lt;/span&gt; /pylon5/mc5phkp/ljcohen/kfish_Illumina/
+
+&lt;span class="o"&gt;(&lt;/span&gt;paste &lt;span class="se"&gt;\&lt;/span&gt;
+&amp;lt;&lt;span class="o"&gt;(&lt;/span&gt;zcat &lt;span class="o"&gt;{&lt;/span&gt;Axenica_USPD16092508-N706-AK391_HV3JCCCXY_L6_1.qc.fq.gz,Axenica_USPD16092508-N706-AK391_HV3JCCCXY_L7_1.qc.fq.gz&lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; paste - - - - &lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&amp;lt;&lt;span class="o"&gt;(&lt;/span&gt;zcat &lt;span class="o"&gt;{&lt;/span&gt;Axenica_USPD16092508-N706-AK391_HV3JCCCXY_L6_2.qc.fq.gz,Axenica_USPD16092508-N706-AK391_HV3JCCCXY_L7_2.qc.fq.gz&lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; paste - - - - &lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt; tr &lt;span class="s1"&gt;&amp;#39;\t&amp;#39;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;\n&amp;#39;&lt;/span&gt;  &lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="o"&gt;(&lt;/span&gt;trim-low-abund.py -k &lt;span class="m"&gt;20&lt;/span&gt; -C &lt;span class="m"&gt;2&lt;/span&gt; - -o - -x 5e7&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="o"&gt;(&lt;/span&gt;extract-paired-reads.py --gzip -p A_xen.paired.gz -s A_xen.single.gz&lt;span class="o"&gt;)&lt;/span&gt; &amp;gt; /dev/null
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;h2&gt;Queue management&lt;/h2&gt;
+&lt;p&gt;Submit script to slurm queue as a job:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sbatch yourfile
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Check the queue status:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;squeue -u ljcohen
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Cancel job:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;scancel 5280622
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In an emergency, if you've (hypothetically) submitted a lot of jobs you don't want, cancel all job ID beginning with numbers &lt;code&gt;528&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;squeue -u ljcohen | grep “528&amp;quot; | sed -r -e &amp;quot;s/[\t\ ]+/./g&amp;quot; | cut -d&amp;quot;.&amp;quot; -f 2 | xargs scancel
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Let's do something simple.&lt;/h2&gt;
+&lt;p&gt;From the &lt;a href="https://angus.readthedocs.io/en/2018/running-command-line-blast.html"&gt;blast commandline tutorial from angus&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd /pylon5/mc5phkp/ljcohen
+mkdir test
+cd test
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Download:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl -o mouse.1.protein.faa.gz -L https://osf.io/v6j9x/download
+curl -o mouse.2.protein.faa.gz -L https://osf.io/j2qxk/download
+curl -o zebrafish.1.protein.faa.gz -L https://osf.io/68mgf/download
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Decompress:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gunzip *.faa.gz
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Load module:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;module&lt;/span&gt; &lt;span class="n"&gt;load&lt;/span&gt; &lt;span class="n"&gt;blast&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2.7.1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Make &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;makeblastdb -in zebrafish.1.protein.faa -dbtype prot
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Run interactive job:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;interact -p RM-shared --ntasks-per-node=4 -N 1 -t 1:00:00
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Run this interactively, or create a script file and submit as an RM job:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd test
+blastp -query mouse.1.protein.faa -db zebrafish.1.protein.faa -out mm.x.zebrafish.tsv -outfmt 6
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;4. How to Transfer files&lt;/h1&gt;
+&lt;p&gt;scp a directory of files from bridges to your local computer, must use port &lt;code&gt;2222&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;scp -r -P 2222 ljcohen@data.bridges.psc.edu:/location/ .
+&lt;/pre&gt;&lt;/div&gt;</content><category term="XSEDE"></category><category term="computing resources"></category><category term="hpc"></category><category term="bridges"></category></entry></feed>

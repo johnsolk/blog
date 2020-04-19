@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>XRAC research proposal - monsteRbashSeq</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://johnsolk.github.io/blog/xrac-research-proposal.html">
+
+        <meta name="author" content="Lisa K. Johnson" />
+        <meta name="keywords" content="XSEDE,computing resources,hpc" />
+        <meta name="description" content="XRAC research proposal - January 15, 2019" />
+
+        <meta property="og:site_name" content="monsteRbashSeq" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="XRAC research proposal"/>
+        <meta property="og:url" content="https://johnsolk.github.io/blog/xrac-research-proposal.html"/>
+        <meta property="og:description" content="XRAC research proposal - January 15, 2019"/>
+        <meta property="article:published_time" content="2019-01-22" />
+            <meta property="article:section" content="Proposals" />
+            <meta property="article:tag" content="XSEDE" />
+            <meta property="article:tag" content="computing resources" />
+            <meta property="article:tag" content="hpc" />
+            <meta property="article:author" content="Lisa K. Johnson" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://johnsolk.github.io/blog/theme/css/bootstrap.simplex.min.css" type="text/css"/>
+    <link href="https://johnsolk.github.io/blog/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://johnsolk.github.io/blog/theme/css/pygments/native.css" rel="stylesheet">
+    <link href="https://johnsolk.github.io/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://johnsolk.github.io/blog/theme/css/style.css" type="text/css"/>
+        <link href="https://johnsolk.github.io/blog/theme/css/custom.css" rel="stylesheet">
+
+        <link href="https://johnsolk.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="monsteRbashSeq ATOM Feed"/>
+
+
+
+        <link href="https://johnsolk.github.io/blog/feeds/proposals.atom.xml" type="application/atom+xml" rel="alternate"
+              title="monsteRbashSeq Proposals ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://johnsolk.github.io/blog/" class="navbar-brand">
+monsteRbashSeq            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="https://johnsolk.github.io/">Main</a></li>
+                    <li><a href="https://johnsolk.github.io/about.html">About</a></li>
+                    <li><a href="https://monsterbashseq.wordpress.com/">Old Blog</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><span>
+                <form class="navbar-search" action="/blog/search.html">
+                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("https://johnsolk.github.io/blog//img/sanomacoast.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+		<div class="copy">
+			<h1>monsteRbashSeq</h1>
+				<p class="intro">Lisa K. Johnson</p>
+		</div>
+	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://johnsolk.github.io/blog/xrac-research-proposal.html"
+                       rel="bookmark"
+                       title="Permalink to XRAC research proposal">
+                        XRAC research proposal
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2019-01-22T00:00:00-08:00"> Tue 22 January 2019</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://johnsolk.github.io/blog/tag/xsede.html">XSEDE</a>
+        /
+	<a href="https://johnsolk.github.io/blog/tag/computing-resources.html">computing resources</a>
+        /
+	<a href="https://johnsolk.github.io/blog/tag/hpc.html">hpc</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Last week (1/15/2019), we submitted a proposal for an <a href="https://portal.xsede.org/allocations/research">XSEDE research allocation</a>. Below is our proposal.</p>
+<p>This is to support the last bits of computational work required for my dissertation, which I hope to complete this year. Tessa Pierce's <a href="https://github.com/dib-lab/eelpond">eelpond</a> automated <em>de novo</em> transcriptome assembly pipeline. In addition, we want to implement and test the <a href="https://oyster-river-protocol.readthedocs.io/en/latest/">Oyster River Protocol</a> across a large dataset. Plus some extra compute for incoming PhD rotation students. </p>
+<p>We've been successful with getting <a href="https://github.com/ljcohen/jetstream-xsede-illo/blob/master/xsede_applications/mmestp-jetstream.md">startup allocations</a> approved by XSEDE since 2016. Our summer <a href="https://angus.readthedocs.io/en/2018/jetstream/boot.html">dibsi/angus courses use Jetstream</a>, due to several successfull <a href="http://ivory.idyll.org/blog/2017-dibsi-xsede-request.html">education proposals</a>. But with my last round requesting a renewal for my startup, apparently I have exceeded the limits. So they asked for a full proposal to the XSEDE resource allocation committee (XRAC). </p>
+<p>(Fingers crossed) We will learn the outcome of the proposal in March. </p>
+<h2>UPDATE: (3/15/2019) We received our allocation!</h2>
+<p>Here is our <a href="https://github.com/johnsolk/jetstream-xsede-illo/blob/master/xsede_applications/Pierce_Johnson_XRACproposal_Jan2019.pdf">proposal (pdf)</a> and <a href="https://github.com/johnsolk/jetstream-xsede-illo/blob/master/xsede_applications/Pierce_Johnson_XRAC_scaling_Jan2019.pdf">code performance and resource usage document</a></p>
+<p>===</p>
+<h2>Improving reference genomes and transcriptomes towards gene expression profiling of sequencing data sets containing multiple eukaryotic species</h2>
+<p><strong>PI:</strong> N. Tessa Pierce</p>
+<p><strong>Co-PI:</strong> Lisa Johnson</p>
+<p><em>UC Davis Data Intensive Biology Lab</em></p>
+<p>Startup Allocations: <strong>TG-MCB170160</strong> and <strong>TG-BIO160028</strong></p>
+<h2>Background and Support</h2>
+<p>High-throughput sequencing methods have revolutionized ecological and evolutionary studies by facilitating research at the whole-genome level for multiple species. However, generation of high-quality references remains a complex and computationally-intensive endeavor, complicated by the biological properties of the sequence (e.g. polymorphism, gene splicing and duplication, etc), technical limitations of the sequencing platforms and analysis tools, and the scale (often hundreds of samples) required for balanced experimental designs. Furthermore, we have shown that the goal to generate a single reference genome or transcriptome as a final product must be re-evaluated in light of the information gained via reanalysis with new tools (Johnson et al. 2018).</p>
+<p>Our research aims to address these issues by systematically evaluating transcriptome and genome assembly, annotation and analysis methods to produce best practices, user-friendly, automated pipelines that facilitate future research. Here, we leverage biological datasets at two scales: first a broad-scale analysis of 678 species in the Marine Microbial Eukaryotic Transcriptome Sequencing Project (MMETSP), and second, finer-scale analysis on the evolution of salinity tolerance in sixteen species of a relatively well-studied species group, Fundulus killifish, exposed to acute hypersalinity challenge. The phylogenetic breadth of these projects enables us to build better bioinformatic pipelines agnostic of species that can be applied by investigators to sequencing data from multiple species as well as repeatedly to our own data as software tools and annotation databases improve. </p>
+<p>These projects are supported through November 2019 by a Moore Foundation Data-Driven Science investigator award to the PI of our lab, Dr. C. Titus Brown. PI Dr. N. Tessa Pierce is funded by an NSF Postdoctoral Research Fellowship in Biology (#1711984; 2017-2020), entitled “Improving RNA-Seq Analysis through Graph-based Analysis and Computational Indexing,” which uses the MMETSP data to test RNAseq analyses. Co-PI Lisa Johnson (Cohen) received an NSF Graduate Research Fellowship Honorable Mention in 2016 and has authored the first publication for this project leveraging the MMETSP dataset (Johnson et al. 2018). Results from these analyses are essential preliminary data for funding proposals to be submitted in the coming year. </p>
+<h2>A. Research Objectives</h2>
+<h3>Project 1: RNA-Seq tool development using the MMETSP dataset</h3>
+<p>The MMETSP consists of RNAseq data from 678 cultured protist species spanning more than 40 eukaryotic phyla, generated to broaden the diversity of sequenced marine protists and facilitate our understanding of their evolution and roles in marine ecosystems and biogeochemical cycles (Keeling et al. 2014). This database forms a rich reference which can be queried to help functionally characterize genes from environmental samples containing species that cannot be cultured. However, the MMETSP data also provides a unique opportunity to assess RNAseq analysis methods using one of the largest and most diverse publicly-available RNAseq data sets at this time. MMETSP is also unusually well-suited for benchmarking analyses, as data submitted by a large consortium of international investigators was prepared with a single, standardized library preparation and sequenced at a single facility.</p>
+<p>MMETSP was first analyzed in 2013, with de novo reference transcriptomes generated by the National Center for Genomic Resources (NCGR) using the Trans-ABySS assembler (Robertson et al. 2010). However, transcriptome assembly is an area of active research, with many new tools and improvements since this initial analysis. The first part of this project (now published) demonstrated that application of a new assembly software tool, Trinity (Grabherr et al. 2011) improved the quality of the assemblies and uncovered new content (Johnson et al. 2018). Comparing the original Trans-ABySS “NCGR” pipeline and our Trinity-based “DIB” assembly pipeline, we see differences in the number of contigs (Figure 1, left), the assembly content measured by alignments (Figure 1, middle) and unique <em>k</em>-mers (<em>k</em>=25) (Figure 1, right). These assemblies are annotated with the <a href="http://dib-lab.github.io/dammit/">dammit annotation program</a>, developed by Camille Scott who is a graduate student in our lab. 
+<img src="https://i.imgur.com/gBB5P4I.png" width="225"><img src="https://i.imgur.com/MqyGGes.png" width="225"><img src="https://i.imgur.com/yZWqTbX.png" width="250">
+<em>Figure 1. (left) Number of contigs compared between NCGR (yellow) and DIB (blue) de novo transcriptome assemblies. (middle) Proportion of contig sequence similarity as measured by a conditional reciprocal best BLAST (CRBB) algorithm between NCGR (yellow) and DIB (blue) assemblies, indicating that the two assemblies have different content. (right) Comparison of the unique k-mer (k=25) content between NCGR assemblies (x-axis) and DIB assemblies (y-axis) indicating that the DIB assemblies had more unique content.</em></p>
+<p>The MMETSP data is publicly available from the NCBI Sequence Read Archive (PRJNA231566) from 678 species, 168,152,967,701 PE50 reads total, 1TB raw data storage with the following phyla (N=species): Bacillariophyta (N=173), Dinophyta (N=114), Ochrophyta (N=73), Haptophyta (N=61), Ciliophora (N=25), Chlorophyta (N=62), Cryptophyta (N=22), Others (N=13). </p>
+<p><strong>Improving Reference Generation with eelpond</strong>
+Given these improvements to old data using new tools, in the second part of this project we are developing an automated best-practices pipeline, called eelpond (https://github.com/dib-lab/eelpond), for non-model species within a framework that facilitates software installation and new tool integration. Eelpond accepts a set of raw fastq RNA sequencing reads and an experimental design matrix, and generates annotated de novo transcriptome assemblies. It will also run preliminary differential expression analysis with the DESeq2 R package. A new multi-assembler protocol, the Oyster River Protocol (ORP; MacManes 2018) suggests that merging contigs from several assemblers (Spades; Bushmanova et. al 2018, Shannon, Trinity; Grabherr et. al 2011) and multiple k-mer lengths may outperform assemblies with the currently-favored assembler, Trinity. We are integrating each of these assemblers (including the full ORP pipeline) into eelpond for benchmarking and comparison with the MMETSP data.</p>
+<p>Gene Pathway and Structure Discovery (glympsed) &amp; Phylotranscriptomics
+The final goal of our MMETSP project is to develop an unsupervised deep learning pipeline, called glympsed, using the “denoising autoencoder” algorithm (Vincent et al 2008) to discover common expression patterns in large RNA sequencing data sets (&gt;100 samples and 30,000 genes/sample). This method has been shown to successfully identify common metabolic patterns of gene expression where there are unknown relationships between samples (Tan et al. 2016). Code for the glympsed project was written as a collaborative group in 2016 using a a large test set from all publicly-available Pseudomonas bacteria data, with the aim of testing and optimizing the glympsed pipeline with MMETSP data. Now that the MMETSP re-assemblies and expression quantification results are complete (Johnson et al. 2018), we can use these results as input to run the glympsed pipeline. </p>
+<p>To start, we will examine data from members of the dinoflagellata phylum in the MMETSP set, which exhibit two distinct lifestyles (endosymbiotic and free-living). With glympsed, we will investigate fundamental metabolic transcriptional differences between the two groups. We will then expand the this approach to additional taxonomic groups within the MMETSP. Following the development and successful analysis with the glympsed pipeline, the agalma phylotranscriptomics pipeline (Dunn et al. 2013) will be used to generate species trees based on pathway genes identified with glympsed.</p>
+<h3>Project 2: Comparative genomics and gene expression analysis of 16 Fundulus killifish species in response to osmotic stress</h3>
+<p>Killifish in the genus <em>Fundulus</em> have emerged as a comparative model system for studying the physiological and genetic mechanisms underlying osmotic tolerance (Whitehead 2010). Some Fundulus species can tolerate a range of environmental salinities (euryhaline) by switching osmoregulatory mechanisms while other Fundulus species require a narrower salinity range (stenohaline) in either fresh or marine waters. In collaboration with Andrew Whitehead’s Environmental Genomics lab at UC Davis, we are studying the evolutionary history of adaptation in these 16 marine, estuarine and freshwater <em>Fundulus</em> species with representation from each of the three clades where species have independently radiated into freshwater environments. As these species are closely related and have a well-characterized phylogeny, this study presents a unique opportunity to study parallel evolution of physiological adaptation.</p>
+<p>This project leverages both stress-response RNA-seq data and long-read genome data. RNAseq data were collected after exposure of 130 individuals to a common, controlled acute hypersalinity challenge experiment, and deeply sequenced on the Illumina HiSeq platform, generating over 4 billion PE100 reads, 500GB raw data storage: <em>Adinia xenica</em> (N=9), <em>Fundulus catenatus</em> (N=7), <em>Fundulus chrysotus</em> (N=8), <em>Fundulus diaphanus</em> (N=7), <em>Fundulus grandis</em> (N=9), <em>Fundulus heteroclitus</em> (MDPL population) (N=9), <em>Fundulus heteroclitus</em> (MDPP population) (N=9), <em>Fundulus notatus</em> (N=9), <em>Fundulus nottii</em> (N=2), <em>Fundulus olivaceus</em> (N=8), Fundulus parvapinis (N=8), <em>Fundulus rathbuni</em> (N=9), <em>Fundulus sciadicus</em> (N=5), <em>Fundulus similis</em> (N=9), <em>Fundulus zebrinus</em> (N=4), Lucania goodei (N=9), Lucania parva (N=9) (Rodgers et al. 2018; Johnson and Whitehead 2018). After the experiment, a subset of four species (3 freshwater: <em>Fundulus nottii</em>, <em>Fundulus catenatus</em>, <em>Fundulus olivaceus</em>, and one marine: <em>Adinia xenica</em>) were selected for <a href="https://ljcohen.github.io/blog/killifish-promethion-data-sharing.html">genome assembly via Oxford Nanopore Technologies (ONT) long-read sequencing</a>.</p>
+<p><strong>Transcriptome Analysis with eelpond</strong>
+Following the success of transcriptome assemblies of the MMETSP dataset, we are applying the same methods to assemble de novo transcriptomes for each of these 16 Fundulus species, which we can then use to analyze transcriptional responses to salinity change by clade and physiology. The end product for this project will be sets of candidate genes with common expression patterns and their corresponding physiological pathways. Based on previous work with microarrays and protein assays, we expect to see isoform switching in relevant genes (e.g. ATPase Na+/K+ transporting subunit alpha 1b vs. alpha 1a). These differences are hard to detect and require high quality reference transcriptomes. Improving the quality of the assemblies has included assembling and re-assembling with the new version of Trinity (2.8.4), which improved the contiguity with fewer contigs (Figure 2, left) and benchmarking evaluation scores (BUSCO; Simão et. al 2015) (Figure 2, right). De novo transcriptome assemblies have been generated, twice with updated versions of Trinity. Now, they need to be improved with ORP and automated using eelpond.</p>
+<p><img src="https://i.imgur.com/DvF2yJ5.png" width="300"><img src="https://i.imgur.com/d8E9c3q.png" width="300"></p>
+<p><em>Figure 2. (left) Numbers of contigs decreased from old assemblies (purple) to new assemblies (green). (right) Benchmarking scores (BUSCO) increased with a tighter distribution in new assemblies (green) compared to the old assemblies (purple).</em></p>
+<p><strong>Generating High-Quality Genome References</strong>
+Genomic sequence data from four species were generated (3 freshwater: Fundulus nottii, Fundulus catenatus, Fundulus olivaceus, and one marine: Adinia xenica) via Oxford Nanopore Technologies (ONT) PromethION desktop sequencer (approximately $3,500/species). Each genome is estimated to be around 1.1 Gb, based on the size of the sister species, Fundulus heteroclitus; therefore, we have collected between 30-50x coverage of ONT data. These genomes will better enable us to detect these small changes in the transcriptomes, as well as to discover changes in genomic architecture underlying adaptive responses to environmental change. Below is a table listing ONT data collected for each species:</p>
+<p>ONT data collected thus far, which will contribute to de novo genomes of 4 Fundulus species:</p>
+<table>
+<thead>
+<tr>
+<th>Species</th>
+<th>bases called</th>
+<th>n reads</th>
+<th>avg length</th>
+<th>largest</th>
+<th>reads N50</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Adinia xenica</em></td>
+<td>38,467,326,719</td>
+<td>15,704,522</td>
+<td>2,449</td>
+<td>953,774</td>
+<td>5,733, n = 1,373,426</td>
+</tr>
+<tr>
+<td><em>Fundulus nottii</em></td>
+<td>33,440,866,723</td>
+<td>5,160,367</td>
+<td>6,480</td>
+<td>667,947</td>
+<td>12,995, n=700,534</td>
+</tr>
+<tr>
+<td><em>Fundulus catenatus</em></td>
+<td>40,274,806,587</td>
+<td>23,701,206</td>
+<td>1,699</td>
+<td>590,485</td>
+<td>3,439, n = 2,687,295</td>
+</tr>
+<tr>
+<td><em>Fundulus olivaceus</em> (MinION)</td>
+<td>4,962,626,713</td>
+<td>740,248</td>
+<td>6,704</td>
+<td>973,552</td>
+<td>12,726, n = 117,202</td>
+</tr>
+<tr>
+<td><em>Fundulus olivaceus</em> (PromethION)</td>
+<td>50,093,027,850</td>
+<td>10,902,817</td>
+<td>4,595</td>
+<td>779,368</td>
+<td>11,670, n = 987,921</td>
+</tr>
+</tbody>
+</table>
+<p>ONT is a new sequencing technology that has only become available within the past 3 years; however, it is showing promise improving genome assemblies because of the length of the reads (Ebbert et al. 2018). Because of the high error rate (~10-15%) associated with ONT data, we are in the process of generating 50x coverage of paired-end 150 bp short-read Illumina data, which has a low error rate (&lt;1%) and will be used to correct the noisy long reads. The size of the Illumina short read data will be around 500 GB total.</p>
+<p><strong>Gene Pathway and Structure Discovery (glympsed) &amp; Phylotranscriptomics</strong>
+The killifish data also have more than 100 samples and will be run through the glympsed pipeline. We are looking for common patterns of gene expression across the clades, hypothesizing that there will be some genes with parallel avenues of evolution whereas some genes will have divergent modes of evolution.</p>
+<h2>B. Computational Methods</h2>
+<p><strong>Transcriptome assemblies</strong> 
+We are working towards improving the quality of reference transcriptomes for these two projects: 16 Fundulus species + 678 MMETSP species = 694 species, around 700 transcriptomes. RNAseq samples from Fundulus species have approximately 10x more reads (average = 238,363,948) than samples from the MMETSP (average = 23,387,060 reads). </p>
+<p><img src="https://i.imgur.com/8tY08mr.png" width="600"></p>
+<p><em>Figure 3. Workflow diagram for the eelpond RNAseq de novo transcriptome assembly pipeline, indicating milestones for each step: Download, quality assessment, digital normalization, assembly, annotation, and evaluation.</em> </p>
+<p><strong>Eelpond</strong> 
+To improve each MMETSP and Fundulus killifish transcriptome, we will run our automated eelpond pipeline (Figure 3; https://github.com/dib-lab/eelpond) to conduct read quality and error trimming, generate additional transcriptome assemblies, and perform assembly annotation and quality evaluation. Eelpond uses Python’s snakemake automation tool to manage each run and uses conda for tool installation. While some of the components of eelpond are not compute intensive, the main assembler, Trinity, is very compute intensive (see “Code Performance and Resource Usage” document). To run this pipeline in parallel to process files from from start to finish, all tools must be run on the HPC. Since the pipeline is modularized, individual milestones can be adjusted (separate jobs submitted requesting different resources) so the whole pipeline does not require the same large amount of resources as Trinity. We are in the process of integrating the Oyster River Protocol, a multi-kmer, multi-assembler tool that may outperform Trinity assemblies (MacManes 2018). Since we already have Trinity assemblies, testing ORP will involve running the remaining assemblers (Spades x2 and Shannon) as well as the assembly merging script, Orthofuser. The resulting assemblies will also require annotations, which eelpond will perform with dammit (Scott in prep). Downstream analyses will be conducted with Salmon (Patro et al 2017) quantification and DESeq2 (Love et al. 2014), already integrated into the pipeline. While eelpond currently works on AWS and Jetstream, only minor modifications are needed to scale up to the Bridges HPC. Resource allocations requested by this proposal will allow us to develop the eelpond protocol for any hpc users with slurm job management, such as PSC Bridges. </p>
+<p><strong>Genome Assemblies</strong>
+Four Fundulus killifish genomes will be assembled from Oxford Nanopore Technologies (ONT) long read data. New tools and methods for assembling and analyzing these noisy ONT long reads are being developed at a fast rate (de Lannoy et al. 2017). We will perform hybrid genome assemblies with ONT and Illumina data, which can produce high quality (&gt;2 Mb contig N50) reference genomes (Tan et al 2018, Miller et al. 2018, Liu et al. 2018). We have found the best available assembler to be MaSuRCA, as evaluated by complete BUSCO identification (eukaryota database; Simão et. al 2015): </p>
+<table>
+<thead>
+<tr>
+<th>Seq data input</th>
+<th>Tool</th>
+<th>bases</th>
+<th>n_contigs</th>
+<th>average</th>
+<th>largest</th>
+<th>N50</th>
+<th>BUSCO (eukaryota)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ONT (MinION)</td>
+<td>Canu</td>
+<td>9,804,264</td>
+<td>540</td>
+<td>18,156</td>
+<td>365,191</td>
+<td>40,681, n = 43</td>
+<td>0.7%</td>
+</tr>
+<tr>
+<td>ONT (MinION)</td>
+<td>Miniasm</td>
+<td>4,917,546</td>
+<td>153</td>
+<td>32,140</td>
+<td>233,136</td>
+<td>50,056, n = 25</td>
+<td>0.0 %</td>
+</tr>
+<tr>
+<td>Illumina (NovaSeq)</td>
+<td>Megahit</td>
+<td>1,183,861,293</td>
+<td>1038799</td>
+<td>1,139</td>
+<td>88,218</td>
+<td>3,846, n = 77,800</td>
+<td>45.6 %</td>
+</tr>
+<tr>
+<td>Illumina (NovaSeq)</td>
+<td>ABySS</td>
+<td>1,381,148,284</td>
+<td>1024759</td>
+<td>1,347</td>
+<td>140629</td>
+<td>9833, n = 37,013</td>
+<td>77.9%</td>
+</tr>
+<tr>
+<td>Hybrid</td>
+<td>Masurca</td>
+<td>1,134,160,060</td>
+<td>90,237</td>
+<td>12,568</td>
+<td>386,222</td>
+<td>42,823, n = 7,616</td>
+<td>86.2%</td>
+</tr>
+</tbody>
+</table>
+<p>The job to run the MaSuRCA software tool required 1TB storage for intermediate files and &gt;1 week to run for the 1.1 Gb genome assembly. Our measurements were validated by the manual and communications with the MaSuRCA authors. Following genome assembly, the intermediate files are deleted. We have successfully produced one MaSuRCA assembly on the MSU hpcc with an abbreviated set of ONT data. However, we were not able to benchmark this on PSC Bridges before this proposal, due to time and resource constraints on our startup allocations. After assembly with MaSuRCA, the quality of the reference genome assemblies will be improved by applying the Pilon or Racon scaffolding and consensus improvement tools, which are also resource intensive.</p>
+<p>These four genomes will be annotated using the MAKER pipeline (Cantarel 2008; latest version v2.31.10 May 4, 2018), used to align RNAseq reads and to perform comparative genomic analysis to test for parallel loss of the genomic architecture that supports plasticity to salinity environments. Data have been collected and now need to be assembled and annotated. Genomes will then be used for comparative genomics analysis.</p>
+<p><strong>Gene Pathway and Structure Discovery (glympsed) &amp; Phylotranscriptomics</strong>
+To discover common expression patterns in large RNA sequencing data sets (&gt;100 samples and 30,000 genes/sample), we are in the process of developing a pipeline using the unsupervised deep learning library, Keras (Chollet 2018). This pipeline, called “glympsed” (https://github.com/glympsed/glympsed) uses the “denoising autoencoder” algorithm (Vincent et al 2008) to extract features or patterns from the noisy dataset. This method has been shown to successfully identify common metabolic patterns of gene expression where there are unknown relationships between samples (Tan et al. 2016). The results of this pipeline will be used to generate hypotheses about pathway “features” that are present or absent in MMETSP and killifish samples.</p>
+<p>Preliminary code and notebooks are available on GitHub, which were developed on AWS. Simulated data were created to test the denoising autoencoder model by randomly sampling beta values, assuming gene expression data follows negative binomial distribution. Jetstream resources will be used to develop code and run Jupyter notebooks for visualizations. Scripts will be written generate output tables containing gene networks and connect to gene regulatory network and pathway databases, such as KEGG (Kanehisa et. al 2000). Tutorials will be developed and Jetstream images with required software installed will be made public. </p>
+<p>Following the development and successful completion of results produced by the glympsed pipeline, the agalma phylotranscriptomics pipeline (Dunn et al. 2013) will be used to generate species trees based on pathway genes identified with glympsed.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Program</strong></th>
+<th><strong>Resources</strong></th>
+<th><strong>Total SUs</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Development of glympsed and tutorials for phylotranscriptomics pipelines</td>
+<td>Jetstream</td>
+<td>110,000</td>
+</tr>
+</tbody>
+</table>
+<h2>C. Computational Research Plan: Resource usage with accompanying application efficiencies to achieve the research objectives.</h2>
+<p>We are requesting PSC Bridges (LM, RM and Pylon storage) in addition to Jetstream cloud computing resources. Jetstream is great for troubleshooting custom software, developing pipeline scripts and performing calculations and visualizations with data table inputs. PSC Bridges is great for storing raw sequencing data files, scaling up assembly pipelines with high memory processes in parallel, then evaluating and generating data tables.</p>
+<p>Jetstream, like AWS elastic cloud computing where we have done some of our initial pipeline development and software installation, allows the freedom of installing with root privileges and frequently updating custom software, as well as hosting open data analysis collaboration with tools such as Jupyter notebooks. For students in a classroom setting and in order to provide persistent documentation, Jetstream resources are key to loading pre-installed software from images and install new software to test. Since we do not need the intermediate files beyond the time during computation, the de novo assembly products and gene expression quantification tables can be downloaded to local computers and the instances can be deleted. </p>
+<p>We need access to an HPC with high memory nodes, like PSC Bridges to launch high memory jobs because the maximum Jetstream instance (s1.xxlarge: CPU 44, Mem 120 GB, Disk 480 GB) is too small to accommodate some of our assemblies and is also incapable of scaling to running hundreds of assemblies in parallel. We will delete intermediate files after assemblies have been generated and downloaded. Persistent storage is also a feature of Bridges that is not possible with Jetstream. One of the more frustrating practical aspects of using Jetstream is having to store large raw files for a data set that is around 1TB in volumes and keep the volume accessible each time you want to work with them from a different instance. Our experience and SUs measured during resources are explained in the attached “Code Performance and Resource Usage” document.</p>
+<h2>D. Justification of the SU allocation amounts for all resources and resource types.</h2>
+<p>Based on the <strong>“Code Performance and Resource Usage”</strong> document below, the total amount of SUs requested for the following year of research are outlined as follows:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Resource</strong></th>
+<th><strong>SUs requested</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jetstream</td>
+<td>110,000</td>
+</tr>
+<tr>
+<td>Bridges LM</td>
+<td>44,876</td>
+</tr>
+<tr>
+<td>Bridges RM</td>
+<td>139,750</td>
+</tr>
+<tr>
+<td>Bridges Pylon storage</td>
+<td>25 TB</td>
+</tr>
+</tbody>
+</table>
+<h2>E.   Resource Appropriateness</h2>
+<p>We’ve used two XSEDE startups of PSC Bridges allocations (LM, RM, and Pylon storage) and two startups of Jetstream allocations generating de novo transcriptome assemblies and annotations for the MMETSP dataset and 17 killifish as well as a separate project on Doryteuthis opalescens squid, which is being prepared for publication by PI Pierce. As a result, we are experienced Jetstream and Bridges users. These XSEDE startup allocations on Jetstream have contributed to one publication thus far (Johnson et al. 2018) and will contribute to another two manuscripts before the conclusion of Ms. Johnson’s PhD research. However, additional compute time is essential to complete this work and prepare results for publication. Completion of Lisa Johnson’s PhD dissertation research depends on these resources.</p>
+<p>We have participated as active members of the XSEDE community both on Jetstream and PSC Bridges, communicating with the help team with questions and reporting problems with jobs and compute nodes. We have served as PIs, Co-PIs and users of 5 education allocations where we have taught researchers (&gt;300 total) in workshop settings how to use Jetstream resources. We have created two public images as a result of these allocations to make future software installation on new instances easier: “RNASeq_1DayWorkshop” and “dammit_annotation_v1.0”. The following are workshops delivered with tutorials using Jetstream materials: Society for Environmental Toxicology And Chemistry meeting, November 2018 (TG-MCB180142), Global Invertebrate Genomics Alliance meeting, October 2018 (TG-MCB180140), Scripps Institution of Oceanography, Bioinformatics User’s Group workshop, October 2017 (TG-BIO170083), Data Intensive Biology Summer Institute (DIBSI), non-model RNAseq topic workshop, July 2017 (TG-BIO170017), 2-week DIBSI beginner’s workshop (ANGUS), June-July 2018, ANGUS 2017 (TG-BIO170017). The following is an example website for a workshop using Jetstream materials that is available to the public and persistent for users beyond the time of the workshop: https://setac-omics.readthedocs.io/en/latest/.</p>
+<p><strong>Local computing environment</strong>
+As a members of Dr. C. Titus Brown’s lab at UC Davis, we have access to two high performance computing clusters at Michigan State University (iCER’s hpcc) and UC Davis (farm cluster). However, there are several issues with these resources. Our time on the MSU hpcc is expiring this fall 2019, following Dr. Brown’s transition from MSU to UCD faculty in 2015. In addition, there has been limited capacity on the MSU hpcc for supporting the scale of these multi-species pipelines as we only have access to 4 nodes with 1TB of resources and the queue time is long. Moving 700 transcriptome through this queue takes more than one month and our storage capacity is limited. With the PSC Bridges startup, we have been extremely pleased with the ease of submitting jobs and having them run smoothly on both the LM and RM partitions. 
+Research funds for AWS compute time are limited, as the Moore Foundation grant that has contributed to funding these projects ends in November 2019. On the UCD farm cluster, we do not have access to the high memory node without buying in to the high memory partition of the system. As our current account stands, we are limited to 12 jobs running at a time with 75 GB RAM each and less than 1TB of total storage.</p>
+<p>Following the computing processes described in this proposal, raw sequence files will be stored locally on storage hard-drives and deposited in NCBI’s Sequence Read Archive public repository. Data products, e.g. assemblies will be stored in public repositories such as Zenodo and the Open Science Framework (Foster and Deardorff, 2017).</p>
+<h2>F. Additional Considerations</h2>
+<p><strong>Research outreach and training</strong>
+Graduate students at UC Davis are required to rotate through labs during their first year prior to choosing a primary advisor. During rotations, small projects are completed. This allocation will contribute to computational training of several rotation students in our lab who are working on the MMETSP data sets using the eelpond protocol. New protocols developed, e.g. glympsed and eelpond-integrated Oyster River Protocol will contribute to tutorials taught during our Data Intensive Biology Summer Institute at UC Davis.</p>
+<p><strong>Funding</strong>
+Analyses for the above-mentioned projects are funded until November 2019 by the Moore Foundation Data-Driven-Science investigator award to the PI of our lab, Dr. C. Titus Brown. Lisa Johnson (Cohen) received an NSF Graduate Research Fellowship Honorable Mention in 2016, which enabled her to serve as PI for the XSEDE startup allocation TG-BIO160028) that has contributed to most of her dissertation work. Tessa Pierce has an NSF Postdoctoral Fellowship and has been a PI for the XSEDE startup allocation TG-MCB170160, which has contributed to her postdoctoral research. Ms. Johnson and Dr. Pierce have both served as co-PIs for the XSEDE education proposals listed above. Results from these analyses are necessary to contribute as preliminary analyses for future proposals requesting funding from agencies such as the NSF.</p>
+<h1>Code Performance and Resource Usage</h1>
+<p>This document is based on 70-80% usage (PSC Bridges LM: 113 jobs, RM: 1042 jobs) of startup allocation TG-BIO160028 on PSC Bridges since we began our allocation on 11/26/2018 and 100% usage of 150,000 SUs on Jetstream from 2016-2018 with TG-BIO160028 and 72% usage of 100,000 SUs on Jetstream with TG-MCB170160.</p>
+<p><strong>Analyses run</strong>
+The following table includes processes run previously and their resources used that are directly related to the processes we are requesting additional resources for in this proposal.</p>
+<p><strong>Transcriptomic analysis</strong> 
+Jetstream resources were estimated, as long-running tools are often run overnight, and instances used for training and workshops are kept running during instruction and troubleshooting, so active program runtimes are not continuous. Bridges jobs are listed for the species with the longest time and highest resource usage.</p>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Species</th>
+<th>Data size</th>
+<th>Resource</th>
+<th>SU/run used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Workshop tutorial (single commands run by hand), de novo transcriptome assembly pipeline</td>
+<td><em>Nematostella vectensis</em></td>
+<td>30,000 reads subset</td>
+<td>Jetstream, m1.medium</td>
+<td>12 = 6 CPU x 8hrs workshop time</td>
+</tr>
+<tr>
+<td>dib-MMETSP, automated de novo transcriptome assembly pipeline (Johnson et al. 2018)</td>
+<td><em>Chaetoceros neogracile</em> (Phylum: Bacillariophyta), MMETSP0751</td>
+<td>33,150,207 reads</td>
+<td>Jetstream, s1.xxlarge</td>
+<td>264 = 44 CPU x 6hrs</td>
+</tr>
+<tr>
+<td>Digital normalization with khmer</td>
+<td><em>Fundulus grandis</em></td>
+<td>467,432,867 trimmed reads</td>
+<td>Bridges RM; jobID 4524354</td>
+<td>48.10</td>
+</tr>
+<tr>
+<td><em>De novo</em> transcriptome assembly with Trinity</td>
+<td>Fundulus heteroclitus (MDPL population)</td>
+<td>79,341,401 reads (after digital normalization)</td>
+<td>Bridges LM; jobID 4555613</td>
+<td>232.07</td>
+</tr>
+<tr>
+<td>Transcriptome annotation, dammit</td>
+<td><em>Fundulus heteroclitus (MDPP population)</em></td>
+<td>668,487 contigs</td>
+<td>Bridges LM; jobID 4710488</td>
+<td>57.48</td>
+</tr>
+<tr>
+<td>Transcriptome and genome evaluation, BUSCO</td>
+<td><em>Fundulus grandis</em></td>
+<td>809,060 contigs</td>
+<td>Bridges RM; jobID 4612712</td>
+<td>292.97</td>
+</tr>
+<tr>
+<td>Transcriptome evaluation, Transrate</td>
+<td><em>Fundulus grandis</em></td>
+<td>809,060 contigs</td>
+<td>Bridges RM; jobID 4609550</td>
+<td>33.33</td>
+</tr>
+<tr>
+<td>Expression quantification, salmon</td>
+<td>Loop with all 9 individuals from the <em>Fundulus grandis</em> species</td>
+<td>467,432,867 trimmed reads</td>
+<td>Bridges RM; jobID 4707781</td>
+<td>14.37</td>
+</tr>
+<tr>
+<td>Genome alignment of RNAseq reads, STAR</td>
+<td><em>Fundulus grandis</em>, BW treatment, sample 1</td>
+<td>81,736,962 trimmed reads</td>
+<td>Bridges RM; jobID 4702491</td>
+<td>6.76</td>
+</tr>
+<tr>
+<td>Species trees, agalma</td>
+<td>Subset of data from 6 invertebrate siphonophore and cnidarian species, RNAseq reads</td>
+<td>Jetstream, m1.medium</td>
+<td>12 = 6 CPU x 2hrs</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Genomic analysis:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Data type</th>
+<th>Data size</th>
+<th>Resource</th>
+<th>SUs used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>De novo</em> genome assembly of a bacteria, ONT reads with canu and Pilon correction</td>
+<td><em>Tenacibaculum</em> sp. bacteria (3Mb)</td>
+<td>Jetstream, s1.large</td>
+<td>80 = 10 CPU x 8 hrs</td>
+<td></td>
+</tr>
+<tr>
+<td>MaSuRCA</td>
+<td>Killifish genome (1.1Gb)</td>
+<td>4x ONT coverage subset with 50x coverage Illumina data</td>
+<td>MSU hpcc</td>
+<td>168  hrs = 1 TB for 1 week; MSU deleted my log file :(</td>
+</tr>
+<tr>
+<td>Racon and Pilon</td>
+<td>Killifish genome (1.1Gb)</td>
+<td>4x ONT coverage subset with 50x coverage Illumina data</td>
+<td>MSU hpcc</td>
+<td>Job failed “Caused by: java.lang.OutOfMemoryError: GC overhead limit exceeded“ with 500 GB memory</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Extrapolation for Future work</strong>
+We have not had a chance to benchmark everything that we want to yet for the de novo genome assemblies, which is why we’re writing this proposal requesting more computing resources on these platforms. As mentioned in the main document, because long reads from Oxford Nanopore Technologies (ONT) are “third-generation” sequencing technology, software tools that are being developed at a fast rate to keep up with the developing technology. The raw signal files used to call bases to generate fastq sequence files must be saved because the base-calling software algorithms are improving. We have not tested the new base-calling software, and thus have not included it in our pipeline here. But, in the next year, if the software improves, we will need to return to the beginning of our pipeline to acquire more accurate bases for our reads. </p>
+<p>There is not yet a set of best practices for these software tools for de novo genome assembly using ONT reads, therefore several must still be tested. As mentioned in the main document, we have tested several de novo genome assemblers for ONT data with a subset of data and have found that MaSuRCA to be the best. However, if we scale up our data and find that another tool is better, we would like to use the better set of tools. </p>
+<p>SUs requested for running genome assembly tools for 4 Fundulus genomes, 1.1Gb each:</p>
+<table>
+<thead>
+<tr>
+<th>Program Description</th>
+<th># runs</th>
+<th>SUs/run</th>
+<th>Resources</th>
+<th>Total SUs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MaSuRCA assembler</td>
+<td>4</td>
+<td>168 = 1 TB x 168 hrs</td>
+<td>Bridges LM</td>
+<td>672</td>
+</tr>
+<tr>
+<td>Racon and/or Pilon Consensus improvement</td>
+<td>24 = 4 x 6 iterations/species*</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>48 = 1 TB x 48 hrs</td>
+<td>Bridges LM</td>
+<td>1,152</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>khmer Error correction</td>
+<td>4</td>
+<td>50</td>
+<td>Bridges RM</td>
+<td>200</td>
+</tr>
+<tr>
+<td>sourmash decontamination</td>
+<td>4</td>
+<td>50</td>
+<td>Bridges RM</td>
+<td>200</td>
+</tr>
+<tr>
+<td>MAKER annotation</td>
+<td>4</td>
+<td>48 = 1 TB x 48 hrs</td>
+<td>Bridges LM</td>
+<td>1,152</td>
+</tr>
+<tr>
+<td>storage: ONT signal files 1TB/species + 100 GB fastq sequence data/species x 4 species + 500 GB for 2 lanes Illumina PE150 fastq data + 3 TB/species x 4 species for intermediate storage during assemblies</td>
+<td>Bridges Pylon storage</td>
+<td></td>
+<td></td>
+<td>17 TB</td>
+</tr>
+</tbody>
+</table>
+<p>*Racon and Pilon are separate tools that take Illumina data and polish the final assembly to improve it. The reason why we have more runs for either Racon and Pilon in our list of SUs requested below is because these require multiple iterations for correcting the consensus genome sequence (Miller et al. 2018). We have done this and confirmed for a 3 Mb bacteria (Tenacibaculum) genome on Jetstream (m1.large), but not on larger assemblies because the jobs crashed without enough memory on our local MSU hpcc We have not attempted on Bridges yet because we didn’t have enough SUs in our startup nor the time between 11/26/18 and the completion of this proposal (1/15/19).</p>
+<p>SUs requested for running de novo transcriptome assembly tools for 700 transcriptomes:</p>
+<table>
+<thead>
+<tr>
+<th>Program Description</th>
+<th># runs</th>
+<th>SUs/run</th>
+<th>Resources</th>
+<th>Total SUs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>khmer digital normalization and error correction</td>
+<td>700</td>
+<td>50</td>
+<td>Bridges RM</td>
+<td>3,500</td>
+</tr>
+<tr>
+<td>Spades x2 k-mers, Shannon de novo transcriptome assemblers</td>
+<td>16</td>
+<td>500</td>
+<td>Bridges LM</td>
+<td>8,000</td>
+</tr>
+<tr>
+<td>Spades x2 k-mers, Shannon de novo transcriptome assemblers</td>
+<td>678</td>
+<td>50</td>
+<td>Bridges LM</td>
+<td>33,900</td>
+</tr>
+<tr>
+<td>Dammit annotation pipeline</td>
+<td>700</td>
+<td>50</td>
+<td>Bridges RM</td>
+<td>35,500</td>
+</tr>
+<tr>
+<td>Transrate transcriptome evaluation</td>
+<td>1,400 (run twice for each assembly, comparing against reference)</td>
+<td>35</td>
+<td>Bridges RM</td>
+<td>49,000</td>
+</tr>
+<tr>
+<td>BUSCO genome and transcriptome evaluation</td>
+<td>700</td>
+<td>50</td>
+<td>Bridges RM</td>
+<td>35,000</td>
+</tr>
+<tr>
+<td>OrthoFinder identification of 1-1 orthologs from data sets</td>
+<td>2 = MMETSP assemblies + killifish assemblies</td>
+<td>250</td>
+<td>Bridges RM</td>
+<td>400</td>
+</tr>
+<tr>
+<td>Salmon gene expression quantification</td>
+<td>700</td>
+<td>20</td>
+<td>Bridges RM</td>
+<td>14,000</td>
+</tr>
+<tr>
+<td>STAR alignments</td>
+<td>130 Fundulus individuals</td>
+<td>15</td>
+<td>Bridges RM</td>
+<td>1,950</td>
+</tr>
+<tr>
+<td>Oyster River Protocol contig merging</td>
+<td>700</td>
+<td>~200 hours of s1.xxlarge at 44 SU</td>
+<td>Jetstream</td>
+<td>10,000</td>
+</tr>
+<tr>
+<td>storage</td>
+<td>2 TB raw sequence data + 6 TB for intermediate files and alignment .bam files</td>
+<td></td>
+<td>Bridges Pylon storage</td>
+<td>8 TB</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bioinformatics Tools, performance and scaling</strong>
+In general, the bioinformatics software tools that we use have been published and optimized by the software authors - including the PI of our lab, Dr. C. Titus Brown who developed and maintains khmer (digital normalization and reads error correction) and sourmash (decontamination) - and are made available for users, like ourselves, to generate data products such as de novo genome and transcriptome assemblies and annotations for our first two objectives.</p>
+<p>The third deep learning objective is an exploratory analysis, and we do not have all of the code yet. The scripts that we have written collaboratively thus far do not require computing resources beyond a cloud instance that will accomodate the software and tables containing expression data from hundreds of species by &gt;30,000 genes each, which is beyond what can be run on a laptop computer. Therefore, we are requesting Jetstream resources to further explore this type of analysis.</p>
+<p>We have been successful in running these tools on systems with slurm management, such as MSU hpcc and UCD farm cluster. However, these hpc resources will not support the work that we want to do to assemble genomes with ONT and Illumina data, re-assemble more transcriptomes, and complete machine learning analyses. Therefore, we are hoping to use PSC Bridges to conduct the assemblies of four genomes.</p>
+<h2>References</h2>
+<p>Bushmanova, E., Antipov, D., Lapidus, A., &amp; Przhibelskiy, A. D. (2018). rnaSPAdes: a de novo transcriptome assembler and its application to RNA-Seq data. bioRxiv, 420208.</p>
+<p>Cantarel, B. L., Korf, I., Robb, S. M., Parra, G., Ross, E., Moore, B., ... &amp; Yandell, M. (2008). MAKER: an easy-to-use annotation pipeline designed for emerging model organism genomes. Genome research, 18(1), 188-196.</p>
+<p>Chollet, F. (2018). Keras: The python deep learning library. Astrophysics Source Code Library.</p>
+<p>de Lannoy, C., de Ridder, D., &amp; Risse, J. (2017). The long reads ahead: de novo genome assembly using the MinION. F1000Research, 6.</p>
+<p>Dunn, C. W., Howison, M., &amp; Zapata, F. (2013). Agalma: an automated phylogenomics workflow. BMC bioinformatics, 14(1), 330.</p>
+<p>Ebbert, M. T., Jensen, T. D., Jansen-West, K., Sens, J. P., Reddy, J. S., Ridge, P. G., ... &amp; Keene, D. (2019). Systematic analysis of dark and camouflaged genes: disease-relevant genes hiding in plain sight. bioRxiv, 514497.</p>
+<p>Foster, E. D., &amp; Deardorff, A. (2017). Open science framework (OSF). Journal of the Medical Library Association: JMLA, 105(2), 203.</p>
+<p>Kannan, S., Hui, J., Mazooji, K., Pachter, L., &amp; Tse, D. (2016). Shannon: An information-optimal de novo rna-seq assembler. bioRxiv, 039230.</p>
+<p>Keeling, P. J., Burki, F., Wilcox, H. M., Allam, B., Allen, E. E., Amaral-Zettler, L. A., ... &amp; Beszteri, B. (2014). The Marine Microbial Eukaryote Transcriptome Sequencing Project (MMETSP): illuminating the functional diversity of eukaryotic life in the oceans through transcriptome sequencing. PLoS biology, 12(6), e1001889.</p>
+<p>Grabherr, M. G., Haas, B. J., Yassour, M., Levin, J. Z., Thompson, D. A., Amit, I., ... &amp; Chen, Z. (2011). Trinity: reconstructing a full-length transcriptome without a genome from RNA-Seq data. Nature biotechnology, 29(7), 644.</p>
+<p>Johnson, Lisa K., Alexander, Harriet, &amp; Brown, C. Titus. (2018). Re-assembly, quality evaluation, and annotation of 678 microbial eukaryotic reference transcriptomes, GigaScience, giy158, https://doi.org/10.1093/gigascience/giy158</p>
+<p>Johnson, Lisa K., Alexander, Harriet, &amp; Brown, C. Titus. (2018). MMETSP re-assemblies [Data set]. Zenodo. https://doi.org/10.5281/zenodo.740440  </p>
+<p>Kanehisa, M., &amp; Goto, S. (2000). KEGG: kyoto encyclopedia of genes and genomes. Nucleic acids research, 28(1), 27-30.</p>
+<p>Love MI, Huber W, Anders S. 2014. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. GenomeBiology. 15:550.</p>
+<p>MacManes, M. D. (2018). The Oyster River Protocol: a multi-assembler and kmer approach for de novo transcriptome assembly. PeerJ, 6, e5428.</p>
+<p>Patro R, Duggal G, Love MI, Irizarry RA, Kingsford C. 2017. Salmon: fast and bias-aware quantification of transcript expression using dual-phase inference. Nature Methods. 14(4): 417-419.</p>
+<p>Rodgers, R., Roach, J. L., Reid, N. M., Whitehead, A., &amp; Duvernell, D. D. (2018). Phylogenomic analysis of Fundulidae (Teleostei: Cyprinodotiformes) using RNA-sequencing data. Molecular phylogenetics and evolution, 121, 150-157.</p>
+<p>Robertson, G., Schein, J., Chiu, R., Corbett, R., Field, M., Jackman, S. D., ... &amp; Griffith, M. (2010). De novo assembly and analysis of RNA-seq data. Nature methods, 7(11), 909.</p>
+<p>Scott C, dammit: an open and accessible de novo transcriptome annotator; 2016. In prep. Available at: https://dib-lab.github.io/dammit/. Accessed 15 Jan 2019.</p>
+<p>Simão, F. A., Waterhouse, R. M., Ioannidis, P., Kriventseva, E. V., &amp; Zdobnov, E. M. (2015). BUSCO: assessing genome assembly and annotation completeness with single-copy orthologs. Bioinformatics, 31(19), 3210-3212.</p>
+<p>Tan, J., Hammond, J. H., Hogan, D. A., &amp; Greene, C. S. (2016). ADAGE-based integration of publicly available Pseudomonas aeruginosa gene expression data with denoising autoencoders illuminates microbe-host interactions. MSystems, 1(1), e00025-15.</p>
+<p>Tan MH, Austin CM, Hammer MP, lee YP, Croft LJ, Gan HM. 2018. Finding nemo: hybrid assembly with Oxford Nanopore and Illumina reads greatly improves the clownfish (Amphiprion ocellaris) genome assembly. GigaScience. 7(3): gix137. https://doi.org/10.1093/gigascience/gix137 </p>
+<p>Vincent, P., Larochelle, H., Bengio, Y., &amp; Manzagol, P. A. (2008, July). Extracting and composing robust features with denoising autoencoders. In Proceedings of the 25th international conference on Machine learning (pp. 1096-1103). ACM.</p>
+<p>Whitehead, A. (2010). The evolutionary radiation of diverse osmotolerant physiologies in killifish (Fundulus sp.). Evolution: International Journal of Organic Evolution, 64(7), 2070-2085.</p>
+<p>Zimin, A. V., Marçais, G., Puiu, D., Roberts, M., Salzberg, S. L., &amp; Yorke, J. A. (2013). The MaSuRCA genome assembler. Bioinformatics, 29(21), 2669-2677.</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'https-ljcohen-github-io-blog'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'xrac-research-proposal';
+                var disqus_url = 'https://johnsolk.github.io/blog/xrac-research-proposal.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://twitter.com/monsterbashseq"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/johnsolk"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+    <li class="list-group-item"><a href="https://www.flickr.com/155690017@N06/"><i class="fa fa-flickr fa-lg"></i> flickr</a></li>
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/johnsolk/"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+    <li class="list-group-item"><a href="mailto:ljcohen@ucdavis.edu"><i class="fa fa-envelope fa-lg"></i> envelope</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/17-sets-how-to-display-all-intersections-with-upsetr-plot.html">17 sets, how to display all intersections with UpSetR plot?</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/xsede-login-with-bridges.html">XSEDE login with bridges</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/annotating-multiple-de-novo-transcriptome-assemblies.html">Annotating multiple de novo transcriptome assemblies</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/running-clust-on-jetstream.html">Running clust on Jetstream</a></li>
+    <li class="list-group-item"><a href="https://johnsolk.github.io/blog/xrac-research-proposal.html">XRAC research proposal</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="http://ivory.idyll.org/lab/" target="_blank">Titus Brown's DIB Lab</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://whiteheadresearch.wordpress.com/" target="_blank">Andrew Whitehead's Lab, Environmental Genomics</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://dib-training.readthedocs.io/en/pub/" target="_blank">UCD DIB Training</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2019 Lisa Johnson
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://johnsolk.github.io/blog/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://johnsolk.github.io/blog/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://johnsolk.github.io/blog/theme/js/respond.min.js"></script>
+
+    <script src="https://johnsolk.github.io/blog/theme/js/custom.js"></script>
+
+    <script src="https://johnsolk.github.io/blog/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'https-ljcohen-github-io-blog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-127427728-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+</body>
+</html>

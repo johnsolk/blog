@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - transcriptome</title><link href="https://johnsolk.github.io/blog/" rel="alternate"></link><link href="https://johnsolk.github.io/blog/feeds/transcriptome.atom.xml" rel="self"></link><id>https://johnsolk.github.io/blog/</id><updated>2018-12-08T00:00:00-08:00</updated><entry><title>New vs. Old versions of Trinity</title><link href="https://johnsolk.github.io/blog/new-vs-old-versions-of-trinity.html" rel="alternate"></link><published>2018-12-08T00:00:00-08:00</published><updated>2018-12-08T00:00:00-08:00</updated><author><name>Lisa K. Johnson</name></author><id>tag:johnsolk.github.io,2018-12-08:/blog/new-vs-old-versions-of-trinity.html</id><summary type="html">&lt;p&gt;Does the newer version of Trinity (v2.8.4) make better transcriptome assemblies (for killifish) than the old (v2.2.0)?&lt;/p&gt;</summary><content type="html">&lt;h4&gt;Does the newer version of Trinity (v2.8.4) make better transcriptome assemblies (for killifish) than the old (v2.2.0)?&lt;/h4&gt;
+&lt;p&gt;tl;dr Yes.&lt;/p&gt;
+&lt;h1&gt;XSEDE Computing Resources&lt;/h1&gt;
+&lt;p&gt;Since I'm overdrawn on my new XSEDE allocation on the &lt;a href="https://www.psc.edu/bridges/user-guide/running-jobs"&gt;PSC Bridges LM (large memory) partition&lt;/a&gt; after receiving it on 11/26/2018, a report is required to apply for more. &lt;/p&gt;
+&lt;p&gt;In case you couldn't tell, I'm a really big fan of the PSC Bridges hpc! I've used 1862 SU out of the 1000 SU they allocated to me on the LM partition and 11484 out of 13000 SU on the RM (regular memory).  &lt;/p&gt;
+&lt;p&gt;In case it might benefit others, here is roughly the progress report that I will submit with my request.&lt;/p&gt;
+&lt;h1&gt;Re-assembling 17 &lt;em&gt;Fundulus&lt;/em&gt; killifish transcriptomes&lt;/h1&gt;
+&lt;p&gt;Since receiving my allocation to the PSC Bridges LM partition on 11/26/2018, I have re-assembled 17 transcriptomes from 16 species of &lt;em&gt;Fundulus&lt;/em&gt; killifish using the &lt;a href="(https://github.com/trinityrnaseq/trinityrnaseq)"&gt;Trinity &lt;em&gt;de novo&lt;/em&gt; transcriptome assembler&lt;/a&gt; version 2.8.4. I originally &lt;a href="https://figshare.com/articles/De_novo_assemblies_annotations_and_gene_expression_profiling_of_gill_epithelium_from_16_species_of_Fundulus_killifish_in_response_to_salinity_change_/6827201"&gt;assembled transcriptomes from the 16 Fundulus species&lt;/a&gt; using Trinity version 2.2.0.&lt;/p&gt;
+&lt;p&gt;There is &lt;a href="https://github.com/johnsolk/MMETSP/blob/master/notebooks/Supplemental%20Notebook%202%20-%20Trinity_version_comparisons.ipynb"&gt;some evidence&lt;/a&gt; that assemblies can be improved by using the updated versions of Trinity. I wanted to re-assemble these killifish transcriptomes to see if the assemblies could be improved.&lt;/p&gt;
+&lt;p&gt;These transcriptomes will be used for the purpose of studying the &lt;a href="https://www.ncbi.nlm.nih.gov/pubmed/20100216"&gt;history of adaptation to different salinities&lt;/a&gt;. Some &lt;em&gt;Fundulus&lt;/em&gt; species can tolerate a range of salinities (euryhaline) by switching osmoregulatory mechanisms while others require a more narrow salinity range (stenohaline) in either fresh or marine waters. This large set of RNAseq data from multiple species is going to help us better characterize the divergence of these molecular osmoregulatory mechanisms between euryhaline and stenohaline freshwater species. To that end, I am attempting to develop a &lt;a href="https://github.com/johnsolk/RNAseq_15killifish"&gt;pipeline for orthologous gene expression profiling analysis across species&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This profiling analysis will enable us to compare expression patterns of salinity-responsive genes, e.g. &lt;a href="https://www.ebi.ac.uk/interpro/entry/IPR023275"&gt;aquaporin 3&lt;/a&gt; (shown below) across clades of species.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/115b2d8eaf1485b6e8e248f36912d619de089b8a/aqu3.png"&gt;&lt;/p&gt;
+&lt;p&gt;The nature of the fragmented assembly output from Trinity makes it especially challenging in our attempt to develop this pipeline. We want to make sure that the reference transcriptomes are the best that they can be so that expression profiles are accurately reflected across species.&lt;/p&gt;
+&lt;h2&gt;Are there differences between the v2.2.0 and v2.8.4 assemblies?&lt;/h2&gt;
+&lt;p&gt;Yes. Are they better? It seems so. But, there are a few items to investigate further.&lt;/p&gt;
+&lt;p&gt;Below are comparisons of various evaluation metrics between the 17 old v2.2.0 (blue) and new v2.8.4 (green) Trinity assemblies. On the left are slope graphs comparing the metric between both assemblies and on the right are split violin plots showing the distributions of all the assemblies.&lt;/p&gt;
+&lt;p&gt;Shout out to &lt;a href="https://www.whoi.edu/profile/halexander"&gt;Dr. Harriet Alexander&lt;/a&gt; for helping with the code to visualize these types of comparisons for &lt;a href="http://dx.doi.org/10.5524/100522"&gt;our paper comparing re-assemblies for the MMETSP - coming out soon in GigaScience&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Code for making these plots is &lt;a href="https://github.com/WhiteheadLab/RNAseq_15killifish/blob/master/notebooks/evaluation_figures.ipynb"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;There are fewer contigs.&lt;/h3&gt;
+&lt;p&gt;However, the large numbers &amp;gt;100,000 contigs indicates that these assemblies are still very fragmented. &lt;a href="https://johnsolk.github.io/blog/explorations-with-orthofinder.html"&gt;Orthogroup/ortholog prediction&lt;/a&gt; is required for downstream analysis. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/master/evaluation/contigs.png"&gt;&lt;/p&gt;
+&lt;h3&gt;The BUSCO scores are higher.&lt;/h3&gt;
+&lt;p&gt;What makes these assemblies especially appealing is their higher scores with the &lt;a href="https://busco.ezlab.org/"&gt;Benchmarking Universal Single-Copy Ortholog (BUSCO)&lt;/a&gt; assessment tool. One species, &lt;em&gt;Lucania goodei&lt;/em&gt; had 100%! The distribution of scores is tighter for the new assemblies compared to the old.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/master/evaluation/busco_euk.png"&gt; &lt;img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/master/evaluation/busco_metazoa.png"&gt;&lt;/p&gt;
+&lt;h3&gt;Lower % ORF?&lt;/h3&gt;
+&lt;p&gt;For some reason, mean % ORF decreases. This was not expected.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/master/evaluation/orf_perc.png"&gt;&lt;/p&gt;
+&lt;h3&gt;Number of contigs with ORF&lt;/h3&gt;
+&lt;p&gt;This is roughly the same and a very low number.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/master/evaluation/n_orf.png"&gt;&lt;/p&gt;
+&lt;h3&gt;Similar unique k-mers&lt;/h3&gt;
+&lt;p&gt;The number of unique k-mers (k=25) does not really change. This means that the content is similar.
+&lt;img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/master/evaluation/kmers.png"&gt;
+&lt;img alt="" src="https://raw.githubusercontent.com/WhiteheadLab/RNAseq_15killifish/master/evaluation/kmers_scatter.png"&gt;&lt;/p&gt;
+&lt;h3&gt;Conditional Reciprocal Best Blast&lt;/h3&gt;
+&lt;p&gt;Using &lt;a href="http://hibberdlab.com/transrate/metrics.html"&gt;transrate &lt;code&gt;--assembly&lt;/code&gt; reference mode&lt;/a&gt; to examine the comparative metrics with &lt;a href="https://github.com/cboursnell/crb-blast"&gt;Conditional Reciprocal Best BLAST (CRBB)&lt;/a&gt; between assemblies consistently did not work, for some reason. (Whereas it did work for comparison with the &lt;a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/Fundulus_heteroclitus/RNA/"&gt;NCBI version of the &lt;em&gt;Fundulus heteroclitus&lt;/em&gt; sister species&lt;/a&gt;) This requires further investigation.&lt;/p&gt;
+&lt;p&gt;Version:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Transrate v1.0.3
+by Richard Smith-Unna, Chris Boursnell, Rob Patro,
+   Julian Hibberd, and Steve Kelly
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;transrate --assembly=/pylon5/bi5fpmp/ljcohen/kfish_trinity/F_parvapinis.trinity_out.Trinity.fasta --reference=/pylon5/bi5fpmp/ljcohen/kfish_assemblies_old/F_parvapinis.trinity_out.Trinity.fasta --threads=8 --output=/pylon5/bi5fpmp/ljcohen/kfish_transrate/F_parvapinis_trinity_v_old/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[ INFO] 2018-12-06 22:23:47 : Loading assembly: /pylon5/bi5fpmp/ljcohen/kfish_trinity/F_parvapinis.trinity_out.Trinity.fasta
+[ INFO] 2018-12-06 22:24:45 : Analysing assembly: /pylon5/bi5fpmp/ljcohen/kfish_trinity/F_parvapinis.trinity_out.Trinity.fasta
+[ INFO] 2018-12-06 22:24:45 : Results will be saved in /pylon5/bi5fpmp/ljcohen/kfish_transrate/F_parvapinis_trinity_v_old/F_parvapinis.trinity_out.Trinity
+[ INFO] 2018-12-06 22:24:45 : Calculating contig metrics...
+[ INFO] 2018-12-06 22:25:37 : Contig metrics:
+[ INFO] 2018-12-06 22:25:37 : -----------------------------------
+[ INFO] 2018-12-06 22:25:37 : n seqs                       298549
+[ INFO] 2018-12-06 22:25:37 : smallest                        183
+[ INFO] 2018-12-06 22:25:37 : largest                       27771
+[ INFO] 2018-12-06 22:25:37 : n bases                   310786992
+[ INFO] 2018-12-06 22:25:37 : mean len                    1040.98
+[ INFO] 2018-12-06 22:25:37 : n under 200                      15
+[ INFO] 2018-12-06 22:25:37 : n over 1k                     77121
+[ INFO] 2018-12-06 22:25:37 : n over 10k                      802
+[ INFO] 2018-12-06 22:25:37 : n with orf                    62453
+[ INFO] 2018-12-06 22:25:37 : mean orf percent              43.26
+[ INFO] 2018-12-06 22:25:37 : n90                             340
+[ INFO] 2018-12-06 22:25:37 : n70                            1141
+[ INFO] 2018-12-06 22:25:37 : n50                            2512
+[ INFO] 2018-12-06 22:25:37 : n30                            4111
+[ INFO] 2018-12-06 22:25:37 : n10                            6966
+[ INFO] 2018-12-06 22:25:37 : gc                             0.46
+[ INFO] 2018-12-06 22:25:37 : bases n                           0
+[ INFO] 2018-12-06 22:25:37 : proportion n                    0.0
+[ INFO] 2018-12-06 22:25:37 : Contig metrics done in 52 seconds
+[ INFO] 2018-12-06 22:25:37 : No reads provided, skipping read diagnostics
+[ INFO] 2018-12-06 22:25:37 : Calculating comparative metrics...
+[ INFO] 2018-12-06 23:23:24 : Comparative metrics:
+[ INFO] 2018-12-06 23:23:24 : -----------------------------------
+[ INFO] 2018-12-06 23:23:24 : CRBB hits                         0
+[ INFO] 2018-12-06 23:23:24 : n contigs with CRBB               0
+[ INFO] 2018-12-06 23:23:24 : p contigs with CRBB             0.0
+[ INFO] 2018-12-06 23:23:24 : rbh per reference               0.0
+[ INFO] 2018-12-06 23:23:24 : n refs with CRBB                  0
+[ INFO] 2018-12-06 23:23:24 : p refs with CRBB                0.0
+[ INFO] 2018-12-06 23:23:24 : cov25                             0
+[ INFO] 2018-12-06 23:23:24 : p cov25                         0.0
+[ INFO] 2018-12-06 23:23:24 : cov50                             0
+[ INFO] 2018-12-06 23:23:24 : p cov50                         0.0
+[ INFO] 2018-12-06 23:23:24 : cov75                             0
+[ INFO] 2018-12-06 23:23:24 : p cov75                         0.0
+[ INFO] 2018-12-06 23:23:24 : cov85                             0
+[ INFO] 2018-12-06 23:23:24 : p cov85                         0.0
+[ INFO] 2018-12-06 23:23:24 : cov95                             0
+[ INFO] 2018-12-06 23:23:24 : p cov95                         0.0
+[ INFO] 2018-12-06 23:23:24 : reference coverage              0.0
+[ INFO] 2018-12-06 23:23:24 : Comparative metrics done in 3467 seconds
+[ INFO] 2018-12-06 23:23:24 : -----------------------------------
+[ INFO] 2018-12-06 23:23:24 : Writing contig metrics for each contig to /pylon5/bi5fpmp/ljcohen/kfish_transrate/F_parvapinis_trinity_v_old/F_parvapinis.trinity_out.Trinity/contigs.csv
+[ INFO] 2018-12-06 23:23:43 : Writing analysis results to assemblies.csv
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;Trinity v2.8.4 is better than v2.2.0. While v2.8.4 still produces very fragmented assemblies, the higher BUSCO content is exciting. &lt;/p&gt;
+&lt;h3&gt;There are questions requiring further investigation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Why, if the unique k-mer content is similiar, would the BUSCO scores improve between versions?&lt;/li&gt;
+&lt;li&gt;ORF content (number of contigs with ORF and mean ORF %) are parodoxical. Why would the ORF content decrease in the newer assemblies?&lt;/li&gt;
+&lt;li&gt;Why wouldn't transrate &lt;code&gt;---reference&lt;/code&gt; work to get CRBB metrics between these assemblies?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;What has improved in Trinity v2.8.4?&lt;/h1&gt;
+&lt;p&gt;According to the &lt;a href="https://github.com/trinityrnaseq/trinityrnaseq/releases"&gt;release notes&lt;/a&gt; from Trinity, major improvements have included using &lt;a href="https://salmon.readthedocs.io/en/latest/"&gt;salmon expression quantification&lt;/a&gt; to help with filtering out assembly artifacts and overhauling the "supertranscript module" to deal with high polymorphism situations. Since killifish are highly heterozygous, we are likely benefitting from these improvements.&lt;/p&gt;
+&lt;h1&gt;Future directions&lt;/h1&gt;
+&lt;p&gt;In addition to annotating these transcritomes and continuing to investigate the questions above, I would also like to try Matt MacManes' &lt;a href="https://oyster-river-protocol.readthedocs.io/en/latest/"&gt;Oyster River Protocol&lt;/a&gt; and accompanying &lt;a href="https://github.com/macmanes-lab/Oyster_River_Protocol/blob/master/orthofuser.mk"&gt;'orthofuser' script&lt;/a&gt; to combine contigs from different assemblers.&lt;/p&gt;</content><category term="comparative"></category><category term="transcriptome"></category><category term="re-assemblies"></category></entry></feed>

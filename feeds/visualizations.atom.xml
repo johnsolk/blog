@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>monsteRbashSeq - visualizations</title><link href="https://johnsolk.github.io/blog/" rel="alternate"></link><link href="https://johnsolk.github.io/blog/feeds/visualizations.atom.xml" rel="self"></link><id>https://johnsolk.github.io/blog/</id><updated>2019-08-30T00:00:00-07:00</updated><entry><title>17 sets, how to display all intersections with UpSetR plot?</title><link href="https://johnsolk.github.io/blog/17-sets-how-to-display-all-intersections-with-upsetr-plot.html" rel="alternate"></link><published>2019-08-30T00:00:00-07:00</published><updated>2019-08-30T00:00:00-07:00</updated><author><name>Lisa K. Johnson</name></author><id>tag:johnsolk.github.io,2019-08-30:/blog/17-sets-how-to-display-all-intersections-with-upsetr-plot.html</id><summary type="html">&lt;p&gt;There are overlapping identities between all 17 sets.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello! Trying to make an UpSetR plot showing overlapping gene annotations between 17 transcriptomes. &lt;/p&gt;
+&lt;p&gt;What am I doing wrong?&lt;/p&gt;
+&lt;p&gt;Is there a bug in the UpSetR library? &lt;/p&gt;
+&lt;p&gt;I posted on the UpSetR library's community &lt;a href="https://github.com/hms-dbmi/UpSetR/issues/170"&gt;GitHub forum&lt;/a&gt;, but did not really get an answer to my questions. My R language expert colleagues at UC Davis could not seem to figure it out either.&lt;/p&gt;
+&lt;p&gt;Here is what I know:&lt;/p&gt;
+&lt;p&gt;There ARE overlapping identities between all 17 of my sets (see code and output below).&lt;/p&gt;
+&lt;p&gt;However, my UpSetR plots do not reflect this. &lt;/p&gt;
+&lt;p&gt;Below is some R code with a downloadable set of data.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;UpSetR&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# https://cran.r-project.org/web/packages/UpSetR/&lt;/span&gt;
+&lt;span class="c1"&gt;# https://cran.r-project.org/web/packages/UpSetR/vignettes/basic.usage.html&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Download and import to a data.frame&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="nb"&gt;file&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exists&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;presence_absence.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;&lt;span class="n"&gt;download&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://raw.githubusercontent.com/johnsolk/RNAseq_15killifish/master/evaluation/presence_absence.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;presence_absence.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)}&lt;/span&gt;
+&lt;span class="n"&gt;pa&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;presence_absence.csv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;pa&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="n"&gt;pa&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+&lt;span class="n"&gt;rownames&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pa&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="n"&gt;pa&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;Ensembl&lt;/span&gt;
+&lt;span class="n"&gt;pa&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="n"&gt;pa&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This plot will display 4 intersects. THIS WORKS. This is what we should see for all 17 sets.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;upset(pa, sets = c(c(&amp;quot;A_xenica&amp;quot;,&amp;quot;F_catanatus&amp;quot;),c(&amp;quot;F_chrysotus&amp;quot;,&amp;quot;F_diaphanus&amp;quot;)),mb.ratio = c(0.55, 0.45),keep.order = F)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="" src="https://i.imgur.com/pdki8ff.png"&gt;&lt;/p&gt;
+&lt;p&gt;But, as soon as I move to 6, I am confused - there is no longer a bar crossing all 6 sets.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;upset(pa, sets = c(c(&amp;quot;A_xenica&amp;quot;,&amp;quot;F_catanatus&amp;quot;,&amp;quot;F_notatus&amp;quot;), c(&amp;quot;F_chrysotus&amp;quot;,&amp;quot;F_diaphanus&amp;quot;,&amp;quot;F_nottii&amp;quot;)),mb.ratio = c(0.55, 0.45),nsets = 6,keep.order = F)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="" src="https://i.imgur.com/mokSySy.png"&gt;&lt;/p&gt;
+&lt;p&gt;The full 17 sets does not make any sense&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;upset(pa, sets = c(c(&amp;quot;A_xenica&amp;quot;,&amp;quot;F_catanatus&amp;quot;),c(&amp;quot;F_chrysotus&amp;quot;,&amp;quot;F_diaphanus&amp;quot;),c(&amp;quot;F_grandis&amp;quot;,&amp;quot;F_heteroclitusMDPL&amp;quot;),c(&amp;quot;F_heteroclitusMDPP&amp;quot;,&amp;quot;F_notatus&amp;quot;),c(&amp;quot;F_nottii&amp;quot;,&amp;quot;F_olivaceous&amp;quot;),c(&amp;quot;F_parvapinis&amp;quot;,&amp;quot;F_rathbuni&amp;quot;),c(&amp;quot;F_sciadicus&amp;quot;,&amp;quot;F_similis&amp;quot;),c(&amp;quot;F_zebrinus&amp;quot;,&amp;quot;L_goodei&amp;quot;),c(&amp;quot;L_parva&amp;quot;)),mb.ratio = c(0.55, 0.45),keep.order = F)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="" src="https://i.imgur.com/vbPSOYk.png"&gt;&lt;/p&gt;
+&lt;p&gt;This confirms that there are overlaps between all 17 sets (and 16, 15, 14, etc)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;test&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;rowSums&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;pa&lt;span class="p"&gt;)&lt;/span&gt;
+test&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;as.data.frame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;test&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kp"&gt;colnames&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;test&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;sum&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kp"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;test&lt;span class="o"&gt;$&lt;/span&gt;sum &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="m"&gt;17&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kp"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;test&lt;span class="o"&gt;$&lt;/span&gt;sum &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kp"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;test&lt;span class="o"&gt;$&lt;/span&gt;sum &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kp"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;test&lt;span class="o"&gt;$&lt;/span&gt;sum &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="m"&gt;14&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; sum(test$sum == 17)
+[1] 10897
+&amp;gt; sum(test$sum == 16)
+[1] 2979
+&amp;gt; sum(test$sum == 15)
+[1] 1585
+&amp;gt; sum(test$sum == 14)
+[1] 1247
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I'm wondering if there is a bug in the UpSetR library that prevents displaying overlaps from such a large number of sets. I remembered &lt;a href="https://github.com/dib-lab/2017-ectocooler/blob/master/Ectocooler-genes.ipynb"&gt;Titus made a similar set of data looking at annotations from a few species with the python library, pyupset&lt;/a&gt;. When I made a &lt;a href="https://github.com/johnsolk/RNAseq_15killifish/blob/master/notebooks/pyupset_annotations.ipynb"&gt;similar notebook using pyupset with my data&lt;/a&gt;, there was a performance issue. The notebook ran overnight and didn't produce any output. This makes me think that it might not be possible to produce a plot with 17 intersections?&lt;/p&gt;
+&lt;p&gt;Any insight anyone has would be greatly appreciated!&lt;/p&gt;</content><category term="R"></category><category term="plotting"></category><category term="annotation"></category></entry></feed>
