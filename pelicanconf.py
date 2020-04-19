@@ -70,7 +70,7 @@ READERS = {'html': None}
 #CC_LICENSE = 'zero'
 
 SOCIAL = (('twitter', 'https://twitter.com/monsterbashseq'),
-          ('github', 'https://github.com/ljcohen'),
+          ('github', 'https://github.com/johnsolk'),
           ('flickr','https://www.flickr.com/155690017@N06/'),
           ('linkedin','https://www.linkedin.com/in/johnsolk/'),
           ('envelope','mailto:ljcohen@ucdavis.edu'))
